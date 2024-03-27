@@ -1,10 +1,10 @@
 auth:
   api-key:
-    secret: ${LOWCODER_API_KEY_SECRET:5a41b090758b39b226603177ef48d73ae9839dd458ccb7e66f7e7cc028d5a50b}
+    secret: ${QUICKDEV_API_KEY_SECRET:5a41b090758b39b226603177ef48d73ae9839dd458ccb7e66f7e7cc028d5a50b}
   email:
-    enable: ${LOWCODER_EMAIL_AUTH_ENABLED:true}
-    enable-register: ${LOWCODER_EMAIL_SIGNUP_ENABLED:true}
-  workspace-creation: ${LOWCODER_CREATE_WORKSPACE_ON_SIGNUP:true}
+    enable: ${QUICKDEV_EMAIL_AUTH_ENABLED:true}
+    enable-register: ${QUICKDEV_EMAIL_SIGNUP_ENABLED:true}
+  workspace-creation: ${QUICKDEV_CREATE_WORKSPACE_ON_SIGNUP:true}
 
 spring:
   data:
@@ -29,32 +29,32 @@ server:
   shutdown: graceful
 
 default:
-  orgs-per-user: ${LOWCODER_MAX_ORGS_PER_USER:100}
-  org-member-count: ${LOWCODER_MAX_MEMBERS_PER_ORG:1000}
-  org-group-count: ${LOWCODER_MAX_GROUPS_PER_ORG:100}
-  org-app-count: ${LOWCODER_MAX_APPS_PER_ORG:1000}
-  developer-count: ${LOWCODER_MAX_DEVELOPERS:50}
-  api-rate-limit: ${LOWCODER_API_RATE_LIMIT:50}
+  orgs-per-user: ${QUICKDEV_MAX_ORGS_PER_USER:100}
+  org-member-count: ${QUICKDEV_MAX_MEMBERS_PER_ORG:1000}
+  org-group-count: ${QUICKDEV_MAX_GROUPS_PER_ORG:100}
+  org-app-count: ${QUICKDEV_MAX_APPS_PER_ORG:1000}
+  developer-count: ${QUICKDEV_MAX_DEVELOPERS:50}
+  api-rate-limit: ${QUICKDEV_API_RATE_LIMIT:50}
 
 common:
-  cookie-name: LOWCODER_CE_SELFHOST_TOKEN
-  product: lowcoder
+  cookie-name: QUICKDEV_CE_SELFHOST_TOKEN
+  product: quickdev
   domain:
-    default-value: lowcoder.org
+    default-value: quickdev.org
   cloud: false
   version: 2.1.4
   apiVersion: 1.1
   block-hound-enable: false
   js-executor:
-    host: ${LOWCODER_NODE_SERVICE_URL:http://127.0.0.1:6060}
-  max-query-request-size: ${LOWCODER_MAX_REQUEST_SIZE:20m}
-  max-query-response-size: ${LOWCODER_MAX_REQUEST_SIZE:20m}
-  max-upload-size: ${LOWCODER_MAX_REQUEST_SIZE:20m}
-  max-query-timeout: ${LOWCODER_MAX_QUERY_TIMEOUT:120}
+    host: ${QUICKDEV_NODE_SERVICE_URL:http://127.0.0.1:6060}
+  max-query-request-size: ${QUICKDEV_MAX_REQUEST_SIZE:20m}
+  max-query-response-size: ${QUICKDEV_MAX_REQUEST_SIZE:20m}
+  max-upload-size: ${QUICKDEV_MAX_REQUEST_SIZE:20m}
+  max-query-timeout: ${QUICKDEV_MAX_QUERY_TIMEOUT:120}
   workspace:
-    mode: ${LOWCODER_WORKSPACE_MODE:SAAS}
+    mode: ${QUICKDEV_WORKSPACE_MODE:SAAS}
   marketplace:
-    private-mode: ${LOWCODER_MARKETPLACE_PRIVATE_MODE:true}
+    private-mode: ${QUICKDEV_MARKETPLACE_PRIVATE_MODE:true}
 
 material:
   mongodb-grid-fs:

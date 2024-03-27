@@ -2,29 +2,29 @@
 ## Build Lowcoder api-service application
 ##
 FROM maven:3.9-eclipse-temurin-17 AS build-api-service
-COPY ./server/api-service /lowcoder-server
-WORKDIR /lowcoder-server
+COPY ./server/api-service /quickdev-server
+WORKDIR /quickdev-server
 RUN --mount=type=cache,target=/root/.m2 mvn -f pom.xml clean package -DskipTests
 
 # Create required folder structure
-RUN mkdir -p /lowcoder/api-service/plugins /lowcoder/api-service/config /lowcoder/api-service/logs
+RUN mkdir -p /quickdev/api-service/plugins /quickdev/api-service/config /quickdev/api-service/logs
 
 # Define lowcoder main jar and plugin jars
-ARG JAR_FILE=/lowcoder-server/lowcoder-server/target/lowcoder-server-*.jar
-ARG PLUGIN_JARS=/lowcoder-server/lowcoder-plugins/*/target/*.jar
+ARG JAR_FILE=/quickdev-server/lowcoder-server/target/lowcoder-server-*.jar
+ARG PLUGIN_JARS=/quickdev-server/lowcoder-plugins/*/target/*.jar
 
 # Copy lowcoder server application and plugins
-RUN cp ${JAR_FILE} /lowcoder/api-service/server.jar \
-  && cp ${PLUGIN_JARS} /lowcoder/api-service/plugins/
+RUN cp ${JAR_FILE} /quickdev/api-service/server.jar \
+  && cp ${PLUGIN_JARS} /quickdev/api-service/plugins/
 
 # Copy lowcoder server configuration
-COPY server/api-service/lowcoder-server/src/main/resources/selfhost/ce/application.yml /lowcoder/api-service/config/
-COPY server/api-service/lowcoder-server/src/main/resources/selfhost/ce/application-selfhost.yml /lowcoder/api-service/config/
+COPY server/api-service/lowcoder-server/src/main/resources/selfhost/ce/application.yml /quickdev/api-service/config/
+COPY server/api-service/lowcoder-server/src/main/resources/selfhost/ce/application-selfhost.yml /quickdev/api-service/config/
 
 # Add bootstrapfile
-COPY deploy/docker/api-service/entrypoint.sh /lowcoder/api-service/entrypoint.sh
-COPY deploy/docker/api-service/init.sh /lowcoder/api-service/init.sh
-RUN chmod +x /lowcoder/api-service/*.sh
+COPY deploy/docker/api-service/entrypoint.sh /quickdev/api-service/entrypoint.sh
+COPY deploy/docker/api-service/init.sh /quickdev/api-service/init.sh
+RUN chmod +x /quickdev/api-service/*.sh
 
 ##
 ## Intermediary Lowcoder api-service image
@@ -33,18 +33,18 @@ RUN chmod +x /lowcoder/api-service/*.sh
 ##   DOCKER_BUILDKIT=1 docker build -f deploy/docker/Dockerfile -t lowcoderorg/lowcoder-ce-api-service --target lowcoder-ce-api-service .
 ##
 FROM eclipse-temurin:17-jammy as lowcoder-ce-api-service
-LABEL maintainer="lowcoder"
+LABEL maintainer="quickdev"
 
 RUN apt-get update && apt-get install -y --no-install-recommends gosu \
   && rm -rf /var/cache/apt/lists \
-  && addgroup --system --gid 9001 lowcoder \
-  && adduser --system --disabled-password --no-create-home --uid 9001 --gid 9001 lowcoder
+  && addgroup --system --gid 9001 quickdev \
+  && adduser --system --disabled-password --no-create-home --uid 9001 --gid 9001 quickdev
 
 # Copy lowcoder server configuration
-COPY --chown=lowcoder:lowcoder --from=build-api-service /lowcoder/api-service /lowcoder/api-service
+COPY --chown=quickdev:quickdev --from=build-api-service /quickdev/api-service /quickdev/api-service
 
 EXPOSE 8080
-CMD [ "sh" , "/lowcoder/api-service/entrypoint.sh" ]
+CMD [ "sh" , "/quickdev/api-service/entrypoint.sh" ]
 
 #############################################################################
 
@@ -66,15 +66,15 @@ RUN apt-get update \
   && npm install -g yarn
 
 # Copy and build the node-service app
-COPY server/node-service/ /lowcoder/node-service/app/
-WORKDIR /lowcoder/node-service/app/
+COPY server/node-service/ /quickdev/node-service/app/
+WORKDIR /quickdev/node-service/app/
 RUN yarn --immutable
 RUN yarn build
 
 # Copy startup script
-COPY deploy/docker/node-service/entrypoint.sh /lowcoder/node-service/entrypoint.sh
-COPY deploy/docker/node-service/init.sh /lowcoder/node-service/init.sh
-RUN chmod +x /lowcoder/node-service/*.sh
+COPY deploy/docker/node-service/entrypoint.sh /quickdev/node-service/entrypoint.sh
+COPY deploy/docker/node-service/init.sh /quickdev/node-service/init.sh
+RUN chmod +x /quickdev/node-service/*.sh
 
 ##
 ## Intermediary Lowcoder node service image
@@ -83,7 +83,7 @@ RUN chmod +x /lowcoder/node-service/*.sh
 ##   DOCKER_BUILDKIT=1 docker build -f deploy/docker/Dockerfile -t lowcoderorg/lowcoder-ce-node-service --target lowcoder-ce-node-service .
 ##
 FROM ubuntu:jammy as lowcoder-ce-node-service
-LABEL maintainer="lowcoder"
+LABEL maintainer="quickdev"
 
 RUN apt update && DEBIAN_FRONTEND=noninteractive apt-get install --no-install-recommends -y curl ca-certificates gnupg
 
@@ -97,13 +97,13 @@ RUN apt-get update \
   && DEBIAN_FRONTEND=noninteractive apt-get install --no-install-recommends -y nodejs gosu \
   && npm install -g yarn \
   && rm -rf /var/cache/apt/lists \
-  && addgroup --system --gid 9001 lowcoder \
-  && adduser --system --disabled-password --no-create-home --uid 9001 --gid 9001 lowcoder
+  && addgroup --system --gid 9001 quickdev \
+  && adduser --system --disabled-password --no-create-home --uid 9001 --gid 9001 quickdev
 
-COPY --from=build-node-service /lowcoder/node-service /lowcoder/node-service
+COPY --from=build-node-service /quickdev/node-service /quickdev/node-service
 
 EXPOSE 6060
-CMD [ "/bin/sh", "/lowcoder/node-service/entrypoint.sh" ]
+CMD [ "/bin/sh", "/quickdev/node-service/entrypoint.sh" ]
 
 #############################################################################
 
@@ -111,8 +111,8 @@ CMD [ "/bin/sh", "/lowcoder/node-service/entrypoint.sh" ]
 ## Build lowcoder client application
 ##
 FROM node:20.2-slim AS build-client
-COPY ./client /lowcoder-client
-WORKDIR /lowcoder-client
+COPY ./client /quickdev-client
+WORKDIR /quickdev-client
 RUN yarn --immutable
 
 # TODO: build lowcoder-comps
@@ -127,6 +127,12 @@ ARG REACT_APP_DISABLE_JS_SANDBOX=true
 RUN yarn build
 
 
+# Intermediate stage to copy lowcoder client data
+FROM alpine:latest AS intermediate
+
+# Copy lowcoder client data from the build-client stage
+COPY --chown=quickdev:quickdev --from=build-client /quickdev-client/packages/lowcoder/build/ /quickdev/client
+
 ##
 ## Intermediary Lowcoder client image
 ##
@@ -134,16 +140,19 @@ RUN yarn build
 ##   DOCKER_BUILDKIT=1 docker build -f deploy/docker/Dockerfile -t lowcoderorg/lowcoder-ce-frontend --target lowcoder-ce-frontend .
 ##
 FROM nginx:1.25.1 as lowcoder-ce-frontend
-LABEL maintainer="lowcoder"
+LABEL maintainer="quickdev"
 
 # Change default nginx user into lowcoder user and remove default nginx config
-RUN usermod --login lowcoder --uid 9001 nginx \
-  && groupmod --new-name lowcoder --gid 9001 nginx \
+RUN usermod --login quickdev --uid 9001 nginx \
+  && groupmod --new-name quickdev --gid 9001 nginx \
   && rm -f /etc/nginx/nginx.conf \
-  && mkdir -p /lowcoder/assets
+  && mkdir -p /quickdev/assets
+
+# Copy lowcoder client data from the intermediate stage
+COPY --from=intermediate /quickdev/client /quickdev/client
 
 # Copy lowcoder client data
-COPY --chown=lowcoder:lowcoder --from=build-client /lowcoder-client/packages/lowcoder/build/ /lowcoder/client
+#COPY --chown=quickdev:quickdev --from=build-client /quickdev-client/packages/lowcoder/build/ /quickdev/client
 
 # Copy additional nginx init scripts
 COPY deploy/docker/frontend/00-change-nginx-user.sh /docker-entrypoint.d/00-change-nginx-user.sh
@@ -167,7 +176,7 @@ EXPOSE 3443
 ## Build Lowcoder all-in-one image
 ##
 FROM lowcoder-ce-frontend
-LABEL maintainer="lowcoder"
+LABEL maintainer="quickdev"
 
 RUN apt update && DEBIAN_FRONTEND=noninteractive apt-get install --no-install-recommends -y curl ca-certificates gnupg
 
@@ -198,24 +207,23 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install --no-instal
       openjdk-17-jdk-headless \
   && npm install -g yarn \
   && rm -rf /var/cache/apt/lists \
-  && mkdir -p /lowcoder/assets
+  && mkdir -p /quickdev/assets
 
 # Add lowcoder api-service
-COPY --chown=lowcoder:lowcoder --from=lowcoder-ce-api-service /lowcoder/api-service /lowcoder/api-service
+COPY --chown=quickdev:quickdev --from=lowcoder-ce-api-service /quickdev/api-service /quickdev/api-service
 
 # Add lowcoder node-service
-COPY --chown=lowcoder:lowcoder --from=lowcoder-ce-node-service /lowcoder/node-service /lowcoder/node-service
+COPY --chown=quickdev:quickdev --from=lowcoder-ce-node-service /quickdev/node-service /quickdev/node-service
 
 # Add services configuration
-COPY --chown=lowcoder:lowcoder deploy/docker/all-in-one/etc /lowcoder/etc
+COPY --chown=quickdev:quickdev deploy/docker/all-in-one/etc /quickdev/etc
 
 # Add startup script
-COPY --chown=lowcoder:lowcoder deploy/docker/all-in-one/entrypoint.sh /lowcoder/entrypoint.sh
+COPY --chown=quickdev:quickdev deploy/docker/all-in-one/entrypoint.sh /quickdev/entrypoint.sh
 
 EXPOSE 27017
 EXPOSE 3000
 EXPOSE 3443
 
-ENTRYPOINT [ "/bin/sh" , "/lowcoder/entrypoint.sh" ]
-CMD ["/usr/bin/supervisord", "-n" , "-c" , "/lowcoder/etc/supervisord.conf"]
-
+ENTRYPOINT [ "/bin/sh" , "/quickdev/entrypoint.sh" ]
+CMD ["/usr/bin/supervisord", "-n" , "-c" , "/quickdev/etc/supervisord.conf"]

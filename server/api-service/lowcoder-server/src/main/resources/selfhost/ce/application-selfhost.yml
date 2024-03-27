@@ -1,15 +1,15 @@
 common:
   encrypt:
-    password: ${LOWCODER_DB_ENCRYPTION_PASSWORD:lowcoder.org}
-    salt: ${LOWCODER_DB_ENCRYPTION_SALT:lowcoder.org}
+    password: ${QUICKDEV_DB_ENCRYPTION_PASSWORD:lowcoder.org}
+    salt: ${QUICKDEV_DB_ENCRYPTION_SALT:lowcoder.org}
   security:
-    corsAllowedDomainString: ${LOWCODER_CORS_DOMAINS:*}
+    corsAllowedDomainString: ${QUICKDEV_CORS_DOMAINS:*}
   workspace:
-    mode: ${LOWCODER_WORKSPACE_MODE:SAAS}
+    mode: ${QUICKDEV_WORKSPACE_MODE:SAAS}
 
 spring:
   data:
     mongodb:
-      uri: ${LOWCODER_MONGODB_URL:mongodb://localhost:27017/lowcoder?socketTimeoutMS=5000}
+      uri: ${QUICKDEV_MONGODB_URL:mongodb://localhost:27017/lowcoder?socketTimeoutMS=5000}
     redis:
-      url: ${LOWCODER_REDIS_URL:redis://localhost:6379}
+      url: ${QUICKDEV_REDIS_URL:redis://localhost:6379}

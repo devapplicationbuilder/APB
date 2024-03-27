@@ -14,7 +14,7 @@ import { globalDepPlugin } from "./src/dev-utils/globalDepPlguin";
 
 dotenv.config();
 
-const apiProxyTarget = process.env.LOWCODER_API_SERVICE_URL;
+const apiProxyTarget = process.env.QUICKDEV_API_SERVICE_URL;
 const nodeServiceApiProxyTarget = process.env.NODE_SERVICE_API_PROXY_TARGET;
 const nodeEnv = process.env.NODE_ENV ?? "development";
 const edition = process.env.REACT_APP_EDITION;
@@ -29,8 +29,8 @@ const base = ensureLastSlash(process.env.PUBLIC_URL);
 
 if (!apiProxyTarget && isDev) {
   console.log();
-  console.log(chalk.red`LOWCODER_API_SERVICE_URL is required.\n`);
-  console.log(chalk.cyan`Start with command: LOWCODER_API_SERVICE_URL=\{backend-api-addr\} yarn start`);
+  console.log(chalk.red`QUICKDEV_API_SERVICE_URL is required.\n`);
+  console.log(chalk.cyan`Start with command: QUICKDEV_API_SERVICE_URL=\{backend-api-addr\} yarn start`);
   console.log();
   process.exit(1);
 }

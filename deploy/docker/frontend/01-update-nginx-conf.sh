@@ -2,7 +2,7 @@
 
 set -e
 
-CERT="/lowcoder-stacks/ssl"
+CERT="/quickdev-stacks/ssl"
 
 rm -f /etc/nginx/nginx.conf
 echo "Creating nginx config..."
@@ -18,12 +18,12 @@ else
    ln -s /etc/nginx/nginx-http.conf /etc/nginx/nginx.conf
 fi;
 
-sed -i "s@__LOWCODER_MAX_QUERY_TIMEOUT__@${LOWCODER_MAX_QUERY_TIMEOUT:=120}@" /etc/nginx/nginx.conf
-sed -i "s@__LOWCODER_MAX_REQUEST_SIZE__@${LOWCODER_MAX_REQUEST_SIZE:=20m}@" /etc/nginx/nginx.conf
-sed -i "s@__LOWCODER_API_SERVICE_URL__@${LOWCODER_API_SERVICE_URL:=http://localhost:8080}@" /etc/nginx/nginx.conf
-sed -i "s@__LOWCODER_NODE_SERVICE_URL__@${LOWCODER_NODE_SERVICE_URL:=http://localhost:6060}@" /etc/nginx/nginx.conf
+sed -i "s@__QUICKDEV_MAX_QUERY_TIMEOUT__@${QUICKDEV_MAX_QUERY_TIMEOUT:=120}@" /etc/nginx/nginx.conf
+sed -i "s@__QUICKDEV_MAX_REQUEST_SIZE__@${QUICKDEV_MAX_REQUEST_SIZE:=20m}@" /etc/nginx/nginx.conf
+sed -i "s@__QUICKDEV_API_SERVICE_URL__@${QUICKDEV_API_SERVICE_URL:=http://localhost:8080}@" /etc/nginx/nginx.conf
+sed -i "s@__QUICKDEV_NODE_SERVICE_URL__@${QUICKDEV_NODE_SERVICE_URL:=http://localhost:6060}@" /etc/nginx/nginx.conf
 
 echo "nginx config updated with:"
-echo "    Lowcoder max upload size: ${LOWCODER_MAX_REQUEST_SIZE:=20m}"
-echo "    Lowcoder api service URL: ${LOWCODER_API_SERVICE_URL:=http://localhost:8080}"
-echo "   Lowcoder node service URL: ${LOWCODER_NODE_SERVICE_URL:=http://localhost:6060}"
+echo "    quickdev max upload size: ${QUICKDEV_MAX_REQUEST_SIZE:=20m}"
+echo "    quickdev api service URL: ${QUICKDEV_API_SERVICE_URL:=http://localhost:8080}"
+echo "   quickdev node service URL: ${QUICKDEV_NODE_SERVICE_URL:=http://localhost:6060}"

@@ -20,7 +20,7 @@ export const buildVars = [
     defaultValue: "",
   },
   {
-    name: "LOWCODER_NODE_SERVICE_URL",
+    name: "QUICKDEV_NODE_SERVICE_URL",
     defaultValue: "",
   },
   {
