@@ -1739,7 +1739,7 @@
       "phoneColumn": "Phone",
       "subTitle": "Title",
       "linkLabel": "Link",
-      "linkUrl": "app.lowcoder.cloud",
+      "linkUrl": "localhost:4500",
       "progressLabel": "Progress",
       "sliderLabel": "Slider",
       "radioLabel": "Radio",
@@ -2061,7 +2061,7 @@
       "jsLibraryDownloadError": "JavaScript Library Download Error",
       "jsLibraryInstallSuccess": "JavaScript Library Installed Successfully",
       "jsLibraryInstallFailed": "JavaScript Library Installation Failed",
-      "jsLibraryInstallFailedCloud": "Perhaps the Library is Not Available in the Sandbox, [Documentation](https://docs.lowcoder.cloud/build-apps/write-javascript/use-third-party-libraries#manually-import-libraries)\n{message}",
+      "jsLibraryInstallFailedCloud": "Perhaps the Library is Not Available in the Sandbox",
       "jsLibraryInstallFailedHost": "{message}",
       "add": "Add New",
       "jsHelpText": "Add a Global Method or Variable to the Current Application.",
@@ -2413,7 +2413,7 @@
       "justify": "Justify Both Ends"
     },
     "playground": {
-      "url": "https://app.lowcoder.cloud/playground/{compType}/1",
+      "url": "http://localhost:4500/playground/{compType}/1",
       "data": "Current Data State",
       "preview": "Preview",
       "property": "Properties",

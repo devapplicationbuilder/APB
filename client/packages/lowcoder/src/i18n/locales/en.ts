@@ -2214,7 +2214,7 @@ export const en = {
     "jsLibraryDownloadError": "JavaScript Library Download Error",
     "jsLibraryInstallSuccess": "JavaScript Library Installed Successfully",
     "jsLibraryInstallFailed": "JavaScript Library Installation Failed",
-    "jsLibraryInstallFailedCloud": "Perhaps the Library is Not Available in the Sandbox, [Documentation](https://docs.lowcoder.cloud/build-apps/write-javascript/use-third-party-libraries#manually-import-libraries)\n{message}",
+    "jsLibraryInstallFailedCloud": "Perhaps the Library is Not Available in the Sandbox",
     "jsLibraryInstallFailedHost": "{message}",
     "add": "Add New",
     "jsHelpText": "Add a Global Method or Variable to the Current Application.",
@@ -2326,7 +2326,7 @@ export const en = {
     "copyLink": "Copy link",
     "appPublicMessage": "Make the app public. Anyone can view.",
     "modulePublicMessage": "Make the module public. Anyone can view.",
-    "marketplaceURL": "https://api-service.lowcoder.cloud",
+    "marketplaceURL": "http://localhost:4500",
     "appMarketplaceMessage": "Publish your App on QuickDEV DEMO Marketplace. Anyone can view and copy it from there.",
     "moduleMarketplaceMessage": "Publish your Module on QuickDEV DEMO Marketplace. Anyone can view and copy it from there.",
     "marketplaceGoodPublishing": "Please make sure your app is well-named and easy to use. Remove any sensitive information before publishing. Also, remove local datasources and replace by static built-in temporary data.",
@@ -2602,7 +2602,7 @@ export const en = {
 
 
   "playground": {
-    "url": "https://app.lowcoder.cloud/playground/{compType}/1",
+    "url": "http://localhost:4500/playground/{compType}/1",
     "data": "Current Data State",
     "preview": "Preview (please mind, that your Editor-Layout/Logic Mode is active here too. You can set it to 'Both' in the App Editor to see all properties here too)",
     "property": "Properties",
@@ -2787,20 +2787,20 @@ export const en = {
   },
 
   docUrls: {
-    docHome: "https://docs.lowcoder.cloud/",
-    components: "https://app.lowcoder.cloud/components/{compType}",
-    module: "https://docs.lowcoder.cloud/lowcoder-documentation/build-applications/create-a-new-app/modules",
+    docHome: "http://localhost:4500",
+    components: "http://localhost:4500/components/{compType}",
+    module: "http://localhost:4500",
     optionList: "",
-    terms: "https://lowcoder.cloud/terms",
-    privacy: "https://lowcoder.cloud/privacy",
-    aboutUs: "https://lowcoder.cloud/about",
-    changeLog: "https://github.com/lowcoder-org/lowcoder/releases",
+    terms: "http://localhost:4500",
+    privacy: "http://localhost:4500",
+    aboutUs: "http://localhost:4500",
+    changeLog: "http://localhost:4500",
     introVideo: "",
-    devNpmPlugin: "https://github.com/lowcoder-org/lowcoder-create-component-plugin",
+    devNpmPlugin: "http://localhost:4500",
     devNpmPluginText: "How to develop npm plugin",
-    useHost: "https://docs.lowcoder.cloud/setup-and-run/self-hosting/access-local-database-or-api",
-    eventHandlerSlowdown: "https://docs.lowcoder.cloud/build-applications/app-interaction/event-handlers",
-    thirdLib: "https://docs.lowcoder.cloud/lowcoder-extension/use-third-party-libraries-in-apps",
+    useHost: "http://localhost:4500",
+    eventHandlerSlowdown: "http://localhost:4500",
+    thirdLib: "http://localhost:4500",
     thirdLibUrlText: "Use third-party libraries",
   },
   datasourceTutorial: {
@@ -2814,19 +2814,19 @@ export const en = {
   },
   queryTutorial: {
     js: "",
-    transformer: "https://docs.lowcoder.cloud/business-logic-in-apps/write-javascript/transformers",
-    tempState: "https://docs.lowcoder.cloud/business-logic-in-apps/write-javascript/temporary-state",
-    dataResponder: "https://docs.lowcoder.cloud/lowcoder-documentation/business-logic-in-apps/write-javascript/data-responder",
+    transformer: "http://localhost:4500",
+    tempState: "http://localhost:4500",
+    dataResponder: "http://localhost:4500",
   },
   customComponent: {
-    entryUrl: "https://sdk.lowcoder.cloud/custom_component.html",
+    entryUrl: "http://localhost:4500",
   },
   template: {
     cloneUrl: "/apps/template-import/",
   },
   lowcoderUrl: {
-    createIssue: "https://github.com/lowcoder-org/lowcoder/issues",
-    discord: "https://discord.com/invite/qMG9uTmAx2",
+    createIssue: "http://localhost:4500",
+    discord: "http://localhost:4500",
   },
 
 };

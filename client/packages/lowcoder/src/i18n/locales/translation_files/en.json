@@ -1,4 +1,3 @@
-
 {
   "productName": "QuickDEV DEMO",
   "productDesc": "Create software applications for your company and customers with minimal coding experience. QuickDEV DEMO is an excellent alternative to Retool, Appsmith, and Tooljet.",
@@ -1007,7 +1006,7 @@
     "link": "Link: ",
     "edit": "Edit",
     "remove": "Remove",
-    "defaultValue" : "Base Content"
+    "defaultValue": "Base Content"
   },
   "numberInput": {
     "formatter": "Format",
@@ -1637,7 +1636,7 @@
     "allowPopup": "Allow Popups"
   },
   "switchComp": {
-    "defaultValue" : "Default Boolean Value",
+    "defaultValue": "Default Boolean Value",
     "open": "On",
     "close": "Off",
     "openDesc": "Triggered When the Switch is Turned On",
@@ -1677,7 +1676,7 @@
     "previewSuccess": "Preview Success",
     "previewFail": "Preview Fail",
     "deleteMessage": "Delete Transformer Success. You Can Use {undoKey} to Undo.",
-    "documentationText" : "Transformers are designed for data transformation and reuse of your multi-line JavaScript code. Use Transformers to adapt Data from queries or components to your local App needs. Unlike JavaScript query, transformer is designed to do read-only operations, which means that you cannot trigger a query or update a temporary state inside a transformer."
+    "documentationText": "Transformers are designed for data transformation and reuse of your multi-line JavaScript code. Use Transformers to adapt Data from queries or components to your local App needs. Unlike JavaScript query, transformer is designed to do read-only operations, which means that you cannot trigger a query or update a temporary state inside a transformer."
   },
   "temporaryState": {
     "value": "Init Value",
@@ -1687,7 +1686,7 @@
     "unStructuredError": "Unstructured Data {prev} Can't Be Updated by {path}",
     "valueDesc": "Temporary State Value",
     "deleteMessage": "The Temporary State is Deleted Successfully. You Can Use {undoKey} to Undo.",
-    "documentationText" : "Temporary states in QuickDEV DEMO are a powerful feature used to manage complex variables that dynamically update the state of components in your application. These states act as intermediary or transient storage for data that can change over time due to user interactions or other processes."
+    "documentationText": "Temporary states in QuickDEV DEMO are a powerful feature used to manage complex variables that dynamically update the state of components in your application. These states act as intermediary or transient storage for data that can change over time due to user interactions or other processes."
   },
   "dataResponder": {
     "data": "Data",
@@ -1695,7 +1694,7 @@
     "dataTooltip": "When This Data is Changed, It Will Trigger Subsequent Actions.",
     "docLink": "Read More About the Data Responders...",
     "deleteMessage": "The Data Responder is Deleted Successfully. You Can Use {undoKey} to Undo.",
-    "documentationText" : "When developing an app, you can assign events to components to monitor changes in specific data. For instance, a Table component might have events like \"Row select change\", \"Filter change\", \"Sort change\", and \"Page change\" to track changes in the selectedRow property. However, for changes in temporary states, transformers, or query results, where standard events are not available, Data responders are utilized. They enable you to detect and react to any data modifications."
+    "documentationText": "When developing an app, you can assign events to components to monitor changes in specific data. For instance, a Table component might have events like \"Row select change\", \"Filter change\", \"Sort change\", and \"Page change\" to track changes in the selectedRow property. However, for changes in temporary states, transformers, or query results, where standard events are not available, Data responders are utilized. They enable you to detect and react to any data modifications."
   },
   "theme": {
     "title": "Themes",
@@ -1739,7 +1738,7 @@
     "phoneColumn": "Phone",
     "subTitle": "Title",
     "linkLabel": "Link",
-    "linkUrl": "app.lowcoder.cloud",
+    "linkUrl": "localhost:4500",
     "progressLabel": "Progress",
     "sliderLabel": "Slider",
     "radioLabel": "Radio",
@@ -2061,7 +2060,7 @@
     "jsLibraryDownloadError": "JavaScript Library Download Error",
     "jsLibraryInstallSuccess": "JavaScript Library Installed Successfully",
     "jsLibraryInstallFailed": "JavaScript Library Installation Failed",
-    "jsLibraryInstallFailedCloud": "Perhaps the Library is Not Available in the Sandbox, [Documentation](https://docs.lowcoder.cloud/build-apps/write-javascript/use-third-party-libraries#manually-import-libraries)\n{message}",
+    "jsLibraryInstallFailedCloud": "Perhaps the Library is Not Available in the Sandbox",
     "jsLibraryInstallFailedHost": "{message}",
     "add": "Add New",
     "jsHelpText": "Add a Global Method or Variable to the Current Application.",
@@ -2413,7 +2412,7 @@
     "justify": "Justify Both Ends"
   },
   "playground": {
-    "url": "https://app.lowcoder.cloud/playground/{compType}/1",
+    "url": "http://localhost:4500/playground/{compType}/1",
     "data": "Current Data State",
     "preview": "Preview",
     "property": "Properties",
@@ -2592,3 +2591,4 @@
     "navItemStyle": "Menu Item Style"
   }
 }
+  

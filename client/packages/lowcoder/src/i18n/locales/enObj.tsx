@@ -112,7 +112,7 @@ export const enObj: I18nObjects = {
     ],
   },
   editorTutorials: {
-    mockDataUrl: "https://6523073ef43b179384152c4f.mockapi.io/api/lowcoder/users",
+    mockDataUrl: "http://localhost:4500",
     data: (code) => (
       <>
         The current State of the Component with all Settings and Data listed here. You can reference to this data with the handlebar expression.
