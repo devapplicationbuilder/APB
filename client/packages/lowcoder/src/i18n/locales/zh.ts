@@ -1867,7 +1867,7 @@ export const zh = {
         "phoneColumn": "Phone",
         "subTitle": "Title",
         "linkLabel": "Link",
-        "linkUrl": "app.lowcoder.cloud",
+        "linkUrl": "localhost",
         "progressLabel": "Progress",
         "sliderLabel": "Slider",
         "radioLabel": "Radio",

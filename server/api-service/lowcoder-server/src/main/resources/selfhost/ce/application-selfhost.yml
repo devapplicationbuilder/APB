@@ -5,7 +5,7 @@ common:
   security:
     corsAllowedDomainString: ${QUICKDEV_CORS_DOMAINS:*}
   workspace:
-    mode: ${QUICKDEV_WORKSPACE_MODE:SAAS}
+    mode: ${QUICKDEV_WORKSPACE_MODE:ENTERPRISE}
 
 spring:
   data:

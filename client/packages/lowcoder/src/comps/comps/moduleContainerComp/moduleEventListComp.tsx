@@ -75,9 +75,8 @@ export class ModuleEventComp extends simpleMultiComp({
           onDelete={(i) => this.handleDelete(i)}
           items={children}
         />
-         <><br/><TacoMarkDown>{trans("module.documentationText")}</TacoMarkDown><br/><DocLink style={{ marginTop: 8 }} href={trans("docUrls.module")} title={trans("module.documentationText")}>
-            {trans("module.docLink")}
-          </DocLink></>
+         <><br/><TacoMarkDown>{trans("module.documentationText")}</TacoMarkDown><br/>
+         </>
       </ConfigViewSection>
     );
   }

@@ -37,7 +37,7 @@ services:
       QUICKDEV_REDIS_URL: "redis://localhost:6379"
       QUICKDEV_EMAIL_SIGNUP_ENABLED: "true"
       QUICKDEV_EMAIL_AUTH_ENABLED: "true"
-      QUICKDEV_CREATE_WORKSPACE_ON_SIGNUP: "true"
+      QUICKDEV_CREATE_WORKSPACE_ON_SIGNUP: "false"
       #
       # ! PLEASE CHANGE THESE TO SOMETHING UNIQUE !
       # 
@@ -58,7 +58,7 @@ services:
       # frontend parameters
       QUICKDEV_MAX_REQUEST_SIZE: 20m
       QUICKDEV_MAX_QUERY_TIMEOUT: 120
-      QUICKDEV_WORKSPACE_MODE: SAAS
+      QUICKDEV_WORKSPACE_MODE: ENTERPRISE
     volumes:
       - ./lowcoder-stacks:/lowcoder-stacks
       - ./lowcoder-stacks/assets:/lowcoder/assets

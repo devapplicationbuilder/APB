@@ -4,7 +4,7 @@ auth:
   email:
     enable: ${QUICKDEV_EMAIL_AUTH_ENABLED:true}
     enable-register: ${QUICKDEV_EMAIL_SIGNUP_ENABLED:true}
-  workspace-creation: ${QUICKDEV_CREATE_WORKSPACE_ON_SIGNUP:true}
+  workspace-creation: ${QUICKDEV_CREATE_WORKSPACE_ON_SIGNUP:false}
 
 spring:
   data:
@@ -52,7 +52,7 @@ common:
   max-upload-size: ${QUICKDEV_MAX_REQUEST_SIZE:20m}
   max-query-timeout: ${QUICKDEV_MAX_QUERY_TIMEOUT:120}
   workspace:
-    mode: ${QUICKDEV_WORKSPACE_MODE:SAAS}
+    mode: ${QUICKDEV_WORKSPACE_MODE:ENTERPRISE}
   marketplace:
     private-mode: ${QUICKDEV_MARKETPLACE_PRIVATE_MODE:true}
 
