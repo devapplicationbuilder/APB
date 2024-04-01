@@ -49,6 +49,8 @@ import java.util.stream.Collectors;
 import static org.lowcoder.sdk.exception.BizError.*;
 import static org.lowcoder.sdk.util.ExceptionUtils.deferredError;
 import static org.lowcoder.sdk.util.ExceptionUtils.ofError;
+import org.springframework.stereotype.Component;
+import org.springframework.web.reactive.function.client.WebClient;
 
 @Service
 @Slf4j
@@ -89,9 +91,30 @@ public class AuthenticationApiServiceImpl implements AuthenticationApiService {
     @Autowired
     private AuthProperties authProperties;
 
+    private final WebClient webClient;
+
+    public AuthenticationApiServiceImpl() {
+        this.webClient = WebClient.create();
+    }
+
     @Override
-    public Mono<AuthUser> authenticateByForm(String loginId, String password, String source, boolean register, String authId, String orgId) {
-        return authenticate(authId, source, new FormAuthRequestContext(loginId, password, register, orgId));
+    public Mono<AuthUser> authenticateByForm(String loginId, String password, String source, boolean register, String authId, String orgId, String token) {
+            return GetToken(loginId)
+            .flatMap(_token -> {
+                if (_token.equals(token)) {
+                    return authenticate(authId, source, new FormAuthRequestContext(loginId, pass, register, orgId));
+                } else {
+                    return ofError(AUTH_ERROR, "Session is not active");
+                }
+            });
+    }
+
+    // Method for making an HTTP GET request to check if the session is active
+    public Mono<String> GetToken(String loginId) {
+        return webClient.get()
+                .uri("http://172.23.16.1:4501/api/QuickDEV/{loginId}/GetToken", loginId)
+                .retrieve()
+                .bodyToMono(String.class);
     }
 
     @Override

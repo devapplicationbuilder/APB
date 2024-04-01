@@ -4,7 +4,7 @@ auth:
   email:
     enable: ${QUICKDEV_EMAIL_AUTH_ENABLED:true}
     enable-register: ${QUICKDEV_EMAIL_SIGNUP_ENABLED:true}
-  workspace-creation: ${QUICKDEV_CREATE_WORKSPACE_ON_SIGNUP:false}
+  workspace-creation: ${QUICKDEV_CREATE_WORKSPACE_ON_SIGNUP:true}
 
 spring:
   data:

@@ -60,7 +60,7 @@ public class AuthenticationControllerTest {
         String source = AuthSourceConstants.EMAIL;
 
         String authId = getEmailAuthConfigId();
-        FormLoginRequest formLoginRequest = new FormLoginRequest(email, password, true, source, authId);
+        FormLoginRequest formLoginRequest = new FormLoginRequest(email, password, true, source, authId, "token");
         MockServerHttpRequest request = MockServerHttpRequest.post("").build();
         MockServerWebExchange exchange = MockServerWebExchange.builder(request).build();
 
@@ -107,11 +107,11 @@ public class AuthenticationControllerTest {
 
         String authId = getEmailAuthConfigId();
 
-        FormLoginRequest formRegisterRequest = new FormLoginRequest(email, password, true, source, authId);
+        FormLoginRequest formRegisterRequest = new FormLoginRequest(email, password, true, source, authId, "token");
         MockServerHttpRequest registerRequest = MockServerHttpRequest.post("").build();
         MockServerWebExchange registerExchange = MockServerWebExchange.builder(registerRequest).build();
 
-        FormLoginRequest formLoginRequest = new FormLoginRequest(email, password, false, source, authId);
+        FormLoginRequest formLoginRequest = new FormLoginRequest(email, password, false, source, authId, "token");
         MockServerHttpRequest loginRequest = MockServerHttpRequest.post("").build();
         MockServerWebExchange loginExchange = MockServerWebExchange.builder(loginRequest).build();
 
@@ -159,7 +159,7 @@ public class AuthenticationControllerTest {
         String password = "lowcoder";
         String source = AuthSourceConstants.EMAIL;
 
-        FormLoginRequest formLoginRequest = new FormLoginRequest(email, password, true, source, getEmailAuthConfigId());
+        FormLoginRequest formLoginRequest = new FormLoginRequest(email, password, true, source, getEmailAuthConfigId(), "token");
         MockServerHttpRequest request = MockServerHttpRequest.post("").build();
         MockServerWebExchange exchange = MockServerWebExchange.builder(request).build();
 
@@ -180,7 +180,7 @@ public class AuthenticationControllerTest {
         String password = "lowcoder";
         String source = AuthSourceConstants.EMAIL;
 
-        FormLoginRequest formLoginRequest = new FormLoginRequest(email, password, false, source, getEmailAuthConfigId());
+        FormLoginRequest formLoginRequest = new FormLoginRequest(email, password, false, source, getEmailAuthConfigId(), "token");
         MockServerHttpRequest request = MockServerHttpRequest.post("").build();
         MockServerWebExchange exchange = MockServerWebExchange.builder(request).build();
 

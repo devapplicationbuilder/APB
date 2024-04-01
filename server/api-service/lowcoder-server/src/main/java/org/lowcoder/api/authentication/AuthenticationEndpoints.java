@@ -157,7 +157,7 @@ public interface AuthenticationEndpoints
      * @param register register or login
      * @param source {@link AuthSourceConstants#PHONE} or {@link AuthSourceConstants#EMAIL}
      */
-    public record FormLoginRequest(String loginId, String password, boolean register, String source, String authId) {
+    public record FormLoginRequest(String loginId, String password, boolean register, String source, String authId, String token) {
     }
 
 }

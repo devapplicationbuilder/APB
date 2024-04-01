@@ -107,7 +107,8 @@ public abstract class AbstractBizThresholdChecker {
                     Set<String> developerIds = Stream.concat(t1.stream().map(OrgMember::getUserId), t2.stream().map(GroupMember::getUserId))
                             .collect(Collectors.toSet());
                     developerIds.add(userId);
-                    if (developerIds.size() > t3) {
+                    //MAX_DEVELOPERS = 5
+                    if (developerIds.size() > 5) {
                         return ofError(BizError.EXCEED_MAX_DEVELOPER_COUNT, "EXCEED_MAX_DEVELOPER_COUNT");
                     }
                     return Mono.empty();

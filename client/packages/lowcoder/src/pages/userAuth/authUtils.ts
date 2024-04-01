@@ -57,7 +57,12 @@ export function useAuthSubmit(
           onAuthSuccess,
         ))
         .catch((e) => {
-          messageInstance.error(e.message);
+          messageInstance.error(e.message + ' You will be redirected to the login page in 3 seconds ...');
+          setTimeout(() => {
+            //window.location.href = 'https://localhost:44447';
+            window.location.href = 'http://172.23.16.1:4501';
+          }, 3000);
+          //aici pot sa redirectionez
         })
         .finally(() => setLoading(false));
     },

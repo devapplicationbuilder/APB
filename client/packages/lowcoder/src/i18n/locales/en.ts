@@ -2819,7 +2819,7 @@ export const en = {
     dataResponder: "http://localhost:4500",
   },
   customComponent: {
-    entryUrl: "http://localhost:4500",
+    entryUrl: "https://sdk.lowcoder.cloud/custom_component.html"
   },
   template: {
     cloneUrl: "/apps/template-import/",

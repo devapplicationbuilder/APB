@@ -154,7 +154,8 @@ export function* logoutSaga(action: LogoutActionType) {
     if (isValidResponse) {
       yield put(logoutSuccess());
       localStorage.clear();
-      window.location.replace(redirectURL);
+      //window.location.replace('https://localhost:44447/');
+      window.location.replace('http://172.23.16.1:4501/');
     }
   } catch (error) {
     log.error(error);

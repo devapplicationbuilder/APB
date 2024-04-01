@@ -30,6 +30,7 @@ interface FormLoginRequest extends CommonLoginParam {
   register: boolean;
   authId?: string;
   orgId?: string;
+  token?: string;
 }
 
 export interface GetUserResponse extends ApiResponse {

@@ -441,10 +441,6 @@ export function HomeLayout(props: HomeLayoutProps) {
       {showNewUserGuide(user) && <HomepageTourV2 />}
       {/*<HomepageTourV2 />*/}
 
-      {mode === "marketplace" && (
-       <MarketplaceHeader><img src={MarketplaceHeaderImage} alt="Lowcoder Application Marketplace"/></MarketplaceHeader>
-      )}
-
       <OperationWrapper>
         {mode !== "folders" && mode !== "module" && (
           <FilterDropdown

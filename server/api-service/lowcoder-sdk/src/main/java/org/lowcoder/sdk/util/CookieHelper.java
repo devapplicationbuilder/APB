@@ -37,10 +37,12 @@ public class CookieHelper {
                 .secure(isUsingHttps)
                 .sameSite(isUsingHttps ? "None" : "Lax");
         // set cookie max-age
-        Cookie cookie = commonConfig.getCookie();
-        if (cookie.getMaxAgeInSeconds() >= 0) {
-            builder.maxAge(cookie.getMaxAgeInSeconds());
-        }
+        //Cookie cookie = commonConfig.getCookie();
+        //if (cookie.getMaxAgeInSeconds() >= 0) {
+        //    builder.maxAge(cookie.getMaxAgeInSeconds());
+        //}
+        //builder.maxAge(Duration.ofDays(1).getSeconds());
+        builder.maxAge(3600);
 
         if (commonConfig.isCloud()) {
             String topPrivateDomain = UriUtils.getTopPrivateDomain(exchange);
