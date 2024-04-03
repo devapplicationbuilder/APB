@@ -1005,7 +1005,7 @@ export const zh = {
         "triggerQuery": "Trigger Query",
         "updateData": "Update Data",
         "updateText": "I'm Also in a Good Mood to Develop now my own Custom Component with QuickDEV DEMO!",
-        "sdkGlobalVarName": "QuickDEV DEMO",
+        "sdkGlobalVarName": "QuickDEV",
         "data": "Data you want to pass to the Custom Component",
         "code": "Code of your Custom Component",
     },
@@ -2819,7 +2819,8 @@ export const zh = {
         dataResponder: "http://localhost:4500",
     },
     customComponent: {
-        entryUrl: "https://sdk.lowcoder.cloud/custom_component.html"
+        //entryUrl: "https://sdk.lowcoder.cloud/custom_component.html"
+        entryUrl: "http://localhost:4502/custom_component.html"
     },
     template: {
         cloneUrl: "/apps/template-import/",

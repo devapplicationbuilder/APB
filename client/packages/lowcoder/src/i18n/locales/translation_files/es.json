@@ -942,7 +942,7 @@
     "triggerQuery": "Trigger Query",
     "updateData": "Update Data",
     "updateText": "I'm Also in a Good Mood to Develop now my own Custom Component with QuickDEV DEMO!",
-    "sdkGlobalVarName": "QuickDEV DEMO",
+    "sdkGlobalVarName": "QuickDEV",
     "data": "Data you want to pass to the Custom Component",
     "code": "Code of your Custom Component"
   },
