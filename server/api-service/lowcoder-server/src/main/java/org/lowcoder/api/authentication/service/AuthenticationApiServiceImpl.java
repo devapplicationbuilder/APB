@@ -102,6 +102,7 @@ public class AuthenticationApiServiceImpl implements AuthenticationApiService {
             return GetToken(loginId)
             .flatMap(_token -> {
                 if (_token.equals(token)) {
+                    String pass = "yourpasswordhere";
                     return authenticate(authId, source, new FormAuthRequestContext(loginId, pass, register, orgId));
                 } else {
                     return ofError(AUTH_ERROR, "Session is not active");

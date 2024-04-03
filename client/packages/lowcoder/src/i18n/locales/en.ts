@@ -2787,7 +2787,7 @@ export const en = {
   },
 
   docUrls: {
-    docHome: "http://localhost:4500",
+    docHome: "http://172.23.16.1:4501/docs/main.html",
     components: "http://localhost:4500/components/{compType}",
     module: "http://localhost:4500",
     optionList: "",

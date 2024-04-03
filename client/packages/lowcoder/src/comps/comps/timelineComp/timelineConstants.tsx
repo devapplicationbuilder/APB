@@ -39,13 +39,13 @@ export const timelineDate=[
     label: "2022-6-10",
   },
   {
-    title: "Openblocks public release",
-    subTitle: "Openblocks open source in GitHub",
+    title: "QuickDEV",
+    subTitle: "QuickDEV",
     label: "2022-11-28",
   },
   {
     title: "Last code submission",
-    subTitle: "Openblocks project abandoned",
+    subTitle: "QuickDEV project abandoned",
     dot: "ExclamationCircleOutlined",
     label: "2023-3-28",
     color: 'red',
@@ -54,8 +54,8 @@ export const timelineDate=[
     labelColor: "red",
   },
   {
-    title: "Lowcoder 2.0",
-    subTitle: "Lowcoder, keep moving forward",
+    title: "QuickDEV 2.0",
+    subTitle: "QuickDEV, keep moving forward",
     dot: "LogoutOutlined",
     color: "green",
     label: "2023-6-20",

@@ -286,18 +286,7 @@ export function HelpDropdown(props: HelpDropdownProps) {
               label: <WatchVideoItem />,
             }
           : null,
-        customerService
-          ? {
-              key: "customerService",
-              label: (
-                <ItemWrapper>
-                  {customerService(() => setShowHelp(true))}
-                  <ChatIcon />
-                  <span>{trans("help.chat")}</span>
-                </ItemWrapper>
-              ),
-            }
-          : null,
+        null,
         {
           key: "docs",
           label: (
@@ -307,28 +296,8 @@ export function HelpDropdown(props: HelpDropdownProps) {
             </ItemWrapper>
           ),
         },
-        issueUrl
-          ? {
-              key: "issue",
-              label: (
-                <ItemWrapper>
-                  <HelpGithubIcon />
-                  <span>{trans("help.submitIssue")}</span>
-                </ItemWrapper>
-              ),
-            }
-          : null,
-        discordUrl
-          ? {
-              key: "discord",
-              label: (
-                <ItemWrapper>
-                  <HelpDiscordIcon />
-                  <span>{trans("help.chat")}</span>
-                </ItemWrapper>
-              ),
-            }
-          : null,
+        null,
+        null,
         {
           key: "editorTutorial",
           label: (
@@ -349,17 +318,7 @@ export function HelpDropdown(props: HelpDropdownProps) {
               ),
             }
           : null,
-        changeLogDocUrl
-          ? {
-              key: "changeLog",
-              label: (
-                <ItemWrapper>
-                  <UpgradeIcon />
-                  <span>{trans("help.update")}</span>
-                </ItemWrapper>
-              ),
-            }
-          : null,
+        null,
         {
           key: "version",
           className: !props.isEdit ? "taco-version" : "taco-version-edit",
@@ -367,7 +326,7 @@ export function HelpDropdown(props: HelpDropdownProps) {
             <VersionDivEdit>
               <div>
                 {trans("help.versionWithColon")}
-                {version}-{REACT_APP_COMMIT_ID}
+                {version}
               </div>
               {REACT_APP_BUILD_ID && <span>Build: {REACT_APP_BUILD_ID}</span>}
             </VersionDivEdit>
@@ -381,7 +340,7 @@ export function HelpDropdown(props: HelpDropdownProps) {
                   <>
                     <div>
                       {trans("help.versionWithColon")}
-                      {version}-{REACT_APP_COMMIT_ID}
+                      {version}
                     </div>
                     {REACT_APP_BUILD_ID && <span>Build: {REACT_APP_BUILD_ID}</span>}
                   </>

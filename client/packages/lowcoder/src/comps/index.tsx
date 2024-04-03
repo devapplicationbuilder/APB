@@ -1066,19 +1066,19 @@ var uiCompMap: Registry = {
       h: 40,
     },
   },
-  custom: {
-    name: trans("uiComp.customCompName"),
-    enName: "Custom Component",
-    description: trans("uiComp.customCompDesc"),
-    icon: CustomCompIcon,
-    categories: ["integration"],
-    keywords: trans("uiComp.customCompKeywords"),
-    comp: CustomComp,
-    layoutInfo: {
-      w: 12,
-      h: 40,
-    },
-  },
+  //custom: {
+  //  name: trans("uiComp.customCompName"),
+  //  enName: "Custom Component",
+  //  description: trans("uiComp.customCompDesc"),
+  //  icon: CustomCompIcon,
+  //  categories: ["integration"],
+  //  keywords: trans("uiComp.customCompKeywords"),
+  //  comp: CustomComp,
+  //  layoutInfo: {
+  //    w: 12,
+  //    h: 40,
+  //  },
+  //},
   module: {
     name: trans("uiComp.moduleCompName"),
     enName: "Module",
