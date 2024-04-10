@@ -1,4 +1,4 @@
-package org.lowcoder.sdk.config.dynamic;
+package org.quickdev.sdk.config.dynamic;
 
 import java.util.Map;
 

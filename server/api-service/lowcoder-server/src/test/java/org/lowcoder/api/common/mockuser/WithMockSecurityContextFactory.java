@@ -1,8 +1,8 @@
-package org.lowcoder.api.common.mockuser;
+package org.quickdev.api.common.mockuser;
 
 import java.util.Collections;
 
-import org.lowcoder.domain.user.model.User;
+import org.quickdev.domain.user.model.User;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContext;

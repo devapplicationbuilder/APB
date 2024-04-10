@@ -1,4 +1,4 @@
-package org.lowcoder.plugin.googlesheets.queryhandler;
+package org.quickdev.plugin.googlesheets.queryhandler;
 
 
 import java.util.LinkedHashMap;
@@ -10,11 +10,11 @@ import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.lowcoder.plugin.googlesheets.constants.FieldName;
-import org.lowcoder.plugin.googlesheets.model.GoogleSheetsQueryExecutionContext;
-import org.lowcoder.plugin.googlesheets.model.GoogleSheetsReadDataRequest;
-import org.lowcoder.sdk.models.QueryExecutionResult;
-import org.lowcoder.sdk.plugin.common.QueryExecutionUtils;
+import org.quickdev.plugin.googlesheets.constants.FieldName;
+import org.quickdev.plugin.googlesheets.model.GoogleSheetsQueryExecutionContext;
+import org.quickdev.plugin.googlesheets.model.GoogleSheetsReadDataRequest;
+import org.quickdev.sdk.models.QueryExecutionResult;
+import org.quickdev.sdk.plugin.common.QueryExecutionUtils;
 
 import com.google.api.client.json.JsonFactory;
 import com.google.api.client.json.gson.GsonFactory;

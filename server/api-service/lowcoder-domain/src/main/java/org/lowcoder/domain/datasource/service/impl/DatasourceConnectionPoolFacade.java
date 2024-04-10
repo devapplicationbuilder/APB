@@ -1,17 +1,17 @@
-package org.lowcoder.domain.datasource.service.impl;
+package org.quickdev.domain.datasource.service.impl;
 
 import jakarta.annotation.PostConstruct;
 import lombok.extern.slf4j.Slf4j;
-import org.lowcoder.domain.datasource.model.Datasource;
-import org.lowcoder.domain.datasource.model.DatasourceConnectionHolder;
-import org.lowcoder.domain.datasource.service.DatasourceConnectionPool;
-import org.lowcoder.domain.plugin.DatasourceMetaInfo;
-import org.lowcoder.domain.plugin.service.DatasourceMetaInfoService;
-import org.lowcoder.sdk.exception.BizError;
-import org.lowcoder.sdk.exception.BizException;
-import org.lowcoder.sdk.models.DatasourceConnectionConfig;
-import org.lowcoder.sdk.plugin.restapi.RestApiDatasourceConfig;
-import org.lowcoder.sdk.plugin.restapi.auth.RestApiAuthType;
+import org.quickdev.domain.datasource.model.Datasource;
+import org.quickdev.domain.datasource.model.DatasourceConnectionHolder;
+import org.quickdev.domain.datasource.service.DatasourceConnectionPool;
+import org.quickdev.domain.plugin.DatasourceMetaInfo;
+import org.quickdev.domain.plugin.service.DatasourceMetaInfoService;
+import org.quickdev.sdk.exception.BizError;
+import org.quickdev.sdk.exception.BizException;
+import org.quickdev.sdk.models.DatasourceConnectionConfig;
+import org.quickdev.sdk.plugin.restapi.RestApiDatasourceConfig;
+import org.quickdev.sdk.plugin.restapi.auth.RestApiAuthType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
@@ -22,7 +22,7 @@ import java.util.Map;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-import static org.lowcoder.domain.plugin.DatasourceMetaInfoConstants.REST_API;
+import static org.quickdev.domain.plugin.DatasourceMetaInfoConstants.REST_API;
 
 @Primary
 @Service

@@ -1,11 +1,11 @@
-package org.lowcoder.sdk.plugin.restapi.auth;
+package org.quickdev.sdk.plugin.restapi.auth;
 
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
 import org.apache.commons.lang3.ObjectUtils;
-import org.lowcoder.sdk.config.SerializeConfig.JsonViews;
+import org.quickdev.sdk.config.SerializeConfig.JsonViews;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonView;

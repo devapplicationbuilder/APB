@@ -16,10 +16,10 @@
  */
 
 // copied and adapted for rest api request
-package org.lowcoder.sdk.plugin.restapi;
+package org.quickdev.sdk.plugin.restapi;
 
-import static org.lowcoder.sdk.exception.PluginCommonError.DATASOURCE_ARGUMENT_ERROR;
-import static org.lowcoder.sdk.util.MustacheHelper.renderMustacheJson;
+import static org.quickdev.sdk.exception.PluginCommonError.DATASOURCE_ARGUMENT_ERROR;
+import static org.quickdev.sdk.util.MustacheHelper.renderMustacheJson;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
@@ -34,11 +34,11 @@ import javax.annotation.Nonnull;
 
 import org.apache.commons.collections4.CollectionUtils;
 import org.apache.commons.lang3.StringUtils;
-import org.lowcoder.sdk.exception.PluginException;
-import org.lowcoder.sdk.exception.ServerException;
-import org.lowcoder.sdk.models.Property;
-import org.lowcoder.sdk.models.RestBodyFormFileData;
-import org.lowcoder.sdk.util.ExceptionUtils;
+import org.quickdev.sdk.exception.PluginException;
+import org.quickdev.sdk.exception.ServerException;
+import org.quickdev.sdk.models.Property;
+import org.quickdev.sdk.models.RestBodyFormFileData;
+import org.quickdev.sdk.util.ExceptionUtils;
 import org.springframework.http.MediaType;
 import org.springframework.http.client.MultipartBodyBuilder;
 import org.springframework.http.client.reactive.ClientHttpRequest;

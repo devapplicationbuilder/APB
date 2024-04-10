@@ -1,7 +1,7 @@
-package org.lowcoder.impl.mock;
+package org.quickdev.impl.mock;
 
-import org.lowcoder.domain.datasource.model.Datasource;
-import org.lowcoder.sdk.models.DatasourceConnectionConfig;
+import org.quickdev.domain.datasource.model.Datasource;
+import org.quickdev.sdk.models.DatasourceConnectionConfig;
 
 public record MockDatasourceConnectionConfig(Datasource datasource) implements DatasourceConnectionConfig {
 

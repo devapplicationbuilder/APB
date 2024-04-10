@@ -1,4 +1,4 @@
-package org.lowcoder.api;
+package org.quickdev.api;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -7,10 +7,10 @@ import java.util.Map;
 
 import org.junit.Assert;
 import org.junit.Test;
-import org.lowcoder.api.application.view.ApplicationInfoView;
-import org.lowcoder.api.home.FolderInfoView;
-import org.lowcoder.domain.folder.service.FolderNode;
-import org.lowcoder.domain.folder.service.Tree;
+import org.quickdev.api.application.view.ApplicationInfoView;
+import org.quickdev.api.home.FolderInfoView;
+import org.quickdev.domain.folder.service.FolderNode;
+import org.quickdev.domain.folder.service.Tree;
 
 public class TreeTest {
 

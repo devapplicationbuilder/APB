@@ -1,9 +1,9 @@
-package org.lowcoder.api.usermanagement.view;
+package org.quickdev.api.usermanagement.view;
 
 import java.util.Locale;
 
-import org.lowcoder.domain.group.model.Group;
-import org.lowcoder.sdk.util.LocaleUtils;
+import org.quickdev.domain.group.model.Group;
+import org.quickdev.sdk.util.LocaleUtils;
 
 import lombok.Builder;
 import lombok.Getter;

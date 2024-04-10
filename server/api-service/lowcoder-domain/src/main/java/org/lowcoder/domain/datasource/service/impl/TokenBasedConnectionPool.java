@@ -1,19 +1,19 @@
-package org.lowcoder.domain.datasource.service.impl;
+package org.quickdev.domain.datasource.service.impl;
 
-import static org.lowcoder.domain.datasource.model.TokenBasedConnectionHolder.EMPTY_CONNECTION;
-import static org.lowcoder.sdk.exception.BizError.DATASOURCE_TYPE_ERROR;
-import static org.lowcoder.sdk.exception.BizError.PLUGIN_CREATE_CONNECTION_FAILED;
-import static org.lowcoder.sdk.util.ExceptionUtils.deferredError;
+import static org.quickdev.domain.datasource.model.TokenBasedConnectionHolder.EMPTY_CONNECTION;
+import static org.quickdev.sdk.exception.BizError.DATASOURCE_TYPE_ERROR;
+import static org.quickdev.sdk.exception.BizError.PLUGIN_CREATE_CONNECTION_FAILED;
+import static org.quickdev.sdk.util.ExceptionUtils.deferredError;
 
-import org.lowcoder.domain.datasource.model.Datasource;
-import org.lowcoder.domain.datasource.model.DatasourceConnectionHolder;
-import org.lowcoder.domain.datasource.model.TokenBasedConnection;
-import org.lowcoder.domain.datasource.model.TokenBasedConnectionHolder;
-import org.lowcoder.domain.datasource.repository.TokenBasedConnectionRepository;
-import org.lowcoder.domain.datasource.service.DatasourceConnectionPool;
-import org.lowcoder.domain.plugin.service.DatasourceMetaInfoService;
-import org.lowcoder.sdk.exception.BizException;
-import org.lowcoder.sdk.models.TokenBasedConnectionDetail;
+import org.quickdev.domain.datasource.model.Datasource;
+import org.quickdev.domain.datasource.model.DatasourceConnectionHolder;
+import org.quickdev.domain.datasource.model.TokenBasedConnection;
+import org.quickdev.domain.datasource.model.TokenBasedConnectionHolder;
+import org.quickdev.domain.datasource.repository.TokenBasedConnectionRepository;
+import org.quickdev.domain.datasource.service.DatasourceConnectionPool;
+import org.quickdev.domain.plugin.service.DatasourceMetaInfoService;
+import org.quickdev.sdk.exception.BizException;
+import org.quickdev.sdk.models.TokenBasedConnectionDetail;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

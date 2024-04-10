@@ -2412,7 +2412,7 @@
     "justify": "Justify Both Ends"
   },
   "playground": {
-    "url": "http://localhost:4500/playground/{compType}/1",
+    "url": "http://172.23.16.1/playground/{compType}/1",
     "data": "Current Data State",
     "preview": "Preview",
     "property": "Properties",

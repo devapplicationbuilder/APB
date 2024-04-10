@@ -1,9 +1,9 @@
-package org.lowcoder.api.application.view;
+package org.quickdev.api.application.view;
 
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
-import org.lowcoder.domain.application.model.ApplicationStatus;
+import org.quickdev.domain.application.model.ApplicationStatus;
 
 @Builder
 @Getter
@@ -29,7 +29,7 @@ public class MarketplaceApplicationInfoView {
     private final long createAt;
     private final String createBy;
     /**
-     * @see org.lowcoder.domain.application.model.ApplicationType
+     * @see org.quickdev.domain.application.model.ApplicationType
      */
     private final int applicationType;
     private final ApplicationStatus applicationStatus;

@@ -1,6 +1,6 @@
-package org.lowcoder.domain.permission.service;
+package org.quickdev.domain.permission.service;
 
-import static org.lowcoder.domain.permission.model.ResourceHolder.USER;
+import static org.quickdev.domain.permission.model.ResourceHolder.USER;
 
 import java.util.Collection;
 import java.util.Collections;
@@ -10,13 +10,13 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import org.apache.commons.collections4.CollectionUtils;
-import org.lowcoder.domain.application.model.ApplicationRequestType;
-import org.lowcoder.domain.datasource.model.Datasource;
-import org.lowcoder.domain.datasource.service.DatasourceService;
-import org.lowcoder.domain.permission.model.ResourceAction;
-import org.lowcoder.domain.permission.model.ResourcePermission;
-import org.lowcoder.domain.permission.model.ResourceRole;
-import org.lowcoder.domain.permission.model.ResourceType;
+import org.quickdev.domain.application.model.ApplicationRequestType;
+import org.quickdev.domain.datasource.model.Datasource;
+import org.quickdev.domain.datasource.service.DatasourceService;
+import org.quickdev.domain.permission.model.ResourceAction;
+import org.quickdev.domain.permission.model.ResourcePermission;
+import org.quickdev.domain.permission.model.ResourceRole;
+import org.quickdev.domain.permission.model.ResourceType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;

@@ -1,14 +1,14 @@
-package org.lowcoder.domain.permission.model;
+package org.quickdev.domain.permission.model;
 
-import static org.lowcoder.domain.permission.config.PermissionConst.ID_SPLITTER;
+import static org.quickdev.domain.permission.config.PermissionConst.ID_SPLITTER;
 
 import java.util.List;
 import java.util.Set;
 
 import org.apache.commons.lang3.StringUtils;
-import org.lowcoder.infra.birelation.BiRelation;
-import org.lowcoder.infra.birelation.BiRelationBizType;
-import org.lowcoder.sdk.models.HasIdAndAuditing;
+import org.quickdev.infra.birelation.BiRelation;
+import org.quickdev.infra.birelation.BiRelationBizType;
+import org.quickdev.sdk.models.HasIdAndAuditing;
 
 import com.google.common.base.Splitter;
 

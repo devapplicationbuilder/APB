@@ -1,12 +1,12 @@
-package org.lowcoder.sdk.util;
+package org.quickdev.sdk.util;
 
 import java.text.MessageFormat;
 import java.util.Locale;
 import java.util.ResourceBundle;
 
 import org.apache.commons.lang3.StringUtils;
-import org.lowcoder.sdk.constants.GlobalContext;
-import org.lowcoder.sdk.models.LocaleMessage;
+import org.quickdev.sdk.constants.GlobalContext;
+import org.quickdev.sdk.models.LocaleMessage;
 
 import lombok.extern.slf4j.Slf4j;
 import reactor.util.context.ContextView;

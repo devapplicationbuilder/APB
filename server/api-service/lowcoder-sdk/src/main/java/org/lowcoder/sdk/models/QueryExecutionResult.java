@@ -1,11 +1,11 @@
-package org.lowcoder.sdk.models;
+package org.quickdev.sdk.models;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.commons.lang3.StringUtils;
-import org.lowcoder.sdk.exception.PluginError;
-import org.lowcoder.sdk.exception.PluginException;
+import org.quickdev.sdk.exception.PluginError;
+import org.quickdev.sdk.exception.PluginException;
 import org.springframework.http.HttpStatus;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;

@@ -1,13 +1,13 @@
-package org.lowcoder.plugin.googlesheets.queryhandler;
+package org.quickdev.plugin.googlesheets.queryhandler;
 
 
 import java.util.ArrayList;
 import java.util.List;
 
-import org.lowcoder.plugin.googlesheets.model.GoogleSheetsDeleteDataRequest;
-import org.lowcoder.plugin.googlesheets.model.GoogleSheetsQueryExecutionContext;
-import org.lowcoder.sdk.models.QueryExecutionResult;
-import org.lowcoder.sdk.plugin.common.QueryExecutionUtils;
+import org.quickdev.plugin.googlesheets.model.GoogleSheetsDeleteDataRequest;
+import org.quickdev.plugin.googlesheets.model.GoogleSheetsQueryExecutionContext;
+import org.quickdev.sdk.models.QueryExecutionResult;
+import org.quickdev.sdk.plugin.common.QueryExecutionUtils;
 
 import com.google.api.services.sheets.v4.Sheets;
 import com.google.api.services.sheets.v4.model.BatchUpdateSpreadsheetRequest;

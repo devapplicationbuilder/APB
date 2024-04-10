@@ -1,14 +1,14 @@
-package org.lowcoder.plugin.mssql.gui;
+package org.quickdev.plugin.mssql.gui;
 
-import static org.lowcoder.plugin.mssql.gui.GuiConstants.MSSQL_COLUMN_DELIMITER_BACK;
-import static org.lowcoder.plugin.mssql.gui.GuiConstants.MSSQL_COLUMN_DELIMITER_FRONT;
-import static org.lowcoder.sdk.plugin.sqlcommand.filter.FilterSet.parseFilterSet;
+import static org.quickdev.plugin.mssql.gui.GuiConstants.MSSQL_COLUMN_DELIMITER_BACK;
+import static org.quickdev.plugin.mssql.gui.GuiConstants.MSSQL_COLUMN_DELIMITER_FRONT;
+import static org.quickdev.sdk.plugin.sqlcommand.filter.FilterSet.parseFilterSet;
 
 import java.util.Map;
 
-import org.lowcoder.sdk.plugin.sqlcommand.GuiSqlCommand;
-import org.lowcoder.sdk.plugin.sqlcommand.command.DeleteCommand;
-import org.lowcoder.sdk.plugin.sqlcommand.filter.FilterSet;
+import org.quickdev.sdk.plugin.sqlcommand.GuiSqlCommand;
+import org.quickdev.sdk.plugin.sqlcommand.command.DeleteCommand;
+import org.quickdev.sdk.plugin.sqlcommand.filter.FilterSet;
 
 public class MssqlDeleteCommand extends DeleteCommand {
 

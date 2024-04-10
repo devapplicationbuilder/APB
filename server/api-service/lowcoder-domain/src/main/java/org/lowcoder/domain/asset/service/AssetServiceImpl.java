@@ -1,4 +1,4 @@
-package org.lowcoder.domain.asset.service;
+package org.quickdev.domain.asset.service;
 
 import java.awt.Color;
 import java.awt.Image;
@@ -9,11 +9,11 @@ import java.util.Set;
 
 import javax.imageio.ImageIO;
 
-import org.lowcoder.domain.asset.model.Asset;
-import org.lowcoder.sdk.config.dynamic.Conf;
-import org.lowcoder.sdk.config.dynamic.ConfigCenter;
-import org.lowcoder.sdk.exception.BizError;
-import org.lowcoder.sdk.exception.BizException;
+import org.quickdev.domain.asset.model.Asset;
+import org.quickdev.sdk.config.dynamic.Conf;
+import org.quickdev.sdk.config.dynamic.ConfigCenter;
+import org.quickdev.sdk.exception.BizError;
+import org.quickdev.sdk.exception.BizException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.buffer.DataBuffer;
 import org.springframework.core.io.buffer.DataBufferUtils;

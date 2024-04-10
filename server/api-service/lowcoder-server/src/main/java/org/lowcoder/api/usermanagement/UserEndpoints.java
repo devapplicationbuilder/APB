@@ -1,11 +1,11 @@
-package org.lowcoder.api.usermanagement;
+package org.quickdev.api.usermanagement;
 
-import org.lowcoder.api.framework.view.ResponseView;
-import org.lowcoder.api.usermanagement.view.UpdateUserRequest;
-import org.lowcoder.api.usermanagement.view.UserProfileView;
-import org.lowcoder.domain.user.model.UserDetail;
-import org.lowcoder.infra.constant.NewUrl;
-import org.lowcoder.infra.constant.Url;
+import org.quickdev.api.framework.view.ResponseView;
+import org.quickdev.api.usermanagement.view.UpdateUserRequest;
+import org.quickdev.api.usermanagement.view.UserProfileView;
+import org.quickdev.domain.user.model.UserDetail;
+import org.quickdev.infra.constant.NewUrl;
+import org.quickdev.infra.constant.Url;
 import org.springframework.http.MediaType;
 import org.springframework.http.codec.multipart.Part;
 import org.springframework.web.bind.annotation.DeleteMapping;

@@ -1,6 +1,6 @@
-package org.lowcoder.api.authentication.dto;
+package org.quickdev.api.authentication.dto;
 
-import org.lowcoder.domain.user.model.User;
+import org.quickdev.domain.user.model.User;
 
 import lombok.Builder;
 import lombok.Getter;

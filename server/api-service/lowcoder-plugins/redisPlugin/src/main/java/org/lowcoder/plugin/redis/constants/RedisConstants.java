@@ -1,4 +1,4 @@
-package org.lowcoder.plugin.redis.constants;
+package org.quickdev.plugin.redis.constants;
 
 public final class RedisConstants {
     public static final long TEST_TIMEOUT_MILLIS = 2000;

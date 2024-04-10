@@ -1,7 +1,7 @@
-package org.lowcoder.sdk.plugin.common;
+package org.quickdev.sdk.plugin.common;
 
-import org.lowcoder.sdk.models.DatasourceConnectionConfig;
-import org.lowcoder.sdk.query.QueryExecutionContext;
+import org.quickdev.sdk.models.DatasourceConnectionConfig;
+import org.quickdev.sdk.query.QueryExecutionContext;
 
 /**
  * This interface is responsible for:

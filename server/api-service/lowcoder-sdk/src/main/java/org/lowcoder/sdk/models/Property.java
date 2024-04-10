@@ -1,6 +1,6 @@
-package org.lowcoder.sdk.models;
+package org.quickdev.sdk.models;
 
-import org.lowcoder.sdk.plugin.restapi.DataUtils.MultipartFormDataType;
+import org.quickdev.sdk.plugin.restapi.DataUtils.MultipartFormDataType;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 

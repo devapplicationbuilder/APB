@@ -1,4 +1,4 @@
-package org.lowcoder.plugin.graphql;
+package org.quickdev.plugin.graphql;
 
 import org.pf4j.Plugin;
 import org.pf4j.PluginWrapper;

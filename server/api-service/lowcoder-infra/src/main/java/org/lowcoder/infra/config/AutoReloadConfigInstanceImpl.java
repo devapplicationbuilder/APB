@@ -1,13 +1,13 @@
-package org.lowcoder.infra.config;
+package org.quickdev.infra.config;
 
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import java.util.concurrent.ConcurrentHashMap;
 
-import org.lowcoder.sdk.config.dynamic.Conf;
-import org.lowcoder.sdk.config.dynamic.ConfigInstance;
-import org.lowcoder.sdk.util.JsonUtils;
+import org.quickdev.sdk.config.dynamic.Conf;
+import org.quickdev.sdk.config.dynamic.ConfigInstance;
+import org.quickdev.sdk.util.JsonUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

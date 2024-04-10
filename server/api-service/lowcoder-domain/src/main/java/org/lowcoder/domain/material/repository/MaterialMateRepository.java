@@ -1,7 +1,7 @@
-package org.lowcoder.domain.material.repository;
+package org.quickdev.domain.material.repository;
 
-import org.lowcoder.domain.material.model.MaterialMeta;
-import org.lowcoder.domain.material.model.MaterialType;
+import org.quickdev.domain.material.model.MaterialMeta;
+import org.quickdev.domain.material.model.MaterialType;
 import org.springframework.data.mongodb.repository.ReactiveMongoRepository;
 import org.springframework.stereotype.Repository;
 

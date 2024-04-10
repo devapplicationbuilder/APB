@@ -1,4 +1,4 @@
-package org.lowcoder.plugin.es;
+package org.quickdev.plugin.es;
 
 import java.io.Closeable;
 import java.io.IOException;

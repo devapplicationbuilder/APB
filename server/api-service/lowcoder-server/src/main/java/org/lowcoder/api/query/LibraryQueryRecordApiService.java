@@ -1,22 +1,22 @@
-package org.lowcoder.api.query;
+package org.quickdev.api.query;
 
-import static org.lowcoder.api.util.ViewBuilder.multiBuild;
-import static org.lowcoder.sdk.exception.BizError.LIBRARY_QUERY_AND_ORG_NOT_MATCH;
-import static org.lowcoder.sdk.util.ExceptionUtils.ofError;
+import static org.quickdev.api.util.ViewBuilder.multiBuild;
+import static org.quickdev.sdk.exception.BizError.LIBRARY_QUERY_AND_ORG_NOT_MATCH;
+import static org.quickdev.sdk.util.ExceptionUtils.ofError;
 
 import java.util.List;
 import java.util.Map;
 
-import org.lowcoder.api.home.SessionUserService;
-import org.lowcoder.api.query.view.LibraryQueryRecordMetaView;
-import org.lowcoder.api.usermanagement.OrgDevChecker;
-import org.lowcoder.domain.organization.model.OrgMember;
-import org.lowcoder.domain.query.model.LibraryQuery;
-import org.lowcoder.domain.query.model.LibraryQueryCombineId;
-import org.lowcoder.domain.query.model.LibraryQueryRecord;
-import org.lowcoder.domain.query.service.LibraryQueryRecordService;
-import org.lowcoder.domain.query.service.LibraryQueryService;
-import org.lowcoder.domain.user.service.UserService;
+import org.quickdev.api.home.SessionUserService;
+import org.quickdev.api.query.view.LibraryQueryRecordMetaView;
+import org.quickdev.api.usermanagement.OrgDevChecker;
+import org.quickdev.domain.organization.model.OrgMember;
+import org.quickdev.domain.query.model.LibraryQuery;
+import org.quickdev.domain.query.model.LibraryQueryCombineId;
+import org.quickdev.domain.query.model.LibraryQueryRecord;
+import org.quickdev.domain.query.service.LibraryQueryRecordService;
+import org.quickdev.domain.query.service.LibraryQueryService;
+import org.quickdev.domain.user.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

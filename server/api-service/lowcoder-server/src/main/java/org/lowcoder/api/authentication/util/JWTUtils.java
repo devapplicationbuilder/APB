@@ -1,4 +1,4 @@
-package org.lowcoder.api.authentication.util;
+package org.quickdev.api.authentication.util;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.JwtParser;
@@ -7,8 +7,8 @@ import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.io.Encoders;
 import jakarta.annotation.PostConstruct;
 import lombok.extern.slf4j.Slf4j;
-import org.lowcoder.domain.user.model.User;
-import org.lowcoder.sdk.config.AuthProperties;
+import org.quickdev.domain.user.model.User;
+import org.quickdev.sdk.config.AuthProperties;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.server.ServerWebExchange;

@@ -1,9 +1,9 @@
-package org.lowcoder.domain.datasource.model;
+package org.quickdev.domain.datasource.model;
 
-import static org.lowcoder.domain.datasource.model.DatasourceCreationSource.LEGACY_WORKSPACE_PREDEFINED;
-import static org.lowcoder.domain.datasource.model.DatasourceCreationSource.SYSTEM_STATIC;
-import static org.lowcoder.domain.plugin.DatasourceMetaInfoConstants.GRAPHQL_API;
-import static org.lowcoder.domain.plugin.DatasourceMetaInfoConstants.REST_API;
+import static org.quickdev.domain.datasource.model.DatasourceCreationSource.LEGACY_WORKSPACE_PREDEFINED;
+import static org.quickdev.domain.datasource.model.DatasourceCreationSource.SYSTEM_STATIC;
+import static org.quickdev.domain.plugin.DatasourceMetaInfoConstants.GRAPHQL_API;
+import static org.quickdev.domain.plugin.DatasourceMetaInfoConstants.REST_API;
 
 import java.util.Locale;
 import java.util.Optional;
@@ -12,15 +12,15 @@ import java.util.Set;
 import javax.annotation.Nullable;
 
 import org.apache.commons.lang3.ObjectUtils;
-import org.lowcoder.domain.plugin.DatasourceMetaInfoConstants;
-import org.lowcoder.domain.plugin.client.dto.DatasourcePluginDefinition;
-import org.lowcoder.sdk.models.DatasourceConnectionConfig;
-import org.lowcoder.sdk.models.HasIdAndAuditing;
-import org.lowcoder.sdk.models.JsDatasourceConnectionConfig;
-import org.lowcoder.sdk.plugin.graphql.GraphQLDatasourceConfig;
-import org.lowcoder.sdk.plugin.lowcoderapi.LowcoderApiDatasourceConfig;
-import org.lowcoder.sdk.plugin.restapi.RestApiDatasourceConfig;
-import org.lowcoder.sdk.util.LocaleUtils;
+import org.quickdev.domain.plugin.DatasourceMetaInfoConstants;
+import org.quickdev.domain.plugin.client.dto.DatasourcePluginDefinition;
+import org.quickdev.sdk.models.DatasourceConnectionConfig;
+import org.quickdev.sdk.models.HasIdAndAuditing;
+import org.quickdev.sdk.models.JsDatasourceConnectionConfig;
+import org.quickdev.sdk.plugin.graphql.GraphQLDatasourceConfig;
+import org.quickdev.sdk.plugin.lowcoderapi.LowcoderApiDatasourceConfig;
+import org.quickdev.sdk.plugin.restapi.RestApiDatasourceConfig;
+import org.quickdev.sdk.util.LocaleUtils;
 import org.springframework.data.annotation.Transient;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;

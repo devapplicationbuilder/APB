@@ -1,6 +1,6 @@
-package org.lowcoder.api.authentication.request.oauth2;
+package org.quickdev.api.authentication.request.oauth2;
 
-import org.lowcoder.sdk.auth.constants.Oauth2Constants;
+import org.quickdev.sdk.auth.constants.Oauth2Constants;
 
 public enum Oauth2DefaultSource implements Oauth2Source {
 

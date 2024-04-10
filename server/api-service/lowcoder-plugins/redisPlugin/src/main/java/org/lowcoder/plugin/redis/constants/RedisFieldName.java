@@ -1,4 +1,4 @@
-package org.lowcoder.plugin.redis.constants;
+package org.quickdev.plugin.redis.constants;
 
 public class RedisFieldName {
 

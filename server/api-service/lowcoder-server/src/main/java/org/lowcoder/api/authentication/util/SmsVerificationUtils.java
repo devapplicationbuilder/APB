@@ -1,4 +1,4 @@
-package org.lowcoder.api.authentication.util;
+package org.quickdev.api.authentication.util;
 
 import java.util.Random;
 

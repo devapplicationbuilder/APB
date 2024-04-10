@@ -1,10 +1,10 @@
-package org.lowcoder.plugin.mssql;
+package org.quickdev.plugin.mssql;
 
 import static org.apache.commons.lang3.StringUtils.isNotBlank;
 
 import org.apache.commons.lang3.StringUtils;
-import org.lowcoder.plugin.mssql.model.MssqlDatasourceConfig;
-import org.lowcoder.plugin.sql.SqlBasedConnector;
+import org.quickdev.plugin.mssql.model.MssqlDatasourceConfig;
+import org.quickdev.plugin.sql.SqlBasedConnector;
 import org.pf4j.Extension;
 
 import com.zaxxer.hikari.HikariConfig;

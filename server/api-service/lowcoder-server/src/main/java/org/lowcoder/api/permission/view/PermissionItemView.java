@@ -1,6 +1,6 @@
-package org.lowcoder.api.permission.view;
+package org.quickdev.api.permission.view;
 
-import org.lowcoder.domain.permission.model.ResourceHolder;
+import org.quickdev.domain.permission.model.ResourceHolder;
 
 import lombok.Builder;
 import lombok.Getter;

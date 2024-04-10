@@ -1,11 +1,11 @@
-package org.lowcoder.api.authentication.request.form;
+package org.quickdev.api.authentication.request.form;
 
 import java.util.Set;
 
-import org.lowcoder.api.authentication.request.AuthRequest;
-import org.lowcoder.api.authentication.request.AuthRequestFactory;
-import org.lowcoder.domain.authentication.context.AuthRequestContext;
-import org.lowcoder.sdk.auth.constants.AuthTypeConstants;
+import org.quickdev.api.authentication.request.AuthRequest;
+import org.quickdev.api.authentication.request.AuthRequestFactory;
+import org.quickdev.domain.authentication.context.AuthRequestContext;
+import org.quickdev.sdk.auth.constants.AuthTypeConstants;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

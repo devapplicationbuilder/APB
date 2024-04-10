@@ -1,4 +1,4 @@
-package org.lowcoder.domain.permission.config;
+package org.quickdev.domain.permission.config;
 
 public final class PermissionConst {
 

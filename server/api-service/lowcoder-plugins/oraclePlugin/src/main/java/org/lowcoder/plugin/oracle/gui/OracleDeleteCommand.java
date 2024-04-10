@@ -1,14 +1,14 @@
-package org.lowcoder.plugin.oracle.gui;
+package org.quickdev.plugin.oracle.gui;
 
-import static org.lowcoder.plugin.oracle.gui.GuiConstants.COLUMN_DELIMITER_FRONT;
-import static org.lowcoder.sdk.plugin.sqlcommand.filter.FilterSet.parseFilterSet;
+import static org.quickdev.plugin.oracle.gui.GuiConstants.COLUMN_DELIMITER_FRONT;
+import static org.quickdev.sdk.plugin.sqlcommand.filter.FilterSet.parseFilterSet;
 
 import java.util.Map;
 
-import org.lowcoder.sdk.plugin.sqlcommand.GuiSqlCommand;
-import org.lowcoder.sdk.plugin.sqlcommand.command.DeleteCommand;
-import org.lowcoder.sdk.plugin.sqlcommand.filter.FilterSet;
-import org.lowcoder.sdk.plugin.sqlcommand.filter.FilterSet.RawFilterCondition;
+import org.quickdev.sdk.plugin.sqlcommand.GuiSqlCommand;
+import org.quickdev.sdk.plugin.sqlcommand.command.DeleteCommand;
+import org.quickdev.sdk.plugin.sqlcommand.filter.FilterSet;
+import org.quickdev.sdk.plugin.sqlcommand.filter.FilterSet.RawFilterCondition;
 
 public class OracleDeleteCommand extends DeleteCommand {
 

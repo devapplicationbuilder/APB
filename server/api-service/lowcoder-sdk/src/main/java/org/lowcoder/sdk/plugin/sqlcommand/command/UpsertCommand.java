@@ -1,13 +1,13 @@
-package org.lowcoder.sdk.plugin.sqlcommand.command;
+package org.quickdev.sdk.plugin.sqlcommand.command;
 
 import java.util.List;
 import java.util.Set;
 
-import org.lowcoder.sdk.plugin.sqlcommand.GuiSqlCommand;
-import org.lowcoder.sdk.plugin.sqlcommand.changeset.ChangeSet;
-import org.lowcoder.sdk.plugin.sqlcommand.changeset.ChangeSetItem;
-import org.lowcoder.sdk.plugin.sqlcommand.changeset.ChangeSetRow;
-import org.lowcoder.sdk.plugin.sqlcommand.filter.FilterSet;
+import org.quickdev.sdk.plugin.sqlcommand.GuiSqlCommand;
+import org.quickdev.sdk.plugin.sqlcommand.changeset.ChangeSet;
+import org.quickdev.sdk.plugin.sqlcommand.changeset.ChangeSetItem;
+import org.quickdev.sdk.plugin.sqlcommand.changeset.ChangeSetRow;
+import org.quickdev.sdk.plugin.sqlcommand.filter.FilterSet;
 
 import com.google.common.collect.Sets;
 

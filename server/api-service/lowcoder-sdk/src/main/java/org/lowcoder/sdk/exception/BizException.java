@@ -1,8 +1,8 @@
-package org.lowcoder.sdk.exception;
+package org.quickdev.sdk.exception;
 
 import java.util.Locale;
 
-import org.lowcoder.sdk.util.LocaleUtils;
+import org.quickdev.sdk.util.LocaleUtils;
 
 import lombok.Getter;
 

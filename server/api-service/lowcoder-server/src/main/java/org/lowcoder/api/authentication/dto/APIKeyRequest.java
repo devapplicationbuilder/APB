@@ -1,11 +1,11 @@
-package org.lowcoder.api.authentication.dto;
+package org.quickdev.api.authentication.dto;
 
 import org.apache.commons.collections4.MapUtils;
 import org.apache.commons.lang3.ObjectUtils;
 
 import java.util.HashMap;
 
-import static org.lowcoder.sdk.util.IDUtils.generate;
+import static org.quickdev.sdk.util.IDUtils.generate;
 
 public class APIKeyRequest extends HashMap<String, Object> {
 

@@ -1,8 +1,8 @@
-package org.lowcoder.api.usermanagement.view;
+package org.quickdev.api.usermanagement.view;
 
-import org.lowcoder.domain.invitation.model.Invitation;
-import org.lowcoder.domain.organization.model.Organization;
-import org.lowcoder.domain.user.model.User;
+import org.quickdev.domain.invitation.model.Invitation;
+import org.quickdev.domain.organization.model.Organization;
+import org.quickdev.domain.user.model.User;
 
 import lombok.Builder;
 import lombok.Getter;

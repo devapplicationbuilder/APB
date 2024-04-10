@@ -227,3 +227,6 @@ EXPOSE 3443
 
 ENTRYPOINT [ "/bin/sh" , "/quickdev/entrypoint.sh" ]
 CMD ["/usr/bin/supervisord", "-n" , "-c" , "/quickdev/etc/supervisord.conf"]
+
+# Add this command at the end of your Dockerfile
+RUN mv /quickdev/client/lowcoder-comps /quickdev/client/quickdev-comps

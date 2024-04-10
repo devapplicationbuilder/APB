@@ -1,10 +1,10 @@
-package org.lowcoder.sdk.plugin.sqlcommand.filter;
+package org.quickdev.sdk.plugin.sqlcommand.filter;
 
 import static com.google.common.collect.Lists.newArrayList;
 import static java.util.Collections.emptyList;
-import static org.lowcoder.sdk.exception.PluginCommonError.INVALID_GUI_SETTINGS;
-import static org.lowcoder.sdk.exception.PluginCommonError.INVALID_IN_OPERATOR_SETTINGS;
-import static org.lowcoder.sdk.util.JsonUtils.toJson;
+import static org.quickdev.sdk.exception.PluginCommonError.INVALID_GUI_SETTINGS;
+import static org.quickdev.sdk.exception.PluginCommonError.INVALID_IN_OPERATOR_SETTINGS;
+import static org.quickdev.sdk.util.JsonUtils.toJson;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -15,13 +15,13 @@ import java.util.stream.Collectors;
 
 import org.apache.commons.collections4.MapUtils;
 import org.apache.commons.lang3.StringUtils;
-import org.lowcoder.sdk.exception.PluginException;
-import org.lowcoder.sdk.plugin.sqlcommand.GuiSqlCommand.GuiSqlCommandRenderResult;
-import org.lowcoder.sdk.plugin.sqlcommand.filter.FilterSet.FilterCondition;
-import org.lowcoder.sdk.util.MustacheHelper;
-import org.lowcoder.sdk.util.SqlGuiUtils;
-import org.lowcoder.sdk.util.SqlGuiUtils.GuiSqlValue;
-import org.lowcoder.sdk.util.SqlGuiUtils.GuiSqlValue.EscapeSql;
+import org.quickdev.sdk.exception.PluginException;
+import org.quickdev.sdk.plugin.sqlcommand.GuiSqlCommand.GuiSqlCommandRenderResult;
+import org.quickdev.sdk.plugin.sqlcommand.filter.FilterSet.FilterCondition;
+import org.quickdev.sdk.util.MustacheHelper;
+import org.quickdev.sdk.util.SqlGuiUtils;
+import org.quickdev.sdk.util.SqlGuiUtils.GuiSqlValue;
+import org.quickdev.sdk.util.SqlGuiUtils.GuiSqlValue.EscapeSql;
 
 import com.google.common.collect.ForwardingList;
 

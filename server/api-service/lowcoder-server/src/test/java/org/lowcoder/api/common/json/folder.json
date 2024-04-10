@@ -1,5 +1,5 @@
 {
-  "class": "org.lowcoder.domain.folder.model.Folder",
+  "class": "org.quickdev.domain.folder.model.Folder",
   "data": [
     {
       "id": "folder01",

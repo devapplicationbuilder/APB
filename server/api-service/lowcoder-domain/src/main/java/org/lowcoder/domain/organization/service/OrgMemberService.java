@@ -1,12 +1,12 @@
-package org.lowcoder.domain.organization.service;
+package org.quickdev.domain.organization.service;
 
 import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 
-import org.lowcoder.domain.organization.model.MemberRole;
-import org.lowcoder.domain.organization.model.OrgMember;
-import org.lowcoder.infra.annotation.PossibleEmptyMono;
+import org.quickdev.domain.organization.model.MemberRole;
+import org.quickdev.domain.organization.model.OrgMember;
+import org.quickdev.infra.annotation.PossibleEmptyMono;
 
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;

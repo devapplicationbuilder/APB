@@ -1,10 +1,10 @@
-package org.lowcoder.api.usermanagement.view;
+package org.quickdev.api.usermanagement.view;
 
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import org.lowcoder.domain.user.model.Connection;
+import org.quickdev.domain.user.model.Connection;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

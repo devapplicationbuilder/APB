@@ -1,17 +1,17 @@
-package org.lowcoder.api.query;
+package org.quickdev.api.query;
 
 import java.util.List;
 
-import org.lowcoder.api.framework.view.ResponseView;
-import org.lowcoder.api.query.view.LibraryQueryAggregateView;
-import org.lowcoder.api.query.view.LibraryQueryPublishRequest;
-import org.lowcoder.api.query.view.LibraryQueryRecordMetaView;
-import org.lowcoder.api.query.view.LibraryQueryView;
-import org.lowcoder.api.query.view.UpsertLibraryQueryRequest;
-import org.lowcoder.api.util.BusinessEventPublisher;
-import org.lowcoder.domain.query.model.LibraryQuery;
-import org.lowcoder.domain.query.service.LibraryQueryService;
-import org.lowcoder.infra.event.EventType;
+import org.quickdev.api.framework.view.ResponseView;
+import org.quickdev.api.query.view.LibraryQueryAggregateView;
+import org.quickdev.api.query.view.LibraryQueryPublishRequest;
+import org.quickdev.api.query.view.LibraryQueryRecordMetaView;
+import org.quickdev.api.query.view.LibraryQueryView;
+import org.quickdev.api.query.view.UpsertLibraryQueryRequest;
+import org.quickdev.api.util.BusinessEventPublisher;
+import org.quickdev.domain.query.model.LibraryQuery;
+import org.quickdev.domain.query.service.LibraryQueryService;
+import org.quickdev.infra.event.EventType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;

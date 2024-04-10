@@ -1,12 +1,12 @@
-package org.lowcoder.domain.group.service;
+package org.quickdev.domain.group.service;
 
 import java.util.Collection;
 import java.util.List;
 
-import org.lowcoder.domain.group.model.Group;
-import org.lowcoder.domain.group.model.GroupMember;
-import org.lowcoder.domain.organization.model.MemberRole;
-import org.lowcoder.infra.birelation.BiRelation;
+import org.quickdev.domain.group.model.Group;
+import org.quickdev.domain.group.model.GroupMember;
+import org.quickdev.domain.organization.model.MemberRole;
+import org.quickdev.infra.birelation.BiRelation;
 
 import reactor.core.publisher.Mono;
 

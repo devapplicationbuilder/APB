@@ -1,8 +1,8 @@
-package org.lowcoder.domain.folder.model;
+package org.quickdev.domain.folder.model;
 
 import javax.annotation.Nullable;
 
-import org.lowcoder.sdk.models.HasIdAndAuditing;
+import org.quickdev.sdk.models.HasIdAndAuditing;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import lombok.Getter;

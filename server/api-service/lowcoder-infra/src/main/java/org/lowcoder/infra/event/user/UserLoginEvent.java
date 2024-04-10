@@ -1,7 +1,7 @@
-package org.lowcoder.infra.event.user;
+package org.quickdev.infra.event.user;
 
-import org.lowcoder.infra.event.AbstractEvent;
-import org.lowcoder.infra.event.EventType;
+import org.quickdev.infra.event.AbstractEvent;
+import org.quickdev.infra.event.EventType;
 
 import lombok.Getter;
 import lombok.experimental.SuperBuilder;

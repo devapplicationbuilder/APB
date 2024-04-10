@@ -1,13 +1,13 @@
-package org.lowcoder.api.usermanagement;
+package org.quickdev.api.usermanagement;
 
-import static org.lowcoder.sdk.util.ExceptionUtils.ofError;
+import static org.quickdev.sdk.util.ExceptionUtils.ofError;
 
 import javax.annotation.Nonnull;
 
-import org.lowcoder.api.home.SessionUserService;
-import org.lowcoder.domain.group.service.GroupMemberService;
-import org.lowcoder.domain.group.service.GroupService;
-import org.lowcoder.sdk.exception.BizError;
+import org.quickdev.api.home.SessionUserService;
+import org.quickdev.domain.group.service.GroupMemberService;
+import org.quickdev.domain.group.service.GroupService;
+import org.quickdev.sdk.exception.BizError;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

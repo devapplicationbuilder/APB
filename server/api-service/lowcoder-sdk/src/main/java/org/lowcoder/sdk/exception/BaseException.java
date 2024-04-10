@@ -1,4 +1,4 @@
-package org.lowcoder.sdk.exception;
+package org.quickdev.sdk.exception;
 
 /**
  * marker interface

@@ -1,18 +1,18 @@
-package org.lowcoder.sdk.plugin.sqlcommand.command.postgres;
+package org.quickdev.sdk.plugin.sqlcommand.command.postgres;
 
 import static java.util.Collections.emptyList;
-import static org.lowcoder.sdk.plugin.sqlcommand.command.GuiConstants.POSTGRES_COLUMN_DELIMITER;
-import static org.lowcoder.sdk.plugin.sqlcommand.filter.FilterSet.parseFilterSet;
-import static org.lowcoder.sdk.util.SqlGuiUtils.POSTGRES_SQL_STR_ESCAPE;
+import static org.quickdev.sdk.plugin.sqlcommand.command.GuiConstants.POSTGRES_COLUMN_DELIMITER;
+import static org.quickdev.sdk.plugin.sqlcommand.filter.FilterSet.parseFilterSet;
+import static org.quickdev.sdk.util.SqlGuiUtils.POSTGRES_SQL_STR_ESCAPE;
 
 import java.util.Map;
 
-import org.lowcoder.sdk.plugin.sqlcommand.GuiSqlCommand;
-import org.lowcoder.sdk.plugin.sqlcommand.command.DeleteCommand;
-import org.lowcoder.sdk.plugin.sqlcommand.command.UpdateOrDeleteSingleCommandRenderResult;
-import org.lowcoder.sdk.plugin.sqlcommand.filter.FilterSet;
-import org.lowcoder.sdk.util.MustacheHelper;
-import org.lowcoder.sdk.util.SqlGuiUtils.GuiSqlValue.EscapeSql;
+import org.quickdev.sdk.plugin.sqlcommand.GuiSqlCommand;
+import org.quickdev.sdk.plugin.sqlcommand.command.DeleteCommand;
+import org.quickdev.sdk.plugin.sqlcommand.command.UpdateOrDeleteSingleCommandRenderResult;
+import org.quickdev.sdk.plugin.sqlcommand.filter.FilterSet;
+import org.quickdev.sdk.util.MustacheHelper;
+import org.quickdev.sdk.util.SqlGuiUtils.GuiSqlValue.EscapeSql;
 
 public class PostgresDeleteCommand extends DeleteCommand {
 

@@ -1,4 +1,4 @@
-package org.lowcoder.plugin.mssql;
+package org.quickdev.plugin.mssql;
 
 import org.pf4j.Plugin;
 import org.pf4j.PluginWrapper;

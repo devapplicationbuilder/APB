@@ -1,16 +1,16 @@
-package org.lowcoder.api.query;
+package org.quickdev.api.query;
 
-import static org.lowcoder.infra.constant.NewUrl.LIBRARY_QUERY_URL;
+import static org.quickdev.infra.constant.NewUrl.LIBRARY_QUERY_URL;
 
 import java.util.List;
 
-import org.lowcoder.api.framework.view.ResponseView;
-import org.lowcoder.api.query.view.LibraryQueryAggregateView;
-import org.lowcoder.api.query.view.LibraryQueryPublishRequest;
-import org.lowcoder.api.query.view.LibraryQueryRecordMetaView;
-import org.lowcoder.api.query.view.LibraryQueryView;
-import org.lowcoder.api.query.view.UpsertLibraryQueryRequest;
-import org.lowcoder.domain.query.model.LibraryQuery;
+import org.quickdev.api.framework.view.ResponseView;
+import org.quickdev.api.query.view.LibraryQueryAggregateView;
+import org.quickdev.api.query.view.LibraryQueryPublishRequest;
+import org.quickdev.api.query.view.LibraryQueryRecordMetaView;
+import org.quickdev.api.query.view.LibraryQueryView;
+import org.quickdev.api.query.view.UpsertLibraryQueryRequest;
+import org.quickdev.domain.query.model.LibraryQuery;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

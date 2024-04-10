@@ -1,6 +1,6 @@
-package org.lowcoder.domain.application.repository;
+package org.quickdev.domain.application.repository;
 
-import org.lowcoder.domain.application.model.ApplicationHistorySnapshot;
+import org.quickdev.domain.application.model.ApplicationHistorySnapshot;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.mongodb.repository.Query;
 import org.springframework.data.mongodb.repository.ReactiveMongoRepository;

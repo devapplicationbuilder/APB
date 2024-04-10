@@ -10,7 +10,7 @@
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
-    <groupId>org.lowcoder</groupId>
+    <groupId>org.quickdev</groupId>
     <artifactId>lowcoder-root</artifactId>
     <version>${revision}</version>
     <packaging>pom</packaging>
@@ -22,7 +22,7 @@
         <javadoc.disabled>true</javadoc.disabled>
         <deploy.disabled>true</deploy.disabled>
         <source.disabled>true</source.disabled>
-        <project.groupId>org.lowcoder</project.groupId>
+        <project.groupId>org.quickdev</project.groupId>
         <project.version>1.0-SNAPSHOT</project.version>
         <skipDockerBuild>true</skipDockerBuild>
         <log4j2.version>2.17.0</log4j2.version>
@@ -108,27 +108,27 @@
         <dependencies>
 
 			<dependency>
-				<groupId>org.lowcoder</groupId>
+				<groupId>org.quickdev</groupId>
 				<artifactId>lowcoder-sdk</artifactId>
 				<version>${revision}</version>
 			</dependency>			
 			<dependency>
-				<groupId>org.lowcoder</groupId>
+				<groupId>org.quickdev</groupId>
 				<artifactId>lowcoder-infra</artifactId>
 				<version>${revision}</version>
 			</dependency>			
 			<dependency>
-				<groupId>org.lowcoder</groupId>
+				<groupId>org.quickdev</groupId>
 				<artifactId>lowcoder-domain</artifactId>
 				<version>${revision}</version>
 			</dependency>			
 			<dependency>
-				<groupId>org.lowcoder</groupId>
+				<groupId>org.quickdev</groupId>
 				<artifactId>lowcoder-plugins</artifactId>
 				<version>${revision}</version>
 			</dependency>			
 			<dependency>
-				<groupId>org.lowcoder</groupId>
+				<groupId>org.quickdev</groupId>
 				<artifactId>lowcoder-server</artifactId>
 				<version>${revision}</version>
 			</dependency>			

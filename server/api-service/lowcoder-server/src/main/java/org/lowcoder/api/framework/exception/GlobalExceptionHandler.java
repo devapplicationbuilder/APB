@@ -1,22 +1,22 @@
-package org.lowcoder.api.framework.exception;
+package org.quickdev.api.framework.exception;
 
-import static org.lowcoder.api.framework.view.ResponseView.error;
-import static org.lowcoder.sdk.util.LocaleUtils.getLocale;
+import static org.quickdev.api.framework.view.ResponseView.error;
+import static org.quickdev.sdk.util.LocaleUtils.getLocale;
 
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
 import java.util.concurrent.TimeoutException;
 
-import org.lowcoder.api.framework.view.ResponseView;
-import org.lowcoder.infra.util.LogUtils;
-import org.lowcoder.sdk.exception.BaseException;
-import org.lowcoder.sdk.exception.BizError;
-import org.lowcoder.sdk.exception.BizException;
-import org.lowcoder.sdk.exception.PluginError;
-import org.lowcoder.sdk.exception.PluginException;
-import org.lowcoder.sdk.exception.ServerException;
-import org.lowcoder.sdk.util.LocaleUtils;
+import org.quickdev.api.framework.view.ResponseView;
+import org.quickdev.infra.util.LogUtils;
+import org.quickdev.sdk.exception.BaseException;
+import org.quickdev.sdk.exception.BizError;
+import org.quickdev.sdk.exception.BizException;
+import org.quickdev.sdk.exception.PluginError;
+import org.quickdev.sdk.exception.PluginException;
+import org.quickdev.sdk.exception.ServerException;
+import org.quickdev.sdk.util.LocaleUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

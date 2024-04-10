@@ -1,4 +1,4 @@
-package org.lowcoder.domain.datasource.service.impl;
+package org.quickdev.domain.datasource.service.impl;
 
 import com.google.common.cache.*;
 import com.google.common.collect.ImmutableList;
@@ -6,18 +6,18 @@ import io.micrometer.core.instrument.Tags;
 import jakarta.annotation.PostConstruct;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
-import org.lowcoder.domain.datasource.model.ClientBasedDatasourceConnectionHolder;
-import org.lowcoder.domain.datasource.model.Datasource;
-import org.lowcoder.domain.datasource.model.DatasourceConnectionHolder;
-import org.lowcoder.domain.datasource.service.DatasourceConnectionPool;
-import org.lowcoder.domain.plugin.DatasourceMetaInfo;
-import org.lowcoder.domain.plugin.service.DatasourceMetaInfoService;
-import org.lowcoder.infra.perf.PerfEvent;
-import org.lowcoder.infra.perf.PerfHelper;
-import org.lowcoder.sdk.exception.BaseException;
-import org.lowcoder.sdk.exception.BizException;
-import org.lowcoder.sdk.plugin.common.QueryExecutionUtils;
-import org.lowcoder.sdk.plugin.common.sql.HikariPerfWrapper;
+import org.quickdev.domain.datasource.model.ClientBasedDatasourceConnectionHolder;
+import org.quickdev.domain.datasource.model.Datasource;
+import org.quickdev.domain.datasource.model.DatasourceConnectionHolder;
+import org.quickdev.domain.datasource.service.DatasourceConnectionPool;
+import org.quickdev.domain.plugin.DatasourceMetaInfo;
+import org.quickdev.domain.plugin.service.DatasourceMetaInfoService;
+import org.quickdev.infra.perf.PerfEvent;
+import org.quickdev.infra.perf.PerfHelper;
+import org.quickdev.sdk.exception.BaseException;
+import org.quickdev.sdk.exception.BizException;
+import org.quickdev.sdk.plugin.common.QueryExecutionUtils;
+import org.quickdev.sdk.plugin.common.sql.HikariPerfWrapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Mono;
@@ -33,9 +33,9 @@ import java.util.Objects;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.stream.Collectors;
 
-import static org.lowcoder.infra.perf.PerfEvent.*;
-import static org.lowcoder.sdk.exception.BizError.PLUGIN_CREATE_CONNECTION_FAILED;
-import static org.lowcoder.sdk.plugin.common.QueryExecutionUtils.querySharedScheduler;
+import static org.quickdev.infra.perf.PerfEvent.*;
+import static org.quickdev.sdk.exception.BizError.PLUGIN_CREATE_CONNECTION_FAILED;
+import static org.quickdev.sdk.plugin.common.QueryExecutionUtils.querySharedScheduler;
 
 /**
  * for hikari pool/redis client/es client/..., these clients has taken over underlying connections

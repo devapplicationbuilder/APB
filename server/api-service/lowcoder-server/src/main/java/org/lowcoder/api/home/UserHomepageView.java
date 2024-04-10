@@ -1,10 +1,10 @@
-package org.lowcoder.api.home;
+package org.quickdev.api.home;
 
 import java.util.List;
 
-import org.lowcoder.api.application.view.ApplicationInfoView;
-import org.lowcoder.domain.organization.model.Organization;
-import org.lowcoder.domain.user.model.User;
+import org.quickdev.api.application.view.ApplicationInfoView;
+import org.quickdev.domain.organization.model.Organization;
+import org.quickdev.domain.user.model.User;
 
 public class UserHomepageView {
 

@@ -1,10 +1,10 @@
-package org.lowcoder.api.query.view;
+package org.quickdev.api.query.view;
 
 import java.util.List;
 
-import org.lowcoder.domain.query.model.LibraryQuery;
-import org.lowcoder.domain.query.model.LibraryQueryRecord;
-import org.lowcoder.domain.user.model.User;
+import org.quickdev.domain.query.model.LibraryQuery;
+import org.quickdev.domain.query.model.LibraryQueryRecord;
+import org.quickdev.domain.user.model.User;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 

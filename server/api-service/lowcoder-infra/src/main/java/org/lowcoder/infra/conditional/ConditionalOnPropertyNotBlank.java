@@ -1,4 +1,4 @@
-package org.lowcoder.infra.conditional;
+package org.quickdev.infra.conditional;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -10,7 +10,7 @@ import javax.annotation.Nullable;
 import javax.validation.constraints.NotBlank;
 
 import org.apache.commons.lang3.StringUtils;
-import org.lowcoder.infra.conditional.ConditionalOnPropertyNotBlank.OnPropertyNotBlankCondition;
+import org.quickdev.infra.conditional.ConditionalOnPropertyNotBlank.OnPropertyNotBlankCondition;
 import org.springframework.context.annotation.Condition;
 import org.springframework.context.annotation.ConditionContext;
 import org.springframework.context.annotation.Conditional;

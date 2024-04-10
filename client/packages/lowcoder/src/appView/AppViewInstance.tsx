@@ -36,8 +36,8 @@ export class AppViewInstance<I = any, O = any> {
   private events = new Map<keyof EventHandlerMap, EventHandlerMap<O>[keyof EventHandlerMap]>();
   private dataPromise: Promise<{ appDsl: any; moduleDslMap: any }>;
   private options: AppViewInstanceOptions = {
-    baseUrl: "http://localhost:4500",
-      webUrl: "http://localhost:4500",
+    baseUrl: "http://172.23.16.1",
+      webUrl: "http://172.23.16.1",
   };
 
   constructor(private appId: string, private node: Element, private root: Root, options: AppViewInstanceOptions = {}) {

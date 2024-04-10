@@ -1,4 +1,4 @@
-package org.lowcoder.domain.application.model;
+package org.quickdev.domain.application.model;
 
 public enum ApplicationStatus {
 

@@ -1,17 +1,17 @@
-package org.lowcoder.sdk.config;
+package org.quickdev.sdk.config;
 
-import static org.lowcoder.sdk.constants.AuthSourceConstants.GITHUB;
-import static org.lowcoder.sdk.constants.AuthSourceConstants.GITHUB_NAME;
-import static org.lowcoder.sdk.constants.AuthSourceConstants.GOOGLE;
-import static org.lowcoder.sdk.constants.AuthSourceConstants.GOOGLE_NAME;
+import static org.quickdev.sdk.constants.AuthSourceConstants.GITHUB;
+import static org.quickdev.sdk.constants.AuthSourceConstants.GITHUB_NAME;
+import static org.quickdev.sdk.constants.AuthSourceConstants.GOOGLE;
+import static org.quickdev.sdk.constants.AuthSourceConstants.GOOGLE_NAME;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import org.lowcoder.sdk.auth.AbstractAuthConfig;
-import org.lowcoder.sdk.auth.EmailAuthConfig;
-import org.lowcoder.sdk.auth.Oauth2SimpleAuthConfig;
-import org.lowcoder.sdk.auth.constants.AuthTypeConstants;
+import org.quickdev.sdk.auth.AbstractAuthConfig;
+import org.quickdev.sdk.auth.EmailAuthConfig;
+import org.quickdev.sdk.auth.Oauth2SimpleAuthConfig;
+import org.quickdev.sdk.auth.constants.AuthTypeConstants;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 

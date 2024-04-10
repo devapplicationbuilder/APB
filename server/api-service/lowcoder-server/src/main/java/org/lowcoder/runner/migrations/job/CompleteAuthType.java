@@ -1,4 +1,4 @@
-package org.lowcoder.runner.migrations.job;
+package org.quickdev.runner.migrations.job;
 
 public interface CompleteAuthType {
 

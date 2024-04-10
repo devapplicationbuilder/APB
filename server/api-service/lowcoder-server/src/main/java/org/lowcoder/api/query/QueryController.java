@@ -1,20 +1,20 @@
-package org.lowcoder.api.query;
+package org.quickdev.api.query;
 
-import static org.lowcoder.sdk.constants.GlobalContext.CLIENT_IP;
-import static org.lowcoder.sdk.util.ExceptionUtils.ofError;
+import static org.quickdev.sdk.constants.GlobalContext.CLIENT_IP;
+import static org.quickdev.sdk.util.ExceptionUtils.ofError;
 
 import java.util.Locale;
 
-import org.lowcoder.api.home.SessionUserService;
-import org.lowcoder.api.query.view.LibraryQueryRequestFromJs;
-import org.lowcoder.api.query.view.QueryExecutionRequest;
-import org.lowcoder.api.query.view.QueryResultView;
-import org.lowcoder.api.util.BusinessEventPublisher;
-import org.lowcoder.sdk.exception.BizError;
-import org.lowcoder.sdk.exception.BizException;
-import org.lowcoder.sdk.models.QueryExecutionResult;
-import org.lowcoder.sdk.util.CookieHelper;
-import org.lowcoder.sdk.util.LocaleUtils;
+import org.quickdev.api.home.SessionUserService;
+import org.quickdev.api.query.view.LibraryQueryRequestFromJs;
+import org.quickdev.api.query.view.QueryExecutionRequest;
+import org.quickdev.api.query.view.QueryResultView;
+import org.quickdev.api.util.BusinessEventPublisher;
+import org.quickdev.sdk.exception.BizError;
+import org.quickdev.sdk.exception.BizException;
+import org.quickdev.sdk.models.QueryExecutionResult;
+import org.quickdev.sdk.util.CookieHelper;
+import org.quickdev.sdk.util.LocaleUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

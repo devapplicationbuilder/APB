@@ -1,4 +1,4 @@
-package org.lowcoder.sdk.config;
+package org.quickdev.sdk.config;
 
 import java.time.Duration;
 import java.util.ArrayList;
@@ -12,7 +12,7 @@ import java.util.regex.Pattern;
 import org.apache.commons.collections4.CollectionUtils;
 import org.apache.commons.collections4.ListUtils;
 import org.apache.commons.lang3.StringUtils;
-import org.lowcoder.sdk.constants.WorkspaceMode;
+import org.quickdev.sdk.constants.WorkspaceMode;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.http.HttpMethod;
 import org.springframework.stereotype.Component;

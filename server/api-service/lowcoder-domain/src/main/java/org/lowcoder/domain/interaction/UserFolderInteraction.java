@@ -1,11 +1,11 @@
-package org.lowcoder.domain.interaction;
+package org.quickdev.domain.interaction;
 
-import static org.lowcoder.infra.birelation.BiRelationBizType.USER_FOLDER_INTERACTION;
+import static org.quickdev.infra.birelation.BiRelationBizType.USER_FOLDER_INTERACTION;
 
 import java.time.Instant;
 
 import org.apache.commons.lang3.math.NumberUtils;
-import org.lowcoder.infra.birelation.BiRelation;
+import org.quickdev.infra.birelation.BiRelation;
 
 import com.google.common.base.Preconditions;
 

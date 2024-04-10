@@ -1,11 +1,11 @@
-package org.lowcoder.api.misc;
+package org.quickdev.api.misc;
 
 import java.util.Collection;
 import java.util.List;
 
-import org.lowcoder.api.framework.view.ResponseView;
-import org.lowcoder.api.misc.JsLibraryController.JsLibraryMeta;
-import org.lowcoder.infra.constant.NewUrl;
+import org.quickdev.api.framework.view.ResponseView;
+import org.quickdev.api.misc.JsLibraryController.JsLibraryMeta;
+import org.quickdev.infra.constant.NewUrl;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;

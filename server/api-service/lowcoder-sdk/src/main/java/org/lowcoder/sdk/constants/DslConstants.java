@@ -1,4 +1,4 @@
-package org.lowcoder.sdk.constants;
+package org.quickdev.sdk.constants;
 
 public class DslConstants {
 

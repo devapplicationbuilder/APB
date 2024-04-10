@@ -1,9 +1,9 @@
-package org.lowcoder.api.query.view;
+package org.quickdev.api.query.view;
 
 import java.util.Map;
 
-import org.lowcoder.domain.query.model.LibraryQuery;
-import org.lowcoder.domain.user.model.User;
+import org.quickdev.domain.query.model.LibraryQuery;
+import org.quickdev.domain.user.model.User;
 
 public record LibraryQueryView(String id,
                                String organizationId,

@@ -1,4 +1,4 @@
-package org.lowcoder.plugin.graphql.model;
+package org.quickdev.plugin.graphql.model;
 
 import java.util.List;
 import java.util.Map;
@@ -6,9 +6,9 @@ import java.util.Set;
 
 import javax.annotation.Nullable;
 
-import org.lowcoder.sdk.models.Property;
-import org.lowcoder.sdk.plugin.restapi.auth.AuthConfig;
-import org.lowcoder.sdk.query.QueryExecutionContext;
+import org.quickdev.sdk.models.Property;
+import org.quickdev.sdk.plugin.restapi.auth.AuthConfig;
+import org.quickdev.sdk.query.QueryExecutionContext;
 import org.springframework.http.HttpCookie;
 import org.springframework.http.HttpMethod;
 import org.springframework.util.MultiValueMap;

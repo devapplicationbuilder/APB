@@ -1,13 +1,13 @@
-package org.lowcoder.api.bizthreshold;
+package org.quickdev.api.bizthreshold;
 
 import java.util.Collections;
 import java.util.Map;
 
 import jakarta.annotation.PostConstruct;
 
-import org.lowcoder.sdk.config.dynamic.Conf;
-import org.lowcoder.sdk.config.dynamic.ConfigCenter;
-import org.lowcoder.sdk.config.dynamic.ConfigInstance;
+import org.quickdev.sdk.config.dynamic.Conf;
+import org.quickdev.sdk.config.dynamic.ConfigCenter;
+import org.quickdev.sdk.config.dynamic.ConfigInstance;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;

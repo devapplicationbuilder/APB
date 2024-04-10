@@ -1,12 +1,12 @@
-package org.lowcoder.plugin.mssql.gui;
+package org.quickdev.plugin.mssql.gui;
 
-import static org.lowcoder.plugin.mssql.gui.GuiConstants.MSSQL_COLUMN_DELIMITER_BACK;
-import static org.lowcoder.plugin.mssql.gui.GuiConstants.MSSQL_COLUMN_DELIMITER_FRONT;
+import static org.quickdev.plugin.mssql.gui.GuiConstants.MSSQL_COLUMN_DELIMITER_BACK;
+import static org.quickdev.plugin.mssql.gui.GuiConstants.MSSQL_COLUMN_DELIMITER_FRONT;
 
 import java.util.Map;
 
-import org.lowcoder.sdk.plugin.sqlcommand.changeset.ChangeSet;
-import org.lowcoder.sdk.plugin.sqlcommand.command.InsertCommand;
+import org.quickdev.sdk.plugin.sqlcommand.changeset.ChangeSet;
+import org.quickdev.sdk.plugin.sqlcommand.command.InsertCommand;
 
 import com.google.common.annotations.VisibleForTesting;
 

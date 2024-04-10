@@ -1,4 +1,4 @@
-package org.lowcoder.sdk.plugin.common;
+package org.quickdev.sdk.plugin.common;
 
 public class SqlQueryUtils {
 

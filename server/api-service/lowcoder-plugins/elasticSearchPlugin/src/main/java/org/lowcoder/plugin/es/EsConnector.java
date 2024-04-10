@@ -1,9 +1,9 @@
-package org.lowcoder.plugin.es;
+package org.quickdev.plugin.es;
 
-import static org.lowcoder.sdk.exception.BizError.DATASOURCE_CLOSE_FAILED;
-import static org.lowcoder.sdk.exception.PluginCommonError.DATASOURCE_ARGUMENT_ERROR;
-import static org.lowcoder.sdk.util.ExceptionUtils.ofException;
-import static org.lowcoder.sdk.util.ExceptionUtils.ofPluginException;
+import static org.quickdev.sdk.exception.BizError.DATASOURCE_CLOSE_FAILED;
+import static org.quickdev.sdk.exception.PluginCommonError.DATASOURCE_ARGUMENT_ERROR;
+import static org.quickdev.sdk.util.ExceptionUtils.ofException;
+import static org.quickdev.sdk.util.ExceptionUtils.ofPluginException;
 
 import java.io.IOException;
 import java.time.Duration;
@@ -28,19 +28,19 @@ import org.elasticsearch.client.Request;
 import org.elasticsearch.client.Response;
 import org.elasticsearch.client.RestClient;
 import org.elasticsearch.client.RestClientBuilder;
-import org.lowcoder.plugin.es.model.EsConnection;
-import org.lowcoder.plugin.es.model.EsDatasourceConfig;
-import org.lowcoder.sdk.config.CommonConfig;
-import org.lowcoder.sdk.config.dynamic.Conf;
-import org.lowcoder.sdk.config.dynamic.ConfigCenter;
-import org.lowcoder.sdk.exception.BizError;
-import org.lowcoder.sdk.exception.BizException;
-import org.lowcoder.sdk.models.DatasourceTestResult;
-import org.lowcoder.sdk.plugin.common.DatasourceConnector;
-import org.lowcoder.sdk.plugin.common.QueryExecutionUtils;
-import org.lowcoder.sdk.util.ExceptionUtils;
-import org.lowcoder.sdk.util.JsonUtils;
-import org.lowcoder.sdk.util.Preconditions;
+import org.quickdev.plugin.es.model.EsConnection;
+import org.quickdev.plugin.es.model.EsDatasourceConfig;
+import org.quickdev.sdk.config.CommonConfig;
+import org.quickdev.sdk.config.dynamic.Conf;
+import org.quickdev.sdk.config.dynamic.ConfigCenter;
+import org.quickdev.sdk.exception.BizError;
+import org.quickdev.sdk.exception.BizException;
+import org.quickdev.sdk.models.DatasourceTestResult;
+import org.quickdev.sdk.plugin.common.DatasourceConnector;
+import org.quickdev.sdk.plugin.common.QueryExecutionUtils;
+import org.quickdev.sdk.util.ExceptionUtils;
+import org.quickdev.sdk.util.JsonUtils;
+import org.quickdev.sdk.util.Preconditions;
 import org.pf4j.Extension;
 import org.springframework.http.HttpMethod;
 

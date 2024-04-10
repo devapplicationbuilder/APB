@@ -14,12 +14,12 @@
  * limitations under the License.
  * <p>
  */
-package org.lowcoder.plugin.mongo.commands;
+package org.quickdev.plugin.mongo.commands;
 
-import static org.lowcoder.plugin.mongo.constants.MongoFieldName.INSERT_DOCUMENT;
-import static org.lowcoder.sdk.exception.PluginCommonError.QUERY_ARGUMENT_ERROR;
-import static org.lowcoder.sdk.plugin.common.QueryExecutionUtils.getValueSafelyFromFormData;
-import static org.lowcoder.sdk.plugin.common.QueryExecutionUtils.validConfigurationPresentInFormData;
+import static org.quickdev.plugin.mongo.constants.MongoFieldName.INSERT_DOCUMENT;
+import static org.quickdev.sdk.exception.PluginCommonError.QUERY_ARGUMENT_ERROR;
+import static org.quickdev.sdk.plugin.common.QueryExecutionUtils.getValueSafelyFromFormData;
+import static org.quickdev.sdk.plugin.common.QueryExecutionUtils.validConfigurationPresentInFormData;
 
 import java.util.ArrayList;
 import java.util.Map;
@@ -28,8 +28,8 @@ import org.apache.commons.lang3.StringUtils;
 import org.bson.BsonArray;
 import org.bson.Document;
 import org.bson.json.JsonParseException;
-import org.lowcoder.plugin.mongo.utils.MongoQueryUtils;
-import org.lowcoder.sdk.exception.PluginException;
+import org.quickdev.plugin.mongo.utils.MongoQueryUtils;
+import org.quickdev.sdk.exception.PluginException;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;

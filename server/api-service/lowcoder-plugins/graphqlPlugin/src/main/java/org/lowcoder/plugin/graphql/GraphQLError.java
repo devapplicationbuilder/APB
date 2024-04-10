@@ -1,6 +1,6 @@
-package org.lowcoder.plugin.graphql;
+package org.quickdev.plugin.graphql;
 
-import org.lowcoder.sdk.exception.PluginError;
+import org.quickdev.sdk.exception.PluginError;
 
 public enum GraphQLError implements PluginError {
     GRAPHQL_EXECUTION_ERROR,

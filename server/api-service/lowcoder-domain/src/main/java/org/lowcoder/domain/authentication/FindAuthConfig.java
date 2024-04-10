@@ -1,9 +1,9 @@
-package org.lowcoder.domain.authentication;
+package org.quickdev.domain.authentication;
 
 import javax.annotation.Nullable;
 
-import org.lowcoder.domain.organization.model.Organization;
-import org.lowcoder.sdk.auth.AbstractAuthConfig;
+import org.quickdev.domain.organization.model.Organization;
+import org.quickdev.sdk.auth.AbstractAuthConfig;
 
 public record FindAuthConfig(AbstractAuthConfig authConfig, @Nullable Organization organization) {
 }

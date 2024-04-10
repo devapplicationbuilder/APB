@@ -1,4 +1,4 @@
-package org.lowcoder.sdk.models;
+package org.quickdev.sdk.models;
 
 import org.apache.commons.lang3.StringUtils;
 

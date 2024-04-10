@@ -1,6 +1,6 @@
-package org.lowcoder.plugin.restapi;
+package org.quickdev.plugin.restapi;
 
-import org.lowcoder.sdk.exception.PluginError;
+import org.quickdev.sdk.exception.PluginError;
 
 public enum RestApiError implements PluginError {
 

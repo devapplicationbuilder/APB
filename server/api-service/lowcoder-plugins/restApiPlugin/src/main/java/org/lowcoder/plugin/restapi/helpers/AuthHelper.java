@@ -1,4 +1,4 @@
-package org.lowcoder.plugin.restapi.helpers;
+package org.quickdev.plugin.restapi.helpers;
 
 import static org.springframework.http.HttpHeaders.WWW_AUTHENTICATE;
 
@@ -6,7 +6,7 @@ import java.text.ParseException;
 import java.util.Optional;
 import java.util.function.Consumer;
 
-import org.lowcoder.sdk.plugin.restapi.auth.BasicAuthConfig;
+import org.quickdev.sdk.plugin.restapi.auth.BasicAuthConfig;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;

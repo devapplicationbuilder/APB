@@ -1,13 +1,13 @@
-package org.lowcoder.domain.material.service.meta;
+package org.quickdev.domain.material.service.meta;
 
 import java.util.Map;
 
 import org.apache.commons.collections4.MapUtils;
-import org.lowcoder.domain.material.model.MaterialMeta;
-import org.lowcoder.domain.material.repository.MaterialMateRepository;
-import org.lowcoder.sdk.constants.FieldName;
-import org.lowcoder.sdk.exception.BizError;
-import org.lowcoder.sdk.exception.BizException;
+import org.quickdev.domain.material.model.MaterialMeta;
+import org.quickdev.domain.material.repository.MaterialMateRepository;
+import org.quickdev.sdk.constants.FieldName;
+import org.quickdev.sdk.exception.BizError;
+import org.quickdev.sdk.exception.BizException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.ReactiveMongoTemplate;
 import org.springframework.data.mongodb.core.aggregation.Aggregation;

@@ -1,4 +1,4 @@
-package org.lowcoder.sdk.util;
+package org.quickdev.sdk.util;
 
 import java.time.Instant;
 import java.time.format.DateTimeFormatter;

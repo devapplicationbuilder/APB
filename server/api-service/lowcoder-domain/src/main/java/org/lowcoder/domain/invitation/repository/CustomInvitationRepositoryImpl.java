@@ -1,10 +1,10 @@
-package org.lowcoder.domain.invitation.repository;
+package org.quickdev.domain.invitation.repository;
 
-import static org.lowcoder.domain.util.QueryDslUtils.fieldName;
+import static org.quickdev.domain.util.QueryDslUtils.fieldName;
 
-import org.lowcoder.domain.invitation.model.Invitation;
-import org.lowcoder.domain.invitation.model.QInvitation;
-import org.lowcoder.sdk.constants.FieldName;
+import org.quickdev.domain.invitation.model.Invitation;
+import org.quickdev.domain.invitation.model.QInvitation;
+import org.quickdev.sdk.constants.FieldName;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.ReactiveMongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;

@@ -1,6 +1,6 @@
-package org.lowcoder.plugin.redis.model;
+package org.quickdev.plugin.redis.model;
 
-import org.lowcoder.sdk.query.QueryExecutionContext;
+import org.quickdev.sdk.query.QueryExecutionContext;
 
 import lombok.Builder;
 import lombok.Getter;

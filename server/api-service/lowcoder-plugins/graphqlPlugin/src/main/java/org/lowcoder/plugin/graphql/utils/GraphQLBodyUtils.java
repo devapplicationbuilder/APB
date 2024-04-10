@@ -1,9 +1,9 @@
-package org.lowcoder.plugin.graphql.utils;
+package org.quickdev.plugin.graphql.utils;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import org.lowcoder.plugin.graphql.model.GraphQLQueryExecutionContext;
+import org.quickdev.plugin.graphql.model.GraphQLQueryExecutionContext;
 
 import com.fasterxml.jackson.databind.JsonNode;
 

@@ -1,4 +1,4 @@
-package org.lowcoder.sdk.auth;
+package org.quickdev.sdk.auth;
 
 import java.util.function.Function;
 

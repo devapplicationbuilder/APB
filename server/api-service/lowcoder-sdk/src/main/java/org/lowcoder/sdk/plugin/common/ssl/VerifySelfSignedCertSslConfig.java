@@ -1,11 +1,11 @@
-package org.lowcoder.sdk.plugin.common.ssl;
+package org.quickdev.sdk.plugin.common.ssl;
 
 import static org.apache.commons.lang3.ObjectUtils.firstNonNull;
 
 import java.util.function.Function;
 
 import org.jetbrains.annotations.Nullable;
-import org.lowcoder.sdk.config.SerializeConfig.JsonViews;
+import org.quickdev.sdk.config.SerializeConfig.JsonViews;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonView;

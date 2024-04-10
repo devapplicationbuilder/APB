@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <parent>
-        <groupId>org.lowcoder</groupId>
+        <groupId>org.quickdev</groupId>
         <artifactId>lowcoder-plugins</artifactId>
         <version>${revision}</version>
     </parent>
@@ -20,7 +20,7 @@
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <plugin.id>postgres-plugin</plugin.id>
-        <plugin.class>org.lowcoder.plugin.postgres.PostgresPlugin</plugin.class>
+        <plugin.class>org.quickdev.plugin.postgres.PostgresPlugin</plugin.class>
         <plugin.version>${revision}</plugin.version>
         <plugin.provider>service@lowcoder.org</plugin.provider>
         <plugin.dependencies/>
@@ -35,7 +35,7 @@
         </dependency>
 
         <dependency>
-            <groupId>org.lowcoder</groupId>
+            <groupId>org.quickdev</groupId>
             <artifactId>sqlBasedPlugin</artifactId>
             <scope>compile</scope>
         </dependency>

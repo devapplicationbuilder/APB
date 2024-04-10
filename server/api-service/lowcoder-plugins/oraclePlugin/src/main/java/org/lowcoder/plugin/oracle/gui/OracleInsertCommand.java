@@ -1,11 +1,11 @@
-package org.lowcoder.plugin.oracle.gui;
+package org.quickdev.plugin.oracle.gui;
 
-import static org.lowcoder.plugin.oracle.gui.GuiConstants.COLUMN_DELIMITER_FRONT;
+import static org.quickdev.plugin.oracle.gui.GuiConstants.COLUMN_DELIMITER_FRONT;
 
 import java.util.Map;
 
-import org.lowcoder.sdk.plugin.sqlcommand.changeset.ChangeSet;
-import org.lowcoder.sdk.plugin.sqlcommand.command.InsertCommand;
+import org.quickdev.sdk.plugin.sqlcommand.changeset.ChangeSet;
+import org.quickdev.sdk.plugin.sqlcommand.command.InsertCommand;
 
 import com.google.common.annotations.VisibleForTesting;
 

@@ -1,4 +1,4 @@
-package org.lowcoder.api.application;
+package org.quickdev.api.application;
 
 import java.util.List;
 import java.util.Map;
@@ -7,19 +7,19 @@ import java.util.Set;
 import javax.annotation.Nullable;
 
 import org.apache.commons.lang3.BooleanUtils;
-import org.lowcoder.api.application.view.ApplicationInfoView;
-import org.lowcoder.api.application.view.ApplicationPermissionView;
-import org.lowcoder.api.application.view.ApplicationView;
-import org.lowcoder.api.application.view.MarketplaceApplicationInfoView;
+import org.quickdev.api.application.view.ApplicationInfoView;
+import org.quickdev.api.application.view.ApplicationPermissionView;
+import org.quickdev.api.application.view.ApplicationView;
+import org.quickdev.api.application.view.MarketplaceApplicationInfoView;
 
 //Falk: shouldn't be here ...?
-// import org.lowcoder.api.application.view.AgencyProfileApplicationView;
-import org.lowcoder.api.framework.view.ResponseView;
-import org.lowcoder.api.home.UserHomepageView;
-import org.lowcoder.domain.application.model.Application;
-import org.lowcoder.domain.application.model.ApplicationStatus;
-import org.lowcoder.infra.constant.NewUrl;
-import org.lowcoder.infra.constant.Url;
+// import org.quickdev.api.application.view.AgencyProfileApplicationView;
+import org.quickdev.api.framework.view.ResponseView;
+import org.quickdev.api.home.UserHomepageView;
+import org.quickdev.domain.application.model.Application;
+import org.quickdev.domain.application.model.ApplicationStatus;
+import org.quickdev.infra.constant.NewUrl;
+import org.quickdev.infra.constant.Url;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

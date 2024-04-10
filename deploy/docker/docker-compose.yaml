@@ -33,7 +33,7 @@ services:
       QUICKDEV_MAX_APPS_PER_ORG: 1000
       QUICKDEV_MAX_DEVELOPERS: 50
       #QUICKDEV_MONGODB_URL: "mongodb://lowcoder:secret123@mongodb/lowcoder?authSource=admin"
-      QUICKDEV_MONGODB_URL: "mongodb://localhost:27017/lowcoder?authSource=admin"
+      QUICKDEV_MONGODB_URL: "mongodb://localhost:27017/quickdev?authSource=admin"
       QUICKDEV_REDIS_URL: "redis://localhost:6379"
       QUICKDEV_EMAIL_SIGNUP_ENABLED: "true"
       QUICKDEV_EMAIL_AUTH_ENABLED: "true"

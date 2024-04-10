@@ -1,6 +1,6 @@
-package org.lowcoder.domain.organization.service;
+package org.quickdev.domain.organization.service;
 
-import static org.lowcoder.infra.birelation.BiRelationBizType.ORG_MEMBER;
+import static org.quickdev.infra.birelation.BiRelationBizType.ORG_MEMBER;
 
 import java.util.Collection;
 import java.util.HashSet;
@@ -9,22 +9,22 @@ import java.util.Map;
 
 import org.apache.commons.lang3.StringUtils;
 import org.bson.Document;
-import org.lowcoder.domain.group.model.GroupMember;
-import org.lowcoder.domain.group.service.GroupMemberService;
-import org.lowcoder.domain.group.service.GroupService;
-import org.lowcoder.domain.organization.model.MemberRole;
-import org.lowcoder.domain.organization.model.OrgMember;
-import org.lowcoder.domain.organization.model.OrgMemberState;
-import org.lowcoder.domain.organization.model.Organization;
-import org.lowcoder.domain.organization.model.OrganizationState;
-import org.lowcoder.infra.annotation.PossibleEmptyMono;
-import org.lowcoder.infra.birelation.BiRelation;
-import org.lowcoder.infra.birelation.BiRelationService;
-import org.lowcoder.infra.mongo.MongoUpsertHelper;
-import org.lowcoder.infra.util.FluxHelper;
-import org.lowcoder.sdk.config.CommonConfig;
-import org.lowcoder.sdk.config.CommonConfig.Workspace;
-import org.lowcoder.sdk.constants.WorkspaceMode;
+import org.quickdev.domain.group.model.GroupMember;
+import org.quickdev.domain.group.service.GroupMemberService;
+import org.quickdev.domain.group.service.GroupService;
+import org.quickdev.domain.organization.model.MemberRole;
+import org.quickdev.domain.organization.model.OrgMember;
+import org.quickdev.domain.organization.model.OrgMemberState;
+import org.quickdev.domain.organization.model.Organization;
+import org.quickdev.domain.organization.model.OrganizationState;
+import org.quickdev.infra.annotation.PossibleEmptyMono;
+import org.quickdev.infra.birelation.BiRelation;
+import org.quickdev.infra.birelation.BiRelationService;
+import org.quickdev.infra.mongo.MongoUpsertHelper;
+import org.quickdev.infra.util.FluxHelper;
+import org.quickdev.sdk.config.CommonConfig;
+import org.quickdev.sdk.config.CommonConfig.Workspace;
+import org.quickdev.sdk.constants.WorkspaceMode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;

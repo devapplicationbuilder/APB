@@ -1,8 +1,8 @@
-package org.lowcoder.domain.authentication.context;
+package org.quickdev.domain.authentication.context;
 
 import javax.annotation.Nullable;
 
-import org.lowcoder.sdk.auth.AbstractAuthConfig;
+import org.quickdev.sdk.auth.AbstractAuthConfig;
 
 import lombok.Getter;
 import lombok.Setter;

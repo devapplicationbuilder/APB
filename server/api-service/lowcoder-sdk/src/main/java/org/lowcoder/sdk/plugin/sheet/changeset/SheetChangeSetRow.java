@@ -1,6 +1,6 @@
-package org.lowcoder.sdk.plugin.sheet.changeset;
+package org.quickdev.sdk.plugin.sheet.changeset;
 
-import static org.lowcoder.sdk.exception.PluginCommonError.INVALID_GUI_SETTINGS;
+import static org.quickdev.sdk.exception.PluginCommonError.INVALID_GUI_SETTINGS;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -12,8 +12,8 @@ import java.util.stream.Collectors;
 
 import javax.annotation.Nonnull;
 
-import org.lowcoder.sdk.exception.PluginException;
-import org.lowcoder.sdk.util.JsonUtils;
+import org.quickdev.sdk.exception.PluginException;
+import org.quickdev.sdk.util.JsonUtils;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;

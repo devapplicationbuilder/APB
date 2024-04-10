@@ -2326,7 +2326,7 @@ export const zh = {
         "copyLink": "Copy link",
         "appPublicMessage": "Make the app public. Anyone can view.",
         "modulePublicMessage": "Make the module public. Anyone can view.",
-        "marketplaceURL": "http://localhost:4500",
+        "marketplaceURL": "http://172.23.16.1",
         "appMarketplaceMessage": "Publish your App on QuickDEV DEMO Marketplace. Anyone can view and copy it from there.",
         "moduleMarketplaceMessage": "Publish your Module on QuickDEV DEMO Marketplace. Anyone can view and copy it from there.",
         "marketplaceGoodPublishing": "Please make sure your app is well-named and easy to use. Remove any sensitive information before publishing. Also, remove local datasources and replace by static built-in temporary data.",
@@ -2602,7 +2602,7 @@ export const zh = {
 
 
     "playground": {
-        "url": "http://localhost:4500/playground/{compType}/1",
+        "url": "http://172.23.16.1/playground/{compType}/1",
         "data": "Current Data State",
         "preview": "Preview (please mind, that your Editor-Layout/Logic Mode is active here too. You can set it to 'Both' in the App Editor to see all properties here too)",
         "property": "Properties",
@@ -2787,20 +2787,20 @@ export const zh = {
     },
 
     docUrls: {
-        docHome: "http://localhost:4500",
-        components: "http://localhost:4500/components/{compType}",
-        module: "http://localhost:4500",
+        docHome: "http://172.23.16.1",
+        components: "http://172.23.16.1/components/{compType}",
+        module: "http://172.23.16.1",
         optionList: "",
-        terms: "http://localhost:4500",
-        privacy: "http://localhost:4500",
-        aboutUs: "http://localhost:4500",
-        changeLog: "http://localhost:4500",
+        terms: "http://172.23.16.1",
+        privacy: "http://172.23.16.1",
+        aboutUs: "http://172.23.16.1",
+        changeLog: "http://172.23.16.1",
         introVideo: "",
-        devNpmPlugin: "http://localhost:4500",
+        devNpmPlugin: "http://172.23.16.1",
         devNpmPluginText: "How to develop npm plugin",
-        useHost: "http://localhost:4500",
-        eventHandlerSlowdown: "http://localhost:4500",
-        thirdLib: "http://localhost:4500",
+        useHost: "http://172.23.16.1",
+        eventHandlerSlowdown: "http://172.23.16.1",
+        thirdLib: "http://172.23.16.1",
         thirdLibUrlText: "Use third-party libraries",
     },
     datasourceTutorial: {
@@ -2814,20 +2814,20 @@ export const zh = {
     },
     queryTutorial: {
         js: "",
-        transformer: "http://localhost:4500",
-        tempState: "http://localhost:4500",
-        dataResponder: "http://localhost:4500",
+        transformer: "http://172.23.16.1",
+        tempState: "http://172.23.16.1",
+        dataResponder: "http://172.23.16.1",
     },
     customComponent: {
         //entryUrl: "https://sdk.lowcoder.cloud/custom_component.html"
-        entryUrl: "http://localhost:4502/custom_component.html"
+        entryUrl: "http://172.23.16.1:4502/custom_component.html"
     },
     template: {
         cloneUrl: "/apps/template-import/",
     },
     lowcoderUrl: {
-        createIssue: "http://localhost:4500",
-        discord: "http://localhost:4500",
+        createIssue: "http://172.23.16.1",
+        discord: "http://172.23.16.1",
     },
 
 };

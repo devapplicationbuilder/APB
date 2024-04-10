@@ -1,6 +1,6 @@
-package org.lowcoder.api.application.view;
+package org.quickdev.api.application.view;
 
-import org.lowcoder.api.permission.view.CommonPermissionView;
+import org.quickdev.api.permission.view.CommonPermissionView;
 
 import lombok.experimental.SuperBuilder;
 

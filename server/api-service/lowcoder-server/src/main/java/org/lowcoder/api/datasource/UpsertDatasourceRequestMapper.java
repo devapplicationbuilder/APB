@@ -1,13 +1,13 @@
-package org.lowcoder.api.datasource;
+package org.quickdev.api.datasource;
 
-import static org.lowcoder.sdk.exception.BizError.INVALID_DATASOURCE_CONFIGURATION;
-import static org.lowcoder.sdk.util.ExceptionUtils.ofException;
+import static org.quickdev.sdk.exception.BizError.INVALID_DATASOURCE_CONFIGURATION;
+import static org.quickdev.sdk.util.ExceptionUtils.ofException;
 
 import org.apache.commons.lang3.StringUtils;
-import org.lowcoder.domain.datasource.model.Datasource;
-import org.lowcoder.domain.plugin.service.DatasourceMetaInfoService;
-import org.lowcoder.sdk.models.JsDatasourceConnectionConfig;
-import org.lowcoder.sdk.util.JsonUtils;
+import org.quickdev.domain.datasource.model.Datasource;
+import org.quickdev.domain.plugin.service.DatasourceMetaInfoService;
+import org.quickdev.sdk.models.JsDatasourceConnectionConfig;
+import org.quickdev.sdk.util.JsonUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

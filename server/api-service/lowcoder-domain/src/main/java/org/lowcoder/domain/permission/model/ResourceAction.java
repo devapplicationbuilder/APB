@@ -1,4 +1,4 @@
-package org.lowcoder.domain.permission.model;
+package org.quickdev.domain.permission.model;
 
 import static com.google.common.collect.Multimaps.toMultimap;
 import static java.util.Collections.emptySet;

@@ -1,4 +1,4 @@
-package org.lowcoder.infra.birelation;
+package org.quickdev.infra.birelation;
 
 import static com.google.common.base.Strings.nullToEmpty;
 import static org.apache.commons.lang3.StringUtils.isNotBlank;
@@ -7,7 +7,7 @@ import static org.springframework.data.mongodb.core.query.Criteria.where;
 import java.util.Collection;
 import java.util.List;
 
-import org.lowcoder.infra.mongo.MongoUpsertHelper;
+import org.quickdev.infra.mongo.MongoUpsertHelper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.mongodb.core.query.Criteria;

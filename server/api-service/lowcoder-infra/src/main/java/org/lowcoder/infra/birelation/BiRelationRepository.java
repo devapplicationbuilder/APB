@@ -1,4 +1,4 @@
-package org.lowcoder.infra.birelation;
+package org.quickdev.infra.birelation;
 
 import java.util.Collection;
 

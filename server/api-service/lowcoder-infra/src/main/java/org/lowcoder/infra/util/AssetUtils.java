@@ -1,7 +1,7 @@
-package org.lowcoder.infra.util;
+package org.quickdev.infra.util;
 
 import org.apache.commons.lang3.StringUtils;
-import org.lowcoder.infra.constant.NewUrl;
+import org.quickdev.infra.constant.NewUrl;
 
 public final class AssetUtils {
 

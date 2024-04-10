@@ -1,4 +1,4 @@
-package org.lowcoder.api.misc;
+package org.quickdev.api.misc;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -19,11 +19,11 @@ import org.apache.commons.collections4.MapUtils;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.jetbrains.annotations.NotNull;
-import org.lowcoder.api.framework.view.ResponseView;
-import org.lowcoder.infra.constant.NewUrl;
-import org.lowcoder.infra.localcache.ReloadableCache;
-import org.lowcoder.sdk.util.JsonUtils;
-import org.lowcoder.sdk.webclient.WebClientBuildHelper;
+import org.quickdev.api.framework.view.ResponseView;
+import org.quickdev.infra.constant.NewUrl;
+import org.quickdev.infra.localcache.ReloadableCache;
+import org.quickdev.sdk.util.JsonUtils;
+import org.quickdev.sdk.webclient.WebClientBuildHelper;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;

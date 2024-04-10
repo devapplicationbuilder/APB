@@ -1,7 +1,7 @@
-package org.lowcoder.domain.permission.model;
+package org.quickdev.domain.permission.model;
 
 import static com.google.common.collect.Maps.newHashMap;
-import static org.lowcoder.sdk.util.StreamUtils.collectMap;
+import static org.quickdev.sdk.util.StreamUtils.collectMap;
 
 import java.util.Arrays;
 import java.util.Collection;

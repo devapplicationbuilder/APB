@@ -1,23 +1,23 @@
-package org.lowcoder.domain.application.service;
+package org.quickdev.domain.application.service;
 
 
-import static org.lowcoder.domain.application.ApplicationUtil.getDependentModulesFromDsl;
+import static org.quickdev.domain.application.ApplicationUtil.getDependentModulesFromDsl;
 
 import java.util.*;
 import java.util.stream.Collectors;
 
-import org.lowcoder.domain.application.model.Application;
-import org.lowcoder.domain.application.model.ApplicationRequestType;
-import org.lowcoder.domain.application.model.ApplicationStatus;
-import org.lowcoder.domain.application.repository.ApplicationRepository;
-import org.lowcoder.domain.permission.model.ResourceRole;
-import org.lowcoder.domain.permission.service.ResourcePermissionService;
-import org.lowcoder.infra.annotation.NonEmptyMono;
-import org.lowcoder.infra.mongo.MongoUpsertHelper;
-import org.lowcoder.sdk.constants.FieldName;
-import org.lowcoder.sdk.exception.BizError;
-import org.lowcoder.sdk.exception.BizException;
-import org.lowcoder.sdk.models.HasIdAndAuditing;
+import org.quickdev.domain.application.model.Application;
+import org.quickdev.domain.application.model.ApplicationRequestType;
+import org.quickdev.domain.application.model.ApplicationStatus;
+import org.quickdev.domain.application.repository.ApplicationRepository;
+import org.quickdev.domain.permission.model.ResourceRole;
+import org.quickdev.domain.permission.service.ResourcePermissionService;
+import org.quickdev.infra.annotation.NonEmptyMono;
+import org.quickdev.infra.mongo.MongoUpsertHelper;
+import org.quickdev.sdk.constants.FieldName;
+import org.quickdev.sdk.exception.BizError;
+import org.quickdev.sdk.exception.BizException;
+import org.quickdev.sdk.models.HasIdAndAuditing;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Service;

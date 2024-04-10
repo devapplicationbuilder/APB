@@ -1,4 +1,4 @@
-package org.lowcoder.api.datasource;
+package org.quickdev.api.datasource;
 
 import java.util.List;
 import java.util.Set;
@@ -6,15 +6,15 @@ import java.util.Set;
 import javax.annotation.Nullable;
 import javax.validation.Valid;
 
-import org.lowcoder.api.framework.view.ResponseView;
-import org.lowcoder.api.permission.view.CommonPermissionView;
-import org.lowcoder.domain.datasource.model.Datasource;
-import org.lowcoder.domain.permission.model.ResourceRole;
-import org.lowcoder.domain.plugin.client.dto.GetPluginDynamicConfigRequestDTO;
-import org.lowcoder.infra.constant.NewUrl;
-import org.lowcoder.infra.constant.Url;
-import org.lowcoder.sdk.config.SerializeConfig.JsonViews;
-import org.lowcoder.sdk.models.DatasourceStructure;
+import org.quickdev.api.framework.view.ResponseView;
+import org.quickdev.api.permission.view.CommonPermissionView;
+import org.quickdev.domain.datasource.model.Datasource;
+import org.quickdev.domain.permission.model.ResourceRole;
+import org.quickdev.domain.plugin.client.dto.GetPluginDynamicConfigRequestDTO;
+import org.quickdev.infra.constant.NewUrl;
+import org.quickdev.infra.constant.Url;
+import org.quickdev.sdk.config.SerializeConfig.JsonViews;
+import org.quickdev.sdk.models.DatasourceStructure;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;

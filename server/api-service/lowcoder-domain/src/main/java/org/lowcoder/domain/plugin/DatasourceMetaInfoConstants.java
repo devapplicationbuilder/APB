@@ -1,4 +1,4 @@
-package org.lowcoder.domain.plugin;
+package org.quickdev.domain.plugin;
 
 public final class DatasourceMetaInfoConstants {
 

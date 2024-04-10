@@ -1,4 +1,4 @@
-package org.lowcoder.domain.user.model;
+package org.quickdev.domain.user.model;
 
 import lombok.Builder;
 import lombok.Data;

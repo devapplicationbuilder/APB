@@ -1,8 +1,8 @@
-package org.lowcoder.infra.js;
+package org.quickdev.infra.js;
 
 import java.net.URI;
 
-import org.lowcoder.sdk.config.CommonConfigHelper;
+import org.quickdev.sdk.config.CommonConfigHelper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.util.UriComponentsBuilder;

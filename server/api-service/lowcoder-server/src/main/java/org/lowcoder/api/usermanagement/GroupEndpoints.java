@@ -1,18 +1,18 @@
-package org.lowcoder.api.usermanagement;
+package org.quickdev.api.usermanagement;
 
 import java.util.List;
 
 import javax.validation.Valid;
 
-import org.lowcoder.api.framework.view.ResponseView;
-import org.lowcoder.api.usermanagement.view.AddMemberRequest;
-import org.lowcoder.api.usermanagement.view.CreateGroupRequest;
-import org.lowcoder.api.usermanagement.view.GroupMemberAggregateView;
-import org.lowcoder.api.usermanagement.view.GroupView;
-import org.lowcoder.api.usermanagement.view.UpdateGroupRequest;
-import org.lowcoder.api.usermanagement.view.UpdateRoleRequest;
-import org.lowcoder.infra.constant.NewUrl;
-import org.lowcoder.infra.constant.Url;
+import org.quickdev.api.framework.view.ResponseView;
+import org.quickdev.api.usermanagement.view.AddMemberRequest;
+import org.quickdev.api.usermanagement.view.CreateGroupRequest;
+import org.quickdev.api.usermanagement.view.GroupMemberAggregateView;
+import org.quickdev.api.usermanagement.view.GroupView;
+import org.quickdev.api.usermanagement.view.UpdateGroupRequest;
+import org.quickdev.api.usermanagement.view.UpdateRoleRequest;
+import org.quickdev.infra.constant.NewUrl;
+import org.quickdev.infra.constant.Url;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

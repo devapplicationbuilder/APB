@@ -1,4 +1,4 @@
-package org.lowcoder.api.common.mockuser;
+package org.quickdev.api.common.mockuser;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;

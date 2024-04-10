@@ -1,12 +1,12 @@
-package org.lowcoder.domain.folder.service;
+package org.quickdev.domain.folder.service;
 
-import static org.lowcoder.infra.birelation.BiRelationBizType.FOLDER_ELEMENT;
+import static org.quickdev.infra.birelation.BiRelationBizType.FOLDER_ELEMENT;
 
 import java.util.List;
 
-import org.lowcoder.domain.folder.model.FolderElement;
-import org.lowcoder.infra.birelation.BiRelationBizType;
-import org.lowcoder.infra.birelation.BiRelationService;
+import org.quickdev.domain.folder.model.FolderElement;
+import org.quickdev.infra.birelation.BiRelationBizType;
+import org.quickdev.infra.birelation.BiRelationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

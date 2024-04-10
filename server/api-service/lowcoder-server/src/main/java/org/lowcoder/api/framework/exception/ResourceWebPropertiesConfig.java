@@ -1,4 +1,4 @@
-package org.lowcoder.api.framework.exception;
+package org.quickdev.api.framework.exception;
 
 import org.springframework.boot.autoconfigure.web.WebProperties;
 import org.springframework.context.annotation.Bean;

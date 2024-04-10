@@ -1,14 +1,14 @@
-package org.lowcoder.plugin.oracle.model;
+package org.quickdev.plugin.oracle.model;
 
-import static org.lowcoder.sdk.exception.BizError.INVALID_DATASOURCE_CONFIG_TYPE;
-import static org.lowcoder.sdk.util.ExceptionUtils.ofException;
+import static org.quickdev.sdk.exception.BizError.INVALID_DATASOURCE_CONFIG_TYPE;
+import static org.quickdev.sdk.util.ExceptionUtils.ofException;
 
 import java.util.Map;
 
 import org.apache.commons.lang3.ObjectUtils;
 import org.apache.commons.lang3.StringUtils;
-import org.lowcoder.sdk.models.DatasourceConnectionConfig;
-import org.lowcoder.sdk.plugin.common.sql.SqlBasedDatasourceConnectionConfig;
+import org.quickdev.sdk.models.DatasourceConnectionConfig;
+import org.quickdev.sdk.plugin.common.sql.SqlBasedDatasourceConnectionConfig;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 

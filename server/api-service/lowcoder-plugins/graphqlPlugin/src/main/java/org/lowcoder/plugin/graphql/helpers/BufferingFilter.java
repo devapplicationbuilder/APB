@@ -1,4 +1,4 @@
-package org.lowcoder.plugin.graphql.helpers;
+package org.quickdev.plugin.graphql.helpers;
 
 import org.reactivestreams.Publisher;
 import org.springframework.core.io.buffer.DataBuffer;

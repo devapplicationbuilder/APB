@@ -1,4 +1,4 @@
-package org.lowcoder.plugin.mysql.utils;
+package org.quickdev.plugin.mysql.utils;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -7,12 +7,12 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.lowcoder.sdk.models.DatasourceStructure.Column;
-import org.lowcoder.sdk.models.DatasourceStructure.ForeignKey;
-import org.lowcoder.sdk.models.DatasourceStructure.Key;
-import org.lowcoder.sdk.models.DatasourceStructure.PrimaryKey;
-import org.lowcoder.sdk.models.DatasourceStructure.Table;
-import org.lowcoder.sdk.models.DatasourceStructure.TableType;
+import org.quickdev.sdk.models.DatasourceStructure.Column;
+import org.quickdev.sdk.models.DatasourceStructure.ForeignKey;
+import org.quickdev.sdk.models.DatasourceStructure.Key;
+import org.quickdev.sdk.models.DatasourceStructure.PrimaryKey;
+import org.quickdev.sdk.models.DatasourceStructure.Table;
+import org.quickdev.sdk.models.DatasourceStructure.TableType;
 
 @SuppressWarnings({"SqlDialectInspection", "SqlNoDataSourceInspection"})
 public class MysqlStructureParser {

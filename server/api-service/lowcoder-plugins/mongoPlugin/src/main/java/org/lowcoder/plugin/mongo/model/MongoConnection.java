@@ -1,4 +1,4 @@
-package org.lowcoder.plugin.mongo.model;
+package org.quickdev.plugin.mongo.model;
 
 import org.bson.Document;
 

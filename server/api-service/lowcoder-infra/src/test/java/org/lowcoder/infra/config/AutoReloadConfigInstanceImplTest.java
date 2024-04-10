@@ -1,4 +1,4 @@
-package org.lowcoder.infra.config;
+package org.quickdev.infra.config;
 
 import java.lang.reflect.Field;
 import java.util.List;
@@ -9,11 +9,11 @@ import javax.annotation.Nullable;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import org.lowcoder.infra.config.AutoReloadConfigFactory;
-import org.lowcoder.infra.config.AutoReloadConfigInstanceImpl;
-import org.lowcoder.sdk.config.dynamic.Conf;
-import org.lowcoder.sdk.test.JsonFileReader;
-import org.lowcoder.sdk.util.JsonUtils;
+import org.quickdev.infra.config.AutoReloadConfigFactory;
+import org.quickdev.infra.config.AutoReloadConfigInstanceImpl;
+import org.quickdev.sdk.config.dynamic.Conf;
+import org.quickdev.sdk.test.JsonFileReader;
+import org.quickdev.sdk.util.JsonUtils;
 
 public class AutoReloadConfigInstanceImplTest {
 

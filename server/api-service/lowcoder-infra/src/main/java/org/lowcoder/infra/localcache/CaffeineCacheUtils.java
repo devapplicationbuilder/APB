@@ -1,4 +1,4 @@
-package org.lowcoder.infra.localcache;
+package org.quickdev.infra.localcache;
 
 import java.util.function.Supplier;
 

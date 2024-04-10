@@ -1,6 +1,6 @@
-package org.lowcoder.domain.user.repository;
+package org.quickdev.domain.user.repository;
 
-import org.lowcoder.domain.user.model.UserStatus;
+import org.quickdev.domain.user.model.UserStatus;
 import org.springframework.data.mongodb.repository.ReactiveMongoRepository;
 import org.springframework.stereotype.Repository;
 

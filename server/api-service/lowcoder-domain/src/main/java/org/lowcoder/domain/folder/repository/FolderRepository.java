@@ -1,6 +1,6 @@
-package org.lowcoder.domain.folder.repository;
+package org.quickdev.domain.folder.repository;
 
-import org.lowcoder.domain.folder.model.Folder;
+import org.quickdev.domain.folder.model.Folder;
 import org.springframework.data.mongodb.repository.ReactiveMongoRepository;
 import org.springframework.stereotype.Repository;
 

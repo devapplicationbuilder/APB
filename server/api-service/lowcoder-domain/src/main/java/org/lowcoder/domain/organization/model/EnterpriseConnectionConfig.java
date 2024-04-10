@@ -1,8 +1,8 @@
-package org.lowcoder.domain.organization.model;
+package org.quickdev.domain.organization.model;
 
 import java.util.List;
 
-import org.lowcoder.sdk.auth.AbstractAuthConfig;
+import org.quickdev.sdk.auth.AbstractAuthConfig;
 
 public interface EnterpriseConnectionConfig {
 

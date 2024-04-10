@@ -1,9 +1,9 @@
-package org.lowcoder.plugin.mysql.utils;
+package org.quickdev.plugin.mysql.utils;
 
-import static org.lowcoder.plugin.mysql.utils.MysqlStructureParser.DATETIME_COLUMN_TYPE_NAME;
-import static org.lowcoder.plugin.mysql.utils.MysqlStructureParser.DATE_COLUMN_TYPE_NAME;
-import static org.lowcoder.plugin.mysql.utils.MysqlStructureParser.TIMESTAMP_COLUMN_TYPE_NAME;
-import static org.lowcoder.sdk.util.DateTimeUtils.DATE_TIME_FORMAT;
+import static org.quickdev.plugin.mysql.utils.MysqlStructureParser.DATETIME_COLUMN_TYPE_NAME;
+import static org.quickdev.plugin.mysql.utils.MysqlStructureParser.DATE_COLUMN_TYPE_NAME;
+import static org.quickdev.plugin.mysql.utils.MysqlStructureParser.TIMESTAMP_COLUMN_TYPE_NAME;
+import static org.quickdev.sdk.util.DateTimeUtils.DATE_TIME_FORMAT;
 
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;

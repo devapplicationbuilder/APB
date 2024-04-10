@@ -1,6 +1,6 @@
-package org.lowcoder.runner.eventlistener;
+package org.quickdev.runner.eventlistener;
 
-import org.lowcoder.sdk.exception.BizError;
+import org.quickdev.sdk.exception.BizError;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Component;

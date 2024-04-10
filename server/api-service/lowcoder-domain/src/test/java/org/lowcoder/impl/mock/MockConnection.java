@@ -1,4 +1,4 @@
-package org.lowcoder.impl.mock;
+package org.quickdev.impl.mock;
 
 public class MockConnection {
 

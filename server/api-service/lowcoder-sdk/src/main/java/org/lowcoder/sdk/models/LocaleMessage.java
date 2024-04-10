@@ -1,4 +1,4 @@
-package org.lowcoder.sdk.models;
+package org.quickdev.sdk.models;
 
 public record LocaleMessage(String messageKey, Object... args) {
 

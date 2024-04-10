@@ -1,4 +1,4 @@
-package org.lowcoder.domain.mongodb;
+package org.quickdev.domain.mongodb;
 
 public interface AfterMongodbRead {
 

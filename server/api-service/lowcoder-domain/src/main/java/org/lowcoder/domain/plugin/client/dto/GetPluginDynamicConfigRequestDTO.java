@@ -1,4 +1,4 @@
-package org.lowcoder.domain.plugin.client.dto;
+package org.quickdev.domain.plugin.client.dto;
 
 import java.util.Map;
 

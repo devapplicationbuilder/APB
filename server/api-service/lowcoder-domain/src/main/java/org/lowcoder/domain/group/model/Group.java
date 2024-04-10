@@ -1,4 +1,4 @@
-package org.lowcoder.domain.group.model;
+package org.quickdev.domain.group.model;
 
 import java.beans.Transient;
 import java.util.Comparator;
@@ -9,8 +9,8 @@ import javax.validation.constraints.NotNull;
 
 import org.apache.commons.lang3.BooleanUtils;
 import org.apache.commons.lang3.StringUtils;
-import org.lowcoder.domain.group.util.SystemGroups;
-import org.lowcoder.sdk.models.HasIdAndAuditing;
+import org.quickdev.domain.group.util.SystemGroups;
+import org.quickdev.sdk.models.HasIdAndAuditing;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;

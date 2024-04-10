@@ -1,4 +1,4 @@
-package org.lowcoder.sdk.plugin.common.ssl;
+package org.quickdev.sdk.plugin.common.ssl;
 
 import java.io.ByteArrayInputStream;
 import java.security.cert.CertificateException;
@@ -7,8 +7,8 @@ import java.security.cert.X509Certificate;
 import java.util.Base64;
 
 import org.apache.commons.lang3.StringUtils;
-import org.lowcoder.sdk.exception.BizError;
-import org.lowcoder.sdk.exception.BizException;
+import org.quickdev.sdk.exception.BizError;
+import org.quickdev.sdk.exception.BizException;
 
 public class SslHelper {
 

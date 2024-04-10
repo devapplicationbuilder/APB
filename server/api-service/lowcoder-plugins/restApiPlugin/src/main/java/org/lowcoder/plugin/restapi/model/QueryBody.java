@@ -1,4 +1,4 @@
-package org.lowcoder.plugin.restapi.model;
+package org.quickdev.plugin.restapi.model;
 
 import com.fasterxml.jackson.databind.JsonNode;
 

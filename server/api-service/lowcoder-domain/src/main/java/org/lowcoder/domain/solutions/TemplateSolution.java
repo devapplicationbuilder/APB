@@ -1,10 +1,10 @@
-package org.lowcoder.domain.solutions;
+package org.quickdev.domain.solutions;
 
 import static java.util.Objects.isNull;
-import static org.lowcoder.sdk.exception.BizError.TEMPLATE_NOT_CORRECT;
-import static org.lowcoder.sdk.exception.BizError.TEMPLATE_NOT_EXIST;
-import static org.lowcoder.sdk.util.ExceptionUtils.deferredError;
-import static org.lowcoder.sdk.util.ExceptionUtils.ofError;
+import static org.quickdev.sdk.exception.BizError.TEMPLATE_NOT_CORRECT;
+import static org.quickdev.sdk.exception.BizError.TEMPLATE_NOT_EXIST;
+import static org.quickdev.sdk.util.ExceptionUtils.deferredError;
+import static org.quickdev.sdk.util.ExceptionUtils.ofError;
 
 import java.util.Collection;
 import java.util.List;
@@ -16,18 +16,18 @@ import javax.annotation.Nonnull;
 
 import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.commons.lang3.tuple.Pair;
-import org.lowcoder.domain.application.model.Application;
-import org.lowcoder.domain.application.model.ApplicationStatus;
-import org.lowcoder.domain.application.service.ApplicationService;
-import org.lowcoder.domain.datasource.model.Datasource;
-import org.lowcoder.domain.datasource.model.DatasourceCreationSource;
-import org.lowcoder.domain.datasource.service.DatasourceService;
-import org.lowcoder.domain.query.model.ApplicationQuery;
-import org.lowcoder.domain.template.model.Template;
-import org.lowcoder.domain.template.service.TemplateService;
-import org.lowcoder.infra.annotation.NonEmptyMono;
-import org.lowcoder.infra.util.TupleUtils;
-import org.lowcoder.sdk.util.JsonUtils;
+import org.quickdev.domain.application.model.Application;
+import org.quickdev.domain.application.model.ApplicationStatus;
+import org.quickdev.domain.application.service.ApplicationService;
+import org.quickdev.domain.datasource.model.Datasource;
+import org.quickdev.domain.datasource.model.DatasourceCreationSource;
+import org.quickdev.domain.datasource.service.DatasourceService;
+import org.quickdev.domain.query.model.ApplicationQuery;
+import org.quickdev.domain.template.model.Template;
+import org.quickdev.domain.template.service.TemplateService;
+import org.quickdev.infra.annotation.NonEmptyMono;
+import org.quickdev.infra.util.TupleUtils;
+import org.quickdev.sdk.util.JsonUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Service;

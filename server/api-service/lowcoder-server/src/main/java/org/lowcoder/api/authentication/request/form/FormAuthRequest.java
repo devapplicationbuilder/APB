@@ -1,21 +1,21 @@
-package org.lowcoder.api.authentication.request.form;
+package org.quickdev.api.authentication.request.form;
 
-import org.lowcoder.api.authentication.request.AuthRequest;
-import org.lowcoder.domain.authentication.context.AuthRequestContext;
-import org.lowcoder.domain.authentication.context.FormAuthRequestContext;
-import org.lowcoder.domain.encryption.EncryptionService;
-import org.lowcoder.domain.user.model.AuthUser;
-import org.lowcoder.domain.user.service.UserService;
-import org.lowcoder.sdk.auth.AbstractAuthConfig;
-import org.lowcoder.sdk.auth.EmailAuthConfig;
-import org.lowcoder.sdk.constants.AuthSourceConstants;
-import org.lowcoder.sdk.exception.BizError;
-import org.lowcoder.sdk.exception.BizException;
+import org.quickdev.api.authentication.request.AuthRequest;
+import org.quickdev.domain.authentication.context.AuthRequestContext;
+import org.quickdev.domain.authentication.context.FormAuthRequestContext;
+import org.quickdev.domain.encryption.EncryptionService;
+import org.quickdev.domain.user.model.AuthUser;
+import org.quickdev.domain.user.service.UserService;
+import org.quickdev.sdk.auth.AbstractAuthConfig;
+import org.quickdev.sdk.auth.EmailAuthConfig;
+import org.quickdev.sdk.constants.AuthSourceConstants;
+import org.quickdev.sdk.exception.BizError;
+import org.quickdev.sdk.exception.BizException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import reactor.core.publisher.Mono;
 
-import static org.lowcoder.sdk.util.ExceptionUtils.ofError;
+import static org.quickdev.sdk.util.ExceptionUtils.ofError;
 
 @Component
 public class FormAuthRequest implements AuthRequest {

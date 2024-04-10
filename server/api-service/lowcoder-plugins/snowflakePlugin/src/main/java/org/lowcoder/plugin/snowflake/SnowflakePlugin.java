@@ -1,4 +1,4 @@
-package org.lowcoder.plugin.snowflake;
+package org.quickdev.plugin.snowflake;
 
 import org.pf4j.Plugin;
 import org.pf4j.PluginWrapper;

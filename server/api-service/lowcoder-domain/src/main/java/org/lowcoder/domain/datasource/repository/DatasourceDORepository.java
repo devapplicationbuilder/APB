@@ -1,6 +1,6 @@
-package org.lowcoder.domain.datasource.repository;
+package org.quickdev.domain.datasource.repository;
 
-import org.lowcoder.domain.datasource.model.DatasourceDO;
+import org.quickdev.domain.datasource.model.DatasourceDO;
 import org.springframework.data.mongodb.repository.ReactiveMongoRepository;
 
 import reactor.core.publisher.Flux;

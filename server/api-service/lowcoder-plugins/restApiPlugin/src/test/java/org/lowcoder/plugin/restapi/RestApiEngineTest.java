@@ -1,12 +1,12 @@
-package org.lowcoder.plugin.restapi;
+package org.quickdev.plugin.restapi;
 
 import static java.util.Collections.emptyList;
 import static java.util.Collections.emptyMap;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
-import static org.lowcoder.sdk.plugin.restapi.auth.RestApiAuthType.BASIC_AUTH;
-import static org.lowcoder.sdk.plugin.restapi.auth.RestApiAuthType.DIGEST_AUTH;
+import static org.quickdev.sdk.plugin.restapi.auth.RestApiAuthType.BASIC_AUTH;
+import static org.quickdev.sdk.plugin.restapi.auth.RestApiAuthType.DIGEST_AUTH;
 
 import java.net.URI;
 import java.util.List;
@@ -14,17 +14,17 @@ import java.util.Map;
 
 import org.junit.Assert;
 import org.junit.Test;
-import org.lowcoder.plugin.restapi.RestApiConnector;
-import org.lowcoder.plugin.restapi.RestApiExecutor;
-import org.lowcoder.plugin.restapi.model.RestApiQueryExecutionContext;
-import org.lowcoder.sdk.config.CommonConfig;
-import org.lowcoder.sdk.models.Property;
-import org.lowcoder.sdk.models.QueryExecutionResult;
-import org.lowcoder.sdk.plugin.common.RestApiUriBuilder;
-import org.lowcoder.sdk.plugin.restapi.RestApiDatasourceConfig;
-import org.lowcoder.sdk.plugin.restapi.auth.BasicAuthConfig;
-import org.lowcoder.sdk.query.QueryExecutionContext;
-import org.lowcoder.sdk.query.QueryVisitorContext;
+import org.quickdev.plugin.restapi.RestApiConnector;
+import org.quickdev.plugin.restapi.RestApiExecutor;
+import org.quickdev.plugin.restapi.model.RestApiQueryExecutionContext;
+import org.quickdev.sdk.config.CommonConfig;
+import org.quickdev.sdk.models.Property;
+import org.quickdev.sdk.models.QueryExecutionResult;
+import org.quickdev.sdk.plugin.common.RestApiUriBuilder;
+import org.quickdev.sdk.plugin.restapi.RestApiDatasourceConfig;
+import org.quickdev.sdk.plugin.restapi.auth.BasicAuthConfig;
+import org.quickdev.sdk.query.QueryExecutionContext;
+import org.quickdev.sdk.query.QueryVisitorContext;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;

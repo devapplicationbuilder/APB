@@ -1,6 +1,6 @@
-package org.lowcoder.api.framework.exception;
+package org.quickdev.api.framework.exception;
 
-import static org.lowcoder.sdk.util.ExceptionUtils.ofException;
+import static org.quickdev.sdk.util.ExceptionUtils.ofException;
 import static org.springframework.web.reactive.function.server.RequestPredicates.all;
 import static org.springframework.web.reactive.function.server.RouterFunctions.route;
 
@@ -8,11 +8,11 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-import org.lowcoder.api.framework.service.GlobalContextService;
-import org.lowcoder.api.framework.view.ResponseView;
-import org.lowcoder.sdk.exception.BizError;
-import org.lowcoder.sdk.exception.BizException;
-import org.lowcoder.sdk.util.LocaleUtils;
+import org.quickdev.api.framework.service.GlobalContextService;
+import org.quickdev.api.framework.view.ResponseView;
+import org.quickdev.sdk.exception.BizError;
+import org.quickdev.sdk.exception.BizException;
+import org.quickdev.sdk.util.LocaleUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.ObjectProvider;

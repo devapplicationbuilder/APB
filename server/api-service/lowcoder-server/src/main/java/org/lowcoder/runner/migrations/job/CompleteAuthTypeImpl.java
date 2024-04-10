@@ -1,11 +1,11 @@
-package org.lowcoder.runner.migrations.job;
+package org.quickdev.runner.migrations.job;
 
 import org.apache.commons.collections4.CollectionUtils;
-import org.lowcoder.domain.organization.model.Organization;
-import org.lowcoder.domain.organization.service.OrganizationService;
-import org.lowcoder.sdk.auth.AbstractAuthConfig;
-import org.lowcoder.sdk.auth.EmailAuthConfig;
-import org.lowcoder.sdk.auth.constants.AuthTypeConstants;
+import org.quickdev.domain.organization.model.Organization;
+import org.quickdev.domain.organization.service.OrganizationService;
+import org.quickdev.sdk.auth.AbstractAuthConfig;
+import org.quickdev.sdk.auth.EmailAuthConfig;
+import org.quickdev.sdk.auth.constants.AuthTypeConstants;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.ReactiveMongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;

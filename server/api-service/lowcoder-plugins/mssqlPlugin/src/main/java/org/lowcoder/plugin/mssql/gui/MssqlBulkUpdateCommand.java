@@ -1,15 +1,15 @@
-package org.lowcoder.plugin.mssql.gui;
+package org.quickdev.plugin.mssql.gui;
 
-import static org.lowcoder.plugin.mssql.gui.GuiConstants.MSSQL_COLUMN_DELIMITER_BACK;
-import static org.lowcoder.plugin.mssql.gui.GuiConstants.MSSQL_COLUMN_DELIMITER_FRONT;
-import static org.lowcoder.sdk.plugin.sqlcommand.GuiSqlCommand.parseTable;
-import static org.lowcoder.sdk.plugin.sqlcommand.changeset.BulkObjectChangeSet.parseBulkRecords;
-import static org.lowcoder.sdk.plugin.sqlcommand.changeset.BulkObjectChangeSet.parsePrimaryKey;
+import static org.quickdev.plugin.mssql.gui.GuiConstants.MSSQL_COLUMN_DELIMITER_BACK;
+import static org.quickdev.plugin.mssql.gui.GuiConstants.MSSQL_COLUMN_DELIMITER_FRONT;
+import static org.quickdev.sdk.plugin.sqlcommand.GuiSqlCommand.parseTable;
+import static org.quickdev.sdk.plugin.sqlcommand.changeset.BulkObjectChangeSet.parseBulkRecords;
+import static org.quickdev.sdk.plugin.sqlcommand.changeset.BulkObjectChangeSet.parsePrimaryKey;
 
 import java.util.Map;
 
-import org.lowcoder.sdk.plugin.sqlcommand.changeset.BulkObjectChangeSet;
-import org.lowcoder.sdk.plugin.sqlcommand.command.BulkUpdateCommand;
+import org.quickdev.sdk.plugin.sqlcommand.changeset.BulkObjectChangeSet;
+import org.quickdev.sdk.plugin.sqlcommand.command.BulkUpdateCommand;
 
 public class MssqlBulkUpdateCommand extends BulkUpdateCommand {
 

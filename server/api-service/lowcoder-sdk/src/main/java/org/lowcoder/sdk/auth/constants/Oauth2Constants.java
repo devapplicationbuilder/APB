@@ -1,4 +1,4 @@
-package org.lowcoder.sdk.auth.constants;
+package org.quickdev.sdk.auth.constants;
 
 public class Oauth2Constants {
 

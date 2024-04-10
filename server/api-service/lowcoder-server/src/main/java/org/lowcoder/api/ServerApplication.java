@@ -1,8 +1,8 @@
-package org.lowcoder.api;
+package org.quickdev.api;
 
 import jakarta.annotation.PostConstruct;
 
-import org.lowcoder.sdk.config.CommonConfig;
+import org.quickdev.sdk.config.CommonConfig;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.Banner;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -20,7 +20,7 @@ import reactor.tools.agent.ReactorDebugAgent;
 
 @Slf4j
 @SpringBootApplication
-@ComponentScan(basePackages = "org.lowcoder.api.framework.configuration")
+@ComponentScan(basePackages = "org.quickdev.api.framework.configuration")
 @EnableScheduling
 @EnableConfigurationProperties
 @OpenAPIDefinition

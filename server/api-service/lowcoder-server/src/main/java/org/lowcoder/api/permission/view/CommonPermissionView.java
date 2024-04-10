@@ -1,4 +1,4 @@
-package org.lowcoder.api.permission.view;
+package org.quickdev.api.permission.view;
 
 import java.util.ArrayList;
 import java.util.List;

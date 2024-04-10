@@ -1,9 +1,9 @@
-package org.lowcoder.plugin.clickhouse;
+package org.quickdev.plugin.clickhouse;
 
-import static org.lowcoder.sdk.exception.PluginCommonError.DATASOURCE_ARGUMENT_ERROR;
-import static org.lowcoder.sdk.exception.PluginCommonError.DATASOURCE_TIMEOUT_ERROR;
-import static org.lowcoder.sdk.exception.PluginCommonError.QUERY_EXECUTION_ERROR;
-import static org.lowcoder.sdk.plugin.common.QueryExecutionUtils.querySharedScheduler;
+import static org.quickdev.sdk.exception.PluginCommonError.DATASOURCE_ARGUMENT_ERROR;
+import static org.quickdev.sdk.exception.PluginCommonError.DATASOURCE_TIMEOUT_ERROR;
+import static org.quickdev.sdk.exception.PluginCommonError.QUERY_EXECUTION_ERROR;
+import static org.quickdev.sdk.plugin.common.QueryExecutionUtils.querySharedScheduler;
 
 import java.time.Duration;
 import java.util.HashSet;
@@ -16,11 +16,11 @@ import java.util.function.Supplier;
 import javax.annotation.Nonnull;
 
 import org.apache.commons.lang3.StringUtils;
-import org.lowcoder.plugin.clickhouse.model.ClickHouseDatasourceConfig;
-import org.lowcoder.sdk.config.dynamic.ConfigCenter;
-import org.lowcoder.sdk.exception.PluginException;
-import org.lowcoder.sdk.models.DatasourceTestResult;
-import org.lowcoder.sdk.plugin.common.DatasourceConnector;
+import org.quickdev.plugin.clickhouse.model.ClickHouseDatasourceConfig;
+import org.quickdev.sdk.config.dynamic.ConfigCenter;
+import org.quickdev.sdk.exception.PluginException;
+import org.quickdev.sdk.models.DatasourceTestResult;
+import org.quickdev.sdk.plugin.common.DatasourceConnector;
 import org.pf4j.Extension;
 
 import com.zaxxer.hikari.HikariConfig;

@@ -1,19 +1,19 @@
-package org.lowcoder.domain.group.service;
+package org.quickdev.domain.group.service;
 
-import static org.lowcoder.domain.group.util.SystemGroups.ALL_USER;
-import static org.lowcoder.domain.group.util.SystemGroups.DEV;
-import static org.lowcoder.sdk.util.LocaleUtils.getLocale;
+import static org.quickdev.domain.group.util.SystemGroups.ALL_USER;
+import static org.quickdev.domain.group.util.SystemGroups.DEV;
+import static org.quickdev.sdk.util.LocaleUtils.getLocale;
 
 import java.util.Collection;
 import java.util.Locale;
 
-import org.lowcoder.domain.group.event.GroupDeletedEvent;
-import org.lowcoder.domain.group.model.Group;
-import org.lowcoder.domain.group.repository.GroupRepository;
-import org.lowcoder.domain.group.util.SystemGroups;
-import org.lowcoder.domain.organization.model.MemberRole;
-import org.lowcoder.infra.mongo.MongoUpsertHelper;
-import org.lowcoder.infra.mongo.MongoUpsertHelper.PartialResourceWithId;
+import org.quickdev.domain.group.event.GroupDeletedEvent;
+import org.quickdev.domain.group.model.Group;
+import org.quickdev.domain.group.repository.GroupRepository;
+import org.quickdev.domain.group.util.SystemGroups;
+import org.quickdev.domain.organization.model.MemberRole;
+import org.quickdev.infra.mongo.MongoUpsertHelper;
+import org.quickdev.infra.mongo.MongoUpsertHelper.PartialResourceWithId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Service;

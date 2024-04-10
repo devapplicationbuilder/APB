@@ -1,8 +1,8 @@
-package org.lowcoder.domain.datasource.model;
+package org.quickdev.domain.datasource.model;
 
 
-import org.lowcoder.sdk.models.DatasourceStructure;
-import org.lowcoder.sdk.models.HasIdAndAuditing;
+import org.quickdev.sdk.models.DatasourceStructure;
+import org.quickdev.sdk.models.HasIdAndAuditing;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import com.querydsl.core.annotations.QueryExclude;

@@ -1,4 +1,4 @@
-package org.lowcoder.sdk.plugin.common.sql;
+package org.quickdev.sdk.plugin.common.sql;
 
 import static java.util.Collections.emptyList;
 import static org.apache.commons.collections4.MapUtils.getString;
@@ -10,9 +10,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.lowcoder.sdk.models.DatasourceStructure.Column;
-import org.lowcoder.sdk.models.DatasourceStructure.Table;
-import org.lowcoder.sdk.models.DatasourceStructure.TableType;
+import org.quickdev.sdk.models.DatasourceStructure.Column;
+import org.quickdev.sdk.models.DatasourceStructure.Table;
+import org.quickdev.sdk.models.DatasourceStructure.TableType;
 
 public class StructureParser {
 

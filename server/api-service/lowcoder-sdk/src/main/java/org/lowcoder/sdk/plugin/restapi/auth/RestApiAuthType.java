@@ -1,4 +1,4 @@
-package org.lowcoder.sdk.plugin.restapi.auth;
+package org.quickdev.sdk.plugin.restapi.auth;
 
 public enum RestApiAuthType {
 

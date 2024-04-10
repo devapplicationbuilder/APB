@@ -1,6 +1,6 @@
-package org.lowcoder.plugin.googlesheets.model;
+package org.quickdev.plugin.googlesheets.model;
 
-import org.lowcoder.sdk.query.QueryExecutionContext;
+import org.quickdev.sdk.query.QueryExecutionContext;
 
 import com.google.auth.oauth2.ServiceAccountCredentials;
 

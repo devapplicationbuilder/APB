@@ -1,8 +1,8 @@
-package org.lowcoder.api;
+package org.quickdev.api;
 
 import java.util.Arrays;
 
-import org.lowcoder.sdk.config.CommonConfig;
+import org.quickdev.sdk.config.CommonConfig;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;

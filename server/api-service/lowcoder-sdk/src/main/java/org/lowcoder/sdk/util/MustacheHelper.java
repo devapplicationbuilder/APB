@@ -17,15 +17,15 @@
 
 // copied and adapted for mustache parsing
 
-package org.lowcoder.sdk.util;
+package org.quickdev.sdk.util;
 
 import static com.google.common.collect.Lists.newArrayList;
 import static org.apache.commons.lang3.ObjectUtils.firstNonNull;
 import static org.apache.commons.lang3.StringUtils.isBlank;
 import static org.apache.commons.lang3.StringUtils.substring;
-import static org.lowcoder.sdk.exception.PluginCommonError.SQL_IN_OPERATOR_PARSE_ERROR;
-import static org.lowcoder.sdk.util.JsonUtils.toJson;
-import static org.lowcoder.sdk.util.StreamUtils.collectMap;
+import static org.quickdev.sdk.exception.PluginCommonError.SQL_IN_OPERATOR_PARSE_ERROR;
+import static org.quickdev.sdk.util.JsonUtils.toJson;
+import static org.quickdev.sdk.util.StreamUtils.collectMap;
 
 import java.time.Duration;
 import java.util.ArrayList;
@@ -48,7 +48,7 @@ import javax.validation.constraints.NotNull;
 import org.apache.commons.collections4.CollectionUtils;
 import org.apache.commons.lang3.Range;
 import org.apache.commons.text.StringEscapeUtils;
-import org.lowcoder.sdk.exception.PluginException;
+import org.quickdev.sdk.exception.PluginException;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.github.benmanes.caffeine.cache.Cache;

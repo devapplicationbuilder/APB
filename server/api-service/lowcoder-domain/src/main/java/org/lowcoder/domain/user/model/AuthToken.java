@@ -1,4 +1,4 @@
-package org.lowcoder.domain.user.model;
+package org.quickdev.domain.user.model;
 
 import java.io.Serializable;
 

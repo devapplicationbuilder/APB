@@ -1,6 +1,6 @@
-package org.lowcoder.plugin.googlesheets.model;
+package org.quickdev.plugin.googlesheets.model;
 
-import static org.lowcoder.sdk.util.MustacheHelper.renderMustacheString;
+import static org.quickdev.sdk.util.MustacheHelper.renderMustacheString;
 
 import java.util.Map;
 

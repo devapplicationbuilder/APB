@@ -1,4 +1,4 @@
-package org.lowcoder.domain.application.model;
+package org.quickdev.domain.application.model;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;

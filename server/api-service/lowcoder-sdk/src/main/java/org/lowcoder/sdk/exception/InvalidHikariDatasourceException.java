@@ -1,6 +1,6 @@
-package org.lowcoder.sdk.exception;
+package org.quickdev.sdk.exception;
 
-import static org.lowcoder.sdk.exception.PluginCommonError.CONNECTION_ERROR;
+import static org.quickdev.sdk.exception.PluginCommonError.CONNECTION_ERROR;
 
 public class InvalidHikariDatasourceException extends PluginException {
 

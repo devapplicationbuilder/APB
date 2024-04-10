@@ -15,10 +15,10 @@
  * <p>
  */
 // copied for postgres result parsing
-package org.lowcoder.plugin.postgres.utils;
+package org.quickdev.plugin.postgres.utils;
 
-import static org.lowcoder.sdk.util.DateTimeUtils.DATE_TIME_FORMAT;
-import static org.lowcoder.sdk.util.JsonUtils.readTree;
+import static org.quickdev.sdk.util.DateTimeUtils.DATE_TIME_FORMAT;
+import static org.quickdev.sdk.util.JsonUtils.readTree;
 
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
@@ -34,8 +34,8 @@ import java.util.Map;
 import java.util.stream.Stream;
 
 import org.apache.commons.lang3.StringUtils;
-import org.lowcoder.sdk.models.DatasourceStructure;
-import org.lowcoder.sdk.models.DatasourceStructure.Table;
+import org.quickdev.sdk.models.DatasourceStructure;
+import org.quickdev.sdk.models.DatasourceStructure.Table;
 import org.postgresql.util.PGobject;
 
 import com.fasterxml.jackson.core.JsonProcessingException;

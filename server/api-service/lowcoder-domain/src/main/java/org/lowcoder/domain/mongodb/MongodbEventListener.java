@@ -1,8 +1,8 @@
-package org.lowcoder.domain.mongodb;
+package org.quickdev.domain.mongodb;
 
-import org.lowcoder.domain.encryption.EncryptionService;
-import org.lowcoder.infra.mongo.MongoUpsertHelper;
-import org.lowcoder.sdk.event.BeforeSaveEvent;
+import org.quickdev.domain.encryption.EncryptionService;
+import org.quickdev.infra.mongo.MongoUpsertHelper;
+import org.quickdev.sdk.event.BeforeSaveEvent;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.event.EventListener;
 import org.springframework.data.mongodb.core.mapping.event.AbstractMongoEventListener;

@@ -1,4 +1,4 @@
-package org.lowcoder.api.common;
+package org.quickdev.api.common;
 
 import com.google.common.util.concurrent.Uninterruptibles;
 import jakarta.annotation.PostConstruct;

@@ -1,7 +1,7 @@
-package org.lowcoder.api.bizthreshold;
+package org.quickdev.api.bizthreshold;
 
-import static org.lowcoder.sdk.util.ExceptionUtils.deferredError;
-import static org.lowcoder.sdk.util.ExceptionUtils.ofError;
+import static org.quickdev.sdk.util.ExceptionUtils.deferredError;
+import static org.quickdev.sdk.util.ExceptionUtils.ofError;
 
 import java.util.List;
 import java.util.Map;
@@ -9,15 +9,15 @@ import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import org.lowcoder.domain.application.model.ApplicationStatus;
-import org.lowcoder.domain.application.service.ApplicationService;
-import org.lowcoder.domain.group.model.GroupMember;
-import org.lowcoder.domain.group.service.GroupMemberService;
-import org.lowcoder.domain.group.service.GroupService;
-import org.lowcoder.domain.organization.model.OrgMember;
-import org.lowcoder.domain.organization.service.OrgMemberService;
-import org.lowcoder.infra.util.TupleUtils;
-import org.lowcoder.sdk.exception.BizError;
+import org.quickdev.domain.application.model.ApplicationStatus;
+import org.quickdev.domain.application.service.ApplicationService;
+import org.quickdev.domain.group.model.GroupMember;
+import org.quickdev.domain.group.service.GroupMemberService;
+import org.quickdev.domain.group.service.GroupService;
+import org.quickdev.domain.organization.model.OrgMember;
+import org.quickdev.domain.organization.service.OrgMemberService;
+import org.quickdev.infra.util.TupleUtils;
+import org.quickdev.sdk.exception.BizError;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -25,6 +25,9 @@ import reactor.core.publisher.Mono;
 
 @Component
 public abstract class AbstractBizThresholdChecker {
+
+    private long maxApps = 10;
+    private long maxDevs = 10;
 
     @Autowired
     private OrgMemberService orgMemberService;
@@ -62,8 +65,7 @@ public abstract class AbstractBizThresholdChecker {
     }
 
     private boolean userOrgCountBelowThreshold(String userId, long userOrgCount) {
-        return userOrgCount < Math.max(getUserOrgCountWhiteList().getOrDefault(userId, 0),
-                getMaxOrgPerUser());
+        return userOrgCount < getMaxOrgPerUser();
     }
 
     public Mono<Void> checkMaxOrgMemberCount(String orgId) {
@@ -74,7 +76,7 @@ public abstract class AbstractBizThresholdChecker {
     }
 
     private boolean orgMemberCountBelowThreshold(String orgId, Long orgMemberCount) {
-        return orgMemberCount < Math.max(getMaxOrgMemberCount(), getOrgMemberCountWhiteList().getOrDefault(orgId, 0));
+        return orgMemberCount < getMaxOrgMemberCount();
     }
 
     public Mono<Void> checkMaxGroupCount(OrgMember orgMemberMono) {
@@ -93,7 +95,7 @@ public abstract class AbstractBizThresholdChecker {
     }
 
     private boolean orgAppCountBelowThreshold(String orgId, long orgAppCount) {
-        return orgAppCount < Math.max(getMaxOrgAppCount(), getOrgAppCountWhiteList().getOrDefault(orgId, 0));
+        return orgAppCount < maxApps;//getMaxOrgAppCount();
     }
 
     public Mono<Void> checkMaxDeveloperCount(String orgId, String developGroupId, String userId) {
@@ -108,8 +110,8 @@ public abstract class AbstractBizThresholdChecker {
                             .collect(Collectors.toSet());
                     developerIds.add(userId);
                     //MAX_DEVELOPERS = 5
-                    if (developerIds.size() > 5) {
-                        return ofError(BizError.EXCEED_MAX_DEVELOPER_COUNT, "EXCEED_MAX_DEVELOPER_COUNT");
+                    if (developerIds.size() > maxDevs) {
+                        return deferredError(BizError.EXCEED_MAX_DEVELOPER_COUNT, "EXCEED_MAX_DEVELOPER_COUNT");
                     }
                     return Mono.empty();
                 });

@@ -1,9 +1,9 @@
-package org.lowcoder.domain.encryption;
+package org.quickdev.domain.encryption;
 
 import org.apache.commons.codec.binary.Hex;
 import org.apache.commons.lang3.StringUtils;
-import org.lowcoder.sdk.config.CommonConfig;
-import org.lowcoder.sdk.config.CommonConfig.Encrypt;
+import org.quickdev.sdk.config.CommonConfig;
+import org.quickdev.sdk.config.CommonConfig.Encrypt;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.encrypt.Encryptors;

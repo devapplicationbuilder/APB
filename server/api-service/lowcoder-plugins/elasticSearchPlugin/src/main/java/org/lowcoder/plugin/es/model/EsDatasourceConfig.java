@@ -1,13 +1,13 @@
-package org.lowcoder.plugin.es.model;
+package org.quickdev.plugin.es.model;
 
-import static org.lowcoder.sdk.exception.BizError.INVALID_DATASOURCE_CONFIG_TYPE;
-import static org.lowcoder.sdk.util.ExceptionUtils.ofException;
+import static org.quickdev.sdk.exception.BizError.INVALID_DATASOURCE_CONFIG_TYPE;
+import static org.quickdev.sdk.util.ExceptionUtils.ofException;
 
 import java.util.function.Function;
 
 import org.apache.commons.lang3.ObjectUtils;
-import org.lowcoder.sdk.config.SerializeConfig.JsonViews;
-import org.lowcoder.sdk.models.DatasourceConnectionConfig;
+import org.quickdev.sdk.config.SerializeConfig.JsonViews;
+import org.quickdev.sdk.models.DatasourceConnectionConfig;
 
 import com.fasterxml.jackson.annotation.JsonView;
 

@@ -1,14 +1,14 @@
-package org.lowcoder.domain.permission.service;
+package org.quickdev.domain.permission.service;
 
 import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 
-import org.lowcoder.domain.permission.model.ResourceHolder;
-import org.lowcoder.domain.permission.model.ResourcePermission;
-import org.lowcoder.domain.permission.model.ResourceRole;
-import org.lowcoder.domain.permission.model.ResourceType;
-import org.lowcoder.infra.annotation.NonEmptyMono;
+import org.quickdev.domain.permission.model.ResourceHolder;
+import org.quickdev.domain.permission.model.ResourcePermission;
+import org.quickdev.domain.permission.model.ResourceRole;
+import org.quickdev.domain.permission.model.ResourceType;
+import org.quickdev.infra.annotation.NonEmptyMono;
 
 import com.google.common.collect.Multimap;
 

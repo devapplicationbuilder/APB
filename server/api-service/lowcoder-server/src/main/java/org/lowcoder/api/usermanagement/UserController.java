@@ -1,22 +1,22 @@
-package org.lowcoder.api.usermanagement;
+package org.quickdev.api.usermanagement;
 
-import static org.lowcoder.sdk.exception.BizError.INVALID_USER_STATUS;
-import static org.lowcoder.sdk.util.ExceptionUtils.ofError;
+import static org.quickdev.sdk.exception.BizError.INVALID_USER_STATUS;
+import static org.quickdev.sdk.util.ExceptionUtils.ofError;
 
 import org.apache.commons.lang3.StringUtils;
-import org.lowcoder.api.authentication.dto.OrganizationDomainCheckResult;
-import org.lowcoder.api.framework.view.ResponseView;
-import org.lowcoder.api.home.SessionUserService;
-import org.lowcoder.api.home.UserHomeApiService;
-import org.lowcoder.api.usermanagement.view.UpdateUserRequest;
-import org.lowcoder.api.usermanagement.view.UserProfileView;
-import org.lowcoder.domain.user.constant.UserStatusType;
-import org.lowcoder.domain.user.model.User;
-import org.lowcoder.domain.user.model.UserDetail;
-import org.lowcoder.domain.user.service.UserService;
-import org.lowcoder.domain.user.service.UserStatusService;
-import org.lowcoder.sdk.config.CommonConfig;
-import org.lowcoder.sdk.exception.BizError;
+import org.quickdev.api.authentication.dto.OrganizationDomainCheckResult;
+import org.quickdev.api.framework.view.ResponseView;
+import org.quickdev.api.home.SessionUserService;
+import org.quickdev.api.home.UserHomeApiService;
+import org.quickdev.api.usermanagement.view.UpdateUserRequest;
+import org.quickdev.api.usermanagement.view.UserProfileView;
+import org.quickdev.domain.user.constant.UserStatusType;
+import org.quickdev.domain.user.model.User;
+import org.quickdev.domain.user.model.UserDetail;
+import org.quickdev.domain.user.service.UserService;
+import org.quickdev.domain.user.service.UserStatusService;
+import org.quickdev.sdk.config.CommonConfig;
+import org.quickdev.sdk.exception.BizError;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.codec.multipart.Part;

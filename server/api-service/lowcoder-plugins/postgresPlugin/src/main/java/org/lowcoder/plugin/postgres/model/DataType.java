@@ -14,7 +14,7 @@
  * limitations under the License.
  * <p>
  */
-package org.lowcoder.plugin.postgres.model;
+package org.quickdev.plugin.postgres.model;
 
 public enum DataType {
     INTEGER,

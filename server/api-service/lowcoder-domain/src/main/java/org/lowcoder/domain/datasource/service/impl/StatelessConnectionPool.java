@@ -1,9 +1,9 @@
-package org.lowcoder.domain.datasource.service.impl;
+package org.quickdev.domain.datasource.service.impl;
 
-import org.lowcoder.domain.datasource.model.Datasource;
-import org.lowcoder.domain.datasource.model.DatasourceConnectionHolder;
-import org.lowcoder.domain.datasource.model.StatelessDatasourceConnectionHolder;
-import org.lowcoder.domain.datasource.service.DatasourceConnectionPool;
+import org.quickdev.domain.datasource.model.Datasource;
+import org.quickdev.domain.datasource.model.DatasourceConnectionHolder;
+import org.quickdev.domain.datasource.model.StatelessDatasourceConnectionHolder;
+import org.quickdev.domain.datasource.service.DatasourceConnectionPool;
 import org.springframework.stereotype.Service;
 
 import lombok.extern.slf4j.Slf4j;

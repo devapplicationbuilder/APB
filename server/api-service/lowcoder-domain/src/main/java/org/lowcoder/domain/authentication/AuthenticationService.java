@@ -1,7 +1,7 @@
-package org.lowcoder.domain.authentication;
+package org.quickdev.domain.authentication;
 
-import org.lowcoder.sdk.auth.EmailAuthConfig;
-import org.lowcoder.sdk.constants.AuthSourceConstants;
+import org.quickdev.sdk.auth.EmailAuthConfig;
+import org.quickdev.sdk.constants.AuthSourceConstants;
 
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;

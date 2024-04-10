@@ -1,12 +1,12 @@
-package org.lowcoder.api.query;
+package org.quickdev.api.query;
 
-import static org.lowcoder.infra.constant.NewUrl.LIBRARY_QUERY_RECORD_URL;
+import static org.quickdev.infra.constant.NewUrl.LIBRARY_QUERY_RECORD_URL;
 
 import java.util.List;
 import java.util.Map;
 
-import org.lowcoder.api.framework.view.ResponseView;
-import org.lowcoder.api.query.view.LibraryQueryRecordMetaView;
+import org.quickdev.api.framework.view.ResponseView;
+import org.quickdev.api.query.view.LibraryQueryRecordMetaView;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

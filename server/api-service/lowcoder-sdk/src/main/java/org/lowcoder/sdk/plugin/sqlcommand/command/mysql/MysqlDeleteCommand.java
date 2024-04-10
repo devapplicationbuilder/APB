@@ -1,13 +1,13 @@
-package org.lowcoder.sdk.plugin.sqlcommand.command.mysql;
+package org.quickdev.sdk.plugin.sqlcommand.command.mysql;
 
-import static org.lowcoder.sdk.plugin.sqlcommand.command.GuiConstants.MYSQL_COLUMN_DELIMITER;
-import static org.lowcoder.sdk.plugin.sqlcommand.filter.FilterSet.parseFilterSet;
+import static org.quickdev.sdk.plugin.sqlcommand.command.GuiConstants.MYSQL_COLUMN_DELIMITER;
+import static org.quickdev.sdk.plugin.sqlcommand.filter.FilterSet.parseFilterSet;
 
 import java.util.Map;
 
-import org.lowcoder.sdk.plugin.sqlcommand.GuiSqlCommand;
-import org.lowcoder.sdk.plugin.sqlcommand.command.DeleteCommand;
-import org.lowcoder.sdk.plugin.sqlcommand.filter.FilterSet;
+import org.quickdev.sdk.plugin.sqlcommand.GuiSqlCommand;
+import org.quickdev.sdk.plugin.sqlcommand.command.DeleteCommand;
+import org.quickdev.sdk.plugin.sqlcommand.filter.FilterSet;
 
 public class MysqlDeleteCommand extends DeleteCommand {
 

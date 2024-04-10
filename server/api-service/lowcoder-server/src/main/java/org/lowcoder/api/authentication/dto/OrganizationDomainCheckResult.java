@@ -1,10 +1,10 @@
-package org.lowcoder.api.authentication.dto;
+package org.quickdev.api.authentication.dto;
 
-import static org.lowcoder.sdk.util.ExceptionUtils.ofError;
+import static org.quickdev.sdk.util.ExceptionUtils.ofError;
 
 import org.apache.commons.lang.StringUtils;
-import org.lowcoder.api.framework.view.ResponseView;
-import org.lowcoder.sdk.exception.BizError;
+import org.quickdev.api.framework.view.ResponseView;
+import org.quickdev.sdk.exception.BizError;
 
 import reactor.core.publisher.Mono;
 

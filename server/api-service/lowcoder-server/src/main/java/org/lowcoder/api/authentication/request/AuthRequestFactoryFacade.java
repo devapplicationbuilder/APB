@@ -1,6 +1,6 @@
-package org.lowcoder.api.authentication.request;
+package org.quickdev.api.authentication.request;
 
-import static org.lowcoder.sdk.exception.BizError.AUTH_ERROR;
+import static org.quickdev.sdk.exception.BizError.AUTH_ERROR;
 
 import java.util.HashMap;
 import java.util.HashSet;
@@ -10,8 +10,8 @@ import java.util.Set;
 
 import jakarta.annotation.PostConstruct;
 
-import org.lowcoder.domain.authentication.context.AuthRequestContext;
-import org.lowcoder.sdk.exception.BizException;
+import org.quickdev.domain.authentication.context.AuthRequestContext;
+import org.quickdev.sdk.exception.BizException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;

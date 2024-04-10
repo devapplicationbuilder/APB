@@ -1,23 +1,23 @@
-package org.lowcoder.plugin;
+package org.quickdev.plugin;
 
 import static java.util.Collections.emptyList;
 import static java.util.Optional.ofNullable;
-import static org.lowcoder.sdk.constants.Authentication.isAnonymousUser;
-import static org.lowcoder.sdk.models.QueryExecutionResult.error;
-import static org.lowcoder.sdk.models.QueryExecutionResult.success;
-import static org.lowcoder.sdk.util.StreamUtils.collectList;
+import static org.quickdev.sdk.constants.Authentication.isAnonymousUser;
+import static org.quickdev.sdk.models.QueryExecutionResult.error;
+import static org.quickdev.sdk.models.QueryExecutionResult.success;
+import static org.quickdev.sdk.util.StreamUtils.collectList;
 
 import java.util.List;
 import java.util.Map;
 import java.util.function.Consumer;
 
 import org.apache.commons.collections4.MapUtils;
-import org.lowcoder.sdk.exception.PluginException;
-import org.lowcoder.sdk.models.QueryExecutionResult;
-import org.lowcoder.sdk.plugin.common.QueryExecutor;
-import org.lowcoder.sdk.plugin.lowcoderapi.LowcoderApiDatasourceConfig;
-import org.lowcoder.sdk.query.QueryVisitorContext;
-import org.lowcoder.sdk.util.CookieHelper;
+import org.quickdev.sdk.exception.PluginException;
+import org.quickdev.sdk.models.QueryExecutionResult;
+import org.quickdev.sdk.plugin.common.QueryExecutor;
+import org.quickdev.sdk.plugin.lowcoderapi.LowcoderApiDatasourceConfig;
+import org.quickdev.sdk.query.QueryVisitorContext;
+import org.quickdev.sdk.util.CookieHelper;
 import org.pf4j.Extension;
 import org.springframework.http.HttpCookie;
 import org.springframework.http.HttpMethod;

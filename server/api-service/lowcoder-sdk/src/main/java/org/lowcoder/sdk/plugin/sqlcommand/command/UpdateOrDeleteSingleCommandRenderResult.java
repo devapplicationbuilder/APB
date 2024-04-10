@@ -1,8 +1,8 @@
-package org.lowcoder.sdk.plugin.sqlcommand.command;
+package org.quickdev.sdk.plugin.sqlcommand.command;
 
 import java.util.List;
 
-import org.lowcoder.sdk.plugin.sqlcommand.GuiSqlCommand.GuiSqlCommandRenderResult;
+import org.quickdev.sdk.plugin.sqlcommand.GuiSqlCommand.GuiSqlCommandRenderResult;
 
 public class UpdateOrDeleteSingleCommandRenderResult extends GuiSqlCommandRenderResult {
     private final String selectQuery;

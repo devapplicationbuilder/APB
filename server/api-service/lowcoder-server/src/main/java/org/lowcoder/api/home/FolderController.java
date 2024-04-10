@@ -1,19 +1,19 @@
-package org.lowcoder.api.home;
+package org.quickdev.api.home;
 
-import static org.lowcoder.infra.event.EventType.APPLICATION_MOVE;
-import static org.lowcoder.sdk.exception.BizError.INVALID_PARAMETER;
-import static org.lowcoder.sdk.util.ExceptionUtils.ofError;
+import static org.quickdev.infra.event.EventType.APPLICATION_MOVE;
+import static org.quickdev.sdk.exception.BizError.INVALID_PARAMETER;
+import static org.quickdev.sdk.util.ExceptionUtils.ofError;
 
 import java.util.List;
 
-import org.lowcoder.api.application.view.ApplicationPermissionView;
-import org.lowcoder.api.framework.view.ResponseView;
-import org.lowcoder.api.util.BusinessEventPublisher;
-import org.lowcoder.domain.application.model.ApplicationType;
-import org.lowcoder.domain.folder.model.Folder;
-import org.lowcoder.domain.folder.service.FolderService;
-import org.lowcoder.domain.permission.model.ResourceRole;
-import org.lowcoder.infra.event.EventType;
+import org.quickdev.api.application.view.ApplicationPermissionView;
+import org.quickdev.api.framework.view.ResponseView;
+import org.quickdev.api.util.BusinessEventPublisher;
+import org.quickdev.domain.application.model.ApplicationType;
+import org.quickdev.domain.folder.model.Folder;
+import org.quickdev.domain.folder.service.FolderService;
+import org.quickdev.domain.permission.model.ResourceRole;
+import org.quickdev.infra.event.EventType;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;

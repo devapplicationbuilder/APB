@@ -1,12 +1,12 @@
-package org.lowcoder.sdk.plugin.graphql;
+package org.quickdev.sdk.plugin.graphql;
 
 import static org.apache.commons.collections4.ListUtils.emptyIfNull;
 import static org.apache.commons.lang3.StringUtils.trimToEmpty;
-import static org.lowcoder.sdk.exception.BizError.INVALID_DATASOURCE_CONFIG_TYPE;
-import static org.lowcoder.sdk.util.ExceptionUtils.ofException;
-import static org.lowcoder.sdk.util.ExceptionUtils.ofPluginException;
-import static org.lowcoder.sdk.util.JsonUtils.fromJson;
-import static org.lowcoder.sdk.util.JsonUtils.toJson;
+import static org.quickdev.sdk.exception.BizError.INVALID_DATASOURCE_CONFIG_TYPE;
+import static org.quickdev.sdk.util.ExceptionUtils.ofException;
+import static org.quickdev.sdk.util.ExceptionUtils.ofPluginException;
+import static org.quickdev.sdk.util.JsonUtils.fromJson;
+import static org.quickdev.sdk.util.JsonUtils.toJson;
 
 import java.util.List;
 import java.util.Map;
@@ -16,11 +16,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import org.apache.commons.collections4.SetUtils;
-import org.lowcoder.sdk.exception.PluginCommonError;
-import org.lowcoder.sdk.models.DatasourceConnectionConfig;
-import org.lowcoder.sdk.models.Property;
-import org.lowcoder.sdk.plugin.restapi.auth.AuthConfig;
-import org.lowcoder.sdk.plugin.restapi.auth.RestApiAuthType;
+import org.quickdev.sdk.exception.PluginCommonError;
+import org.quickdev.sdk.models.DatasourceConnectionConfig;
+import org.quickdev.sdk.models.Property;
+import org.quickdev.sdk.plugin.restapi.auth.AuthConfig;
+import org.quickdev.sdk.plugin.restapi.auth.RestApiAuthType;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 

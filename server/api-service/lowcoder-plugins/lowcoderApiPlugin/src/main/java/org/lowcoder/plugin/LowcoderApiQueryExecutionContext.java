@@ -1,6 +1,6 @@
-package org.lowcoder.plugin;
+package org.quickdev.plugin;
 
-import org.lowcoder.sdk.query.QueryExecutionContext;
+import org.quickdev.sdk.query.QueryExecutionContext;
 import org.springframework.http.HttpCookie;
 import org.springframework.util.MultiValueMap;
 

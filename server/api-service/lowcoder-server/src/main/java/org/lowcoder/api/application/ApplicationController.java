@@ -1,32 +1,32 @@
-package org.lowcoder.api.application;
+package org.quickdev.api.application;
 
 import static org.apache.commons.collections4.SetUtils.emptyIfNull;
-import static org.lowcoder.infra.event.EventType.APPLICATION_CREATE;
-import static org.lowcoder.infra.event.EventType.APPLICATION_DELETE;
-import static org.lowcoder.infra.event.EventType.APPLICATION_RECYCLED;
-import static org.lowcoder.infra.event.EventType.APPLICATION_RESTORE;
-import static org.lowcoder.infra.event.EventType.APPLICATION_UPDATE;
-import static org.lowcoder.sdk.exception.BizError.INVALID_PARAMETER;
-import static org.lowcoder.sdk.util.ExceptionUtils.ofError;
+import static org.quickdev.infra.event.EventType.APPLICATION_CREATE;
+import static org.quickdev.infra.event.EventType.APPLICATION_DELETE;
+import static org.quickdev.infra.event.EventType.APPLICATION_RECYCLED;
+import static org.quickdev.infra.event.EventType.APPLICATION_RESTORE;
+import static org.quickdev.infra.event.EventType.APPLICATION_UPDATE;
+import static org.quickdev.sdk.exception.BizError.INVALID_PARAMETER;
+import static org.quickdev.sdk.util.ExceptionUtils.ofError;
 
 import java.util.List;
 
-import org.lowcoder.api.application.view.ApplicationInfoView;
-import org.lowcoder.api.application.view.ApplicationPermissionView;
-import org.lowcoder.api.application.view.ApplicationView;
-import org.lowcoder.api.application.view.MarketplaceApplicationInfoView;
+import org.quickdev.api.application.view.ApplicationInfoView;
+import org.quickdev.api.application.view.ApplicationPermissionView;
+import org.quickdev.api.application.view.ApplicationView;
+import org.quickdev.api.application.view.MarketplaceApplicationInfoView;
 // should we not have a AgencyApplicationInfoView
-import org.lowcoder.api.framework.view.ResponseView;
-import org.lowcoder.api.home.SessionUserService;
-import org.lowcoder.api.home.UserHomeApiService;
-import org.lowcoder.api.home.UserHomepageView;
-import org.lowcoder.api.util.BusinessEventPublisher;
-import org.lowcoder.domain.application.model.Application;
-import org.lowcoder.domain.application.model.ApplicationRequestType;
-import org.lowcoder.domain.application.model.ApplicationStatus;
-import org.lowcoder.domain.application.model.ApplicationType;
-import org.lowcoder.domain.permission.model.ResourceRole;
-import org.lowcoder.infra.event.EventType;
+import org.quickdev.api.framework.view.ResponseView;
+import org.quickdev.api.home.SessionUserService;
+import org.quickdev.api.home.UserHomeApiService;
+import org.quickdev.api.home.UserHomepageView;
+import org.quickdev.api.util.BusinessEventPublisher;
+import org.quickdev.domain.application.model.Application;
+import org.quickdev.domain.application.model.ApplicationRequestType;
+import org.quickdev.domain.application.model.ApplicationStatus;
+import org.quickdev.domain.application.model.ApplicationType;
+import org.quickdev.domain.permission.model.ResourceRole;
+import org.quickdev.infra.event.EventType;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;

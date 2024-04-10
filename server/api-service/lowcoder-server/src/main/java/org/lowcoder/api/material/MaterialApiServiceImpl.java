@@ -1,4 +1,4 @@
-package org.lowcoder.api.material;
+package org.quickdev.api.material;
 
 import static org.apache.commons.io.FileUtils.ONE_GB;
 import static org.apache.commons.io.FileUtils.ONE_MB;
@@ -7,19 +7,19 @@ import static org.apache.commons.io.FileUtils.byteCountToDisplaySize;
 import java.util.Base64;
 import java.util.List;
 
-import org.lowcoder.api.home.SessionUserService;
-import org.lowcoder.api.material.MaterialEndpoints.MaterialView;
-import org.lowcoder.api.usermanagement.OrgDevChecker;
-import org.lowcoder.domain.material.model.MaterialMeta;
-import org.lowcoder.domain.material.model.MaterialType;
-import org.lowcoder.domain.material.repository.MaterialMateRepository;
-import org.lowcoder.domain.material.service.meta.MaterialMetaService;
-import org.lowcoder.domain.material.service.storage.MaterialStorageService;
-import org.lowcoder.sdk.config.CommonConfig;
-import org.lowcoder.sdk.config.dynamic.ConfigCenter;
-import org.lowcoder.sdk.config.dynamic.ConfigInstanceHelper;
-import org.lowcoder.sdk.exception.BizError;
-import org.lowcoder.sdk.exception.BizException;
+import org.quickdev.api.home.SessionUserService;
+import org.quickdev.api.material.MaterialEndpoints.MaterialView;
+import org.quickdev.api.usermanagement.OrgDevChecker;
+import org.quickdev.domain.material.model.MaterialMeta;
+import org.quickdev.domain.material.model.MaterialType;
+import org.quickdev.domain.material.repository.MaterialMateRepository;
+import org.quickdev.domain.material.service.meta.MaterialMetaService;
+import org.quickdev.domain.material.service.storage.MaterialStorageService;
+import org.quickdev.sdk.config.CommonConfig;
+import org.quickdev.sdk.config.dynamic.ConfigCenter;
+import org.quickdev.sdk.config.dynamic.ConfigInstanceHelper;
+import org.quickdev.sdk.exception.BizError;
+import org.quickdev.sdk.exception.BizException;
 import org.reactivestreams.Publisher;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.buffer.DataBuffer;

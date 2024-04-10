@@ -1,4 +1,4 @@
-package org.lowcoder.api.datasource;
+package org.quickdev.api.datasource;
 
 import java.util.Map;
 

@@ -1,11 +1,11 @@
-package org.lowcoder.api.authentication.util;
+package org.quickdev.api.authentication.util;
 
 import static java.util.Collections.emptyMap;
 import static reactor.core.scheduler.Schedulers.newBoundedElastic;
 
 import java.util.Collection;
 
-import org.lowcoder.domain.user.model.User;
+import org.quickdev.domain.user.model.User;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
 

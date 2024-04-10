@@ -1,9 +1,9 @@
-package org.lowcoder.plugin.mysql;
+package org.quickdev.plugin.mysql;
 
-import static org.lowcoder.plugin.mysql.utils.MysqlStructureParser.parseTableAndColumns;
-import static org.lowcoder.plugin.mysql.utils.MysqlStructureParser.parseTableKeys;
-import static org.lowcoder.sdk.exception.PluginCommonError.DATASOURCE_GET_STRUCTURE_ERROR;
-import static org.lowcoder.sdk.exception.PluginCommonError.QUERY_ARGUMENT_ERROR;
+import static org.quickdev.plugin.mysql.utils.MysqlStructureParser.parseTableAndColumns;
+import static org.quickdev.plugin.mysql.utils.MysqlStructureParser.parseTableKeys;
+import static org.quickdev.sdk.exception.PluginCommonError.DATASOURCE_GET_STRUCTURE_ERROR;
+import static org.quickdev.sdk.exception.PluginCommonError.QUERY_ARGUMENT_ERROR;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -15,19 +15,19 @@ import java.util.Map;
 
 import javax.annotation.Nonnull;
 
-import org.lowcoder.plugin.sql.GeneralSqlExecutor;
-import org.lowcoder.plugin.sql.SqlBasedQueryExecutor;
-import org.lowcoder.sdk.exception.PluginException;
-import org.lowcoder.sdk.models.DatasourceStructure;
-import org.lowcoder.sdk.models.DatasourceStructure.Table;
-import org.lowcoder.sdk.plugin.common.sql.SqlBasedDatasourceConnectionConfig;
-import org.lowcoder.sdk.plugin.sqlcommand.GuiSqlCommand;
-import org.lowcoder.sdk.plugin.sqlcommand.command.mysql.MysqlBulkInsertCommand;
-import org.lowcoder.sdk.plugin.sqlcommand.command.mysql.MysqlBulkUpdateCommand;
-import org.lowcoder.sdk.plugin.sqlcommand.command.mysql.MysqlDeleteCommand;
-import org.lowcoder.sdk.plugin.sqlcommand.command.mysql.MysqlInsertCommand;
-import org.lowcoder.sdk.plugin.sqlcommand.command.mysql.MysqlUpdateCommand;
-import org.lowcoder.sdk.plugin.sqlcommand.command.mysql.MysqlUpsertCommand;
+import org.quickdev.plugin.sql.GeneralSqlExecutor;
+import org.quickdev.plugin.sql.SqlBasedQueryExecutor;
+import org.quickdev.sdk.exception.PluginException;
+import org.quickdev.sdk.models.DatasourceStructure;
+import org.quickdev.sdk.models.DatasourceStructure.Table;
+import org.quickdev.sdk.plugin.common.sql.SqlBasedDatasourceConnectionConfig;
+import org.quickdev.sdk.plugin.sqlcommand.GuiSqlCommand;
+import org.quickdev.sdk.plugin.sqlcommand.command.mysql.MysqlBulkInsertCommand;
+import org.quickdev.sdk.plugin.sqlcommand.command.mysql.MysqlBulkUpdateCommand;
+import org.quickdev.sdk.plugin.sqlcommand.command.mysql.MysqlDeleteCommand;
+import org.quickdev.sdk.plugin.sqlcommand.command.mysql.MysqlInsertCommand;
+import org.quickdev.sdk.plugin.sqlcommand.command.mysql.MysqlUpdateCommand;
+import org.quickdev.sdk.plugin.sqlcommand.command.mysql.MysqlUpsertCommand;
 import org.pf4j.Extension;
 
 import lombok.extern.slf4j.Slf4j;

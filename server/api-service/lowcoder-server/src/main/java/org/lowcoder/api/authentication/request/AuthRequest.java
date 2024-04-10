@@ -1,7 +1,7 @@
-package org.lowcoder.api.authentication.request;
+package org.quickdev.api.authentication.request;
 
-import org.lowcoder.domain.authentication.context.AuthRequestContext;
-import org.lowcoder.domain.user.model.AuthUser;
+import org.quickdev.domain.authentication.context.AuthRequestContext;
+import org.quickdev.domain.user.model.AuthUser;
 import reactor.core.publisher.Mono;
 
 /**

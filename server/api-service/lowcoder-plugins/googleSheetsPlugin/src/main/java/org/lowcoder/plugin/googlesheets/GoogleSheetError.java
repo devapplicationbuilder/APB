@@ -1,6 +1,6 @@
-package org.lowcoder.plugin.googlesheets;
+package org.quickdev.plugin.googlesheets;
 
-import org.lowcoder.sdk.exception.PluginError;
+import org.quickdev.sdk.exception.PluginError;
 
 public enum GoogleSheetError implements PluginError {
 

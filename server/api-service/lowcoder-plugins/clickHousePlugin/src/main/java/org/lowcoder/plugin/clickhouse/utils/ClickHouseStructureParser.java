@@ -1,4 +1,4 @@
-package org.lowcoder.plugin.clickhouse.utils;
+package org.quickdev.plugin.clickhouse.utils;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -6,9 +6,9 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Map;
 
-import org.lowcoder.sdk.models.DatasourceStructure.Column;
-import org.lowcoder.sdk.models.DatasourceStructure.Table;
-import org.lowcoder.sdk.models.DatasourceStructure.TableType;
+import org.quickdev.sdk.models.DatasourceStructure.Column;
+import org.quickdev.sdk.models.DatasourceStructure.Table;
+import org.quickdev.sdk.models.DatasourceStructure.TableType;
 
 @SuppressWarnings({"SqlDialectInspection", "SqlNoDataSourceInspection"})
 public class ClickHouseStructureParser {

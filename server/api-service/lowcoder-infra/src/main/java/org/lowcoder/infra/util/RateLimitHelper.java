@@ -1,4 +1,4 @@
-package org.lowcoder.infra.util;
+package org.quickdev.infra.util;
 
 import java.time.Duration;
 import java.util.Set;

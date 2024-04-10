@@ -1,9 +1,9 @@
-package org.lowcoder.sdk.models;
+package org.quickdev.sdk.models;
 
 import java.util.List;
 
-import org.lowcoder.sdk.plugin.restapi.MultipartFormData;
-import org.lowcoder.sdk.plugin.restapi.DataUtils.MultipartFormDataType;
+import org.quickdev.sdk.plugin.restapi.MultipartFormData;
+import org.quickdev.sdk.plugin.restapi.DataUtils.MultipartFormDataType;
 
 public class RestBodyFormFileData extends Property {
 

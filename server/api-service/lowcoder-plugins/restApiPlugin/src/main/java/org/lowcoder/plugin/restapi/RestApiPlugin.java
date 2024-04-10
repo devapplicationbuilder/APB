@@ -1,4 +1,4 @@
-package org.lowcoder.plugin.restapi;
+package org.quickdev.plugin.restapi;
 
 import org.pf4j.Plugin;
 import org.pf4j.PluginWrapper;

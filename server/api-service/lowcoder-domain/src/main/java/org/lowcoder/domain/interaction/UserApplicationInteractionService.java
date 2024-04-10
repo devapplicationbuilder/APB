@@ -1,10 +1,10 @@
-package org.lowcoder.domain.interaction;
+package org.quickdev.domain.interaction;
 
 import java.time.Instant;
 
-import org.lowcoder.infra.birelation.BiRelation;
-import org.lowcoder.infra.birelation.BiRelationBizType;
-import org.lowcoder.infra.birelation.BiRelationService;
+import org.quickdev.infra.birelation.BiRelation;
+import org.quickdev.infra.birelation.BiRelationBizType;
+import org.quickdev.infra.birelation.BiRelationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

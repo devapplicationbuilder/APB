@@ -1,4 +1,4 @@
-package org.lowcoder.infra.constant;
+package org.quickdev.infra.constant;
 
 public final class Url {
     public static final String BASE_URL = "/api";

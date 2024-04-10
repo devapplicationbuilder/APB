@@ -1,13 +1,13 @@
-package org.lowcoder.plugin.postgres;
+package org.quickdev.plugin.postgres;
 
 import static com.google.common.collect.Lists.newArrayList;
-import static org.lowcoder.plugin.postgres.utils.PostgresDataTypeUtils.castValueWithTargetType;
-import static org.lowcoder.plugin.postgres.utils.PostgresDataTypeUtils.extractExplicitCasting;
-import static org.lowcoder.plugin.postgres.utils.PostgresResultParser.parseDatabaseStructure;
-import static org.lowcoder.sdk.exception.PluginCommonError.QUERY_ARGUMENT_ERROR;
-import static org.lowcoder.sdk.exception.PluginCommonError.QUERY_EXECUTION_ERROR;
-import static org.lowcoder.sdk.util.MustacheHelper.doPrepareStatement;
-import static org.lowcoder.sdk.util.MustacheHelper.extractMustacheKeysInOrder;
+import static org.quickdev.plugin.postgres.utils.PostgresDataTypeUtils.castValueWithTargetType;
+import static org.quickdev.plugin.postgres.utils.PostgresDataTypeUtils.extractExplicitCasting;
+import static org.quickdev.plugin.postgres.utils.PostgresResultParser.parseDatabaseStructure;
+import static org.quickdev.sdk.exception.PluginCommonError.QUERY_ARGUMENT_ERROR;
+import static org.quickdev.sdk.exception.PluginCommonError.QUERY_EXECUTION_ERROR;
+import static org.quickdev.sdk.util.MustacheHelper.doPrepareStatement;
+import static org.quickdev.sdk.util.MustacheHelper.extractMustacheKeysInOrder;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -20,19 +20,19 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.lowcoder.plugin.postgres.model.DataType;
-import org.lowcoder.plugin.postgres.utils.PostgresResultParser;
-import org.lowcoder.plugin.sql.GeneralSqlExecutor;
-import org.lowcoder.plugin.sql.SqlBasedQueryExecutor;
-import org.lowcoder.sdk.exception.PluginException;
-import org.lowcoder.sdk.models.DatasourceStructure;
-import org.lowcoder.sdk.plugin.common.sql.SqlBasedDatasourceConnectionConfig;
-import org.lowcoder.sdk.plugin.sqlcommand.GuiSqlCommand;
-import org.lowcoder.sdk.plugin.sqlcommand.command.postgres.PostgresBulkInsertCommand;
-import org.lowcoder.sdk.plugin.sqlcommand.command.postgres.PostgresBulkUpdateCommand;
-import org.lowcoder.sdk.plugin.sqlcommand.command.postgres.PostgresDeleteCommand;
-import org.lowcoder.sdk.plugin.sqlcommand.command.postgres.PostgresInsertCommand;
-import org.lowcoder.sdk.plugin.sqlcommand.command.postgres.PostgresUpdateCommand;
+import org.quickdev.plugin.postgres.model.DataType;
+import org.quickdev.plugin.postgres.utils.PostgresResultParser;
+import org.quickdev.plugin.sql.GeneralSqlExecutor;
+import org.quickdev.plugin.sql.SqlBasedQueryExecutor;
+import org.quickdev.sdk.exception.PluginException;
+import org.quickdev.sdk.models.DatasourceStructure;
+import org.quickdev.sdk.plugin.common.sql.SqlBasedDatasourceConnectionConfig;
+import org.quickdev.sdk.plugin.sqlcommand.GuiSqlCommand;
+import org.quickdev.sdk.plugin.sqlcommand.command.postgres.PostgresBulkInsertCommand;
+import org.quickdev.sdk.plugin.sqlcommand.command.postgres.PostgresBulkUpdateCommand;
+import org.quickdev.sdk.plugin.sqlcommand.command.postgres.PostgresDeleteCommand;
+import org.quickdev.sdk.plugin.sqlcommand.command.postgres.PostgresInsertCommand;
+import org.quickdev.sdk.plugin.sqlcommand.command.postgres.PostgresUpdateCommand;
 import org.pf4j.Extension;
 
 import com.fasterxml.jackson.core.JsonProcessingException;

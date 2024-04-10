@@ -1,4 +1,4 @@
-package org.lowcoder.infra.serverlog;
+package org.quickdev.infra.serverlog;
 
 import java.util.Map;
 

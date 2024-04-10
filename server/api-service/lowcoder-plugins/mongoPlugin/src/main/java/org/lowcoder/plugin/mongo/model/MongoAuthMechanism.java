@@ -1,4 +1,4 @@
-package org.lowcoder.plugin.mongo.model;
+package org.quickdev.plugin.mongo.model;
 
 public enum MongoAuthMechanism {
     SCRAM_SHA_1("SCRAM-SHA-1"),

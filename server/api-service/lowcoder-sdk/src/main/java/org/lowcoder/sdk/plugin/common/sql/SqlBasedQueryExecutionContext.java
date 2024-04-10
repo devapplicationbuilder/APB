@@ -1,11 +1,11 @@
-package org.lowcoder.sdk.plugin.common.sql;
+package org.quickdev.sdk.plugin.common.sql;
 
 import static org.apache.commons.collections4.MapUtils.emptyIfNull;
 
 import java.util.Map;
 
-import org.lowcoder.sdk.plugin.sqlcommand.GuiSqlCommand;
-import org.lowcoder.sdk.query.QueryExecutionContext;
+import org.quickdev.sdk.plugin.sqlcommand.GuiSqlCommand;
+import org.quickdev.sdk.query.QueryExecutionContext;
 
 import lombok.Builder;
 import lombok.Getter;

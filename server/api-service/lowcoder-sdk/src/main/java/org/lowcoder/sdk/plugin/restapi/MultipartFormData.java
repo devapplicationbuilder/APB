@@ -1,4 +1,4 @@
-package org.lowcoder.sdk.plugin.restapi;
+package org.quickdev.sdk.plugin.restapi;
 
 import static com.google.common.base.Strings.nullToEmpty;
 import lombok.Setter;

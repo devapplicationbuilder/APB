@@ -1,7 +1,7 @@
-package org.lowcoder.sdk.auth;
+package org.quickdev.sdk.auth;
 
-import static org.lowcoder.sdk.auth.constants.AuthTypeConstants.FORM;
-import static org.lowcoder.sdk.constants.AuthSourceConstants.EMAIL;
+import static org.quickdev.sdk.auth.constants.AuthTypeConstants.FORM;
+import static org.quickdev.sdk.constants.AuthSourceConstants.EMAIL;
 
 import javax.annotation.Nullable;
 

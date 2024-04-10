@@ -1,4 +1,4 @@
-package org.lowcoder.domain.organization.model;
+package org.quickdev.domain.organization.model;
 
 import java.util.Arrays;
 import java.util.Map;

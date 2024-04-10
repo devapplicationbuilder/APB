@@ -1,10 +1,10 @@
-package org.lowcoder.domain.interaction;
+package org.quickdev.domain.interaction;
 
 import java.time.Instant;
 
 import org.apache.commons.lang3.math.NumberUtils;
-import org.lowcoder.infra.birelation.BiRelation;
-import org.lowcoder.infra.birelation.BiRelationBizType;
+import org.quickdev.infra.birelation.BiRelation;
+import org.quickdev.infra.birelation.BiRelationBizType;
 
 import com.google.common.base.Preconditions;
 

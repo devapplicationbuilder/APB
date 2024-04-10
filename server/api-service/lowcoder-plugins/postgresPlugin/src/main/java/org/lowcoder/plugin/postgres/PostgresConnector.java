@@ -1,10 +1,10 @@
-package org.lowcoder.plugin.postgres;
+package org.quickdev.plugin.postgres;
 
 import static org.apache.commons.lang3.StringUtils.isNotBlank;
 
 import org.apache.commons.lang3.StringUtils;
-import org.lowcoder.plugin.postgres.model.PostgresDatasourceConfig;
-import org.lowcoder.plugin.sql.SqlBasedConnector;
+import org.quickdev.plugin.postgres.model.PostgresDatasourceConfig;
+import org.quickdev.plugin.sql.SqlBasedConnector;
 import org.pf4j.Extension;
 
 import com.zaxxer.hikari.HikariConfig;

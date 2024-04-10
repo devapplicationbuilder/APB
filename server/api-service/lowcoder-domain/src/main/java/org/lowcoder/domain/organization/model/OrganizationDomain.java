@@ -1,12 +1,12 @@
-package org.lowcoder.domain.organization.model;
+package org.quickdev.domain.organization.model;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import org.lowcoder.domain.mongodb.MongodbInterceptorContext;
-import org.lowcoder.sdk.auth.AbstractAuthConfig;
-import org.lowcoder.sdk.config.SerializeConfig.JsonViews;
-import org.lowcoder.sdk.util.JsonUtils;
+import org.quickdev.domain.mongodb.MongodbInterceptorContext;
+import org.quickdev.sdk.auth.AbstractAuthConfig;
+import org.quickdev.sdk.config.SerializeConfig.JsonViews;
+import org.quickdev.sdk.util.JsonUtils;
 import org.springframework.data.annotation.Transient;
 
 import com.fasterxml.jackson.core.type.TypeReference;

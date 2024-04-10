@@ -1,4 +1,4 @@
-package org.lowcoder.plugin.mongo.constants;
+package org.quickdev.plugin.mongo.constants;
 
 public class MongoFieldName {
 

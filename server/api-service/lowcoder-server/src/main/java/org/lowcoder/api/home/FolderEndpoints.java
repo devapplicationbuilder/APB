@@ -1,13 +1,13 @@
-package org.lowcoder.api.home;
+package org.quickdev.api.home;
 
 import java.util.List;
 import java.util.Set;
 
-import org.lowcoder.api.application.view.ApplicationPermissionView;
-import org.lowcoder.api.framework.view.ResponseView;
-import org.lowcoder.domain.application.model.ApplicationType;
-import org.lowcoder.domain.folder.model.Folder;
-import org.lowcoder.infra.constant.NewUrl;
+import org.quickdev.api.application.view.ApplicationPermissionView;
+import org.quickdev.api.framework.view.ResponseView;
+import org.quickdev.domain.application.model.ApplicationType;
+import org.quickdev.domain.folder.model.Folder;
+import org.quickdev.infra.constant.NewUrl;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

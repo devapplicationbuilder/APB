@@ -1,12 +1,12 @@
-package org.lowcoder.sdk.plugin.sqlcommand.command;
+package org.quickdev.sdk.plugin.sqlcommand.command;
 
 import java.util.Collections;
 import java.util.Map;
 import java.util.Set;
 
-import org.lowcoder.sdk.plugin.sqlcommand.GuiSqlCommand;
-import org.lowcoder.sdk.plugin.sqlcommand.filter.FilterSet;
-import org.lowcoder.sdk.util.MustacheHelper;
+import org.quickdev.sdk.plugin.sqlcommand.GuiSqlCommand;
+import org.quickdev.sdk.plugin.sqlcommand.filter.FilterSet;
+import org.quickdev.sdk.util.MustacheHelper;
 
 public class DeleteCommand implements GuiSqlCommand {
 

@@ -1,4 +1,4 @@
-package org.lowcoder.infra.serverlog;
+package org.quickdev.infra.serverlog;
 
 import org.springframework.data.mongodb.repository.ReactiveMongoRepository;
 import reactor.core.publisher.Mono;

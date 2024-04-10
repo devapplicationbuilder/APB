@@ -1,4 +1,4 @@
-package org.lowcoder.plugin.clickhouse;
+package org.quickdev.plugin.clickhouse;
 
 import org.pf4j.Plugin;
 import org.pf4j.PluginWrapper;

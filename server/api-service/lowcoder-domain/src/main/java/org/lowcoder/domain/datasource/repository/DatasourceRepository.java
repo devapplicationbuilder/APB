@@ -1,7 +1,7 @@
-package org.lowcoder.domain.datasource.repository;
+package org.quickdev.domain.datasource.repository;
 
-import static org.lowcoder.sdk.util.JsonUtils.fromJsonMap;
-import static org.lowcoder.sdk.util.JsonUtils.toJson;
+import static org.quickdev.sdk.util.JsonUtils.fromJsonMap;
+import static org.quickdev.sdk.util.JsonUtils.toJson;
 
 import java.util.Collection;
 import java.util.HashSet;
@@ -9,19 +9,19 @@ import java.util.Set;
 import java.util.function.Function;
 
 import org.apache.commons.collections4.CollectionUtils;
-import org.lowcoder.domain.datasource.model.Datasource;
-import org.lowcoder.domain.datasource.model.DatasourceCreationSource;
-import org.lowcoder.domain.datasource.model.DatasourceDO;
-import org.lowcoder.domain.datasource.model.DatasourceStatus;
-import org.lowcoder.domain.datasource.service.JsDatasourceHelper;
-import org.lowcoder.domain.encryption.EncryptionService;
-import org.lowcoder.domain.plugin.client.DatasourcePluginClient;
-import org.lowcoder.domain.plugin.service.DatasourceMetaInfoService;
-import org.lowcoder.infra.mongo.MongoUpsertHelper;
-import org.lowcoder.sdk.models.DatasourceConnectionConfig;
-import org.lowcoder.sdk.models.HasIdAndAuditing;
-import org.lowcoder.sdk.models.JsDatasourceConnectionConfig;
-import org.lowcoder.sdk.util.JsonUtils;
+import org.quickdev.domain.datasource.model.Datasource;
+import org.quickdev.domain.datasource.model.DatasourceCreationSource;
+import org.quickdev.domain.datasource.model.DatasourceDO;
+import org.quickdev.domain.datasource.model.DatasourceStatus;
+import org.quickdev.domain.datasource.service.JsDatasourceHelper;
+import org.quickdev.domain.encryption.EncryptionService;
+import org.quickdev.domain.plugin.client.DatasourcePluginClient;
+import org.quickdev.domain.plugin.service.DatasourceMetaInfoService;
+import org.quickdev.infra.mongo.MongoUpsertHelper;
+import org.quickdev.sdk.models.DatasourceConnectionConfig;
+import org.quickdev.sdk.models.HasIdAndAuditing;
+import org.quickdev.sdk.models.JsDatasourceConnectionConfig;
+import org.quickdev.sdk.util.JsonUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 

@@ -1,4 +1,4 @@
-package org.lowcoder.domain;
+package org.quickdev.domain;
 
 import org.springframework.boot.Banner;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -9,7 +9,7 @@ import reactor.core.publisher.Hooks;
 import reactor.core.scheduler.Schedulers;
 
 @Slf4j
-@SpringBootApplication(scanBasePackages = "org.lowcoder")
+@SpringBootApplication(scanBasePackages = "org.quickdev")
 public class ServerApplication {
 
     public static void main(String[] args) {

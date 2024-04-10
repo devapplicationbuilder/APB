@@ -1,11 +1,11 @@
-package org.lowcoder.api.application;
+package org.quickdev.api.application;
 
-import static org.lowcoder.domain.permission.model.ResourceAction.READ_APPLICATIONS;
-import static org.lowcoder.sdk.constants.DslConstants.CompoundAppDslConstants.ACTION;
-import static org.lowcoder.sdk.constants.DslConstants.CompoundAppDslConstants.APP;
-import static org.lowcoder.sdk.constants.DslConstants.CompoundAppDslConstants.APP_ID;
-import static org.lowcoder.sdk.constants.DslConstants.CompoundAppDslConstants.COMP;
-import static org.lowcoder.sdk.constants.DslConstants.CompoundAppDslConstants.HIDE_WHEN_NO_PERMISSION;
+import static org.quickdev.domain.permission.model.ResourceAction.READ_APPLICATIONS;
+import static org.quickdev.sdk.constants.DslConstants.CompoundAppDslConstants.ACTION;
+import static org.quickdev.sdk.constants.DslConstants.CompoundAppDslConstants.APP;
+import static org.quickdev.sdk.constants.DslConstants.CompoundAppDslConstants.APP_ID;
+import static org.quickdev.sdk.constants.DslConstants.CompoundAppDslConstants.COMP;
+import static org.quickdev.sdk.constants.DslConstants.CompoundAppDslConstants.HIDE_WHEN_NO_PERMISSION;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -20,10 +20,10 @@ import java.util.stream.Collectors;
 import org.apache.commons.collections4.CollectionUtils;
 import org.apache.commons.collections4.MapUtils;
 import org.apache.commons.lang3.StringUtils;
-import org.lowcoder.api.home.SessionUserService;
-import org.lowcoder.domain.permission.service.ResourcePermissionService;
-import org.lowcoder.sdk.constants.DslConstants.CompoundAppDslConstants;
-import org.lowcoder.sdk.util.MoreMapUtils;
+import org.quickdev.api.home.SessionUserService;
+import org.quickdev.domain.permission.service.ResourcePermissionService;
+import org.quickdev.sdk.constants.DslConstants.CompoundAppDslConstants;
+import org.quickdev.sdk.util.MoreMapUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

@@ -1,9 +1,9 @@
-package org.lowcoder.sdk.helpers;
+package org.quickdev.sdk.helpers;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.lowcoder.sdk.util.MustacheHelper.extractMustacheKeys;
-import static org.lowcoder.sdk.util.MustacheHelper.extractMustacheKeysInOrder;
-import static org.lowcoder.sdk.util.MustacheHelper.tokenize;
+import static org.quickdev.sdk.util.MustacheHelper.extractMustacheKeys;
+import static org.quickdev.sdk.util.MustacheHelper.extractMustacheKeysInOrder;
+import static org.quickdev.sdk.util.MustacheHelper.tokenize;
 
 import java.util.Arrays;
 import java.util.Collection;
@@ -14,8 +14,8 @@ import java.util.Set;
 
 import org.junit.Assert;
 import org.junit.Test;
-import org.lowcoder.sdk.util.JsonUtils;
-import org.lowcoder.sdk.util.MustacheHelper;
+import org.quickdev.sdk.util.JsonUtils;
+import org.quickdev.sdk.util.MustacheHelper;
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Lists;

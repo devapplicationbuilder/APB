@@ -1,11 +1,11 @@
-package org.lowcoder.infra.config;
+package org.quickdev.infra.config;
 
 import static org.apache.commons.lang3.ObjectUtils.firstNonNull;
 
 import java.util.function.Function;
 
 import org.apache.commons.lang3.StringUtils;
-import org.lowcoder.sdk.config.dynamic.Conf;
+import org.quickdev.sdk.config.dynamic.Conf;
 
 class AutoReloadConfImpl<T> implements Conf<T> {
 

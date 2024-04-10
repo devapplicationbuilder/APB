@@ -1,4 +1,4 @@
-package org.lowcoder.domain.organization.service;
+package org.quickdev.domain.organization.service;
 
 import java.util.HashSet;
 import java.util.List;
@@ -10,10 +10,10 @@ import org.apache.commons.lang3.RandomUtils;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.lowcoder.domain.organization.model.MemberRole;
-import org.lowcoder.domain.organization.model.OrgMember;
-import org.lowcoder.domain.organization.service.OrgMemberService;
-import org.lowcoder.sdk.util.IDUtils;
+import org.quickdev.domain.organization.model.MemberRole;
+import org.quickdev.domain.organization.model.OrgMember;
+import org.quickdev.domain.organization.service.OrgMemberService;
+import org.quickdev.sdk.util.IDUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;

@@ -1,9 +1,9 @@
-package org.lowcoder.api.usermanagement;
+package org.quickdev.api.usermanagement;
 
-import org.lowcoder.api.framework.view.ResponseView;
-import org.lowcoder.api.usermanagement.view.InvitationVO;
-import org.lowcoder.infra.constant.NewUrl;
-import org.lowcoder.infra.constant.Url;
+import org.quickdev.api.framework.view.ResponseView;
+import org.quickdev.api.usermanagement.view.InvitationVO;
+import org.quickdev.infra.constant.NewUrl;
+import org.quickdev.infra.constant.Url;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;

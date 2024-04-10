@@ -1,4 +1,4 @@
-package org.lowcoder.sdk.util;
+package org.quickdev.sdk.util;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

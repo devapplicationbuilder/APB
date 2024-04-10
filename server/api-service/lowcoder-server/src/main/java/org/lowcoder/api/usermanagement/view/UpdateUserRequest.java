@@ -1,4 +1,4 @@
-package org.lowcoder.api.usermanagement.view;
+package org.quickdev.api.usermanagement.view;
 
 public class UpdateUserRequest {
 

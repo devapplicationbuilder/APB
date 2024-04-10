@@ -1,9 +1,9 @@
-package org.lowcoder.domain.organization.repository;
+package org.quickdev.domain.organization.repository;
 
 import java.util.Collection;
 
-import org.lowcoder.domain.organization.model.Organization;
-import org.lowcoder.domain.organization.model.OrganizationState;
+import org.quickdev.domain.organization.model.Organization;
+import org.quickdev.domain.organization.model.OrganizationState;
 import org.springframework.data.mongodb.repository.ReactiveMongoRepository;
 import org.springframework.stereotype.Repository;
 

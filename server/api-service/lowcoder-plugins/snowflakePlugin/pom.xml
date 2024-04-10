@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>org.lowcoder</groupId>
+        <groupId>org.quickdev</groupId>
         <artifactId>lowcoder-plugins</artifactId>
         <version>${revision}</version>
     </parent>
@@ -18,7 +18,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
         <plugin.id>snowflake-plugin</plugin.id>
-        <plugin.class>org.lowcoder.plugin.snowflake.SnowflakePlugin</plugin.class>
+        <plugin.class>org.quickdev.plugin.snowflake.SnowflakePlugin</plugin.class>
         <plugin.version>${revision}</plugin.version>
         <plugin.provider>service@lowcoder.org</plugin.provider>
         <plugin.dependencies/>
@@ -32,7 +32,7 @@
             <version>3.13.33</version>
         </dependency>
         <dependency>
-            <groupId>org.lowcoder</groupId>
+            <groupId>org.quickdev</groupId>
             <artifactId>sqlBasedPlugin</artifactId>
 			<scope>compile</scope>
         </dependency>

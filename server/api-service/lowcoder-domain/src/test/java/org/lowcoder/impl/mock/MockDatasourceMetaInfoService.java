@@ -1,16 +1,16 @@
-package org.lowcoder.impl.mock;
+package org.quickdev.impl.mock;
 
 import reactor.core.publisher.Flux;
 
 import java.util.List;
 import java.util.Map;
 
-import org.lowcoder.domain.plugin.DatasourceMetaInfo;
-import org.lowcoder.domain.plugin.service.DatasourceMetaInfoService;
-import org.lowcoder.sdk.models.DatasourceConnectionConfig;
-import org.lowcoder.sdk.plugin.common.DatasourceConnector;
-import org.lowcoder.sdk.plugin.common.QueryExecutor;
-import org.lowcoder.sdk.query.QueryExecutionContext;
+import org.quickdev.domain.plugin.DatasourceMetaInfo;
+import org.quickdev.domain.plugin.service.DatasourceMetaInfoService;
+import org.quickdev.sdk.models.DatasourceConnectionConfig;
+import org.quickdev.sdk.plugin.common.DatasourceConnector;
+import org.quickdev.sdk.plugin.common.QueryExecutor;
+import org.quickdev.sdk.query.QueryExecutionContext;
 
 public class MockDatasourceMetaInfoService implements DatasourceMetaInfoService {
 

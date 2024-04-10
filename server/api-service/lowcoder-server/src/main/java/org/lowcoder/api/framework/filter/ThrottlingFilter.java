@@ -1,9 +1,9 @@
-package org.lowcoder.api.framework.filter;
+package org.quickdev.api.framework.filter;
 
 import static java.util.Collections.emptyMap;
-import static org.lowcoder.api.framework.filter.FilterOrder.THROTTLING;
-import static org.lowcoder.sdk.exception.BizError.REQUEST_THROTTLED;
-import static org.lowcoder.sdk.util.ExceptionUtils.ofError;
+import static org.quickdev.api.framework.filter.FilterOrder.THROTTLING;
+import static org.quickdev.sdk.exception.BizError.REQUEST_THROTTLED;
+import static org.quickdev.sdk.util.ExceptionUtils.ofError;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -11,7 +11,7 @@ import java.util.function.Supplier;
 
 import javax.annotation.Nonnull;
 
-import org.lowcoder.sdk.config.dynamic.ConfigCenter;
+import org.quickdev.sdk.config.dynamic.ConfigCenter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnExpression;

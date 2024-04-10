@@ -1,8 +1,8 @@
-package org.lowcoder.api.authentication.request;
+package org.quickdev.api.authentication.request;
 
 import java.util.Set;
 
-import org.lowcoder.domain.authentication.context.AuthRequestContext;
+import org.quickdev.domain.authentication.context.AuthRequestContext;
 
 import reactor.core.publisher.Mono;
 

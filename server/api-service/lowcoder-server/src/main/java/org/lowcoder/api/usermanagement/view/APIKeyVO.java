@@ -1,8 +1,8 @@
-package org.lowcoder.api.usermanagement.view;
+package org.quickdev.api.usermanagement.view;
 
 import lombok.Builder;
 import lombok.Getter;
-import org.lowcoder.domain.user.model.APIKey;
+import org.quickdev.domain.user.model.APIKey;
 
 @Builder
 @Getter

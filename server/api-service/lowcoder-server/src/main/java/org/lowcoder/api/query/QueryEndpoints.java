@@ -1,10 +1,10 @@
-package org.lowcoder.api.query;
+package org.quickdev.api.query;
 
-import org.lowcoder.api.query.view.LibraryQueryRequestFromJs;
-import org.lowcoder.api.query.view.QueryExecutionRequest;
-import org.lowcoder.api.query.view.QueryResultView;
-import org.lowcoder.infra.constant.NewUrl;
-import org.lowcoder.infra.constant.Url;
+import org.quickdev.api.query.view.LibraryQueryRequestFromJs;
+import org.quickdev.api.query.view.QueryExecutionRequest;
+import org.quickdev.api.query.view.QueryResultView;
+import org.quickdev.infra.constant.NewUrl;
+import org.quickdev.infra.constant.Url;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;

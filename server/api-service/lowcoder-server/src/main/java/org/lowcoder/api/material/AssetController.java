@@ -1,6 +1,6 @@
-package org.lowcoder.api.material;
+package org.quickdev.api.material;
 
-import org.lowcoder.domain.asset.service.AssetService;
+import org.quickdev.domain.asset.service.AssetService;
 import org.springframework.http.HttpHeaders;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;

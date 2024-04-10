@@ -1,6 +1,6 @@
-package org.lowcoder.plugin.snowflake;
+package org.quickdev.plugin.snowflake;
 
-import static org.lowcoder.sdk.exception.PluginCommonError.DATASOURCE_GET_STRUCTURE_ERROR;
+import static org.quickdev.sdk.exception.PluginCommonError.DATASOURCE_GET_STRUCTURE_ERROR;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -13,17 +13,17 @@ import java.util.Map;
 import javax.annotation.Nonnull;
 
 import org.apache.commons.lang3.StringUtils;
-import org.lowcoder.plugin.sql.GeneralSqlExecutor;
-import org.lowcoder.plugin.sql.SqlBasedQueryExecutor;
-import org.lowcoder.sdk.models.DatasourceStructure;
-import org.lowcoder.sdk.models.DatasourceStructure.Column;
-import org.lowcoder.sdk.models.DatasourceStructure.Table;
-import org.lowcoder.sdk.models.DatasourceStructure.TableType;
-import org.lowcoder.sdk.plugin.common.sql.SqlBasedDatasourceConnectionConfig;
-import org.lowcoder.sdk.plugin.common.sql.SqlBasedQueryExecutionContext;
-import org.lowcoder.sdk.plugin.sqlcommand.GuiSqlCommand;
-import org.lowcoder.sdk.query.QueryVisitorContext;
-import org.lowcoder.sdk.util.ExceptionUtils;
+import org.quickdev.plugin.sql.GeneralSqlExecutor;
+import org.quickdev.plugin.sql.SqlBasedQueryExecutor;
+import org.quickdev.sdk.models.DatasourceStructure;
+import org.quickdev.sdk.models.DatasourceStructure.Column;
+import org.quickdev.sdk.models.DatasourceStructure.Table;
+import org.quickdev.sdk.models.DatasourceStructure.TableType;
+import org.quickdev.sdk.plugin.common.sql.SqlBasedDatasourceConnectionConfig;
+import org.quickdev.sdk.plugin.common.sql.SqlBasedQueryExecutionContext;
+import org.quickdev.sdk.plugin.sqlcommand.GuiSqlCommand;
+import org.quickdev.sdk.query.QueryVisitorContext;
+import org.quickdev.sdk.util.ExceptionUtils;
 import org.pf4j.Extension;
 
 import lombok.extern.slf4j.Slf4j;

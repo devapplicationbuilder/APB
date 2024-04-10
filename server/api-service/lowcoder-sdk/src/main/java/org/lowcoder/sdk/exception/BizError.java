@@ -1,8 +1,8 @@
-package org.lowcoder.sdk.exception;
+package org.quickdev.sdk.exception;
 
-import static org.lowcoder.sdk.exception.ErrorLogType.SIMPLE;
-import static org.lowcoder.sdk.exception.ErrorLogType.VERBOSE;
-import static org.lowcoder.sdk.util.EnumUtils.checkDuplicates;
+import static org.quickdev.sdk.exception.ErrorLogType.SIMPLE;
+import static org.quickdev.sdk.exception.ErrorLogType.VERBOSE;
+import static org.quickdev.sdk.util.EnumUtils.checkDuplicates;
 
 import lombok.Getter;
 

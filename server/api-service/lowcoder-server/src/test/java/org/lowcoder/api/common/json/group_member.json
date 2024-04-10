@@ -1,5 +1,5 @@
 {
-  "class": "org.lowcoder.infra.birelation.BiRelation",
+  "class": "org.quickdev.infra.birelation.BiRelation",
   "data": [
     {
       "id": "group_member02",

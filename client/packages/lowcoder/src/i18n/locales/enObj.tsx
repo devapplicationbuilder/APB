@@ -112,7 +112,7 @@ export const enObj: I18nObjects = {
     ],
   },
   editorTutorials: {
-    mockDataUrl: "http://localhost:4500",
+    mockDataUrl: "http://172.23.16.1",
     data: (code) => (
       <>
         The current State of the Component with all Settings and Data listed here. You can reference to this data with the handlebar expression.

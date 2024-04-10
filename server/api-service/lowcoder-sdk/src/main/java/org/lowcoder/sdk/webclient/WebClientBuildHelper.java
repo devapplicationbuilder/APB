@@ -1,4 +1,4 @@
-package org.lowcoder.sdk.webclient;
+package org.quickdev.sdk.webclient;
 
 import java.security.cert.CertificateException;
 import java.security.cert.X509Certificate;
@@ -9,10 +9,10 @@ import javax.net.ssl.SSLException;
 
 import org.apache.commons.collections4.CollectionUtils;
 import org.apache.commons.lang3.StringUtils;
-import org.lowcoder.sdk.plugin.common.ssl.DisableVerifySslConfig;
-import org.lowcoder.sdk.plugin.common.ssl.SslConfig;
-import org.lowcoder.sdk.plugin.common.ssl.SslHelper;
-import org.lowcoder.sdk.plugin.common.ssl.VerifySelfSignedCertSslConfig;
+import org.quickdev.sdk.plugin.common.ssl.DisableVerifySslConfig;
+import org.quickdev.sdk.plugin.common.ssl.SslConfig;
+import org.quickdev.sdk.plugin.common.ssl.SslHelper;
+import org.quickdev.sdk.plugin.common.ssl.VerifySelfSignedCertSslConfig;
 import org.springframework.http.client.reactive.ReactorClientHttpConnector;
 import org.springframework.web.reactive.function.client.WebClient;
 import org.springframework.web.reactive.function.client.WebClient.Builder;

@@ -1,6 +1,6 @@
-package org.lowcoder.runner.migrations.job;
+package org.quickdev.runner.migrations.job;
 
-import org.lowcoder.domain.application.service.ApplicationService;
+import org.quickdev.domain.application.service.ApplicationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

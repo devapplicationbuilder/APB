@@ -1,4 +1,4 @@
-package org.lowcoder.sdk.util;
+package org.quickdev.sdk.util;
 
 
 import java.net.URI;
@@ -7,7 +7,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 import org.apache.commons.lang3.StringUtils;
-import org.lowcoder.sdk.constants.GlobalContext;
+import org.quickdev.sdk.constants.GlobalContext;
 import org.springframework.http.server.reactive.ServerHttpRequest;
 import org.springframework.web.server.ServerWebExchange;
 

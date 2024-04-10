@@ -1,14 +1,14 @@
-package org.lowcoder.api.usermanagement;
+package org.quickdev.api.usermanagement;
 
-import org.lowcoder.api.authentication.dto.OrganizationDomainCheckResult;
-import org.lowcoder.api.config.ConfigView;
-import org.lowcoder.api.usermanagement.view.OrgMemberListView;
-import org.lowcoder.api.usermanagement.view.OrgView;
-import org.lowcoder.api.usermanagement.view.UpdateOrgRequest;
-import org.lowcoder.api.usermanagement.view.UpdateRoleRequest;
-import org.lowcoder.domain.organization.model.Organization;
-import org.lowcoder.domain.organization.model.Organization.OrganizationCommonSettings;
-import org.lowcoder.infra.annotation.NonEmptyMono;
+import org.quickdev.api.authentication.dto.OrganizationDomainCheckResult;
+import org.quickdev.api.config.ConfigView;
+import org.quickdev.api.usermanagement.view.OrgMemberListView;
+import org.quickdev.api.usermanagement.view.OrgView;
+import org.quickdev.api.usermanagement.view.UpdateOrgRequest;
+import org.quickdev.api.usermanagement.view.UpdateRoleRequest;
+import org.quickdev.domain.organization.model.Organization;
+import org.quickdev.domain.organization.model.Organization.OrganizationCommonSettings;
+import org.quickdev.infra.annotation.NonEmptyMono;
 import org.springframework.http.codec.multipart.Part;
 
 import reactor.core.publisher.Mono;

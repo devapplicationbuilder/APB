@@ -1,10 +1,10 @@
-package org.lowcoder.plugin.mysql;
+package org.quickdev.plugin.mysql;
 
 import static org.apache.commons.lang3.StringUtils.isNotBlank;
 
 import org.apache.commons.lang3.StringUtils;
-import org.lowcoder.plugin.sql.SqlBasedConnector;
-import org.lowcoder.sdk.plugin.mysql.MysqlDatasourceConfig;
+import org.quickdev.plugin.sql.SqlBasedConnector;
+import org.quickdev.sdk.plugin.mysql.MysqlDatasourceConfig;
 import org.pf4j.Extension;
 
 import com.zaxxer.hikari.HikariConfig;

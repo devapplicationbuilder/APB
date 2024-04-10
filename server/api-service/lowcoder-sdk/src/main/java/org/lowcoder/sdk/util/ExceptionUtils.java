@@ -1,12 +1,12 @@
-package org.lowcoder.sdk.util;
+package org.quickdev.sdk.util;
 
 import static reactor.core.Exceptions.throwIfFatal;
 
-import org.lowcoder.sdk.exception.BaseException;
-import org.lowcoder.sdk.exception.BizError;
-import org.lowcoder.sdk.exception.BizException;
-import org.lowcoder.sdk.exception.PluginError;
-import org.lowcoder.sdk.exception.PluginException;
+import org.quickdev.sdk.exception.BaseException;
+import org.quickdev.sdk.exception.BizError;
+import org.quickdev.sdk.exception.BizException;
+import org.quickdev.sdk.exception.PluginError;
+import org.quickdev.sdk.exception.PluginException;
 
 import reactor.core.publisher.Mono;
 

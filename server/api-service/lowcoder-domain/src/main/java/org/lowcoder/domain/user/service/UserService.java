@@ -1,14 +1,14 @@
-package org.lowcoder.domain.user.service;
+package org.quickdev.domain.user.service;
 
 import java.util.Collection;
 import java.util.Map;
 
-import org.lowcoder.domain.user.model.AuthUser;
-import org.lowcoder.domain.user.model.Connection;
-import org.lowcoder.domain.user.model.User;
-import org.lowcoder.domain.user.model.UserDetail;
-import org.lowcoder.infra.annotation.NonEmptyMono;
-import org.lowcoder.infra.mongo.MongoUpsertHelper.PartialResourceWithId;
+import org.quickdev.domain.user.model.AuthUser;
+import org.quickdev.domain.user.model.Connection;
+import org.quickdev.domain.user.model.User;
+import org.quickdev.domain.user.model.UserDetail;
+import org.quickdev.infra.annotation.NonEmptyMono;
+import org.quickdev.infra.mongo.MongoUpsertHelper.PartialResourceWithId;
 import org.springframework.http.codec.multipart.Part;
 import org.springframework.web.server.ServerWebExchange;
 

@@ -15,24 +15,24 @@
  * <p>
  */
 // copied for postgres data types
-package org.lowcoder.plugin.postgres.utils;
+package org.quickdev.plugin.postgres.utils;
 
-import static org.lowcoder.plugin.postgres.model.DataType.BOOLEAN;
-import static org.lowcoder.plugin.postgres.model.DataType.DOUBLE;
-import static org.lowcoder.plugin.postgres.model.DataType.FLOAT;
-import static org.lowcoder.plugin.postgres.model.DataType.INTEGER;
-import static org.lowcoder.plugin.postgres.model.DataType.LONG;
-import static org.lowcoder.plugin.postgres.model.DataType.STRING;
-import static org.lowcoder.plugin.postgres.utils.PostgresDataTypeUtils.PostgresDataType.BOOL;
-import static org.lowcoder.plugin.postgres.utils.PostgresDataTypeUtils.PostgresDataType.DATE;
-import static org.lowcoder.plugin.postgres.utils.PostgresDataTypeUtils.PostgresDataType.DECIMAL;
-import static org.lowcoder.plugin.postgres.utils.PostgresDataTypeUtils.PostgresDataType.FLOAT8;
-import static org.lowcoder.plugin.postgres.utils.PostgresDataTypeUtils.PostgresDataType.INT;
-import static org.lowcoder.plugin.postgres.utils.PostgresDataTypeUtils.PostgresDataType.INT4;
-import static org.lowcoder.plugin.postgres.utils.PostgresDataTypeUtils.PostgresDataType.INT8;
-import static org.lowcoder.plugin.postgres.utils.PostgresDataTypeUtils.PostgresDataType.TEXT;
-import static org.lowcoder.plugin.postgres.utils.PostgresDataTypeUtils.PostgresDataType.TIME;
-import static org.lowcoder.plugin.postgres.utils.PostgresDataTypeUtils.PostgresDataType.VARCHAR;
+import static org.quickdev.plugin.postgres.model.DataType.BOOLEAN;
+import static org.quickdev.plugin.postgres.model.DataType.DOUBLE;
+import static org.quickdev.plugin.postgres.model.DataType.FLOAT;
+import static org.quickdev.plugin.postgres.model.DataType.INTEGER;
+import static org.quickdev.plugin.postgres.model.DataType.LONG;
+import static org.quickdev.plugin.postgres.model.DataType.STRING;
+import static org.quickdev.plugin.postgres.utils.PostgresDataTypeUtils.PostgresDataType.BOOL;
+import static org.quickdev.plugin.postgres.utils.PostgresDataTypeUtils.PostgresDataType.DATE;
+import static org.quickdev.plugin.postgres.utils.PostgresDataTypeUtils.PostgresDataType.DECIMAL;
+import static org.quickdev.plugin.postgres.utils.PostgresDataTypeUtils.PostgresDataType.FLOAT8;
+import static org.quickdev.plugin.postgres.utils.PostgresDataTypeUtils.PostgresDataType.INT;
+import static org.quickdev.plugin.postgres.utils.PostgresDataTypeUtils.PostgresDataType.INT4;
+import static org.quickdev.plugin.postgres.utils.PostgresDataTypeUtils.PostgresDataType.INT8;
+import static org.quickdev.plugin.postgres.utils.PostgresDataTypeUtils.PostgresDataType.TEXT;
+import static org.quickdev.plugin.postgres.utils.PostgresDataTypeUtils.PostgresDataType.TIME;
+import static org.quickdev.plugin.postgres.utils.PostgresDataTypeUtils.PostgresDataType.VARCHAR;
 
 import java.lang.reflect.Field;
 import java.sql.Date;
@@ -48,7 +48,7 @@ import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.lowcoder.plugin.postgres.model.DataType;
+import org.quickdev.plugin.postgres.model.DataType;
 
 public class PostgresDataTypeUtils {
 

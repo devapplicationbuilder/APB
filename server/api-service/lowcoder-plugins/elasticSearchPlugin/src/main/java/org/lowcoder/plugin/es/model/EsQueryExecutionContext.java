@@ -1,6 +1,6 @@
-package org.lowcoder.plugin.es.model;
+package org.quickdev.plugin.es.model;
 
-import org.lowcoder.sdk.query.QueryExecutionContext;
+import org.quickdev.sdk.query.QueryExecutionContext;
 import org.springframework.http.HttpMethod;
 
 import lombok.Builder;

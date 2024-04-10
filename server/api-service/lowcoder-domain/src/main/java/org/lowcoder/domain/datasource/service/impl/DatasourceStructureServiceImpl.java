@@ -1,27 +1,27 @@
-package org.lowcoder.domain.datasource.service.impl;
+package org.quickdev.domain.datasource.service.impl;
 
-import static org.lowcoder.sdk.exception.PluginCommonError.DATASOURCE_GET_STRUCTURE_ERROR;
+import static org.quickdev.sdk.exception.PluginCommonError.DATASOURCE_GET_STRUCTURE_ERROR;
 
 import java.time.Duration;
 import java.util.concurrent.TimeoutException;
 
-import org.lowcoder.domain.datasource.model.Datasource;
-import org.lowcoder.domain.datasource.model.DatasourceStructureDO;
-import org.lowcoder.domain.datasource.repository.DatasourceStructureRepository;
-import org.lowcoder.domain.datasource.service.DatasourceConnectionPool;
-import org.lowcoder.domain.datasource.service.DatasourceService;
-import org.lowcoder.domain.datasource.service.DatasourceStructureService;
-import org.lowcoder.domain.plugin.DatasourceMetaInfo;
-import org.lowcoder.domain.plugin.service.DatasourceMetaInfoService;
-import org.lowcoder.infra.mongo.MongoUpsertHelper;
-import org.lowcoder.sdk.config.CommonConfig;
-import org.lowcoder.sdk.exception.BizError;
-import org.lowcoder.sdk.exception.BizException;
-import org.lowcoder.sdk.exception.PluginException;
-import org.lowcoder.sdk.models.DatasourceConnectionConfig;
-import org.lowcoder.sdk.models.DatasourceStructure;
-import org.lowcoder.sdk.plugin.common.QueryExecutor;
-import org.lowcoder.sdk.query.QueryExecutionContext;
+import org.quickdev.domain.datasource.model.Datasource;
+import org.quickdev.domain.datasource.model.DatasourceStructureDO;
+import org.quickdev.domain.datasource.repository.DatasourceStructureRepository;
+import org.quickdev.domain.datasource.service.DatasourceConnectionPool;
+import org.quickdev.domain.datasource.service.DatasourceService;
+import org.quickdev.domain.datasource.service.DatasourceStructureService;
+import org.quickdev.domain.plugin.DatasourceMetaInfo;
+import org.quickdev.domain.plugin.service.DatasourceMetaInfoService;
+import org.quickdev.infra.mongo.MongoUpsertHelper;
+import org.quickdev.sdk.config.CommonConfig;
+import org.quickdev.sdk.exception.BizError;
+import org.quickdev.sdk.exception.BizException;
+import org.quickdev.sdk.exception.PluginException;
+import org.quickdev.sdk.models.DatasourceConnectionConfig;
+import org.quickdev.sdk.models.DatasourceStructure;
+import org.quickdev.sdk.plugin.common.QueryExecutor;
+import org.quickdev.sdk.query.QueryExecutionContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

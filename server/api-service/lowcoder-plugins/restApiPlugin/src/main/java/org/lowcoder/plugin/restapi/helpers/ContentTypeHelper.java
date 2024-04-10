@@ -1,4 +1,4 @@
-package org.lowcoder.plugin.restapi.helpers;
+package org.quickdev.plugin.restapi.helpers;
 
 import java.util.Map;
 import java.util.Map.Entry;

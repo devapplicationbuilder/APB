@@ -1,11 +1,11 @@
-package org.lowcoder.api.framework;
+package org.quickdev.api.framework;
 
 
-import static org.lowcoder.sdk.exception.BizError.SERVER_NOT_READY;
-import static org.lowcoder.sdk.util.ExceptionUtils.ofError;
+import static org.quickdev.sdk.exception.BizError.SERVER_NOT_READY;
+import static org.quickdev.sdk.util.ExceptionUtils.ofError;
 
-import org.lowcoder.api.framework.view.ResponseView;
-import org.lowcoder.api.framework.warmup.WarmupHelper;
+import org.quickdev.api.framework.view.ResponseView;
+import org.quickdev.api.framework.warmup.WarmupHelper;
 import org.springframework.web.bind.annotation.RestController;
 
 import lombok.RequiredArgsConstructor;

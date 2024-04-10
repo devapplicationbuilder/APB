@@ -1,4 +1,4 @@
-package org.lowcoder.domain.encryption;
+package org.quickdev.domain.encryption;
 
 public interface EncryptionService {
 

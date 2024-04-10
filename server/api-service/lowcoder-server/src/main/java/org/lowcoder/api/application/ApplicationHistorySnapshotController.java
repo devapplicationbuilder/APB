@@ -1,22 +1,22 @@
-package org.lowcoder.api.application;
+package org.quickdev.api.application;
 
-import static org.lowcoder.api.util.ViewBuilder.multiBuild;
+import static org.quickdev.api.util.ViewBuilder.multiBuild;
 
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-import org.lowcoder.api.application.view.HistorySnapshotDslView;
-import org.lowcoder.api.framework.view.ResponseView;
-import org.lowcoder.api.home.SessionUserService;
-import org.lowcoder.api.util.Pagination;
-import org.lowcoder.domain.application.model.Application;
-import org.lowcoder.domain.application.model.ApplicationHistorySnapshot;
-import org.lowcoder.domain.application.service.ApplicationHistorySnapshotService;
-import org.lowcoder.domain.application.service.ApplicationService;
-import org.lowcoder.domain.permission.model.ResourceAction;
-import org.lowcoder.domain.permission.service.ResourcePermissionService;
-import org.lowcoder.domain.user.service.UserService;
+import org.quickdev.api.application.view.HistorySnapshotDslView;
+import org.quickdev.api.framework.view.ResponseView;
+import org.quickdev.api.home.SessionUserService;
+import org.quickdev.api.util.Pagination;
+import org.quickdev.domain.application.model.Application;
+import org.quickdev.domain.application.model.ApplicationHistorySnapshot;
+import org.quickdev.domain.application.service.ApplicationHistorySnapshotService;
+import org.quickdev.domain.application.service.ApplicationService;
+import org.quickdev.domain.permission.model.ResourceAction;
+import org.quickdev.domain.permission.service.ResourcePermissionService;
+import org.quickdev.domain.user.service.UserService;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;

@@ -1,6 +1,6 @@
-package org.lowcoder.api.framework.filter;
+package org.quickdev.api.framework.filter;
 
-import static org.lowcoder.api.framework.filter.FilterOrder.REQUEST_COST;
+import static org.quickdev.api.framework.filter.FilterOrder.REQUEST_COST;
 
 import java.time.Duration;
 

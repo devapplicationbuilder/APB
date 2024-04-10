@@ -1,10 +1,10 @@
-package org.lowcoder.domain.group.util;
+package org.quickdev.domain.group.util;
 
 import java.util.Locale;
 import java.util.Map;
 
 import org.apache.commons.lang3.StringUtils;
-import org.lowcoder.sdk.util.LocaleUtils;
+import org.quickdev.sdk.util.LocaleUtils;
 
 import com.google.common.collect.ImmutableMap;
 

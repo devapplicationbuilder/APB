@@ -1,6 +1,6 @@
-package org.lowcoder.api.usermanagement.view;
+package org.quickdev.api.usermanagement.view;
 
-import org.lowcoder.domain.organization.model.Organization;
+import org.quickdev.domain.organization.model.Organization;
 
 public class OrgAndVisitorRoleView {
 

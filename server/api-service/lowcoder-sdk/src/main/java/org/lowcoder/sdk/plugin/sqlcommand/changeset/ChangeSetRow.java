@@ -1,6 +1,6 @@
-package org.lowcoder.sdk.plugin.sqlcommand.changeset;
+package org.quickdev.sdk.plugin.sqlcommand.changeset;
 
-import static org.lowcoder.sdk.exception.PluginCommonError.INVALID_GUI_SETTINGS;
+import static org.quickdev.sdk.exception.PluginCommonError.INVALID_GUI_SETTINGS;
 
 import java.util.Iterator;
 import java.util.LinkedHashMap;
@@ -13,8 +13,8 @@ import java.util.stream.StreamSupport;
 
 import javax.annotation.Nonnull;
 
-import org.lowcoder.sdk.exception.PluginException;
-import org.lowcoder.sdk.util.SqlGuiUtils.GuiSqlValue;
+import org.quickdev.sdk.exception.PluginException;
+import org.quickdev.sdk.util.SqlGuiUtils.GuiSqlValue;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;

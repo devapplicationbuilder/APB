@@ -1,10 +1,10 @@
-package org.lowcoder.infra.config;
+package org.quickdev.infra.config;
 
 import jakarta.annotation.PostConstruct;
 import lombok.extern.slf4j.Slf4j;
-import org.lowcoder.infra.config.model.ServerConfig;
-import org.lowcoder.infra.config.repository.ServerConfigRepository;
-import org.lowcoder.infra.localcache.ReloadableCache;
+import org.quickdev.infra.config.model.ServerConfig;
+import org.quickdev.infra.config.repository.ServerConfigRepository;
+import org.quickdev.infra.localcache.ReloadableCache;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -14,7 +14,7 @@ import java.util.Map;
 
 import static java.util.Collections.emptyMap;
 import static java.util.stream.Collectors.toUnmodifiableMap;
-import static org.lowcoder.sdk.util.JsonUtils.toJson;
+import static org.quickdev.sdk.util.JsonUtils.toJson;
 
 @Slf4j
 @Component

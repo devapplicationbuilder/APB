@@ -1,8 +1,8 @@
-package org.lowcoder.api.framework;
+package org.quickdev.api.framework;
 
-import org.lowcoder.api.framework.view.ResponseView;
-import org.lowcoder.infra.constant.NewUrl;
-import org.lowcoder.infra.constant.Url;
+import org.quickdev.api.framework.view.ResponseView;
+import org.quickdev.infra.constant.NewUrl;
+import org.quickdev.infra.constant.Url;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;

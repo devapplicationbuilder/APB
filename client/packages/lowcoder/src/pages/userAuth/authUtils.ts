@@ -60,7 +60,7 @@ export function useAuthSubmit(
           messageInstance.error(e.message + ' You will be redirected to the login page in 3 seconds ...');
           setTimeout(() => {
             //window.location.href = 'https://localhost:44447';
-            window.location.href = 'http://172.23.16.1:4501';
+              window.location.href = 'http://172.23.16.1:4501';
           }, 3000);
           //aici pot sa redirectionez
         })

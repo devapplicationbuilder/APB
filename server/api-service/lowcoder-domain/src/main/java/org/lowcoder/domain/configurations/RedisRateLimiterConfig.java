@@ -1,4 +1,4 @@
-package org.lowcoder.domain.configurations;
+package org.quickdev.domain.configurations;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;

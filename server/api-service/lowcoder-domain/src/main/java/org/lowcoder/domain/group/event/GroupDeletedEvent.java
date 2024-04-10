@@ -1,4 +1,4 @@
-package org.lowcoder.domain.group.event;
+package org.quickdev.domain.group.event;
 
 import lombok.Getter;
 import lombok.Setter;

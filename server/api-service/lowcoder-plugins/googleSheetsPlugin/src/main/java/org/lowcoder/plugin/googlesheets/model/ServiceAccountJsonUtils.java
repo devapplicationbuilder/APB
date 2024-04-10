@@ -1,8 +1,8 @@
-package org.lowcoder.plugin.googlesheets.model;
+package org.quickdev.plugin.googlesheets.model;
 
 import java.util.Map;
 
-import org.lowcoder.sdk.util.JsonUtils;
+import org.quickdev.sdk.util.JsonUtils;
 
 import lombok.Getter;
 import lombok.Setter;

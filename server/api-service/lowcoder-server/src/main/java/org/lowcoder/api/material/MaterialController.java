@@ -1,13 +1,13 @@
-package org.lowcoder.api.material;
+package org.quickdev.api.material;
 
 import java.time.Duration;
 import java.util.List;
 
-import org.lowcoder.api.framework.view.ResponseView;
-import org.lowcoder.domain.material.service.meta.MaterialMetaService;
-import org.lowcoder.sdk.exception.BizError;
-import org.lowcoder.sdk.exception.BizException;
-import org.lowcoder.sdk.util.MediaTypeUtils;
+import org.quickdev.api.framework.view.ResponseView;
+import org.quickdev.domain.material.service.meta.MaterialMetaService;
+import org.quickdev.sdk.exception.BizError;
+import org.quickdev.sdk.exception.BizException;
+import org.quickdev.sdk.util.MediaTypeUtils;
 import org.springframework.http.CacheControl;
 import org.springframework.http.ContentDisposition;
 import org.springframework.http.HttpHeaders;

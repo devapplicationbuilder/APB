@@ -1,11 +1,11 @@
-package org.lowcoder.api.query;
+package org.quickdev.api.query;
 
 import java.util.List;
 import java.util.Map;
 
-import org.lowcoder.api.framework.view.ResponseView;
-import org.lowcoder.api.query.view.LibraryQueryRecordMetaView;
-import org.lowcoder.domain.query.model.LibraryQueryCombineId;
+import org.quickdev.api.framework.view.ResponseView;
+import org.quickdev.api.query.view.LibraryQueryRecordMetaView;
+import org.quickdev.domain.query.model.LibraryQueryCombineId;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;

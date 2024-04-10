@@ -9,7 +9,7 @@ const DatasourceTutorials: Partial<Record<DatasourceType, string>> = {
   es: trans("datasourceTutorial.es"),
   smtp: trans("datasourceTutorial.smtp"),
   clickHouse: trans("datasourceTutorial.clickHouse"),
-  googleSheets: "http://localhost:4500/apps",
+  googleSheets: "http://172.23.16.1/apps",
 };
 
 export const getDatasourceTutorial = (datasourceType: DatasourceType) => {

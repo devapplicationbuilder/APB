@@ -1,7 +1,7 @@
-package org.lowcoder.sdk.auth;
+package org.quickdev.sdk.auth;
 
-import static org.lowcoder.sdk.auth.constants.Oauth2Constants.BASE_URL_PLACEHOLDER;
-import static org.lowcoder.sdk.auth.constants.Oauth2Constants.SCOPE_PLACEHOLDER;
+import static org.quickdev.sdk.auth.constants.Oauth2Constants.BASE_URL_PLACEHOLDER;
+import static org.quickdev.sdk.auth.constants.Oauth2Constants.SCOPE_PLACEHOLDER;
 
 import javax.annotation.Nullable;
 

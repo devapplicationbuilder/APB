@@ -1,9 +1,9 @@
-package org.lowcoder.plugin.sql;
+package org.quickdev.plugin.sql;
 
-import static org.lowcoder.sdk.exception.PluginCommonError.CONNECTION_ERROR;
-import static org.lowcoder.sdk.exception.PluginCommonError.QUERY_ARGUMENT_ERROR;
-import static org.lowcoder.sdk.exception.PluginCommonError.QUERY_EXECUTION_ERROR;
-import static org.lowcoder.sdk.util.ExceptionUtils.wrapException;
+import static org.quickdev.sdk.exception.PluginCommonError.CONNECTION_ERROR;
+import static org.quickdev.sdk.exception.PluginCommonError.QUERY_ARGUMENT_ERROR;
+import static org.quickdev.sdk.exception.PluginCommonError.QUERY_EXECUTION_ERROR;
+import static org.quickdev.sdk.util.ExceptionUtils.wrapException;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -14,18 +14,18 @@ import javax.annotation.Nonnull;
 
 import org.apache.commons.collections4.MapUtils;
 import org.apache.commons.lang3.StringUtils;
-import org.lowcoder.sdk.exception.InvalidHikariDatasourceException;
-import org.lowcoder.sdk.exception.PluginException;
-import org.lowcoder.sdk.models.DatasourceStructure;
-import org.lowcoder.sdk.models.QueryExecutionResult;
-import org.lowcoder.sdk.plugin.common.BlockingQueryExecutor;
-import org.lowcoder.sdk.plugin.common.SqlQueryUtils;
-import org.lowcoder.sdk.plugin.common.sql.HikariPerfWrapper;
-import org.lowcoder.sdk.plugin.common.sql.SqlBasedDatasourceConnectionConfig;
-import org.lowcoder.sdk.plugin.common.sql.SqlBasedQueryExecutionContext;
-import org.lowcoder.sdk.plugin.sqlcommand.GuiSqlCommand;
-import org.lowcoder.sdk.query.QueryVisitorContext;
-import org.lowcoder.sdk.util.MustacheHelper;
+import org.quickdev.sdk.exception.InvalidHikariDatasourceException;
+import org.quickdev.sdk.exception.PluginException;
+import org.quickdev.sdk.models.DatasourceStructure;
+import org.quickdev.sdk.models.QueryExecutionResult;
+import org.quickdev.sdk.plugin.common.BlockingQueryExecutor;
+import org.quickdev.sdk.plugin.common.SqlQueryUtils;
+import org.quickdev.sdk.plugin.common.sql.HikariPerfWrapper;
+import org.quickdev.sdk.plugin.common.sql.SqlBasedDatasourceConnectionConfig;
+import org.quickdev.sdk.plugin.common.sql.SqlBasedQueryExecutionContext;
+import org.quickdev.sdk.plugin.sqlcommand.GuiSqlCommand;
+import org.quickdev.sdk.query.QueryVisitorContext;
+import org.quickdev.sdk.util.MustacheHelper;
 
 import com.google.common.collect.Maps;
 import com.zaxxer.hikari.HikariDataSource;
