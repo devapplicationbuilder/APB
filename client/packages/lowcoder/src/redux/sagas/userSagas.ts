@@ -155,7 +155,17 @@ export function* logoutSaga(action: LogoutActionType) {
       yield put(logoutSuccess());
       localStorage.clear();
       //window.location.replace('https://localhost:44447/');
-        window.location.replace('http://172.23.16.1:4501/');
+      //window.location.replace('http://172.23.16.1:4501/');
+        const { protocol, hostname, port } = window.location;
+
+        if (port) {
+            const newPort = Number(port) + 1;
+            const newUrl = `${protocol}//${hostname}:${newPort}`;
+            window.location.href = newUrl;
+        } else {
+            const newUrl = `${protocol}//${hostname}_AUTH`;
+            window.location.href = newUrl;
+        }
     }
   } catch (error) {
     log.error(error);

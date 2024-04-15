@@ -62,10 +62,52 @@ public class LowcoderApiExecutor implements QueryExecutor<LowcoderApiDatasourceC
 
         String actionType = context.getActionType();
         if (actionType.equals(QUERY_ORG_USERS)) {
-            return doListOrgUsers0(context);
+            return getCurrentUserEmail(context)
+                .flatMap(email -> {
+                    return getUserDetails(email);
+                });
         }
 
         throw new PluginException(LowcoderApiPluginError.LOWCODER_API_INVALID_REQUEST_TYPE, "LOWCODER_INTERNAL_INVALID_REQUEST_TYPE");
+    }
+
+    private Mono<QueryExecutionResult> getUserDetails(String email) {
+        String authUrl = System.getenv("QUICKDEV_AUTH_URL");
+        String url = authUrl + "/api/QuickDEV/" + email + "/GetUserDetails";
+
+        return WebClient.builder()
+            .build()
+            .method(HttpMethod.GET)
+            .uri(url, email)
+            .retrieve()
+            .bodyToMono(Object.class) // Assuming the response is JSON
+            .map(userData -> QueryExecutionResult.success(userData))
+            .onErrorResume(e -> Mono.just(
+                QueryExecutionResult.error(LowcoderApiPluginError.LOWCODER_API_REQUEST_ERROR, "LOWCODER_INTERNAL_REQUEST_ERROR",
+                    e.getMessage())));
+    }
+
+    private Mono<String> getCurrentUserEmail(LowcoderApiQueryExecutionContext context) {
+        String visitorId = context.getVisitorId();
+        if (isAnonymousUser(visitorId)) {
+            return Mono.just("");
+        }
+
+        String url = "http://localhost:" + context.getPort() + "/api/users/currentUser";  //"/" + context.getApplicationOrgId() + "/members";
+
+        return WebClient.builder()
+                .defaultCookies(injectCookies(context))
+                .build()
+                .method(HttpMethod.GET)
+                .uri(url)
+                .exchangeToMono(clientResponse -> clientResponse.bodyToMono(LowcoderResponse.class))
+                .flatMap(responseView -> {
+                    if (responseView.isSuccess()) {
+                        return Mono.just((String) responseView.getData().get("email"));
+                    }
+                    // Return an empty string or handle error cases as needed
+                    return Mono.just("");
+                });
     }
 
     private Mono<QueryExecutionResult> doListOrgUsers0(LowcoderApiQueryExecutionContext context) {

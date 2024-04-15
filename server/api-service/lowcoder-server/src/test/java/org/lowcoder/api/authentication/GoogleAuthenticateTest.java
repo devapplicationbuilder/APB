@@ -56,7 +56,7 @@ public class GoogleAuthenticateTest {
         String source = AuthSourceConstants.EMAIL;
 
         String authId = getGoogleAuthConfigId();
-        FormLoginRequest formLoginRequest = new FormLoginRequest(email, password, true, source, authId, "token");
+        FormLoginRequest formLoginRequest = new FormLoginRequest(email, password, true, source, authId, "token", "EMAIL");
         MockServerHttpRequest request = MockServerHttpRequest.post("").build();
         MockServerWebExchange exchange = MockServerWebExchange.builder(request).build();
 

@@ -655,7 +655,7 @@ export const de = {
         "extParamsTooltip": "Configure Additional Connection Parameters"
     },
     "lowcoderQuery": {
-        "queryOrgUsers": "Query Workspace Users"
+        "queryOrgUsers": "Query user details"
     },
     "redisQuery": {
         "rawCommand": "Raw Command",

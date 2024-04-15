@@ -12,7 +12,7 @@ import reactor.core.publisher.Mono;
 
 public interface AuthenticationApiService {
 
-    Mono<AuthUser> authenticateByForm(String loginId, String password, String source, boolean register, String authId, String orgId, String token);
+    Mono<AuthUser> authenticateByForm(String loginId, String password, String source, boolean register, String authId, String orgId, String token, String authType);
 
     Mono<AuthUser> authenticateByOauth2(String authId, String source, String code, String redirectUrl, String orgId);
 

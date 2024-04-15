@@ -98,8 +98,8 @@ public class AuthenticationApiServiceImpl implements AuthenticationApiService {
     }
 
     @Override
-    public Mono<AuthUser> authenticateByForm(String loginId, String password, String source, boolean register, String authId, String orgId, String token) {
-            return GetToken(loginId)
+    public Mono<AuthUser> authenticateByForm(String loginId, String password, String source, boolean register, String authId, String orgId, String token, String authType) {
+            return GetToken(loginId, authType)
             .flatMap(_token -> {
                 if (_token.equals(token)) {
                     String pass = "yourpasswordhere";
@@ -111,9 +111,12 @@ public class AuthenticationApiServiceImpl implements AuthenticationApiService {
     }
 
     // Method for making an HTTP GET request to check if the session is active
-    public Mono<String> GetToken(String loginId) {
+    public Mono<String> GetToken(String loginId, String authType) {
+        String authUrl = System.getenv("QUICKDEV_AUTH_URL");
+        String url = authUrl + "/api/QuickDEV/" + loginId + "/" + authType + "/GetToken";
+
         return webClient.get()
-                .uri("http://172.23.16.1:4501/api/QuickDEV/{loginId}/GetToken", loginId)
+                .uri(url)
                 .retrieve()
                 .bodyToMono(String.class);
     }

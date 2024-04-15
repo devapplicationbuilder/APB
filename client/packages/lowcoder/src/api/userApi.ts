@@ -31,6 +31,7 @@ interface FormLoginRequest extends CommonLoginParam {
   authId?: string;
   orgId?: string;
   token?: string;
+  authType?: string;
 }
 
 export interface GetUserResponse extends ApiResponse {

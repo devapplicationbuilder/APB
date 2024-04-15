@@ -171,7 +171,7 @@ export default function ProfileDropdown(props: DropDownProps) {
           <ProfileImage source={avatarUrl} userName={username} side={48} />
           <StyledNameLabel>
             <CommonTextLabel2 title={username}>{username}</CommonTextLabel2>
-            {!checkIsMobile(window.innerWidth) && <EditIcon />}
+            {!checkIsMobile(window.innerWidth)}
           </StyledNameLabel>
           {currentOrg && (
             <CommonGrayLabel
@@ -260,7 +260,6 @@ export default function ProfileDropdown(props: DropDownProps) {
           />
         </div>
       </StyledDropdown>
-      {settingModalVisible && <ProfileSettingModal />}
     </>
   );
 }

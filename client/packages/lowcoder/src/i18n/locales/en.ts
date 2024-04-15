@@ -655,7 +655,7 @@ export const en = {
     "extParamsTooltip": "Configure Additional Connection Parameters"
   },
   "lowcoderQuery": {
-    "queryOrgUsers": "Query Workspace Users"
+    "queryOrgUsers": "Query user details"
   },
   "redisQuery": {
     "rawCommand": "Raw Command",
@@ -2787,8 +2787,8 @@ export const en = {
   },
 
   docUrls: {
-      docHome: "http://172.23.16.1:4501/docs/main.html",
-    components: "http://172.23.16.1/components/{compType}",
+    docHome: "http://172.23.16.1:4501/docs/main.html",
+    components: "http://172.23.16.1:4501/components/{compType}",
     module: "http://172.23.16.1",
     optionList: "",
     terms: "http://172.23.16.1",

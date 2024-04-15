@@ -175,7 +175,17 @@ type HelpDropdownProps = {
   isEdit?: boolean;
 };
 
-const docHomeUrl = trans("docUrls.docHome");
+const { protocol, hostname, port } = window.location;
+
+var newUrl = '';
+if (port) {
+    const newPort = Number(port) + 1;
+    newUrl = `${protocol}//${hostname}:${newPort}/docs/main.html`;
+} else {
+    newUrl = `${protocol}//${hostname}_AUTH/docs/main.html`;
+}
+
+const docHomeUrl = newUrl;
 const changeLogDocUrl = trans("docUrls.changeLog");
 const introVideoUrl = trans("docUrls.introVideo");
 const issueUrl = trans("lowcoderUrl.createIssue");

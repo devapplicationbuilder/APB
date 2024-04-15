@@ -87,12 +87,23 @@ function sendMessage(iframe: HTMLIFrameElement | null, data: any) {
   iframe?.contentWindow?.postMessage(data, "*");
 }
 
+function getUrl(): string {
+    const { protocol, hostname, port } = window.location;
+    if (port) {
+        const newPort = Number(port) + 2;
+        return `${protocol}//${hostname}:${newPort}/custom_component.html`;
+    }
+
+    return `${protocol}//${hostname}_SDK/custom_component.html`
+}
+
 function InnerCustomComponent(props: IProps) {
   const hostIdRef = useRef(String(Date.now()));
   const { model, code, onModelChange, dispatch } = props;
   const iframeRef = useRef<HTMLIFrameElement>(null);
   const modelRef = useRef<any>(model);
   const reloadFlagRef = useRef(false);
+  const newUrl = getUrl();
 
   const methodsRef = useRef({
     runQuery: async (data: any) => {
@@ -198,7 +209,7 @@ function InnerCustomComponent(props: IProps) {
 
   return (
     <Wrapper>
-      <iframe ref={iframeRef} title="custom-comp" src={trans("customComponent.entryUrl")} />
+      <iframe ref={iframeRef} title="custom-comp" src={newUrl} />
     </Wrapper>
   );
 }
