@@ -1,6 +1,6 @@
-package org.lowcoder.plugin.mongo;
+package org.quickdev.plugin.mongo;
 
-import org.lowcoder.sdk.exception.PluginError;
+import org.quickdev.sdk.exception.PluginError;
 
 public enum MongoPluginError implements PluginError {
 

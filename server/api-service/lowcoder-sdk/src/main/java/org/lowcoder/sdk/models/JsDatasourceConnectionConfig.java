@@ -1,8 +1,8 @@
-package org.lowcoder.sdk.models;
+package org.quickdev.sdk.models;
 
 import static org.apache.commons.lang3.ObjectUtils.firstNonNull;
-import static org.lowcoder.sdk.exception.BizError.INVALID_DATASOURCE_CONFIG_TYPE;
-import static org.lowcoder.sdk.util.ExceptionUtils.ofException;
+import static org.quickdev.sdk.exception.BizError.INVALID_DATASOURCE_CONFIG_TYPE;
+import static org.quickdev.sdk.util.ExceptionUtils.ofException;
 
 import java.util.Collections;
 import java.util.HashMap;
@@ -16,7 +16,7 @@ import java.util.function.Function;
 
 import org.apache.commons.collections4.MapUtils;
 import org.apache.commons.lang3.ObjectUtils;
-import org.lowcoder.sdk.plugin.restapi.auth.RestApiAuthType;
+import org.quickdev.sdk.plugin.restapi.auth.RestApiAuthType;
 import org.springframework.data.annotation.Transient;
 
 import lombok.Getter;

@@ -1,7 +1,7 @@
-package org.lowcoder.sdk.constants;
+package org.quickdev.sdk.constants;
 
 /**
- * @see org.lowcoder.sdk.auth.constants.AuthTypeConstants
+ * @see org.quickdev.sdk.auth.constants.AuthTypeConstants
  */
 public class AuthSourceConstants {
 

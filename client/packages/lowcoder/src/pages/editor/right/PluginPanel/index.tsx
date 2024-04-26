@@ -115,9 +115,9 @@ export default function PluginPanel() {
           }}
           value={newPluginName}
         />
-        <DocLink style={{ marginTop: 8 }} href={trans("docUrls.devNpmPlugin")}>
-          {trans("docUrls.devNpmPluginText")}
-        </DocLink>
+        {/*<DocLink style={{ marginTop: 8 }} href={trans("docUrls.devNpmPlugin")}>*/}
+        {/*  {trans("docUrls.devNpmPluginText")}*/}
+        {/*</DocLink>*/}
       </CustomModal>
     </>
   );

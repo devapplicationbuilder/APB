@@ -1,6 +1,6 @@
-package org.lowcoder.plugin.snowflake;
+package org.quickdev.plugin.snowflake;
 
-import org.lowcoder.plugin.sql.SqlBasedConnector;
+import org.quickdev.plugin.sql.SqlBasedConnector;
 import org.pf4j.Extension;
 
 import com.zaxxer.hikari.HikariConfig;

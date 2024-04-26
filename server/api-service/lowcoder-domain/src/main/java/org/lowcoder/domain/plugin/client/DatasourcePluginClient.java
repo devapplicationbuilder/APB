@@ -1,6 +1,6 @@
-package org.lowcoder.domain.plugin.client;
+package org.quickdev.domain.plugin.client;
 
-import static org.lowcoder.sdk.constants.GlobalContext.REQUEST;
+import static org.quickdev.sdk.constants.GlobalContext.REQUEST;
 
 import java.time.Duration;
 import java.util.Collections;
@@ -11,14 +11,14 @@ import java.util.function.Function;
 import org.apache.commons.collections4.CollectionUtils;
 import org.apache.commons.collections4.MapUtils;
 import org.apache.commons.lang3.StringUtils;
-import org.lowcoder.domain.plugin.client.dto.DatasourcePluginDefinition;
-import org.lowcoder.domain.plugin.client.dto.GetPluginDynamicConfigRequestDTO;
-import org.lowcoder.infra.js.NodeServerClient;
-import org.lowcoder.infra.js.NodeServerHelper;
-import org.lowcoder.sdk.config.CommonConfigHelper;
-import org.lowcoder.sdk.exception.ServerException;
-import org.lowcoder.sdk.models.DatasourceTestResult;
-import org.lowcoder.sdk.models.QueryExecutionResult;
+import org.quickdev.domain.plugin.client.dto.DatasourcePluginDefinition;
+import org.quickdev.domain.plugin.client.dto.GetPluginDynamicConfigRequestDTO;
+import org.quickdev.infra.js.NodeServerClient;
+import org.quickdev.infra.js.NodeServerHelper;
+import org.quickdev.sdk.config.CommonConfigHelper;
+import org.quickdev.sdk.exception.ServerException;
+import org.quickdev.sdk.models.DatasourceTestResult;
+import org.quickdev.sdk.models.QueryExecutionResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpHeaders;

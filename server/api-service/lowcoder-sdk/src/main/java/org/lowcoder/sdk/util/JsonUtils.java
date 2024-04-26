@@ -1,4 +1,4 @@
-package org.lowcoder.sdk.util;
+package org.quickdev.sdk.util;
 
 import java.nio.charset.StandardCharsets;
 import java.util.List;
@@ -7,10 +7,10 @@ import java.util.Set;
 
 import javax.annotation.Nullable;
 
-import org.lowcoder.sdk.auth.EmailAuthConfig;
-import org.lowcoder.sdk.auth.Oauth2KeycloakAuthConfig;
-import org.lowcoder.sdk.auth.Oauth2OryAuthConfig;
-import org.lowcoder.sdk.auth.Oauth2SimpleAuthConfig;
+import org.quickdev.sdk.auth.EmailAuthConfig;
+import org.quickdev.sdk.auth.Oauth2KeycloakAuthConfig;
+import org.quickdev.sdk.auth.Oauth2OryAuthConfig;
+import org.quickdev.sdk.auth.Oauth2SimpleAuthConfig;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -30,7 +30,7 @@ import com.fasterxml.jackson.module.paramnames.ParameterNamesModule;
 
 import lombok.extern.slf4j.Slf4j;
 
-import static org.lowcoder.sdk.auth.constants.AuthTypeConstants.*;
+import static org.quickdev.sdk.auth.constants.AuthTypeConstants.*;
 
 @Slf4j
 public final class JsonUtils {

@@ -1,4 +1,4 @@
-package org.lowcoder.plugin.restapi.helpers;
+package org.quickdev.plugin.restapi.helpers;
 
 import org.reactivestreams.Publisher;
 import org.springframework.core.io.buffer.DataBuffer;

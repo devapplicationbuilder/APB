@@ -1,7 +1,7 @@
-package org.lowcoder.plugin.mongo.model;
+package org.quickdev.plugin.mongo.model;
 
-import static org.lowcoder.sdk.exception.PluginCommonError.DATASOURCE_ARGUMENT_ERROR;
-import static org.lowcoder.sdk.util.ExceptionUtils.ofPluginException;
+import static org.quickdev.sdk.exception.PluginCommonError.DATASOURCE_ARGUMENT_ERROR;
+import static org.quickdev.sdk.util.ExceptionUtils.ofPluginException;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -1,10 +1,10 @@
-package org.lowcoder.api.material;
+package org.quickdev.api.material;
 
 import java.util.List;
 
-import org.lowcoder.api.material.MaterialEndpoints.MaterialView;
-import org.lowcoder.domain.material.model.MaterialMeta;
-import org.lowcoder.domain.material.model.MaterialType;
+import org.quickdev.api.material.MaterialEndpoints.MaterialView;
+import org.quickdev.domain.material.model.MaterialMeta;
+import org.quickdev.domain.material.model.MaterialType;
 import org.reactivestreams.Publisher;
 import org.springframework.core.io.buffer.DataBuffer;
 

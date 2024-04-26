@@ -129,5 +129,5 @@ export const TemporaryStateListComp = bottomResListComp(
   TemporaryStateItemComp,
   BottomResTypeEnum.TempState,
   { value: "null" },
-  "state"
+  "variable"
 );

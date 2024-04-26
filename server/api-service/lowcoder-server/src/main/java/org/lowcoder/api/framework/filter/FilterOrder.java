@@ -1,7 +1,7 @@
-package org.lowcoder.api.framework.filter;
+package org.quickdev.api.framework.filter;
 
-import static org.lowcoder.api.framework.filter.Position.AFTER_PROXY_CHAIN;
-import static org.lowcoder.api.framework.filter.Position.BEFORE_PROXY_CHAIN;
+import static org.quickdev.api.framework.filter.Position.AFTER_PROXY_CHAIN;
+import static org.quickdev.api.framework.filter.Position.BEFORE_PROXY_CHAIN;
 
 import org.springframework.core.PriorityOrdered;
 

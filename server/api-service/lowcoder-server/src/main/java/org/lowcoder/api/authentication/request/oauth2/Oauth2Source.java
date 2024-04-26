@@ -1,4 +1,4 @@
-package org.lowcoder.api.authentication.request.oauth2;
+package org.quickdev.api.authentication.request.oauth2;
 
 public interface Oauth2Source {
 

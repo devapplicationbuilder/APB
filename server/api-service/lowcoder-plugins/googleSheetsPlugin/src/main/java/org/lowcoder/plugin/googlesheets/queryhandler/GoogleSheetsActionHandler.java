@@ -1,7 +1,7 @@
-package org.lowcoder.plugin.googlesheets.queryhandler;
+package org.quickdev.plugin.googlesheets.queryhandler;
 
-import org.lowcoder.plugin.googlesheets.model.GoogleSheetsQueryExecutionContext;
-import org.lowcoder.sdk.models.QueryExecutionResult;
+import org.quickdev.plugin.googlesheets.model.GoogleSheetsQueryExecutionContext;
+import org.quickdev.sdk.models.QueryExecutionResult;
 
 import reactor.core.publisher.Mono;
 

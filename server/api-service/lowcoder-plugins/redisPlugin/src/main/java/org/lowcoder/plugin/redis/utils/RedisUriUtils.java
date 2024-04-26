@@ -1,4 +1,4 @@
-package org.lowcoder.plugin.redis.utils;
+package org.quickdev.plugin.redis.utils;
 
 import static org.apache.commons.lang3.ObjectUtils.firstNonNull;
 
@@ -6,7 +6,7 @@ import java.net.URI;
 import java.net.URISyntaxException;
 
 import org.apache.commons.lang3.StringUtils;
-import org.lowcoder.plugin.redis.model.RedisDatasourceConfig;
+import org.quickdev.plugin.redis.model.RedisDatasourceConfig;
 
 public class RedisUriUtils {
     private static final Long DEFAULT_PORT = 6379L;

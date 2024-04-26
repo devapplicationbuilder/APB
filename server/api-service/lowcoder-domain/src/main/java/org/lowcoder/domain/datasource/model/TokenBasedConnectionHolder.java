@@ -1,4 +1,4 @@
-package org.lowcoder.domain.datasource.model;
+package org.quickdev.domain.datasource.model;
 
 import java.time.Instant;
 

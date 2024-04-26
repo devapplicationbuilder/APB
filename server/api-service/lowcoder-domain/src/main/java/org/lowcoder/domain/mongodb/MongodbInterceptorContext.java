@@ -1,6 +1,6 @@
-package org.lowcoder.domain.mongodb;
+package org.quickdev.domain.mongodb;
 
-import org.lowcoder.domain.encryption.EncryptionService;
+import org.quickdev.domain.encryption.EncryptionService;
 
 public record MongodbInterceptorContext(EncryptionService encryptionService) {
 }

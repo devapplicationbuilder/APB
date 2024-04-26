@@ -1,13 +1,13 @@
-package org.lowcoder.api.infra;
+package org.quickdev.api.infra;
 
 import com.google.common.collect.ImmutableList;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.lowcoder.infra.config.model.ServerConfig;
-import org.lowcoder.infra.config.repository.ServerConfigRepository;
-import org.lowcoder.sdk.config.dynamic.Conf;
-import org.lowcoder.sdk.config.dynamic.ConfigInstance;
+import org.quickdev.infra.config.model.ServerConfig;
+import org.quickdev.infra.config.repository.ServerConfigRepository;
+import org.quickdev.sdk.config.dynamic.Conf;
+import org.quickdev.sdk.config.dynamic.ConfigInstance;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;

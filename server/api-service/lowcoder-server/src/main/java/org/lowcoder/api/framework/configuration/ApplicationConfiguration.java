@@ -1,6 +1,6 @@
-package org.lowcoder.api.framework.configuration;
+package org.quickdev.api.framework.configuration;
 
-import org.lowcoder.sdk.config.CommonConfig;
+import org.quickdev.sdk.config.CommonConfig;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.web.servlet.MultipartConfigFactory;
 import org.springframework.context.annotation.Bean;

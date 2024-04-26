@@ -1,9 +1,9 @@
-package org.lowcoder.api.home;
+package org.quickdev.api.home;
 
 import java.time.Instant;
 import java.util.List;
 
-import org.lowcoder.api.application.view.ApplicationInfoView;
+import org.quickdev.api.application.view.ApplicationInfoView;
 
 import lombok.Builder;
 import lombok.Getter;

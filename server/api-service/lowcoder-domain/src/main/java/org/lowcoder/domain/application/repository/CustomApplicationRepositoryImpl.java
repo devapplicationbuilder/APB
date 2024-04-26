@@ -1,6 +1,6 @@
-package org.lowcoder.domain.application.repository;
+package org.quickdev.domain.application.repository;
 
-import org.lowcoder.domain.application.model.Application;
+import org.quickdev.domain.application.model.Application;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.ReactiveMongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;

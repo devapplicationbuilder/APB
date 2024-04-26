@@ -1,10 +1,10 @@
-package org.lowcoder.api.config;
+package org.quickdev.api.config;
 
-import org.lowcoder.api.framework.view.ResponseView;
-import org.lowcoder.infra.config.model.ServerConfig;
-import org.lowcoder.infra.constant.NewUrl;
-import org.lowcoder.infra.constant.Url;
-import org.lowcoder.sdk.config.SerializeConfig.JsonViews;
+import org.quickdev.api.framework.view.ResponseView;
+import org.quickdev.infra.config.model.ServerConfig;
+import org.quickdev.infra.constant.NewUrl;
+import org.quickdev.infra.constant.Url;
+import org.quickdev.sdk.config.SerializeConfig.JsonViews;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;

@@ -1,21 +1,21 @@
-package org.lowcoder.sdk.plugin.common;
+package org.quickdev.sdk.plugin.common;
 
-import static org.lowcoder.sdk.exception.PluginCommonError.QUERY_EXECUTION_ERROR;
-import static org.lowcoder.sdk.util.ExceptionUtils.ofPluginError;
-import static org.lowcoder.sdk.util.ExceptionUtils.ofPluginException;
-import static org.lowcoder.sdk.util.ExceptionUtils.propagateError;
+import static org.quickdev.sdk.exception.PluginCommonError.QUERY_EXECUTION_ERROR;
+import static org.quickdev.sdk.util.ExceptionUtils.ofPluginError;
+import static org.quickdev.sdk.util.ExceptionUtils.ofPluginException;
+import static org.quickdev.sdk.util.ExceptionUtils.propagateError;
 
 import java.util.Map;
 
-import org.lowcoder.sdk.exception.BizException;
-import org.lowcoder.sdk.exception.PluginCommonError;
-import org.lowcoder.sdk.exception.PluginException;
-import org.lowcoder.sdk.models.DatasourceConnectionConfig;
-import org.lowcoder.sdk.models.DatasourceStructure;
-import org.lowcoder.sdk.models.QueryExecutionResult;
-import org.lowcoder.sdk.query.QueryExecutionContext;
-import org.lowcoder.sdk.query.QueryVisitorContext;
-import org.lowcoder.sdk.util.ExceptionUtils;
+import org.quickdev.sdk.exception.BizException;
+import org.quickdev.sdk.exception.PluginCommonError;
+import org.quickdev.sdk.exception.PluginException;
+import org.quickdev.sdk.models.DatasourceConnectionConfig;
+import org.quickdev.sdk.models.DatasourceStructure;
+import org.quickdev.sdk.models.QueryExecutionResult;
+import org.quickdev.sdk.query.QueryExecutionContext;
+import org.quickdev.sdk.query.QueryVisitorContext;
+import org.quickdev.sdk.util.ExceptionUtils;
 import org.pf4j.ExtensionPoint;
 
 import reactor.core.publisher.Mono;

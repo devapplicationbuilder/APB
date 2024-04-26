@@ -1,16 +1,16 @@
-package org.lowcoder.sdk.plugin.sqlcommand.command.postgres;
+package org.quickdev.sdk.plugin.sqlcommand.command.postgres;
 
-import static org.lowcoder.sdk.plugin.sqlcommand.changeset.BulkObjectChangeSet.parseBulkRecords;
-import static org.lowcoder.sdk.plugin.sqlcommand.changeset.BulkObjectChangeSet.parsePrimaryKey;
-import static org.lowcoder.sdk.plugin.sqlcommand.command.GuiConstants.POSTGRES_COLUMN_DELIMITER;
-import static org.lowcoder.sdk.util.SqlGuiUtils.POSTGRES_SQL_STR_ESCAPE;
+import static org.quickdev.sdk.plugin.sqlcommand.changeset.BulkObjectChangeSet.parseBulkRecords;
+import static org.quickdev.sdk.plugin.sqlcommand.changeset.BulkObjectChangeSet.parsePrimaryKey;
+import static org.quickdev.sdk.plugin.sqlcommand.command.GuiConstants.POSTGRES_COLUMN_DELIMITER;
+import static org.quickdev.sdk.util.SqlGuiUtils.POSTGRES_SQL_STR_ESCAPE;
 
 import java.util.Map;
 
-import org.lowcoder.sdk.plugin.sqlcommand.GuiSqlCommand;
-import org.lowcoder.sdk.plugin.sqlcommand.changeset.BulkObjectChangeSet;
-import org.lowcoder.sdk.plugin.sqlcommand.command.BulkUpdateCommand;
-import org.lowcoder.sdk.util.SqlGuiUtils.GuiSqlValue.EscapeSql;
+import org.quickdev.sdk.plugin.sqlcommand.GuiSqlCommand;
+import org.quickdev.sdk.plugin.sqlcommand.changeset.BulkObjectChangeSet;
+import org.quickdev.sdk.plugin.sqlcommand.command.BulkUpdateCommand;
+import org.quickdev.sdk.util.SqlGuiUtils.GuiSqlValue.EscapeSql;
 
 public class PostgresBulkUpdateCommand extends BulkUpdateCommand {
 

@@ -1,6 +1,6 @@
-package org.lowcoder.domain.asset.model;
+package org.quickdev.domain.asset.model;
 
-import org.lowcoder.sdk.models.HasIdAndAuditing;
+import org.quickdev.sdk.models.HasIdAndAuditing;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.http.MediaType;
 

@@ -1,10 +1,10 @@
-# Temporary state
+# Dynamic Variable
 
-You can use temporary state to store and reference local data within an app. Every time you load or refresh an app, the value of temporary state value is reset.
+You can use Dynamic Variable to store and reference local data within an app. Every time you load or refresh an app, the value of Dynamic Variable value is reset.
 
 ## Use case scenarios
 
-Temporary states may help in the following scenarios:
+Dynamic Variables may help in the following scenarios:
 
 * To track the temporary values of a variable when the user interacts with your app.
 * To store your data only in operation without persisting to a database.
@@ -14,19 +14,19 @@ Temporary states may help in the following scenarios:
 To store and access data across apps in your workspace, use localStorage instead.
 {% endhint %}
 
-## Create a temporary state
+## Create a Dynamic Variable
 
-Click **+ New** and select **Temporary state** in query editor.
+Click **+ New** and select **Dynamic Variable** in query editor.
 
 <figure><img src="../../.gitbook/assets/temporary-state-1.png" alt=""><figcaption></figcaption></figure>
 
-You can rename the temporary state and set an initial value.
+You can rename the Dynamic Variable and set an initial value.
 
 <figure><img src="../../.gitbook/assets/temporary-state-2.png" alt=""><figcaption></figcaption></figure>
 
 ## Set state values
 
-Temporary state offers `setValue()` and `setIn()` methods to set or change its value, which can be called in JavaScript queries.
+Dynamic Variable offers `setValue()` and `setIn()` methods to set or change its value, which can be called in JavaScript queries.
 
 Use `setValue()` to change the value directly.
 
@@ -36,7 +36,7 @@ state.setValue(3)
 state.setValue(input1.value)
 ```
 
-When the initial value of a temporary state is an object, use `setIn()` to change the value in a specified path.
+When the initial value of a Dynamic Variable is an object, use `setIn()` to change the value in a specified path.
 
 ```javascript
 // initial value of state2 as follows：
@@ -68,7 +68,7 @@ state2.setIn(['boy','age'],18)
 state2.setIn([1],"foo") // this will result to ["hello", "foo"]
 ```
 
-You can also call these two methods in [event handlers](../event-handlers.md). Select **Set temporary state** as the action and choose method on demand.
+You can also call these two methods in [event handlers](../event-handlers.md). Select **Set Dynamic Variable** as the action and choose method on demand.
 
 <figure><img src="../../.gitbook/assets/temporary-state-3.png" alt=""><figcaption></figcaption></figure>
 
@@ -81,10 +81,10 @@ In this example, the counter tracks the number of button clicks. Every time the 
 Build an increment counter in following steps:
 
 1. Add a button component `button1` and a text component `text1`.
-2.  Create a temporary state `state1`, set its initial value as `0`. Bind `{{state1.value}}` as the display text of `text1`.
+2.  Create a Dynamic Variable `state1`, set its initial value as `0`. Bind `{{state1.value}}` as the display text of `text1`.
 
     <figure><img src="../../.gitbook/assets/temporary-state-5.png" alt=""><figcaption></figcaption></figure>
-3.  Add an event handler for `button1`. Select the action **Set temporary state** and the method **setValue**, and then set `{{state1.value+1}}` as the value.
+3.  Add an event handler for `button1`. Select the action **Set Dynamic Variable** and the method **setValue**, and then set `{{state1.value+1}}` as the value.
 
     <figure><img src="../../.gitbook/assets/temporary-state-6.png" alt=""><figcaption></figcaption></figure>
 4.  Click the button, you can see the value of `text1` increases by one each time you click.

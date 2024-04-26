@@ -2,7 +2,7 @@
 
 Transformers are designed for data transformation and reuse of your multi-line JavaScript code. Data from queries or components might not meet your needs in business scenarios. Also, you may use the same code block several times within an app. In such cases, a transformer is what you need.
 
-Compared with inline code in `{{ }}`, transformer supports multi-line code blocks. And unlike JavaScript query, transformer is designed to do read-only operations, which means that you cannot trigger a query or update a temporary state inside a transformer.
+Compared with inline code in `{{ }}`, transformer supports multi-line code blocks. And unlike JavaScript query, transformer is designed to do read-only operations, which means that you cannot trigger a query or update a Dynamic Variable inside a transformer.
 
 ## Quickstart
 
@@ -58,7 +58,7 @@ return users.map(user => ({
 
 ## Read-only operations
 
-Only read-only operations are allowed inside a transformer. It means that you cannot set values of components or temporary states, or trigger queries. For those operations, use JavaScript queries instead.
+Only read-only operations are allowed inside a transformer. It means that you cannot set values of components or Dynamic Variables, or trigger queries. For those operations, use JavaScript queries instead.
 
 For example, you cannot call the method `setText()` of a text component in a transformer.
 

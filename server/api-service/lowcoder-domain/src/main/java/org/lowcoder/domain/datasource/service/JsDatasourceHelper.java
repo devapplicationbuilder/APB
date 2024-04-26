@@ -1,13 +1,13 @@
-package org.lowcoder.domain.datasource.service;
+package org.quickdev.domain.datasource.service;
 
 import java.util.List;
 
 import org.apache.commons.lang3.ObjectUtils;
-import org.lowcoder.domain.datasource.model.Datasource;
-import org.lowcoder.domain.plugin.client.DatasourcePluginClient;
-import org.lowcoder.domain.plugin.client.dto.GetPluginDynamicConfigRequestDTO;
-import org.lowcoder.domain.plugin.service.DatasourceMetaInfoService;
-import org.lowcoder.sdk.models.JsDatasourceConnectionConfig;
+import org.quickdev.domain.datasource.model.Datasource;
+import org.quickdev.domain.plugin.client.DatasourcePluginClient;
+import org.quickdev.domain.plugin.client.dto.GetPluginDynamicConfigRequestDTO;
+import org.quickdev.domain.plugin.service.DatasourceMetaInfoService;
+import org.quickdev.sdk.models.JsDatasourceConnectionConfig;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

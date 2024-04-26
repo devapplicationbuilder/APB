@@ -1,12 +1,12 @@
-package org.lowcoder.domain.organization.service;
+package org.quickdev.domain.organization.service;
 
 import java.util.Collection;
 
-import org.lowcoder.domain.organization.model.Organization;
-import org.lowcoder.domain.organization.model.Organization.OrganizationCommonSettings;
-import org.lowcoder.domain.user.model.User;
-import org.lowcoder.infra.annotation.NonEmptyMono;
-import org.lowcoder.infra.annotation.PossibleEmptyMono;
+import org.quickdev.domain.organization.model.Organization;
+import org.quickdev.domain.organization.model.Organization.OrganizationCommonSettings;
+import org.quickdev.domain.user.model.User;
+import org.quickdev.infra.annotation.NonEmptyMono;
+import org.quickdev.infra.annotation.PossibleEmptyMono;
 import org.springframework.http.codec.multipart.Part;
 
 import reactor.core.publisher.Flux;

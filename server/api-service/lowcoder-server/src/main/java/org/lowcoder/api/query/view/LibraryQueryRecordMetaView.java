@@ -1,7 +1,7 @@
-package org.lowcoder.api.query.view;
+package org.quickdev.api.query.view;
 
-import org.lowcoder.domain.query.model.LibraryQueryRecord;
-import org.lowcoder.domain.user.model.User;
+import org.quickdev.domain.query.model.LibraryQueryRecord;
+import org.quickdev.domain.user.model.User;
 
 public record LibraryQueryRecordMetaView(String id,
                                          String libraryQueryId,

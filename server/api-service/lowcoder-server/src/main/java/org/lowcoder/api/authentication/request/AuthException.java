@@ -1,4 +1,4 @@
-package org.lowcoder.api.authentication.request;
+package org.quickdev.api.authentication.request;
 
 public class AuthException extends RuntimeException {
 

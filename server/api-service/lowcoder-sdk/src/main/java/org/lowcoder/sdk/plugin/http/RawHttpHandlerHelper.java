@@ -1,4 +1,4 @@
-package org.lowcoder.sdk.plugin.http;
+package org.quickdev.sdk.plugin.http;
 
 import java.net.URI;
 import java.net.URISyntaxException;
@@ -8,8 +8,8 @@ import java.util.Map.Entry;
 import java.util.stream.Collectors;
 
 import org.apache.commons.lang3.StringUtils;
-import org.lowcoder.sdk.models.Property;
-import org.lowcoder.sdk.plugin.restapi.DataUtils;
+import org.quickdev.sdk.models.Property;
+import org.quickdev.sdk.plugin.restapi.DataUtils;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.InvalidMediaTypeException;

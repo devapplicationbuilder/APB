@@ -1,6 +1,6 @@
-package org.lowcoder.domain.datasource.model;
+package org.quickdev.domain.datasource.model;
 
-import org.lowcoder.sdk.exception.InvalidHikariDatasourceException;
+import org.quickdev.sdk.exception.InvalidHikariDatasourceException;
 
 import lombok.extern.slf4j.Slf4j;
 

@@ -1,16 +1,16 @@
-package org.lowcoder.plugin.googlesheets.queryhandler;
+package org.quickdev.plugin.googlesheets.queryhandler;
 
-import static org.lowcoder.plugin.googlesheets.GoogleSheetError.GOOGLESHEETS_REQUEST_ERROR;
+import static org.quickdev.plugin.googlesheets.GoogleSheetError.GOOGLESHEETS_REQUEST_ERROR;
 
 import java.io.IOException;
 import java.security.GeneralSecurityException;
 
-import org.lowcoder.plugin.googlesheets.model.GoogleSheetsActionRequest;
-import org.lowcoder.plugin.googlesheets.model.GoogleSheetsAppendDataRequest;
-import org.lowcoder.plugin.googlesheets.model.GoogleSheetsQueryExecutionContext;
-import org.lowcoder.plugin.googlesheets.model.GoogleSheetsUpdateDataRequest;
-import org.lowcoder.sdk.exception.PluginException;
-import org.lowcoder.sdk.plugin.sheet.changeset.SheetChangeSetRow;
+import org.quickdev.plugin.googlesheets.model.GoogleSheetsActionRequest;
+import org.quickdev.plugin.googlesheets.model.GoogleSheetsAppendDataRequest;
+import org.quickdev.plugin.googlesheets.model.GoogleSheetsQueryExecutionContext;
+import org.quickdev.plugin.googlesheets.model.GoogleSheetsUpdateDataRequest;
+import org.quickdev.sdk.exception.PluginException;
+import org.quickdev.sdk.plugin.sheet.changeset.SheetChangeSetRow;
 
 import com.google.api.client.googleapis.javanet.GoogleNetHttpTransport;
 import com.google.api.client.http.HttpRequestInitializer;

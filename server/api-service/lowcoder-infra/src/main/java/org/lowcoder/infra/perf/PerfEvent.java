@@ -1,4 +1,4 @@
-package org.lowcoder.infra.perf;
+package org.quickdev.infra.perf;
 
 public enum PerfEvent {
     API_ERROR_CODE,

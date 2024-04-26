@@ -1,11 +1,11 @@
-package org.lowcoder.domain.permission.service;
+package org.quickdev.domain.permission.service;
 
 import static java.util.Collections.singleton;
 import static org.apache.commons.collections4.SetUtils.emptyIfNull;
-import static org.lowcoder.sdk.exception.BizError.INVALID_PERMISSION_OPERATION;
-import static org.lowcoder.sdk.exception.BizError.NOT_AUTHORIZED;
-import static org.lowcoder.sdk.util.ExceptionUtils.ofError;
-import static org.lowcoder.sdk.util.ExceptionUtils.ofException;
+import static org.quickdev.sdk.exception.BizError.INVALID_PERMISSION_OPERATION;
+import static org.quickdev.sdk.exception.BizError.NOT_AUTHORIZED;
+import static org.quickdev.sdk.util.ExceptionUtils.ofError;
+import static org.quickdev.sdk.util.ExceptionUtils.ofException;
 
 import java.util.Collection;
 import java.util.Collections;
@@ -19,16 +19,16 @@ import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import org.apache.commons.collections4.CollectionUtils;
-import org.lowcoder.domain.application.model.ApplicationRequestType;
-import org.lowcoder.domain.permission.model.ResourceAction;
-import org.lowcoder.domain.permission.model.ResourceHolder;
-import org.lowcoder.domain.permission.model.ResourcePermission;
-import org.lowcoder.domain.permission.model.ResourceRole;
-import org.lowcoder.domain.permission.model.ResourceType;
-import org.lowcoder.domain.permission.model.UserPermissionOnResourceStatus;
-import org.lowcoder.infra.annotation.NonEmptyMono;
-import org.lowcoder.infra.annotation.PossibleEmptyMono;
-import org.lowcoder.sdk.exception.BizException;
+import org.quickdev.domain.application.model.ApplicationRequestType;
+import org.quickdev.domain.permission.model.ResourceAction;
+import org.quickdev.domain.permission.model.ResourceHolder;
+import org.quickdev.domain.permission.model.ResourcePermission;
+import org.quickdev.domain.permission.model.ResourceRole;
+import org.quickdev.domain.permission.model.ResourceType;
+import org.quickdev.domain.permission.model.UserPermissionOnResourceStatus;
+import org.quickdev.infra.annotation.NonEmptyMono;
+import org.quickdev.infra.annotation.PossibleEmptyMono;
+import org.quickdev.sdk.exception.BizException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Service;

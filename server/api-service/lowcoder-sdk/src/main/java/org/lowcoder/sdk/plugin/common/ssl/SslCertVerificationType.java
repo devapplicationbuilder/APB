@@ -1,4 +1,4 @@
-package org.lowcoder.sdk.plugin.common.ssl;
+package org.quickdev.sdk.plugin.common.ssl;
 
 public enum SslCertVerificationType {
     VERIFY_CA_CERT,

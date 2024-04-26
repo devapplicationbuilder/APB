@@ -1,4 +1,4 @@
-package org.lowcoder.infra.annotation;
+package org.quickdev.infra.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Target;

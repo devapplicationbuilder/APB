@@ -1,6 +1,6 @@
-package org.lowcoder.infra.serverlog;
+package org.quickdev.infra.serverlog;
 
-import static org.lowcoder.infra.perf.PerfEvent.SERVER_LOG_BATCH_INSERT;
+import static org.quickdev.infra.perf.PerfEvent.SERVER_LOG_BATCH_INSERT;
 
 import java.time.LocalDateTime;
 import java.time.ZoneOffset;
@@ -10,7 +10,7 @@ import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.collections4.CollectionUtils;
-import org.lowcoder.infra.perf.PerfHelper;
+import org.quickdev.infra.perf.PerfHelper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;

@@ -1,7 +1,7 @@
-package org.lowcoder.plugin.googlesheets.queryhandler;
+package org.quickdev.plugin.googlesheets.queryhandler;
 
 
-import static org.lowcoder.plugin.googlesheets.GoogleSheetError.GOOGLESHEETS_EMPTY_QUERY_PARAM;
+import static org.quickdev.plugin.googlesheets.GoogleSheetError.GOOGLESHEETS_EMPTY_QUERY_PARAM;
 
 import java.util.LinkedHashMap;
 import java.util.LinkedList;
@@ -9,12 +9,12 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-import org.lowcoder.plugin.googlesheets.model.GoogleSheetsAppendDataRequest;
-import org.lowcoder.plugin.googlesheets.model.GoogleSheetsQueryExecutionContext;
-import org.lowcoder.sdk.exception.PluginException;
-import org.lowcoder.sdk.models.QueryExecutionResult;
-import org.lowcoder.sdk.plugin.common.QueryExecutionUtils;
-import org.lowcoder.sdk.plugin.sheet.changeset.SheetChangeSetRow;
+import org.quickdev.plugin.googlesheets.model.GoogleSheetsAppendDataRequest;
+import org.quickdev.plugin.googlesheets.model.GoogleSheetsQueryExecutionContext;
+import org.quickdev.sdk.exception.PluginException;
+import org.quickdev.sdk.models.QueryExecutionResult;
+import org.quickdev.sdk.plugin.common.QueryExecutionUtils;
+import org.quickdev.sdk.plugin.sheet.changeset.SheetChangeSetRow;
 
 import com.google.api.services.sheets.v4.Sheets;
 import com.google.api.services.sheets.v4.model.AppendValuesResponse;

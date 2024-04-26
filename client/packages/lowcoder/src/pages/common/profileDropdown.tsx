@@ -131,6 +131,9 @@ type DropDownProps = {
   profileSide: number;
   fontSize?: number;
 };
+
+const docUrl = trans("docUrls.docHome");
+
 export default function ProfileDropdown(props: DropDownProps) {
   const { avatarUrl, username, orgs, currentOrgId } = props.user;
   const currentOrgRoleId = props.user.orgRoleMap.get(currentOrgId);
@@ -151,7 +154,8 @@ export default function ProfileDropdown(props: DropDownProps) {
     } else if (e.key === "logout") {
       // logout
       dispatch(logoutAction({}));
-    } else if (e.keyPath.includes("switchOrg")) {
+    }
+    else if (e.keyPath.includes("switchOrg")) {
       if (e.key === "newOrganization") {
         // create new organization
         dispatch(createOrgAction(orgs));
@@ -171,19 +175,8 @@ export default function ProfileDropdown(props: DropDownProps) {
           <ProfileImage source={avatarUrl} userName={username} side={48} />
           <StyledNameLabel>
             <CommonTextLabel2 title={username}>{username}</CommonTextLabel2>
-            {!checkIsMobile(window.innerWidth) && <EditIcon />}
+            {!checkIsMobile(window.innerWidth)}
           </StyledNameLabel>
-          {currentOrg && (
-            <CommonGrayLabel
-              style={{
-                width: "130px",
-                textAlign: "center",
-                lineHeight: "15px",
-              }}
-            >
-              {currentOrg.name}
-            </CommonGrayLabel>
-          )}
           {currentOrgRoleId && OrgRoleInfo[currentOrgRoleId] && (
             <OrgRoleLabel>{OrgRoleInfo[currentOrgRoleId].name}</OrgRoleLabel>
           )}
@@ -260,7 +253,6 @@ export default function ProfileDropdown(props: DropDownProps) {
           />
         </div>
       </StyledDropdown>
-      {settingModalVisible && <ProfileSettingModal />}
     </>
   );
 }

@@ -448,6 +448,12 @@ export default function Header(props: HeaderProps) {
     </>
   );
 
+  const handleDocsClick = () => {
+      // Replace 'your_url_here' with the actual URL you want to open
+      const url = trans("docUrls.docHome");
+      window.open(url, '_blank');
+  };
+
   const headerEnd = showAppSnapshot ? (
     <HeaderProfile user={user} />
   ) : (

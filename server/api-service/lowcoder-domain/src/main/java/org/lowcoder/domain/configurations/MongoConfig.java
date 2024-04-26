@@ -1,4 +1,4 @@
-package org.lowcoder.domain.configurations;
+package org.quickdev.domain.configurations;
 
 import com.github.cloudyrock.mongock.driver.mongodb.springdata.v3.SpringDataMongoV3Driver;
 import com.github.cloudyrock.spring.v5.MongockSpring5;
@@ -7,9 +7,9 @@ import com.mongodb.ReadPreference;
 import com.mongodb.WriteConcern;
 import jakarta.annotation.PostConstruct;
 import lombok.extern.slf4j.Slf4j;
-import org.lowcoder.domain.user.model.User;
-import org.lowcoder.sdk.config.MaterialProperties;
-import org.lowcoder.sdk.models.HasIdAndAuditing;
+import org.quickdev.domain.user.model.User;
+import org.quickdev.sdk.config.MaterialProperties;
+import org.quickdev.sdk.models.HasIdAndAuditing;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
@@ -31,7 +31,7 @@ import java.util.List;
 @Slf4j
 @Configuration
 @EnableReactiveMongoAuditing
-@EnableReactiveMongoRepositories(basePackages = {"org.lowcoder.infra", "org.lowcoder.domain"})
+@EnableReactiveMongoRepositories(basePackages = {"org.quickdev.infra", "org.quickdev.domain"})
 public class MongoConfig {
 
     @Autowired
@@ -53,7 +53,7 @@ public class MongoConfig {
 
         return MongockSpring5.builder()
                 .setDriver(springDataMongoV3Driver)
-                .addChangeLogsScanPackages(List.of("org.lowcoder.runner.migrations"))
+                .addChangeLogsScanPackages(List.of("org.quickdev.runner.migrations"))
                 .setSpringContext(springContext)
                 .buildApplicationRunner();
     }

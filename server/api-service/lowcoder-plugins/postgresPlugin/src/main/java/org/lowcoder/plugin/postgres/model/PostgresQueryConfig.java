@@ -1,13 +1,13 @@
-package org.lowcoder.plugin.postgres.model;
+package org.quickdev.plugin.postgres.model;
 
-import static org.lowcoder.sdk.exception.PluginCommonError.INVALID_QUERY_SETTINGS;
-import static org.lowcoder.sdk.util.JsonUtils.fromJson;
-import static org.lowcoder.sdk.util.JsonUtils.toJson;
+import static org.quickdev.sdk.exception.PluginCommonError.INVALID_QUERY_SETTINGS;
+import static org.quickdev.sdk.util.JsonUtils.fromJson;
+import static org.quickdev.sdk.util.JsonUtils.toJson;
 
 import java.util.Map;
 
 import org.apache.commons.collections4.MapUtils;
-import org.lowcoder.sdk.exception.PluginException;
+import org.quickdev.sdk.exception.PluginException;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;

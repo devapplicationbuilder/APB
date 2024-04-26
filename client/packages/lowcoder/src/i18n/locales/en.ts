@@ -231,8 +231,8 @@ export const en = {
     "runScriptPlaceHolder": "Write Code Here",
     "component": "Component",
     "method": "Method",
-    "setTempState": "Set a Temporary State value",
-    "state": "State",
+    "setTempState": "Set a Dynamic Variable value",
+    "state": "Variable",
     "triggerModuleEvent": "Trigger a Module Event",
     "moduleEvent": "Module Event",
     "goToApp": "Go to an other App",
@@ -469,14 +469,14 @@ export const en = {
     "folder": "Folder",
     "folderNotEmpty": "Folder is not empty",
     "dataResponder": "Data Responder",
-    "tempState": "Temporary State",
+    "tempState": "Dynamic Variable",
     "transformer": "Transformer",
     "quickRestAPI": "REST Query",
     "quickStreamAPI": "Stream Query",
     "quickGraphql": "GraphQL Query",
     "lowcoderAPI": "QuickDEV DEMO API",
     "executeJSCode": "Run JavaScript Code",
-    "importFromQueryLibrary": "Import from Query Library",
+    "importFromQueryLibrary": "Import from Query Repository",
     "importFromFile": "Import from File",
     "triggerType": "Triggered when...",
     "triggerTypeAuto": "Inputs Change or On Page Load",
@@ -655,7 +655,8 @@ export const en = {
     "extParamsTooltip": "Configure Additional Connection Parameters"
   },
   "lowcoderQuery": {
-    "queryOrgUsers": "Query Workspace Users"
+    "queryOrgUsers": "Query user details",
+    "getCookie": "GetCookie"
   },
   "redisQuery": {
     "rawCommand": "Raw Command",
@@ -1800,17 +1801,17 @@ export const en = {
     "previewSuccess": "Preview Success",
     "previewFail": "Preview Fail",
     "deleteMessage": "Delete Transformer Success. You Can Use {undoKey} to Undo.",
-    "documentationText" : "Transformers are designed for data transformation and reuse of your multi-line JavaScript code. Use Transformers to adapt Data from queries or components to your local App needs. Unlike JavaScript query, transformer is designed to do read-only operations, which means that you cannot trigger a query or update a temporary state inside a transformer."
+    "documentationText" : "Transformers are designed for data transformation and reuse of your multi-line JavaScript code. Use Transformers to adapt Data from queries or components to your local App needs. Unlike JavaScript query, transformer is designed to do read-only operations, which means that you cannot trigger a query or update a dynamic variable inside a transformer."
   },
   "temporaryState": {
     "value": "Init Value",
-    "valueTooltip": "The Initial Value Stored in the Temporary State Can Be Any Valid JSON Value.",
-    "docLink": "Read More About Temporary States...",
+    "valueTooltip": "The Initial Value Stored in the dynamic variable Can Be Any Valid JSON Value.",
+    "docLink": "Read More About dynamic variables...",
     "pathTypeError": "Path Must Be Either a String or an Array of Values",
     "unStructuredError": "Unstructured Data {prev} Can't Be Updated by {path}",
-    "valueDesc": "Temporary State Value",
-    "deleteMessage": "The Temporary State is Deleted Successfully. You Can Use {undoKey} to Undo.",
-    "documentationText" : "Temporary states in QuickDEV DEMO are a powerful feature used to manage complex variables that dynamically update the state of components in your application. These states act as intermediary or transient storage for data that can change over time due to user interactions or other processes."
+    "valueDesc": "Dynamic Variable Value",
+    "deleteMessage": "The Dynamic Variable is Deleted Successfully. You Can Use {undoKey} to Undo.",
+    "documentationText" : "Dynamic Variables in QuickDEV DEMO are a powerful feature used to manage complex variables that dynamically update the state of components in your application. These states act as intermediary or transient storage for data that can change over time due to user interactions or other processes."
   },
   "dataResponder": {
     "data": "Data",
@@ -1818,7 +1819,7 @@ export const en = {
     "dataTooltip": "When This Data is Changed, It Will Trigger Subsequent Actions.",
     "docLink": "Read More About the Data Responders...",
     "deleteMessage": "The Data Responder is Deleted Successfully. You Can Use {undoKey} to Undo.",
-    "documentationText" : "When developing an app, you can assign events to components to monitor changes in specific data. For instance, a Table component might have events like \"Row select change\", \"Filter change\", \"Sort change\", and \"Page change\" to track changes in the selectedRow property. However, for changes in temporary states, transformers, or query results, where standard events are not available, Data responders are utilized. They enable you to detect and react to any data modifications."
+    "documentationText" : "When developing an app, you can assign events to components to monitor changes in specific data. For instance, a Table component might have events like \"Row select change\", \"Filter change\", \"Sort change\", and \"Page change\" to track changes in the selectedRow property. However, for changes in dynamic variables, transformers, or query results, where standard events are not available, Data responders are utilized. They enable you to detect and react to any data modifications."
   },
 
 
@@ -2267,7 +2268,7 @@ export const en = {
     "trash": "Trash",
     "marketplace": "Marketplace",
     "allCategories": "All Categories",
-    "queryLibrary": "Query Library",
+    "queryLibrary": "Query Repository",
     "datasource": "Data Sources",
     "selectDatasourceType": "Select Data Source Type",
     "home": "Home | Admin Area",
@@ -2326,7 +2327,7 @@ export const en = {
     "copyLink": "Copy link",
     "appPublicMessage": "Make the app public. Anyone can view.",
     "modulePublicMessage": "Make the module public. Anyone can view.",
-    "marketplaceURL": "http://localhost:4500",
+    "marketplaceURL": "http://172.23.16.1",
     "appMarketplaceMessage": "Publish your App on QuickDEV DEMO Marketplace. Anyone can view and copy it from there.",
     "moduleMarketplaceMessage": "Publish your Module on QuickDEV DEMO Marketplace. Anyone can view and copy it from there.",
     "marketplaceGoodPublishing": "Please make sure your app is well-named and easy to use. Remove any sensitive information before publishing. Also, remove local datasources and replace by static built-in temporary data.",
@@ -2602,7 +2603,7 @@ export const en = {
 
 
   "playground": {
-    "url": "http://localhost:4500/playground/{compType}/1",
+    "url": "http://172.23.16.1/playground/{compType}/1",
     "data": "Current Data State",
     "preview": "Preview (please mind, that your Editor-Layout/Logic Mode is active here too. You can set it to 'Both' in the App Editor to see all properties here too)",
     "property": "Properties",
@@ -2787,20 +2788,21 @@ export const en = {
   },
 
   docUrls: {
-    docHome: "http://172.23.16.1:4501/docs/main.html",
-    components: "http://localhost:4500/components/{compType}",
-    module: "http://localhost:4500",
-    optionList: "",
-    terms: "http://localhost:4500",
-    privacy: "http://localhost:4500",
-    aboutUs: "http://localhost:4500",
-    changeLog: "http://localhost:4500",
+    docHome: "https://quickdev-cloud.web.app",
+    components: "http://172.23.16.1:4501/components/{compType}",
+    module: "https://quickdev-cloud.web.app/#/modules?id=modules",
+    fileUpload: "https://quickdev-cloud.web.app/#/file-upload?id=file-upload",
+    optionList: "https://quickdev-cloud.web.app/#/option-lists?id=option-lists",
+    terms: "http://172.23.16.1",
+    privacy: "http://172.23.16.1",
+    aboutUs: "http://172.23.16.1",
+    changeLog: "http://172.23.16.1",
     introVideo: "",
-    devNpmPlugin: "http://localhost:4500",
+    devNpmPlugin: "http://172.23.16.1",
     devNpmPluginText: "How to develop npm plugin",
-    useHost: "http://localhost:4500",
-    eventHandlerSlowdown: "http://localhost:4500",
-    thirdLib: "http://localhost:4500",
+    useHost: "http://172.23.16.1",
+    eventHandlerSlowdown: "https://quickdev-cloud.web.app/#/event-handlers?id=event-handlers",
+    thirdLib: "https://quickdev-cloud.web.app/#/third-party-libraries?id=third-party-libraries",
     thirdLibUrlText: "Use third-party libraries",
   },
   datasourceTutorial: {
@@ -2814,22 +2816,21 @@ export const en = {
   },
   queryTutorial: {
     js: "",
-    transformer: "http://localhost:4500",
-    tempState: "http://localhost:4500",
-    dataResponder: "http://localhost:4500",
+    transformer: "https://quickdev-cloud.web.app/#/transformers?id=transformers",
+    tempState: "https://quickdev-cloud.web.app/#/dynamic-variable?id=dynamic-variable",
+    dataResponder: "https://quickdev-cloud.web.app/#/data-responder?id=data-responder",
   },
   customComponent: {
-        //entryUrl: "https://sdk.lowcoder.cloud/custom_component.html"
-        entryUrl: "http://localhost:4502/custom_component.html"
+    //entryUrl: "https://sdk.lowcoder.cloud/custom_component.html"
+    entryUrl: "http://172.23.16.1:4502/custom_component.html"
   },
   template: {
     cloneUrl: "/apps/template-import/",
   },
   lowcoderUrl: {
-    createIssue: "http://localhost:4500",
-    discord: "http://localhost:4500",
-  },
-
+    createIssue: "http://172.23.16.1",
+    discord: "http://172.23.16.1",
+  }
 };
 
 // const jsonString = JSON.stringify(en, null, 2);

@@ -1,6 +1,6 @@
-package org.lowcoder.domain.template.model;
+package org.quickdev.domain.template.model;
 
-import org.lowcoder.sdk.models.HasIdAndAuditing;
+import org.quickdev.sdk.models.HasIdAndAuditing;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import lombok.Getter;

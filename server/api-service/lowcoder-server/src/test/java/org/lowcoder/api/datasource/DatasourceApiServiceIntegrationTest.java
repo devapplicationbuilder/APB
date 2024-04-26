@@ -1,18 +1,18 @@
-package org.lowcoder.api.datasource;
+package org.quickdev.api.datasource;
 
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.lowcoder.api.common.mockuser.WithMockUser;
-import org.lowcoder.api.permission.view.CommonPermissionView;
-import org.lowcoder.api.permission.view.PermissionItemView;
-import org.lowcoder.domain.datasource.model.Datasource;
-import org.lowcoder.domain.datasource.model.DatasourceCreationSource;
-import org.lowcoder.domain.datasource.model.DatasourceStatus;
-import org.lowcoder.sdk.exception.BizError;
-import org.lowcoder.sdk.exception.BizException;
-import org.lowcoder.sdk.plugin.mysql.MysqlDatasourceConfig;
+import org.quickdev.api.common.mockuser.WithMockUser;
+import org.quickdev.api.permission.view.CommonPermissionView;
+import org.quickdev.api.permission.view.PermissionItemView;
+import org.quickdev.domain.datasource.model.Datasource;
+import org.quickdev.domain.datasource.model.DatasourceCreationSource;
+import org.quickdev.domain.datasource.model.DatasourceStatus;
+import org.quickdev.sdk.exception.BizError;
+import org.quickdev.sdk.exception.BizException;
+import org.quickdev.sdk.plugin.mysql.MysqlDatasourceConfig;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
@@ -23,8 +23,8 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Set;
 
-import static org.lowcoder.domain.permission.model.ResourceRole.OWNER;
-import static org.lowcoder.domain.permission.model.ResourceRole.VIEWER;
+import static org.quickdev.domain.permission.model.ResourceRole.OWNER;
+import static org.quickdev.domain.permission.model.ResourceRole.VIEWER;
 
 @SpringBootTest
 @RunWith(SpringRunner.class)

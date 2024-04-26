@@ -1,20 +1,20 @@
-package org.lowcoder.api.authentication;
+package org.quickdev.api.authentication;
 
 import java.util.List;
 
-import org.lowcoder.api.authentication.dto.APIKeyRequest;
-import org.lowcoder.api.authentication.dto.AuthConfigRequest;
-import org.lowcoder.api.authentication.service.AuthenticationApiService;
-import org.lowcoder.api.framework.view.ResponseView;
-import org.lowcoder.api.home.SessionUserService;
-import org.lowcoder.api.usermanagement.UserController;
-import org.lowcoder.api.usermanagement.UserEndpoints.UpdatePasswordRequest;
-import org.lowcoder.api.usermanagement.view.APIKeyVO;
-import org.lowcoder.api.util.BusinessEventPublisher;
-import org.lowcoder.domain.authentication.FindAuthConfig;
-import org.lowcoder.domain.user.model.APIKey;
-import org.lowcoder.sdk.auth.AbstractAuthConfig;
-import org.lowcoder.sdk.util.CookieHelper;
+import org.quickdev.api.authentication.dto.APIKeyRequest;
+import org.quickdev.api.authentication.dto.AuthConfigRequest;
+import org.quickdev.api.authentication.service.AuthenticationApiService;
+import org.quickdev.api.framework.view.ResponseView;
+import org.quickdev.api.home.SessionUserService;
+import org.quickdev.api.usermanagement.UserController;
+import org.quickdev.api.usermanagement.UserEndpoints.UpdatePasswordRequest;
+import org.quickdev.api.usermanagement.view.APIKeyVO;
+import org.quickdev.api.util.BusinessEventPublisher;
+import org.quickdev.domain.authentication.FindAuthConfig;
+import org.quickdev.domain.user.model.APIKey;
+import org.quickdev.sdk.auth.AbstractAuthConfig;
+import org.quickdev.sdk.util.CookieHelper;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -23,6 +23,7 @@ import org.springframework.web.server.ServerWebExchange;
 
 import lombok.RequiredArgsConstructor;
 import reactor.core.publisher.Mono;
+import org.springframework.http.HttpStatus;
 
 @RequiredArgsConstructor
 @RestController
@@ -41,14 +42,16 @@ public class AuthenticationController implements AuthenticationEndpoints
      */
     @Override
     public Mono<ResponseView<Boolean>> formLogin(@RequestBody FormLoginRequest formLoginRequest,
-                                                 @RequestParam(required = false) String invitationId,
-                                                 @RequestParam(required = false) String orgId,
-                                                 ServerWebExchange exchange) {
-        return authenticationApiService.authenticateByForm(formLoginRequest.loginId(), formLoginRequest.password(),
-                        formLoginRequest.source(), formLoginRequest.register(), formLoginRequest.authId(), orgId, formLoginRequest.token())
-                .flatMap(user -> authenticationApiService.loginOrRegister(user, exchange, invitationId, Boolean.FALSE))
-                .thenReturn(ResponseView.success(true));
-    }
+                                              @RequestParam(required = false) String invitationId,
+                                              @RequestParam(required = false) String orgId,
+                                              ServerWebExchange exchange) {
+    return authenticationApiService.authenticateByForm(formLoginRequest.loginId(), formLoginRequest.password(),
+                    formLoginRequest.source(), formLoginRequest.register(), formLoginRequest.authId(), orgId, formLoginRequest.token(), formLoginRequest.authType())
+            .flatMap(user -> {
+                    return authenticationApiService.loginOrRegister(user, exchange, invitationId, Boolean.FALSE)
+                            .thenReturn(ResponseView.success(true));
+            });
+}
 
     /**
      * third party login api

@@ -14,24 +14,24 @@
  * limitations under the License.
  * <p>
  */
-package org.lowcoder.plugin.redis;
+package org.quickdev.plugin.redis;
 
 import static com.google.common.collect.Maps.newHashMap;
 import static java.util.Objects.isNull;
-import static org.lowcoder.plugin.redis.RedisError.REDIS_EXECUTION_ERROR;
-import static org.lowcoder.plugin.redis.RedisError.REDIS_URL_ERROR;
-import static org.lowcoder.plugin.redis.constants.RedisConstants.JEDIS_POOL_MAX_IDLE;
-import static org.lowcoder.plugin.redis.constants.RedisConstants.JEDIS_POOL_MAX_TOTAL;
-import static org.lowcoder.plugin.redis.constants.RedisConstants.JEDIS_POOL_MIN_EVICTABLE_IDLE_MILLIS;
-import static org.lowcoder.plugin.redis.constants.RedisConstants.JEDIS_POOL_MIN_IDLE;
-import static org.lowcoder.plugin.redis.constants.RedisConstants.JEDIS_POOL_TIME_BETWEEN_EVICTION_RUNS_MILLIS;
-import static org.lowcoder.plugin.redis.constants.RedisConstants.TEST_TIMEOUT_MILLIS;
-import static org.lowcoder.plugin.redis.constants.RedisFieldName.RAW_COMMAND;
-import static org.lowcoder.plugin.redis.utils.RedisQueryUtils.convertRedisFormInputToRedisCommand;
-import static org.lowcoder.sdk.exception.PluginCommonError.QUERY_ARGUMENT_ERROR;
-import static org.lowcoder.sdk.plugin.common.QueryExecutionUtils.getValueSafelyFromFormData;
-import static org.lowcoder.sdk.util.MustacheHelper.renderMustacheArrayString;
-import static org.lowcoder.sdk.util.MustacheHelper.renderMustacheStringWithoutRemoveSurroundedPar;
+import static org.quickdev.plugin.redis.RedisError.REDIS_EXECUTION_ERROR;
+import static org.quickdev.plugin.redis.RedisError.REDIS_URL_ERROR;
+import static org.quickdev.plugin.redis.constants.RedisConstants.JEDIS_POOL_MAX_IDLE;
+import static org.quickdev.plugin.redis.constants.RedisConstants.JEDIS_POOL_MAX_TOTAL;
+import static org.quickdev.plugin.redis.constants.RedisConstants.JEDIS_POOL_MIN_EVICTABLE_IDLE_MILLIS;
+import static org.quickdev.plugin.redis.constants.RedisConstants.JEDIS_POOL_MIN_IDLE;
+import static org.quickdev.plugin.redis.constants.RedisConstants.JEDIS_POOL_TIME_BETWEEN_EVICTION_RUNS_MILLIS;
+import static org.quickdev.plugin.redis.constants.RedisConstants.TEST_TIMEOUT_MILLIS;
+import static org.quickdev.plugin.redis.constants.RedisFieldName.RAW_COMMAND;
+import static org.quickdev.plugin.redis.utils.RedisQueryUtils.convertRedisFormInputToRedisCommand;
+import static org.quickdev.sdk.exception.PluginCommonError.QUERY_ARGUMENT_ERROR;
+import static org.quickdev.sdk.plugin.common.QueryExecutionUtils.getValueSafelyFromFormData;
+import static org.quickdev.sdk.util.MustacheHelper.renderMustacheArrayString;
+import static org.quickdev.sdk.util.MustacheHelper.renderMustacheStringWithoutRemoveSurroundedPar;
 
 import java.net.URI;
 import java.time.Duration;
@@ -49,17 +49,17 @@ import javax.annotation.Nonnull;
 
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.lang3.ArrayUtils;
-import org.lowcoder.plugin.redis.commands.RedisCommand;
-import org.lowcoder.plugin.redis.model.RedisDatasourceConfig;
-import org.lowcoder.plugin.redis.model.RedisQueryExecutionContext;
-import org.lowcoder.plugin.redis.utils.RedisQueryUtils;
-import org.lowcoder.plugin.redis.utils.RedisUriUtils;
-import org.lowcoder.sdk.exception.PluginException;
-import org.lowcoder.sdk.models.DatasourceTestResult;
-import org.lowcoder.sdk.models.QueryExecutionResult;
-import org.lowcoder.sdk.plugin.common.DatasourceQueryEngine;
-import org.lowcoder.sdk.plugin.common.QueryExecutionUtils;
-import org.lowcoder.sdk.query.QueryVisitorContext;
+import org.quickdev.plugin.redis.commands.RedisCommand;
+import org.quickdev.plugin.redis.model.RedisDatasourceConfig;
+import org.quickdev.plugin.redis.model.RedisQueryExecutionContext;
+import org.quickdev.plugin.redis.utils.RedisQueryUtils;
+import org.quickdev.plugin.redis.utils.RedisUriUtils;
+import org.quickdev.sdk.exception.PluginException;
+import org.quickdev.sdk.models.DatasourceTestResult;
+import org.quickdev.sdk.models.QueryExecutionResult;
+import org.quickdev.sdk.plugin.common.DatasourceQueryEngine;
+import org.quickdev.sdk.plugin.common.QueryExecutionUtils;
+import org.quickdev.sdk.query.QueryVisitorContext;
 import org.pf4j.Extension;
 import org.pf4j.Plugin;
 import org.pf4j.PluginWrapper;

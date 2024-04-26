@@ -1,6 +1,6 @@
-package org.lowcoder.domain.datasource.service;
+package org.quickdev.domain.datasource.service;
 
-import org.lowcoder.sdk.models.DatasourceStructure;
+import org.quickdev.sdk.models.DatasourceStructure;
 
 import reactor.core.publisher.Mono;
 

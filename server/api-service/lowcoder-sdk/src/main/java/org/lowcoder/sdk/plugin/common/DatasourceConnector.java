@@ -1,10 +1,10 @@
-package org.lowcoder.sdk.plugin.common;
+package org.quickdev.sdk.plugin.common;
 
-import static org.lowcoder.sdk.exception.PluginCommonError.DATASOURCE_TIMEOUT_ERROR;
-import static org.lowcoder.sdk.exception.PluginCommonError.QUERY_EXECUTION_ERROR;
-import static org.lowcoder.sdk.util.ExceptionUtils.ofPluginException;
-import static org.lowcoder.sdk.util.JsonUtils.fromJson;
-import static org.lowcoder.sdk.util.JsonUtils.toJson;
+import static org.quickdev.sdk.exception.PluginCommonError.DATASOURCE_TIMEOUT_ERROR;
+import static org.quickdev.sdk.exception.PluginCommonError.QUERY_EXECUTION_ERROR;
+import static org.quickdev.sdk.util.ExceptionUtils.ofPluginException;
+import static org.quickdev.sdk.util.JsonUtils.fromJson;
+import static org.quickdev.sdk.util.JsonUtils.toJson;
 
 import java.time.Duration;
 import java.util.Map;
@@ -13,11 +13,11 @@ import java.util.concurrent.TimeoutException;
 
 import javax.annotation.Nonnull;
 
-import org.lowcoder.sdk.exception.PluginCommonError;
-import org.lowcoder.sdk.exception.PluginException;
-import org.lowcoder.sdk.models.DatasourceConnectionConfig;
-import org.lowcoder.sdk.models.DatasourceTestResult;
-import org.lowcoder.sdk.models.TokenBasedConnectionDetail;
+import org.quickdev.sdk.exception.PluginCommonError;
+import org.quickdev.sdk.exception.PluginException;
+import org.quickdev.sdk.models.DatasourceConnectionConfig;
+import org.quickdev.sdk.models.DatasourceTestResult;
+import org.quickdev.sdk.models.TokenBasedConnectionDetail;
 import org.pf4j.ExtensionPoint;
 
 import com.google.common.reflect.TypeToken;

@@ -1,7 +1,7 @@
-package org.lowcoder.domain.datasource.model;
+package org.quickdev.domain.datasource.model;
 
-import org.lowcoder.sdk.models.HasIdAndAuditing;
-import org.lowcoder.sdk.models.TokenBasedConnectionDetail;
+import org.quickdev.sdk.models.HasIdAndAuditing;
+import org.quickdev.sdk.models.TokenBasedConnectionDetail;
 
 import lombok.Getter;
 import lombok.Setter;

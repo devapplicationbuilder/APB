@@ -1,7 +1,7 @@
-package org.lowcoder.domain.query.model;
+package org.quickdev.domain.query.model;
 
-import org.lowcoder.domain.application.model.Application;
-import org.lowcoder.domain.datasource.model.Datasource;
+import org.quickdev.domain.application.model.Application;
+import org.quickdev.domain.datasource.model.Datasource;
 
 import lombok.Getter;
 import reactor.core.publisher.Mono;

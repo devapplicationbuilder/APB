@@ -1,4 +1,4 @@
-package org.lowcoder.api.usermanagement.view;
+package org.quickdev.api.usermanagement.view;
 
 import java.util.List;
 import java.util.Map;

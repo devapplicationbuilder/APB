@@ -14,11 +14,11 @@
  * limitations under the License.
  * <p>
  */
-package org.lowcoder.plugin.mongo.commands;
+package org.quickdev.plugin.mongo.commands;
 
-import static org.lowcoder.plugin.mongo.constants.MongoFieldName.COLLECTION;
-import static org.lowcoder.sdk.exception.PluginCommonError.QUERY_EXECUTION_ERROR;
-import static org.lowcoder.sdk.plugin.common.QueryExecutionUtils.validConfigurationPresentInFormData;
+import static org.quickdev.plugin.mongo.constants.MongoFieldName.COLLECTION;
+import static org.quickdev.sdk.exception.PluginCommonError.QUERY_EXECUTION_ERROR;
+import static org.quickdev.sdk.plugin.common.QueryExecutionUtils.validConfigurationPresentInFormData;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,7 +27,7 @@ import java.util.Map;
 import org.apache.commons.collections4.MapUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.bson.Document;
-import org.lowcoder.sdk.exception.PluginException;
+import org.quickdev.sdk.exception.PluginException;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 

@@ -20,8 +20,8 @@ common:
   domain:
     default-value: skipCheck
   encrypt:
-    password: lowcoder.org
-    salt: lowcoder.org
+    password: quickdev.org
+    salt: quickdev.org
   cloud: false
   security:
     cors-allowed-domains:

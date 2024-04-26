@@ -1,4 +1,4 @@
-package org.lowcoder.infra.perf;
+package org.quickdev.infra.perf;
 
 import java.time.Duration;
 import java.util.concurrent.Callable;

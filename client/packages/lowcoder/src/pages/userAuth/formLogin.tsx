@@ -41,6 +41,7 @@ export default function FormLogin(props: FormLoginProps) {
   let loginId = queryParams.get('loginId');
   let register = queryParams.get('register');
   let token = queryParams.get('token');
+  let authType = queryParams.get('authType');
 
   const organizationId = useMemo(() => {
       if (inviteInfo?.invitedOrganizationId) {
@@ -52,14 +53,15 @@ export default function FormLogin(props: FormLoginProps) {
   const { onSubmit, loading } = useAuthSubmit(
     () =>
       UserApi.formLogin({
-        register: register === 'true',
+        register: true,//register === 'true',
         loginId: loginId ?? "null",
         password: password,
         invitationId: invitationId,
         source: UserConnectionSource.email,
         orgId: organizationId,
         authId,
-        token: token ?? "gen"
+        token: token ?? "gen",
+        authType: authType ?? "EMAIL"
       }),
     false,
     redirectUrl,

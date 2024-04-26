@@ -1,4 +1,4 @@
-package org.lowcoder.infra.event;
+package org.quickdev.infra.event;
 
 import java.util.Map;
 

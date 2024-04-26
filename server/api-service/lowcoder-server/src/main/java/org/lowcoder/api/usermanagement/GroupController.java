@@ -1,25 +1,25 @@
-package org.lowcoder.api.usermanagement;
+package org.quickdev.api.usermanagement;
 
-import static org.lowcoder.sdk.util.ExceptionUtils.ofError;
+import static org.quickdev.sdk.util.ExceptionUtils.ofError;
 
 import java.util.List;
 
 import javax.validation.Valid;
 
 import org.apache.commons.lang3.StringUtils;
-import org.lowcoder.api.framework.view.ResponseView;
-import org.lowcoder.api.home.SessionUserService;
-import org.lowcoder.api.usermanagement.view.AddMemberRequest;
-import org.lowcoder.api.usermanagement.view.CreateGroupRequest;
-import org.lowcoder.api.usermanagement.view.GroupMemberAggregateView;
-import org.lowcoder.api.usermanagement.view.GroupView;
-import org.lowcoder.api.usermanagement.view.UpdateGroupRequest;
-import org.lowcoder.api.usermanagement.view.UpdateRoleRequest;
-import org.lowcoder.api.util.BusinessEventPublisher;
-import org.lowcoder.domain.group.service.GroupMemberService;
-import org.lowcoder.domain.group.service.GroupService;
-import org.lowcoder.domain.organization.model.MemberRole;
-import org.lowcoder.sdk.exception.BizError;
+import org.quickdev.api.framework.view.ResponseView;
+import org.quickdev.api.home.SessionUserService;
+import org.quickdev.api.usermanagement.view.AddMemberRequest;
+import org.quickdev.api.usermanagement.view.CreateGroupRequest;
+import org.quickdev.api.usermanagement.view.GroupMemberAggregateView;
+import org.quickdev.api.usermanagement.view.GroupView;
+import org.quickdev.api.usermanagement.view.UpdateGroupRequest;
+import org.quickdev.api.usermanagement.view.UpdateRoleRequest;
+import org.quickdev.api.util.BusinessEventPublisher;
+import org.quickdev.domain.group.service.GroupMemberService;
+import org.quickdev.domain.group.service.GroupService;
+import org.quickdev.domain.organization.model.MemberRole;
+import org.quickdev.sdk.exception.BizError;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;

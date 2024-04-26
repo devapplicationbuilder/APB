@@ -1,13 +1,13 @@
-package org.lowcoder.sdk.plugin.common;
+package org.quickdev.sdk.plugin.common;
 
-import static org.lowcoder.sdk.plugin.common.QueryExecutionUtils.querySharedScheduler;
+import static org.quickdev.sdk.plugin.common.QueryExecutionUtils.querySharedScheduler;
 
 import javax.annotation.Nonnull;
 
-import org.lowcoder.sdk.models.DatasourceConnectionConfig;
-import org.lowcoder.sdk.models.DatasourceStructure;
-import org.lowcoder.sdk.models.QueryExecutionResult;
-import org.lowcoder.sdk.query.QueryExecutionContext;
+import org.quickdev.sdk.models.DatasourceConnectionConfig;
+import org.quickdev.sdk.models.DatasourceStructure;
+import org.quickdev.sdk.models.QueryExecutionResult;
+import org.quickdev.sdk.query.QueryExecutionContext;
 
 import reactor.core.publisher.Mono;
 

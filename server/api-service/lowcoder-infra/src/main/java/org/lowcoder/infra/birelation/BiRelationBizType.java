@@ -1,4 +1,4 @@
-package org.lowcoder.infra.birelation;
+package org.quickdev.infra.birelation;
 
 public enum BiRelationBizType {
     ORG_MEMBER,

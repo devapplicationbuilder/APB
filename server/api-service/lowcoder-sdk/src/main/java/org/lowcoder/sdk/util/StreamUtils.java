@@ -1,4 +1,4 @@
-package org.lowcoder.sdk.util;
+package org.quickdev.sdk.util;
 
 import static java.util.function.Function.identity;
 

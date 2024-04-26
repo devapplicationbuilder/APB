@@ -1,8 +1,8 @@
-package org.lowcoder.sdk.plugin.common;
+package org.quickdev.sdk.plugin.common;
 
-import static org.lowcoder.sdk.exception.PluginCommonError.QUERY_ARGUMENT_ERROR;
-import static org.lowcoder.sdk.util.ExceptionUtils.wrapException;
-import static org.lowcoder.sdk.util.MustacheHelper.renderMustacheString;
+import static org.quickdev.sdk.exception.PluginCommonError.QUERY_ARGUMENT_ERROR;
+import static org.quickdev.sdk.util.ExceptionUtils.wrapException;
+import static org.quickdev.sdk.util.MustacheHelper.renderMustacheString;
 
 import java.net.URI;
 import java.net.URISyntaxException;
@@ -10,7 +10,7 @@ import java.util.Map;
 
 import org.apache.commons.lang3.StringUtils;
 import org.apache.http.client.utils.URIBuilder;
-import org.lowcoder.sdk.exception.PluginException;
+import org.quickdev.sdk.exception.PluginException;
 
 public final class RestApiUriBuilder {
 

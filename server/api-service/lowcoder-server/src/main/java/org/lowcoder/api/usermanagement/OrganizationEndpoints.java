@@ -1,19 +1,19 @@
-package org.lowcoder.api.usermanagement;
+package org.quickdev.api.usermanagement;
 
 import java.util.List;
 
 import javax.validation.Valid;
 
-import org.lowcoder.api.framework.view.ResponseView;
-import org.lowcoder.api.usermanagement.view.OrgMemberListView;
-import org.lowcoder.api.usermanagement.view.OrgView;
-import org.lowcoder.api.usermanagement.view.UpdateOrgRequest;
-import org.lowcoder.api.usermanagement.view.UpdateRoleRequest;
-import org.lowcoder.domain.organization.model.Organization;
-import org.lowcoder.domain.organization.model.Organization.OrganizationCommonSettings;
-import org.lowcoder.domain.plugin.DatasourceMetaInfo;
-import org.lowcoder.infra.constant.NewUrl;
-import org.lowcoder.infra.constant.Url;
+import org.quickdev.api.framework.view.ResponseView;
+import org.quickdev.api.usermanagement.view.OrgMemberListView;
+import org.quickdev.api.usermanagement.view.OrgView;
+import org.quickdev.api.usermanagement.view.UpdateOrgRequest;
+import org.quickdev.api.usermanagement.view.UpdateRoleRequest;
+import org.quickdev.domain.organization.model.Organization;
+import org.quickdev.domain.organization.model.Organization.OrganizationCommonSettings;
+import org.quickdev.domain.plugin.DatasourceMetaInfo;
+import org.quickdev.infra.constant.NewUrl;
+import org.quickdev.infra.constant.Url;
 import org.springframework.http.codec.multipart.Part;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;

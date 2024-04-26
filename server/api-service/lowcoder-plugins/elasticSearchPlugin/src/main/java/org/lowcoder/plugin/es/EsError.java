@@ -1,6 +1,6 @@
-package org.lowcoder.plugin.es;
+package org.quickdev.plugin.es;
 
-import org.lowcoder.sdk.exception.PluginError;
+import org.quickdev.sdk.exception.PluginError;
 
 public enum EsError implements PluginError {
 

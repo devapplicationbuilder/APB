@@ -41,7 +41,7 @@ export const jsonMenuItems = [
     key: 'menu-item-1',
     icon: "https://cdn-icons-png.flaticon.com/128/149/149338.png",
     action: {
-      url: "http://localhost:4500",
+      url: "http://172.23.16.1",
       newTab: false,
     },
     children: [
@@ -50,7 +50,7 @@ export const jsonMenuItems = [
         key: 'submenu-item-11',
         icon: "",
         action: {
-            url: "http://localhost:4500",
+            url: "http://172.23.16.1",
           newTab: false,
         },
       },
@@ -59,7 +59,7 @@ export const jsonMenuItems = [
         key: 'submenu-item-12',
         icon: "",
         action: {
-          url: "http://localhost:4500",
+          url: "http://172.23.16.1",
           newTab: false,
         },
       },
@@ -70,7 +70,7 @@ export const jsonMenuItems = [
     key: 'menu-item-2',
     icon: "https://cdn-icons-png.flaticon.com/128/149/149206.png",
     action: {
-      url: "http://localhost:4500",
+      url: "http://172.23.16.1",
       newTab: true,
     },
   }

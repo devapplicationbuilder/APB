@@ -1,10 +1,10 @@
-package org.lowcoder.domain.template.repository;
+package org.quickdev.domain.template.repository;
 
 import java.util.Collection;
 
 import javax.annotation.Nonnull;
 
-import org.lowcoder.domain.template.model.Template;
+import org.quickdev.domain.template.model.Template;
 import org.springframework.data.mongodb.repository.ReactiveMongoRepository;
 import org.springframework.stereotype.Repository;
 

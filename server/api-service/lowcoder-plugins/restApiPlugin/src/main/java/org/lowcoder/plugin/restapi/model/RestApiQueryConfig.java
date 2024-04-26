@@ -1,15 +1,15 @@
-package org.lowcoder.plugin.restapi.model;
+package org.quickdev.plugin.restapi.model;
 
 import static org.apache.commons.collections4.ListUtils.emptyIfNull;
-import static org.lowcoder.sdk.exception.PluginCommonError.INVALID_QUERY_SETTINGS;
-import static org.lowcoder.sdk.util.JsonUtils.fromJson;
-import static org.lowcoder.sdk.util.JsonUtils.toJson;
+import static org.quickdev.sdk.exception.PluginCommonError.INVALID_QUERY_SETTINGS;
+import static org.quickdev.sdk.util.JsonUtils.fromJson;
+import static org.quickdev.sdk.util.JsonUtils.toJson;
 
 import java.util.List;
 import java.util.Map;
 
-import org.lowcoder.sdk.exception.PluginException;
-import org.lowcoder.sdk.models.Property;
+import org.quickdev.sdk.exception.PluginException;
+import org.quickdev.sdk.models.Property;
 import org.springframework.http.HttpMethod;
 
 import com.fasterxml.jackson.annotation.JsonCreator;

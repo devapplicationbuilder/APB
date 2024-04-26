@@ -1,19 +1,19 @@
-package org.lowcoder.api.framework.security;
+package org.quickdev.api.framework.security;
 
 
-import org.lowcoder.api.authentication.request.AuthRequestFactory;
-import org.lowcoder.api.authentication.service.AuthenticationApiServiceImpl;
-import org.lowcoder.api.authentication.util.JWTUtils;
-import org.lowcoder.api.framework.filter.APIKeyAuthFilter;
-import org.lowcoder.api.framework.filter.UserSessionPersistenceFilter;
-import org.lowcoder.api.home.SessionUserService;
-import org.lowcoder.domain.authentication.AuthenticationService;
-import org.lowcoder.domain.authentication.context.AuthRequestContext;
-import org.lowcoder.domain.user.model.User;
-import org.lowcoder.domain.user.service.UserService;
-import org.lowcoder.infra.constant.NewUrl;
-import org.lowcoder.sdk.config.CommonConfig;
-import org.lowcoder.sdk.util.CookieHelper;
+import org.quickdev.api.authentication.request.AuthRequestFactory;
+import org.quickdev.api.authentication.service.AuthenticationApiServiceImpl;
+import org.quickdev.api.authentication.util.JWTUtils;
+import org.quickdev.api.framework.filter.APIKeyAuthFilter;
+import org.quickdev.api.framework.filter.UserSessionPersistenceFilter;
+import org.quickdev.api.home.SessionUserService;
+import org.quickdev.domain.authentication.AuthenticationService;
+import org.quickdev.domain.authentication.context.AuthRequestContext;
+import org.quickdev.domain.user.model.User;
+import org.quickdev.domain.user.service.UserService;
+import org.quickdev.infra.constant.NewUrl;
+import org.quickdev.sdk.config.CommonConfig;
+import org.quickdev.sdk.util.CookieHelper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -35,10 +35,10 @@ import org.springframework.web.server.adapter.ForwardedHeaderTransformer;
 import javax.annotation.Nonnull;
 import java.util.List;
 
-import static org.lowcoder.infra.constant.NewUrl.GITHUB_STAR;
-import static org.lowcoder.infra.constant.Url.*;
-import static org.lowcoder.sdk.constants.Authentication.ANONYMOUS_USER;
-import static org.lowcoder.sdk.constants.Authentication.ANONYMOUS_USER_ID;
+import static org.quickdev.infra.constant.NewUrl.GITHUB_STAR;
+import static org.quickdev.infra.constant.Url.*;
+import static org.quickdev.sdk.constants.Authentication.ANONYMOUS_USER;
+import static org.quickdev.sdk.constants.Authentication.ANONYMOUS_USER_ID;
 
 @Configuration
 @EnableWebFluxSecurity

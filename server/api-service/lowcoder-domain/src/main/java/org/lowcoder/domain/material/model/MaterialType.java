@@ -1,4 +1,4 @@
-package org.lowcoder.domain.material.model;
+package org.quickdev.domain.material.model;
 
 public enum MaterialType {
 

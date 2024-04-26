@@ -1,8 +1,8 @@
-package org.lowcoder.domain.plugin;
+package org.quickdev.domain.plugin;
 
 import static org.apache.commons.lang3.StringUtils.firstNonEmpty;
 
-import org.lowcoder.domain.datasource.service.DatasourceConnectionPool;
+import org.quickdev.domain.datasource.service.DatasourceConnectionPool;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;

@@ -1,8 +1,8 @@
-package org.lowcoder.domain.group.model;
+package org.quickdev.domain.group.model;
 
 import org.apache.commons.lang3.StringUtils;
-import org.lowcoder.domain.organization.model.MemberRole;
-import org.lowcoder.infra.birelation.BiRelation;
+import org.quickdev.domain.organization.model.MemberRole;
+import org.quickdev.infra.birelation.BiRelation;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonIgnore;

@@ -1,8 +1,8 @@
-package org.lowcoder.api.authentication.service.factory;
+package org.quickdev.api.authentication.service.factory;
 
 import jakarta.annotation.PostConstruct;
-import org.lowcoder.api.authentication.dto.AuthConfigRequest;
-import org.lowcoder.sdk.auth.AbstractAuthConfig;
+import org.quickdev.api.authentication.dto.AuthConfigRequest;
+import org.quickdev.sdk.auth.AbstractAuthConfig;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;

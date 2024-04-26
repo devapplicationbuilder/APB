@@ -1,17 +1,17 @@
-package org.lowcoder.runner.migrations.job;
+package org.quickdev.runner.migrations.job;
 
 import java.util.List;
 
 import org.apache.commons.collections4.CollectionUtils;
-import org.lowcoder.domain.organization.model.Organization;
-import org.lowcoder.domain.organization.model.OrganizationDomain;
-import org.lowcoder.domain.organization.repository.OrganizationRepository;
-import org.lowcoder.domain.organization.service.OrganizationService;
-import org.lowcoder.sdk.auth.AbstractAuthConfig;
-import org.lowcoder.sdk.config.AuthProperties;
-import org.lowcoder.sdk.config.CommonConfig;
-import org.lowcoder.sdk.constants.WorkspaceMode;
-import org.lowcoder.sdk.util.IDUtils;
+import org.quickdev.domain.organization.model.Organization;
+import org.quickdev.domain.organization.model.OrganizationDomain;
+import org.quickdev.domain.organization.repository.OrganizationRepository;
+import org.quickdev.domain.organization.service.OrganizationService;
+import org.quickdev.sdk.auth.AbstractAuthConfig;
+import org.quickdev.sdk.config.AuthProperties;
+import org.quickdev.sdk.config.CommonConfig;
+import org.quickdev.sdk.constants.WorkspaceMode;
+import org.quickdev.sdk.util.IDUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

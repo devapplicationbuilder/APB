@@ -1,4 +1,4 @@
-package org.lowcoder.plugin.mssql.gui;
+package org.quickdev.plugin.mssql.gui;
 
 public final class GuiConstants {
 

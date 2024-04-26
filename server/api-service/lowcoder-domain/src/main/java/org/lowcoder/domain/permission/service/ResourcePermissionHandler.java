@@ -1,11 +1,11 @@
-package org.lowcoder.domain.permission.service;
+package org.quickdev.domain.permission.service;
 
 import static java.util.Collections.emptyList;
 import static java.util.Collections.emptyMap;
 import static java.util.Collections.singletonList;
 import static java.util.function.Function.identity;
 import static java.util.stream.Collectors.toMap;
-import static org.lowcoder.sdk.constants.Authentication.isAnonymousUser;
+import static org.quickdev.sdk.constants.Authentication.isAnonymousUser;
 
 import java.util.Collection;
 import java.util.Collections;
@@ -18,16 +18,16 @@ import javax.annotation.Nonnull;
 
 import org.apache.commons.collections4.CollectionUtils;
 import org.apache.commons.collections4.ListUtils;
-import org.lowcoder.domain.application.model.ApplicationRequestType;
-import org.lowcoder.domain.group.service.GroupMemberService;
-import org.lowcoder.domain.organization.service.OrgMemberService;
-import org.lowcoder.domain.permission.model.ResourceAction;
-import org.lowcoder.domain.permission.model.ResourceHolder;
-import org.lowcoder.domain.permission.model.ResourcePermission;
-import org.lowcoder.domain.permission.model.ResourceRole;
-import org.lowcoder.domain.permission.model.ResourceType;
-import org.lowcoder.domain.permission.model.UserPermissionOnResourceStatus;
-import org.lowcoder.sdk.config.CommonConfig;
+import org.quickdev.domain.application.model.ApplicationRequestType;
+import org.quickdev.domain.group.service.GroupMemberService;
+import org.quickdev.domain.organization.service.OrgMemberService;
+import org.quickdev.domain.permission.model.ResourceAction;
+import org.quickdev.domain.permission.model.ResourceHolder;
+import org.quickdev.domain.permission.model.ResourcePermission;
+import org.quickdev.domain.permission.model.ResourceRole;
+import org.quickdev.domain.permission.model.ResourceType;
+import org.quickdev.domain.permission.model.UserPermissionOnResourceStatus;
+import org.quickdev.sdk.config.CommonConfig;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.google.common.collect.Maps;

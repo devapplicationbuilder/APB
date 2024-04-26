@@ -1,11 +1,11 @@
-package org.lowcoder.api.config;
+package org.quickdev.api.config;
 
-import org.lowcoder.api.framework.view.ResponseView;
-import org.lowcoder.api.usermanagement.OrgApiService;
-import org.lowcoder.infra.config.model.ServerConfig;
-import org.lowcoder.infra.config.repository.ServerConfigRepository;
-import org.lowcoder.sdk.config.dynamic.Conf;
-import org.lowcoder.sdk.config.dynamic.ConfigCenter;
+import org.quickdev.api.framework.view.ResponseView;
+import org.quickdev.api.usermanagement.OrgApiService;
+import org.quickdev.infra.config.model.ServerConfig;
+import org.quickdev.infra.config.repository.ServerConfigRepository;
+import org.quickdev.sdk.config.dynamic.Conf;
+import org.quickdev.sdk.config.dynamic.ConfigCenter;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;

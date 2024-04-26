@@ -1,4 +1,4 @@
-package org.lowcoder.api.application.view;
+package org.quickdev.api.application.view;
 
 import java.util.Map;
 

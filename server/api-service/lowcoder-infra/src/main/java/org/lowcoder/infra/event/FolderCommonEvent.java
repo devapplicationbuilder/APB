@@ -1,4 +1,4 @@
-package org.lowcoder.infra.event;
+package org.quickdev.infra.event;
 
 import lombok.Getter;
 import lombok.experimental.SuperBuilder;

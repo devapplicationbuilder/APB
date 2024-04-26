@@ -1,7 +1,7 @@
-package org.lowcoder.api.usermanagement.view;
+package org.quickdev.api.usermanagement.view;
 
-import org.lowcoder.domain.group.model.GroupMember;
-import org.lowcoder.domain.user.model.User;
+import org.quickdev.domain.group.model.GroupMember;
+import org.quickdev.domain.user.model.User;
 
 public class GroupMemberView {
 

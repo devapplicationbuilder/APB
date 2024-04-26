@@ -17,12 +17,12 @@
 
 // copied and adapted for mongo result parsing
 
-package org.lowcoder.plugin.mongo.utils;
+package org.quickdev.plugin.mongo.utils;
 
-import static org.lowcoder.plugin.mongo.constants.MongoFieldName.COMMAND_TYPE;
-import static org.lowcoder.sdk.exception.PluginCommonError.QUERY_ARGUMENT_ERROR;
-import static org.lowcoder.sdk.util.JsonUtils.createObjectNode;
-import static org.lowcoder.sdk.util.JsonUtils.readTree;
+import static org.quickdev.plugin.mongo.constants.MongoFieldName.COMMAND_TYPE;
+import static org.quickdev.sdk.exception.PluginCommonError.QUERY_ARGUMENT_ERROR;
+import static org.quickdev.sdk.util.JsonUtils.createObjectNode;
+import static org.quickdev.sdk.util.JsonUtils.readTree;
 
 import java.math.BigDecimal;
 import java.net.URLEncoder;
@@ -43,16 +43,16 @@ import org.bson.types.Decimal128;
 import org.bson.types.ObjectId;
 import org.json.JSONArray;
 import org.json.JSONObject;
-import org.lowcoder.plugin.mongo.commands.Aggregate;
-import org.lowcoder.plugin.mongo.commands.Count;
-import org.lowcoder.plugin.mongo.commands.Delete;
-import org.lowcoder.plugin.mongo.commands.Distinct;
-import org.lowcoder.plugin.mongo.commands.Find;
-import org.lowcoder.plugin.mongo.commands.Insert;
-import org.lowcoder.plugin.mongo.commands.MongoCommand;
-import org.lowcoder.plugin.mongo.commands.UpdateMany;
-import org.lowcoder.sdk.exception.PluginException;
-import org.lowcoder.sdk.models.DatasourceStructure;
+import org.quickdev.plugin.mongo.commands.Aggregate;
+import org.quickdev.plugin.mongo.commands.Count;
+import org.quickdev.plugin.mongo.commands.Delete;
+import org.quickdev.plugin.mongo.commands.Distinct;
+import org.quickdev.plugin.mongo.commands.Find;
+import org.quickdev.plugin.mongo.commands.Insert;
+import org.quickdev.plugin.mongo.commands.MongoCommand;
+import org.quickdev.plugin.mongo.commands.UpdateMany;
+import org.quickdev.sdk.exception.PluginException;
+import org.quickdev.sdk.models.DatasourceStructure;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;

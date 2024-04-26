@@ -1,6 +1,6 @@
-package org.lowcoder.sdk.config;
+package org.quickdev.sdk.config;
 
-import org.lowcoder.sdk.util.JsonUtils;
+import org.quickdev.sdk.util.JsonUtils;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

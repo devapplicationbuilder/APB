@@ -1,4 +1,4 @@
-package org.lowcoder.api.framework.service;
+package org.quickdev.api.framework.service;
 
 import java.util.Locale;
 

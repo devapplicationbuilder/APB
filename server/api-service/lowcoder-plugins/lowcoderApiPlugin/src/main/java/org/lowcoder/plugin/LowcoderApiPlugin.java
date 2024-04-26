@@ -1,4 +1,4 @@
-package org.lowcoder.plugin;
+package org.quickdev.plugin;
 
 import org.pf4j.Plugin;
 import org.pf4j.PluginWrapper;

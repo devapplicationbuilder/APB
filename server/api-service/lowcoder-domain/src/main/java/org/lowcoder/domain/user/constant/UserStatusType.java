@@ -1,4 +1,4 @@
-package org.lowcoder.domain.user.constant;
+package org.quickdev.domain.user.constant;
 
 import java.util.Arrays;
 import java.util.Map;

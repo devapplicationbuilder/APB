@@ -1,13 +1,13 @@
-package org.lowcoder.plugin.oracle.gui;
+package org.quickdev.plugin.oracle.gui;
 
-import static org.lowcoder.plugin.oracle.gui.GuiConstants.COLUMN_DELIMITER_FRONT;
-import static org.lowcoder.sdk.plugin.sqlcommand.changeset.BulkObjectChangeSet.parseBulkRecords;
+import static org.quickdev.plugin.oracle.gui.GuiConstants.COLUMN_DELIMITER_FRONT;
+import static org.quickdev.sdk.plugin.sqlcommand.changeset.BulkObjectChangeSet.parseBulkRecords;
 
 import java.util.Map;
 
-import org.lowcoder.sdk.plugin.sqlcommand.GuiSqlCommand;
-import org.lowcoder.sdk.plugin.sqlcommand.changeset.BulkObjectChangeSet;
-import org.lowcoder.sdk.plugin.sqlcommand.command.BulkInsertCommand;
+import org.quickdev.sdk.plugin.sqlcommand.GuiSqlCommand;
+import org.quickdev.sdk.plugin.sqlcommand.changeset.BulkObjectChangeSet;
+import org.quickdev.sdk.plugin.sqlcommand.command.BulkInsertCommand;
 
 public class OracleBulkInsertCommand extends BulkInsertCommand {
     protected OracleBulkInsertCommand(String table, BulkObjectChangeSet bulkObjectChangeSet) {

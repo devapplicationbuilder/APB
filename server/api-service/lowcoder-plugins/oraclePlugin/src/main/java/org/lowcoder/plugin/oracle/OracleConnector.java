@@ -1,4 +1,4 @@
-package org.lowcoder.plugin.oracle;
+package org.quickdev.plugin.oracle;
 
 import static org.apache.commons.lang3.StringUtils.isAllBlank;
 import static org.apache.commons.lang3.StringUtils.isBlank;
@@ -7,8 +7,8 @@ import java.util.HashSet;
 import java.util.Set;
 
 import org.apache.commons.lang3.StringUtils;
-import org.lowcoder.plugin.oracle.model.OracleDatasourceConfig;
-import org.lowcoder.plugin.sql.SqlBasedConnector;
+import org.quickdev.plugin.oracle.model.OracleDatasourceConfig;
+import org.quickdev.plugin.sql.SqlBasedConnector;
 import org.pf4j.Extension;
 
 import com.zaxxer.hikari.HikariConfig;

@@ -1,4 +1,4 @@
-package org.lowcoder.plugin.mysql;
+package org.quickdev.plugin.mysql;
 
 import org.pf4j.Plugin;
 import org.pf4j.PluginWrapper;

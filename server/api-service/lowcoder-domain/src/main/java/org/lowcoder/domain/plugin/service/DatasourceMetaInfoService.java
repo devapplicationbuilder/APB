@@ -1,13 +1,13 @@
-package org.lowcoder.domain.plugin.service;
+package org.quickdev.domain.plugin.service;
 
 import java.util.List;
 import java.util.Map;
 
-import org.lowcoder.domain.plugin.DatasourceMetaInfo;
-import org.lowcoder.sdk.models.DatasourceConnectionConfig;
-import org.lowcoder.sdk.plugin.common.DatasourceConnector;
-import org.lowcoder.sdk.plugin.common.QueryExecutor;
-import org.lowcoder.sdk.query.QueryExecutionContext;
+import org.quickdev.domain.plugin.DatasourceMetaInfo;
+import org.quickdev.sdk.models.DatasourceConnectionConfig;
+import org.quickdev.sdk.plugin.common.DatasourceConnector;
+import org.quickdev.sdk.plugin.common.QueryExecutor;
+import org.quickdev.sdk.query.QueryExecutionContext;
 
 import reactor.core.publisher.Flux;
 

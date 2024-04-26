@@ -1,4 +1,4 @@
-package org.lowcoder.domain.configurations;
+package org.quickdev.domain.configurations;
 
 import org.pf4j.spring.SpringPluginManager;
 import org.springframework.context.annotation.Bean;

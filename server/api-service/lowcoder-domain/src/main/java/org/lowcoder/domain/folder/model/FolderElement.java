@@ -1,4 +1,4 @@
-package org.lowcoder.domain.folder.model;
+package org.quickdev.domain.folder.model;
 
 public record FolderElement(String folderId, String elementId) {
 }

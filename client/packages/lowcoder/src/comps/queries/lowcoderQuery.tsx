@@ -6,13 +6,15 @@ import { buildQueryCommand, FunctionProperty, toQueryView } from "./queryCompUti
 
 const CommandOptions = [
   { label: trans("lowcoderQuery.queryOrgUsers"), value: "queryOrgUsers" },
+  { label: trans("lowcoderQuery.getCookie"), value: "queryGetCookie" },
 ] as const;
 
 const CommandMap: Record<
   ValueFromOption<typeof CommandOptions>,
   CompConstructor<FunctionProperty[]>
 > = {
-  queryOrgUsers: buildQueryCommand({}),
+    queryOrgUsers: buildQueryCommand({}),
+    queryGetCookie: buildQueryCommand({}),
 };
 
 const LowcoderTmpQuery = withTypeAndChildrenAbstract(CommandMap, "queryOrgUsers", {});

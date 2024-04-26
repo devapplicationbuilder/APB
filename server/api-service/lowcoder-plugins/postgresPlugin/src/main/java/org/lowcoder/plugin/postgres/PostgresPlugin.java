@@ -1,4 +1,4 @@
-package org.lowcoder.plugin.postgres;
+package org.quickdev.plugin.postgres;
 
 import org.pf4j.Plugin;
 import org.pf4j.PluginWrapper;

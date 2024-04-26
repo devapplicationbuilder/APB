@@ -1,13 +1,13 @@
-package org.lowcoder.api.authentication.mock;
-//package org.lowcoder.api.authentication.mock;
+package org.quickdev.api.authentication.mock;
+//package org.quickdev.api.authentication.mock;
 //
-//import static org.lowcoder.api.authentication.request.ee.common.JustAuthBasedOAuth2Request.wrap;
+//import static org.quickdev.api.authentication.request.ee.common.JustAuthBasedOAuth2Request.wrap;
 //
 //import org.springframework.context.annotation.Primary;
 //
-//import org.lowcoder.api.authentication.request.AuthRequest;
-//import org.lowcoder.api.authentication.request.ee.common.OAuth2RequestContext;
-//import org.lowcoder.api.authentication.request.ee.google.GoogleOauth2AuthRequestFactory;
+//import org.quickdev.api.authentication.request.AuthRequest;
+//import org.quickdev.api.authentication.request.ee.common.OAuth2RequestContext;
+//import org.quickdev.api.authentication.request.ee.google.GoogleOauth2AuthRequestFactory;
 //
 //import me.zhyd.oauth.model.AuthCallback;
 //import me.zhyd.oauth.model.AuthResponse;

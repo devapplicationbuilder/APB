@@ -1,4 +1,4 @@
-package org.lowcoder.plugin.graphql;
+package org.quickdev.plugin.graphql;
 
 import static java.util.Collections.emptySet;
 
@@ -7,9 +7,9 @@ import java.util.Set;
 
 import javax.annotation.Nonnull;
 
-import org.lowcoder.sdk.models.DatasourceTestResult;
-import org.lowcoder.sdk.plugin.common.DatasourceConnector;
-import org.lowcoder.sdk.plugin.graphql.GraphQLDatasourceConfig;
+import org.quickdev.sdk.models.DatasourceTestResult;
+import org.quickdev.sdk.plugin.common.DatasourceConnector;
+import org.quickdev.sdk.plugin.graphql.GraphQLDatasourceConfig;
 import org.pf4j.Extension;
 
 import reactor.core.publisher.Mono;

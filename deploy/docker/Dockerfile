@@ -227,3 +227,7 @@ EXPOSE 3443
 
 ENTRYPOINT [ "/bin/sh" , "/quickdev/entrypoint.sh" ]
 CMD ["/usr/bin/supervisord", "-n" , "-c" , "/quickdev/etc/supervisord.conf"]
+
+# Add this command at the end of your Dockerfile
+RUN comp_folder=$(ls -l /quickdev/client | grep -- '-comps' | awk '{print $9}') \
+    && mv "/quickdev/client/$comp_folder" "/quickdev/client/quickdev-comps"

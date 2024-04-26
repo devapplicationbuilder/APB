@@ -1,4 +1,4 @@
-package org.lowcoder.domain.user.service;
+package org.quickdev.domain.user.service;
 
 
 import jakarta.annotation.PostConstruct;
@@ -6,30 +6,30 @@ import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.ObjectUtils;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.commons.lang3.StringUtils;
-import org.lowcoder.domain.asset.model.Asset;
-import org.lowcoder.domain.asset.service.AssetService;
-import org.lowcoder.domain.authentication.AuthenticationService;
-import org.lowcoder.domain.authentication.context.FormAuthRequestContext;
-import org.lowcoder.domain.encryption.EncryptionService;
-import org.lowcoder.domain.group.model.Group;
-import org.lowcoder.domain.group.service.GroupMemberService;
-import org.lowcoder.domain.group.service.GroupService;
-import org.lowcoder.domain.organization.model.OrgMember;
-import org.lowcoder.domain.organization.service.OrgMemberService;
-import org.lowcoder.domain.user.model.*;
-import org.lowcoder.domain.user.model.User.TransformedUserInfo;
-import org.lowcoder.domain.user.repository.UserRepository;
-import org.lowcoder.infra.mongo.MongoUpsertHelper;
-import org.lowcoder.infra.mongo.MongoUpsertHelper.PartialResourceWithId;
-import org.lowcoder.sdk.config.CommonConfig;
-import org.lowcoder.sdk.config.dynamic.Conf;
-import org.lowcoder.sdk.config.dynamic.ConfigCenter;
-import org.lowcoder.sdk.constants.AuthSourceConstants;
-import org.lowcoder.sdk.constants.FieldName;
-import org.lowcoder.sdk.constants.WorkspaceMode;
-import org.lowcoder.sdk.exception.BizError;
-import org.lowcoder.sdk.exception.BizException;
-import org.lowcoder.sdk.util.LocaleUtils;
+import org.quickdev.domain.asset.model.Asset;
+import org.quickdev.domain.asset.service.AssetService;
+import org.quickdev.domain.authentication.AuthenticationService;
+import org.quickdev.domain.authentication.context.FormAuthRequestContext;
+import org.quickdev.domain.encryption.EncryptionService;
+import org.quickdev.domain.group.model.Group;
+import org.quickdev.domain.group.service.GroupMemberService;
+import org.quickdev.domain.group.service.GroupService;
+import org.quickdev.domain.organization.model.OrgMember;
+import org.quickdev.domain.organization.service.OrgMemberService;
+import org.quickdev.domain.user.model.*;
+import org.quickdev.domain.user.model.User.TransformedUserInfo;
+import org.quickdev.domain.user.repository.UserRepository;
+import org.quickdev.infra.mongo.MongoUpsertHelper;
+import org.quickdev.infra.mongo.MongoUpsertHelper.PartialResourceWithId;
+import org.quickdev.sdk.config.CommonConfig;
+import org.quickdev.sdk.config.dynamic.Conf;
+import org.quickdev.sdk.config.dynamic.ConfigCenter;
+import org.quickdev.sdk.constants.AuthSourceConstants;
+import org.quickdev.sdk.constants.FieldName;
+import org.quickdev.sdk.constants.WorkspaceMode;
+import org.quickdev.sdk.exception.BizError;
+import org.quickdev.sdk.exception.BizException;
+import org.quickdev.sdk.util.LocaleUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DuplicateKeyException;
 import org.springframework.http.codec.multipart.Part;
@@ -45,10 +45,10 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import static com.google.common.collect.Sets.newHashSet;
-import static org.lowcoder.domain.user.model.UserDetail.ANONYMOUS_CURRENT_USER;
-import static org.lowcoder.sdk.constants.GlobalContext.CLIENT_IP;
-import static org.lowcoder.sdk.util.ExceptionUtils.ofError;
-import static org.lowcoder.sdk.util.ExceptionUtils.ofException;
+import static org.quickdev.domain.user.model.UserDetail.ANONYMOUS_CURRENT_USER;
+import static org.quickdev.sdk.constants.GlobalContext.CLIENT_IP;
+import static org.quickdev.sdk.util.ExceptionUtils.ofError;
+import static org.quickdev.sdk.util.ExceptionUtils.ofException;
 
 @Slf4j
 @Service

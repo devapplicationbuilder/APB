@@ -1,7 +1,7 @@
-package org.lowcoder.sdk.plugin.sqlcommand.command;
+package org.quickdev.sdk.plugin.sqlcommand.command;
 
-import static org.lowcoder.sdk.exception.PluginCommonError.INVALID_INSERT_COMMAND;
-import static org.lowcoder.sdk.plugin.sqlcommand.changeset.ChangeSet.parseChangeSet;
+import static org.quickdev.sdk.exception.PluginCommonError.INVALID_INSERT_COMMAND;
+import static org.quickdev.sdk.plugin.sqlcommand.changeset.ChangeSet.parseChangeSet;
 
 import java.util.Collections;
 import java.util.List;
@@ -11,13 +11,13 @@ import java.util.Set;
 import javax.annotation.Nonnull;
 
 import org.apache.commons.lang3.StringUtils;
-import org.lowcoder.sdk.exception.PluginException;
-import org.lowcoder.sdk.plugin.sqlcommand.GuiSqlCommand;
-import org.lowcoder.sdk.plugin.sqlcommand.changeset.ChangeSet;
-import org.lowcoder.sdk.plugin.sqlcommand.changeset.ChangeSetItem;
-import org.lowcoder.sdk.plugin.sqlcommand.changeset.ChangeSetRow;
-import org.lowcoder.sdk.util.MustacheHelper;
-import org.lowcoder.sdk.util.SqlGuiUtils.GuiSqlValue;
+import org.quickdev.sdk.exception.PluginException;
+import org.quickdev.sdk.plugin.sqlcommand.GuiSqlCommand;
+import org.quickdev.sdk.plugin.sqlcommand.changeset.ChangeSet;
+import org.quickdev.sdk.plugin.sqlcommand.changeset.ChangeSetItem;
+import org.quickdev.sdk.plugin.sqlcommand.changeset.ChangeSetRow;
+import org.quickdev.sdk.util.MustacheHelper;
+import org.quickdev.sdk.util.SqlGuiUtils.GuiSqlValue;
 
 public abstract class InsertCommand implements GuiSqlCommand {
 

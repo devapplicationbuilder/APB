@@ -1,15 +1,15 @@
-package org.lowcoder.domain.datasource.repository;
+package org.quickdev.domain.datasource.repository;
 
 import java.util.Map;
 
-import org.lowcoder.domain.datasource.model.TokenBasedConnection;
-import org.lowcoder.domain.datasource.model.TokenBasedConnectionDO;
-import org.lowcoder.domain.encryption.EncryptionService;
-import org.lowcoder.domain.plugin.service.DatasourceMetaInfoService;
-import org.lowcoder.infra.mongo.MongoUpsertHelper;
-import org.lowcoder.sdk.models.DatasourceConnectionConfig;
-import org.lowcoder.sdk.models.TokenBasedConnectionDetail;
-import org.lowcoder.sdk.plugin.common.DatasourceConnector;
+import org.quickdev.domain.datasource.model.TokenBasedConnection;
+import org.quickdev.domain.datasource.model.TokenBasedConnectionDO;
+import org.quickdev.domain.encryption.EncryptionService;
+import org.quickdev.domain.plugin.service.DatasourceMetaInfoService;
+import org.quickdev.infra.mongo.MongoUpsertHelper;
+import org.quickdev.sdk.models.DatasourceConnectionConfig;
+import org.quickdev.sdk.models.TokenBasedConnectionDetail;
+import org.quickdev.sdk.plugin.common.DatasourceConnector;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 

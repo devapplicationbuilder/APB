@@ -1,15 +1,15 @@
-package org.lowcoder.plugin.googlesheets.model;
+package org.quickdev.plugin.googlesheets.model;
 
-import static org.lowcoder.sdk.util.ExceptionUtils.ofPluginException;
-import static org.lowcoder.sdk.util.JsonUtils.fromJson;
-import static org.lowcoder.sdk.util.JsonUtils.toJson;
+import static org.quickdev.sdk.util.ExceptionUtils.ofPluginException;
+import static org.quickdev.sdk.util.JsonUtils.fromJson;
+import static org.quickdev.sdk.util.JsonUtils.toJson;
 
 import java.util.Map;
 import java.util.function.Function;
 
-import org.lowcoder.sdk.config.SerializeConfig.JsonViews;
-import org.lowcoder.sdk.exception.PluginCommonError;
-import org.lowcoder.sdk.models.DatasourceConnectionConfig;
+import org.quickdev.sdk.config.SerializeConfig.JsonViews;
+import org.quickdev.sdk.exception.PluginCommonError;
+import org.quickdev.sdk.models.DatasourceConnectionConfig;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonView;

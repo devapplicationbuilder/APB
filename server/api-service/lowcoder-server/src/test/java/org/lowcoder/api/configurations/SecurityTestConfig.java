@@ -1,4 +1,4 @@
-package org.lowcoder.api.configurations;
+package org.quickdev.api.configurations;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.config.annotation.method.configuration.EnableReactiveMethodSecurity;

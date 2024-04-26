@@ -36,8 +36,8 @@ export class AppViewInstance<I = any, O = any> {
   private events = new Map<keyof EventHandlerMap, EventHandlerMap<O>[keyof EventHandlerMap]>();
   private dataPromise: Promise<{ appDsl: any; moduleDslMap: any }>;
   private options: AppViewInstanceOptions = {
-    baseUrl: "http://localhost:4500",
-      webUrl: "http://localhost:4500",
+    baseUrl: "http://172.23.16.1",
+      webUrl: "http://172.23.16.1",
   };
 
   constructor(private appId: string, private node: Element, private root: Root, options: AppViewInstanceOptions = {}) {
@@ -77,7 +77,18 @@ export class AppViewInstance<I = any, O = any> {
               [AuthSearchParams.loginType]: null,
             })
             //window.location.href = 'https://localhost:44447/';//`${webUrl}${AUTH_LOGIN_URL}`;
-            window.location.href = 'http://172.23.16.1:4501/';
+            //window.location.href = 'http://172.23.16.1:4501/';
+
+            const { protocol, hostname, port } = window.location;
+
+            if (port) {
+                const newPort = Number(port) + 1;
+                const newUrl = `${protocol}//${hostname}:${newPort}`;
+                window.location.href = newUrl;
+            } else {
+                const newUrl = `${protocol}//${hostname}_AUTH`;
+                window.location.href = newUrl;
+            }
           }
         });
 

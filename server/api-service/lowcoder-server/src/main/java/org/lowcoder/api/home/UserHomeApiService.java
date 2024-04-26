@@ -1,16 +1,16 @@
-package org.lowcoder.api.home;
+package org.quickdev.api.home;
 
 import javax.annotation.Nullable;
 
-import org.lowcoder.api.application.view.MarketplaceApplicationInfoView;
+import org.quickdev.api.application.view.MarketplaceApplicationInfoView;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
-import org.lowcoder.api.application.view.ApplicationInfoView;
-import org.lowcoder.api.usermanagement.view.UserProfileView;
-import org.lowcoder.domain.application.model.ApplicationStatus;
-import org.lowcoder.domain.application.model.ApplicationType;
-import org.lowcoder.domain.user.model.User;
+import org.quickdev.api.application.view.ApplicationInfoView;
+import org.quickdev.api.usermanagement.view.UserProfileView;
+import org.quickdev.domain.application.model.ApplicationStatus;
+import org.quickdev.domain.application.model.ApplicationType;
+import org.quickdev.domain.user.model.User;
 import org.springframework.web.server.ServerWebExchange;
 
 public interface UserHomeApiService {

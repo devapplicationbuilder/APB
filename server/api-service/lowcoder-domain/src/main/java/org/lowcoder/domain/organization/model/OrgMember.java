@@ -1,9 +1,9 @@
-package org.lowcoder.domain.organization.model;
+package org.quickdev.domain.organization.model;
 
 import static com.google.common.base.Strings.nullToEmpty;
 
 import org.apache.commons.lang3.StringUtils;
-import org.lowcoder.infra.birelation.BiRelation;
+import org.quickdev.infra.birelation.BiRelation;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonIgnore;

@@ -1,10 +1,10 @@
-package org.lowcoder.api.application;
+package org.quickdev.api.application;
 
 import java.util.Map;
 
-import org.lowcoder.api.application.view.HistorySnapshotDslView;
-import org.lowcoder.api.framework.view.ResponseView;
-import org.lowcoder.infra.constant.NewUrl;
+import org.quickdev.api.application.view.HistorySnapshotDslView;
+import org.quickdev.api.framework.view.ResponseView;
+import org.quickdev.infra.constant.NewUrl;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;

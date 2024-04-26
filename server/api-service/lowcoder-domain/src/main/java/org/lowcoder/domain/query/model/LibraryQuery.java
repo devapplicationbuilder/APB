@@ -1,12 +1,12 @@
-package org.lowcoder.domain.query.model;
+package org.quickdev.domain.query.model;
 
 import static com.google.common.base.Suppliers.memoize;
 
 import java.util.Map;
 import java.util.function.Supplier;
 
-import org.lowcoder.sdk.models.HasIdAndAuditing;
-import org.lowcoder.sdk.util.JsonUtils;
+import org.quickdev.sdk.models.HasIdAndAuditing;
+import org.quickdev.sdk.util.JsonUtils;
 import org.springframework.data.annotation.Transient;
 import org.springframework.data.mongodb.core.mapping.Document;
 

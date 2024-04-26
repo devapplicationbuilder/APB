@@ -1,7 +1,7 @@
-package org.lowcoder.sdk.config;
+package org.quickdev.sdk.config;
 
-import org.lowcoder.sdk.config.dynamic.ConfigCenter;
-import org.lowcoder.sdk.config.dynamic.ConfigInstanceHelper;
+import org.quickdev.sdk.config.dynamic.ConfigCenter;
+import org.quickdev.sdk.config.dynamic.ConfigInstanceHelper;
 import org.springframework.stereotype.Component;
 
 @Component

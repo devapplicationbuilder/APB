@@ -1,11 +1,11 @@
-package org.lowcoder.api.framework.exception;
+package org.quickdev.api.framework.exception;
 
 import static java.util.Optional.ofNullable;
 
-import org.lowcoder.infra.perf.PerfEvent;
-import org.lowcoder.infra.perf.PerfHelper;
-import org.lowcoder.sdk.exception.BizError;
-import org.lowcoder.sdk.exception.PluginError;
+import org.quickdev.infra.perf.PerfEvent;
+import org.quickdev.infra.perf.PerfHelper;
+import org.quickdev.sdk.exception.BizError;
+import org.quickdev.sdk.exception.PluginError;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.server.PathContainer;
 import org.springframework.http.server.RequestPath;

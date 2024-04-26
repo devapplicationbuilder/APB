@@ -1,17 +1,17 @@
-package org.lowcoder.api.service;
+package org.quickdev.api.service;
 
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.lowcoder.api.application.view.ApplicationInfoView;
-import org.lowcoder.api.application.view.ApplicationPermissionView;
-import org.lowcoder.api.common.mockuser.WithMockUser;
-import org.lowcoder.api.home.FolderApiService;
-import org.lowcoder.api.permission.view.PermissionItemView;
-import org.lowcoder.domain.folder.model.Folder;
-import org.lowcoder.domain.folder.service.FolderService;
-import org.lowcoder.domain.permission.model.ResourceRole;
+import org.quickdev.api.application.view.ApplicationInfoView;
+import org.quickdev.api.application.view.ApplicationPermissionView;
+import org.quickdev.api.common.mockuser.WithMockUser;
+import org.quickdev.api.home.FolderApiService;
+import org.quickdev.api.permission.view.PermissionItemView;
+import org.quickdev.domain.folder.model.Folder;
+import org.quickdev.domain.folder.service.FolderService;
+import org.quickdev.domain.permission.model.ResourceRole;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;

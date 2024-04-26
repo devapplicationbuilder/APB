@@ -1,6 +1,6 @@
-package org.lowcoder.domain.material.service.storage;
+package org.quickdev.domain.material.service.storage;
 
-import org.lowcoder.domain.material.model.MaterialMeta;
+import org.quickdev.domain.material.model.MaterialMeta;
 import org.reactivestreams.Publisher;
 import org.springframework.core.io.buffer.DataBuffer;
 

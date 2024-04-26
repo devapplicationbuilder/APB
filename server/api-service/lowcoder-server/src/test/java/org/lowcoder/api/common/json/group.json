@@ -1,5 +1,5 @@
 {
-  "class": "org.lowcoder.domain.group.model.Group",
+  "class": "org.quickdev.domain.group.model.Group",
   "data": [
     {
       "id": "dev",

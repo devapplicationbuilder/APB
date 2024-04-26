@@ -1,9 +1,9 @@
-package org.lowcoder.domain.group.service;
+package org.quickdev.domain.group.service;
 
 import java.util.Collection;
 
-import org.lowcoder.domain.group.model.Group;
-import org.lowcoder.infra.mongo.MongoUpsertHelper.PartialResourceWithId;
+import org.quickdev.domain.group.model.Group;
+import org.quickdev.infra.mongo.MongoUpsertHelper.PartialResourceWithId;
 
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;

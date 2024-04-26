@@ -17,7 +17,7 @@
 
 // copied and adapted for datasource meta structure
 
-package org.lowcoder.sdk.models;
+package org.quickdev.sdk.models;
 
 import java.lang.reflect.Type;
 import java.util.List;

@@ -1,15 +1,15 @@
-package org.lowcoder.sdk.util;
+package org.quickdev.sdk.util;
 
 import static java.util.Optional.ofNullable;
-import static org.lowcoder.sdk.util.IDUtils.generate;
-import static org.lowcoder.sdk.util.UriUtils.getRefererURI;
+import static org.quickdev.sdk.util.IDUtils.generate;
+import static org.quickdev.sdk.util.UriUtils.getRefererURI;
 
 import java.util.Optional;
 
 import javax.annotation.Nullable;
 
-import org.lowcoder.sdk.config.CommonConfig;
-import org.lowcoder.sdk.config.CommonConfig.Cookie;
+import org.quickdev.sdk.config.CommonConfig;
+import org.quickdev.sdk.config.CommonConfig.Cookie;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpCookie;
 import org.springframework.http.ResponseCookie;

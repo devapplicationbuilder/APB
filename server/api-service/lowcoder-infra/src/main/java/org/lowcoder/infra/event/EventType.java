@@ -1,8 +1,8 @@
-package org.lowcoder.infra.event;
+package org.quickdev.infra.event;
 
 import java.util.Locale;
 
-import org.lowcoder.sdk.util.LocaleUtils;
+import org.quickdev.sdk.util.LocaleUtils;
 
 public enum EventType {
 

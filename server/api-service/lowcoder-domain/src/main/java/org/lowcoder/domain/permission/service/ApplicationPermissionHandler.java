@@ -1,12 +1,12 @@
-package org.lowcoder.domain.permission.service;
+package org.quickdev.domain.permission.service;
 
 import static com.google.common.collect.Sets.newHashSet;
 import static java.util.Collections.emptyMap;
 import static java.util.function.Function.identity;
 import static org.apache.commons.collections4.SetUtils.union;
-import static org.lowcoder.domain.permission.model.ResourceHolder.USER;
-import static org.lowcoder.sdk.constants.Authentication.ANONYMOUS_USER_ID;
-import static org.lowcoder.sdk.util.StreamUtils.collectMap;
+import static org.quickdev.domain.permission.model.ResourceHolder.USER;
+import static org.quickdev.sdk.constants.Authentication.ANONYMOUS_USER_ID;
+import static org.quickdev.sdk.util.StreamUtils.collectMap;
 
 import java.util.Collection;
 import java.util.Collections;
@@ -15,14 +15,14 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import org.lowcoder.domain.application.model.Application;
-import org.lowcoder.domain.application.model.ApplicationRequestType;
-import org.lowcoder.domain.application.service.ApplicationService;
-import org.lowcoder.domain.permission.model.ResourceAction;
-import org.lowcoder.domain.permission.model.ResourcePermission;
-import org.lowcoder.domain.permission.model.ResourceRole;
-import org.lowcoder.domain.permission.model.ResourceType;
-import org.lowcoder.domain.solutions.TemplateSolution;
+import org.quickdev.domain.application.model.Application;
+import org.quickdev.domain.application.model.ApplicationRequestType;
+import org.quickdev.domain.application.service.ApplicationService;
+import org.quickdev.domain.permission.model.ResourceAction;
+import org.quickdev.domain.permission.model.ResourcePermission;
+import org.quickdev.domain.permission.model.ResourceRole;
+import org.quickdev.domain.permission.model.ResourceType;
+import org.quickdev.domain.solutions.TemplateSolution;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;

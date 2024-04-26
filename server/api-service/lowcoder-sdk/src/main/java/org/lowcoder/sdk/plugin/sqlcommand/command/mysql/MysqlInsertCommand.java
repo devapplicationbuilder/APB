@@ -1,11 +1,11 @@
-package org.lowcoder.sdk.plugin.sqlcommand.command.mysql;
+package org.quickdev.sdk.plugin.sqlcommand.command.mysql;
 
-import static org.lowcoder.sdk.plugin.sqlcommand.command.GuiConstants.MYSQL_COLUMN_DELIMITER;
+import static org.quickdev.sdk.plugin.sqlcommand.command.GuiConstants.MYSQL_COLUMN_DELIMITER;
 
 import java.util.Map;
 
-import org.lowcoder.sdk.plugin.sqlcommand.changeset.ChangeSet;
-import org.lowcoder.sdk.plugin.sqlcommand.command.InsertCommand;
+import org.quickdev.sdk.plugin.sqlcommand.changeset.ChangeSet;
+import org.quickdev.sdk.plugin.sqlcommand.command.InsertCommand;
 
 import com.google.common.annotations.VisibleForTesting;
 

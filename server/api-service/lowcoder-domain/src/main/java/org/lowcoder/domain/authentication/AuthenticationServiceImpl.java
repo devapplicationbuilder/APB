@@ -1,14 +1,14 @@
-package org.lowcoder.domain.authentication;
+package org.quickdev.domain.authentication;
 
 import lombok.extern.slf4j.Slf4j;
-import org.lowcoder.domain.organization.service.OrgMemberService;
-import org.lowcoder.domain.organization.service.OrganizationService;
-import org.lowcoder.sdk.auth.AbstractAuthConfig;
-import org.lowcoder.sdk.auth.EmailAuthConfig;
-import org.lowcoder.sdk.config.AuthProperties;
-import org.lowcoder.sdk.config.CommonConfig;
-import org.lowcoder.sdk.constants.AuthSourceConstants;
-import org.lowcoder.sdk.constants.WorkspaceMode;
+import org.quickdev.domain.organization.service.OrgMemberService;
+import org.quickdev.domain.organization.service.OrganizationService;
+import org.quickdev.sdk.auth.AbstractAuthConfig;
+import org.quickdev.sdk.auth.EmailAuthConfig;
+import org.quickdev.sdk.config.AuthProperties;
+import org.quickdev.sdk.config.CommonConfig;
+import org.quickdev.sdk.constants.AuthSourceConstants;
+import org.quickdev.sdk.constants.WorkspaceMode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
@@ -18,8 +18,8 @@ import java.util.Objects;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-import static org.lowcoder.sdk.exception.BizError.LOG_IN_SOURCE_NOT_SUPPORTED;
-import static org.lowcoder.sdk.util.ExceptionUtils.ofError;
+import static org.quickdev.sdk.exception.BizError.LOG_IN_SOURCE_NOT_SUPPORTED;
+import static org.quickdev.sdk.util.ExceptionUtils.ofError;
 
 @Slf4j
 @Service

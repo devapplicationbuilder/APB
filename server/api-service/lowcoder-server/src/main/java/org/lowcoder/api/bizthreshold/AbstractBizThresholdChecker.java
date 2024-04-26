@@ -1,7 +1,7 @@
-package org.lowcoder.api.bizthreshold;
+package org.quickdev.api.bizthreshold;
 
-import static org.lowcoder.sdk.util.ExceptionUtils.deferredError;
-import static org.lowcoder.sdk.util.ExceptionUtils.ofError;
+import static org.quickdev.sdk.util.ExceptionUtils.deferredError;
+import static org.quickdev.sdk.util.ExceptionUtils.ofError;
 
 import java.util.List;
 import java.util.Map;
@@ -9,23 +9,23 @@ import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import org.lowcoder.domain.application.model.ApplicationStatus;
-import org.lowcoder.domain.application.service.ApplicationService;
-import org.lowcoder.domain.group.model.GroupMember;
-import org.lowcoder.domain.group.service.GroupMemberService;
-import org.lowcoder.domain.group.service.GroupService;
-import org.lowcoder.domain.organization.model.OrgMember;
-import org.lowcoder.domain.organization.service.OrgMemberService;
-import org.lowcoder.infra.util.TupleUtils;
-import org.lowcoder.sdk.exception.BizError;
+import org.quickdev.domain.application.model.ApplicationStatus;
+import org.quickdev.domain.application.service.ApplicationService;
+import org.quickdev.domain.group.model.GroupMember;
+import org.quickdev.domain.group.service.GroupMemberService;
+import org.quickdev.domain.group.service.GroupService;
+import org.quickdev.domain.organization.model.OrgMember;
+import org.quickdev.domain.organization.service.OrgMemberService;
+import org.quickdev.infra.util.TupleUtils;
+import org.quickdev.sdk.exception.BizError;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.web.reactive.function.client.WebClient;
 
 import reactor.core.publisher.Mono;
 
 @Component
 public abstract class AbstractBizThresholdChecker {
-
     @Autowired
     private OrgMemberService orgMemberService;
 
@@ -62,43 +62,122 @@ public abstract class AbstractBizThresholdChecker {
     }
 
     private boolean userOrgCountBelowThreshold(String userId, long userOrgCount) {
-        return userOrgCount < Math.max(getUserOrgCountWhiteList().getOrDefault(userId, 0),
-                getMaxOrgPerUser());
+        return userOrgCount < getMaxOrgPerUser();
     }
 
     public Mono<Void> checkMaxOrgMemberCount(String orgId) {
         return orgMemberService.getOrgMemberCount(orgId)
-                .filter(orgMemberCount -> orgMemberCountBelowThreshold(orgId, orgMemberCount))
-                .switchIfEmpty(deferredError(BizError.EXCEED_MAX_ORG_MEMBER_COUNT, "EXCEED_MAX_ORG_MEMBER_COUNT"))
+                .flatMap(orgMemberCount -> orgMemberCountBelowThreshold(orgId, orgMemberCount)
+                        .flatMap(isBelowThreshold -> {
+                            if (isBelowThreshold) {
+                                return Mono.empty(); // Return empty Mono to indicate success
+                            } else {
+                                return deferredError(BizError.EXCEED_MAX_ORG_MEMBER_COUNT, "EXCEED_MAX_ORG_MEMBER_COUNT");
+                            }
+                        }))
                 .then();
     }
 
-    private boolean orgMemberCountBelowThreshold(String orgId, Long orgMemberCount) {
-        return orgMemberCount < Math.max(getMaxOrgMemberCount(), getOrgMemberCountWhiteList().getOrDefault(orgId, 0));
+    private Mono<Boolean> orgMemberCountBelowThreshold(String orgId, Long orgMemberCount) {
+        return getItemFromLicense(orgId, "MAX_USERS")
+                .map(maxUsers -> orgMemberCount < Long.parseLong(maxUsers) + 1)
+                .defaultIfEmpty(false);
     }
 
     public Mono<Void> checkMaxGroupCount(OrgMember orgMemberMono) {
         return groupService.getOrgGroupCount(orgMemberMono.getOrgId())
-                .filter(it -> it < getMaxOrgGroupCount())
-                .switchIfEmpty(deferredError(BizError.EXCEED_MAX_GROUP_COUNT, "EXCEED_MAX_GROUP_COUNT"))
+                .flatMap(orgGroupCount -> orgGroupCountBelowThreshold(orgMemberMono.getOrgId(), orgGroupCount)
+                        .flatMap(isBelowThreshold -> {
+                            if (isBelowThreshold) {
+                                return Mono.empty(); // Return empty Mono to indicate success
+                            } else {
+                                return deferredError(BizError.EXCEED_MAX_GROUP_COUNT, "EXCEED_MAX_GROUP_COUNT");
+                            }
+                        }))
                 .then();
+    }
+
+    private Mono<Boolean> orgGroupCountBelowThreshold(String orgId, Long orgGroupCount) {
+        return getItemFromLicense(orgId, "MAX_GROUPS")
+                .map(maxGroups -> orgGroupCount < Long.parseLong(maxGroups) + 2)
+                .defaultIfEmpty(false);
     }
 
     public Mono<Void> checkMaxOrgApplicationCount(OrgMember orgMember) {
         String orgId = orgMember.getOrgId();
         return applicationService.countByOrganizationId(orgId, ApplicationStatus.NORMAL)
-                .filter(orgAppCount -> orgAppCountBelowThreshold(orgId, orgAppCount))
-                .switchIfEmpty(deferredError(BizError.EXCEED_MAX_APP_COUNT, "EXCEED_MAX_APP_COUNT"))
-                .then();
+                .flatMap(orgAppCount -> orgAppCountBelowThreshold(orgId, orgAppCount)
+                        .flatMap(isBelowThreshold -> {
+                            if (isBelowThreshold) {
+                                return Mono.empty(); // Return empty Mono to indicate success
+                            } else {
+                                return deferredError(BizError.EXCEED_MAX_APP_COUNT, "EXCEED_MAX_APP_COUNT");
+                            }
+                        }))
+                .then(); // Convert the result to Mono<Void>
     }
 
-    private boolean orgAppCountBelowThreshold(String orgId, long orgAppCount) {
-        return orgAppCount < Math.max(getMaxOrgAppCount(), getOrgAppCountWhiteList().getOrDefault(orgId, 0));
+    public Mono<String> getItemFromLicense(String orgId, String type) {
+        String authUrl = System.getenv("QUICKDEV_AUTH_URL");
+        String url = authUrl + "/api/QuickDEV/" + orgId + "/CheckLicense";
+
+        WebClient webClient = WebClient.create();
+
+        return webClient.get()
+                .uri(url)
+                .retrieve()
+                .bodyToMono(String.class)
+                .flatMap(license -> {
+                    if(license.equalsIgnoreCase("ERROR"))
+                        return deferredError(BizError.NO_LICENSE, "NO_LICENSE");
+
+                    String[] parts = license.split("#");
+
+                    String editValidTo = parts[0] + "#" + parts[1] + "#" + parts[2] + "#" + parts[3] + "#" + parts[4] + "#" + parts[5];
+                    String viewValidTo = parts[6] + "#" + parts[7] + "#" + parts[8] + "#" + parts[9] + "#" + parts[10] + "#" + parts[11];
+                    String maxApps = parts[12];
+                    String maxGroups = parts[13];
+                    String maxUsers = parts[14];
+                    String maxDevs = parts[15];
+
+                    if (type.equalsIgnoreCase("MAX_APPS")) {
+                        return Mono.just(maxApps);
+                    }
+                    else if (type.equalsIgnoreCase("MAX_GROUPS")) {
+                        return Mono.just(maxGroups);
+                    }
+                    else if (type.equalsIgnoreCase("MAX_USERS")) {
+                        return Mono.just(maxUsers);
+                    }
+                    else if (type.equalsIgnoreCase("MAX_DEVELOPERS")) {
+                        return Mono.just(maxDevs);
+                    }
+                    else if (type.equalsIgnoreCase("EDIT_VALID_TO")) {
+                        return Mono.just(editValidTo);
+                    }
+                    else if (type.equalsIgnoreCase("VIEW_VALID_TO")) {
+                        return Mono.just(editValidTo);
+                    }
+
+                    return Mono.empty();
+                });
+    }
+
+    private Mono<Boolean> orgAppCountBelowThreshold(String orgId, long orgAppCount) {
+        return getItemFromLicense(orgId, "MAX_APPS")
+                .map(maxApps -> orgAppCount < Long.parseLong(maxApps))
+                .defaultIfEmpty(false); // Return false if getItemFromLicense returns empty
+    }
+
+    private Mono<Boolean> orgDeveloperCountBelowThreshold(String orgId, long orgDeveloperCount) {
+        return getItemFromLicense(orgId, "MAX_DEVELOPERS")
+                .map(maxDevelopers -> orgDeveloperCount < Long.parseLong(maxDevelopers) + 2)
+                .defaultIfEmpty(false); // Return false if getItemFromLicense returns empty
     }
 
     public Mono<Void> checkMaxDeveloperCount(String orgId, String developGroupId, String userId) {
         return orgMemberService.getAllOrgAdmins(orgId)
-                .zipWith(groupMemberService.getGroupMembers(developGroupId, 1, 100))
+                .zipWith(groupMemberService.getGroupMembers(developGroupId, 1, 9999))
                 .zipWith(getMaxDeveloperCount(), TupleUtils::merge)
                 .flatMap(tuple -> {
                     List<OrgMember> t1 = tuple.getT1();
@@ -108,10 +187,16 @@ public abstract class AbstractBizThresholdChecker {
                             .collect(Collectors.toSet());
                     developerIds.add(userId);
                     //MAX_DEVELOPERS = 5
-                    if (developerIds.size() > 5) {
-                        return ofError(BizError.EXCEED_MAX_DEVELOPER_COUNT, "EXCEED_MAX_DEVELOPER_COUNT");
-                    }
-                    return Mono.empty();
+
+                    return orgDeveloperCountBelowThreshold(orgId, developerIds.size())
+                            .flatMap(isBelowThreshold -> {
+                                if (isBelowThreshold) {
+                                    return Mono.empty(); // Return empty Mono to indicate success
+                                } else {
+                                    return deferredError(BizError.EXCEED_MAX_APP_COUNT, "EXCEED_MAX_DEVELOPER_COUNT");
+                                }
+                            })
+                            .then();
                 });
     }
 }

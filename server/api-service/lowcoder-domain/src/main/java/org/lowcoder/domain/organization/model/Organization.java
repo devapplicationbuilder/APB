@@ -1,8 +1,8 @@
-package org.lowcoder.domain.organization.model;
+package org.quickdev.domain.organization.model;
 
 import static java.util.Optional.ofNullable;
 import static org.apache.commons.lang3.ObjectUtils.firstNonNull;
-import static org.lowcoder.infra.util.AssetUtils.toAssetPath;
+import static org.quickdev.infra.util.AssetUtils.toAssetPath;
 
 import java.util.Collections;
 import java.util.HashMap;
@@ -11,11 +11,11 @@ import java.util.Optional;
 
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
-import org.lowcoder.domain.mongodb.AfterMongodbRead;
-import org.lowcoder.domain.mongodb.BeforeMongodbWrite;
-import org.lowcoder.domain.mongodb.MongodbInterceptorContext;
-import org.lowcoder.sdk.auth.AbstractAuthConfig;
-import org.lowcoder.sdk.models.HasIdAndAuditing;
+import org.quickdev.domain.mongodb.AfterMongodbRead;
+import org.quickdev.domain.mongodb.BeforeMongodbWrite;
+import org.quickdev.domain.mongodb.MongodbInterceptorContext;
+import org.quickdev.sdk.auth.AbstractAuthConfig;
+import org.quickdev.sdk.models.HasIdAndAuditing;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;

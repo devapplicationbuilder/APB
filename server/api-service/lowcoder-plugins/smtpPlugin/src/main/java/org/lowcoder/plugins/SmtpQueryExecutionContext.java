@@ -1,10 +1,10 @@
-package org.lowcoder.plugins;
+package org.quickdev.plugins;
 
 import java.util.List;
 
 import javax.mail.internet.InternetAddress;
 
-import org.lowcoder.sdk.query.QueryExecutionContext;
+import org.quickdev.sdk.query.QueryExecutionContext;
 
 import lombok.Builder;
 import lombok.Getter;

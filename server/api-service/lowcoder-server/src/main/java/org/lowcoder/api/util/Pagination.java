@@ -1,8 +1,8 @@
-package org.lowcoder.api.util;
+package org.quickdev.api.util;
 
-import static org.lowcoder.sdk.exception.BizError.INVALID_PARAMETER;
+import static org.quickdev.sdk.exception.BizError.INVALID_PARAMETER;
 
-import org.lowcoder.sdk.exception.BizException;
+import org.quickdev.sdk.exception.BizException;
 import org.springframework.data.domain.PageRequest;
 
 public class Pagination {

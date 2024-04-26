@@ -1,9 +1,9 @@
-package org.lowcoder.domain.template.service;
+package org.quickdev.domain.template.service;
 
 import java.util.Collection;
 
-import org.lowcoder.domain.template.model.Template;
-import org.lowcoder.domain.template.repository.TemplateRepository;
+import org.quickdev.domain.template.model.Template;
+import org.quickdev.domain.template.repository.TemplateRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

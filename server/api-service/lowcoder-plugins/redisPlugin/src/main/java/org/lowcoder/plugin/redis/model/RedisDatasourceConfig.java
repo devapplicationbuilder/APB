@@ -1,18 +1,18 @@
-package org.lowcoder.plugin.redis.model;
+package org.quickdev.plugin.redis.model;
 
 import static org.apache.commons.lang3.ObjectUtils.firstNonNull;
-import static org.lowcoder.sdk.exception.BizError.INVALID_DATASOURCE_CONFIG_TYPE;
-import static org.lowcoder.sdk.exception.PluginCommonError.DATASOURCE_ARGUMENT_ERROR;
-import static org.lowcoder.sdk.util.ExceptionUtils.ofException;
-import static org.lowcoder.sdk.util.ExceptionUtils.ofPluginException;
-import static org.lowcoder.sdk.util.JsonUtils.fromJson;
-import static org.lowcoder.sdk.util.JsonUtils.toJson;
+import static org.quickdev.sdk.exception.BizError.INVALID_DATASOURCE_CONFIG_TYPE;
+import static org.quickdev.sdk.exception.PluginCommonError.DATASOURCE_ARGUMENT_ERROR;
+import static org.quickdev.sdk.util.ExceptionUtils.ofException;
+import static org.quickdev.sdk.util.ExceptionUtils.ofPluginException;
+import static org.quickdev.sdk.util.JsonUtils.fromJson;
+import static org.quickdev.sdk.util.JsonUtils.toJson;
 
 import java.util.Map;
 import java.util.function.Function;
 
-import org.lowcoder.sdk.config.SerializeConfig.JsonViews;
-import org.lowcoder.sdk.models.DatasourceConnectionConfig;
+import org.quickdev.sdk.config.SerializeConfig.JsonViews;
+import org.quickdev.sdk.models.DatasourceConnectionConfig;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonView;

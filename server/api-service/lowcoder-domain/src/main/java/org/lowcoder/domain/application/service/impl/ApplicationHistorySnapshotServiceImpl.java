@@ -1,16 +1,16 @@
-package org.lowcoder.domain.application.service.impl;
+package org.quickdev.domain.application.service.impl;
 
-import static org.lowcoder.sdk.exception.BizError.INVALID_HISTORY_SNAPSHOT;
-import static org.lowcoder.sdk.util.ExceptionUtils.deferredError;
-import static org.lowcoder.sdk.util.ExceptionUtils.ofException;
+import static org.quickdev.sdk.exception.BizError.INVALID_HISTORY_SNAPSHOT;
+import static org.quickdev.sdk.util.ExceptionUtils.deferredError;
+import static org.quickdev.sdk.util.ExceptionUtils.ofException;
 
 import java.util.List;
 import java.util.Map;
 
-import org.lowcoder.domain.application.model.ApplicationHistorySnapshot;
-import org.lowcoder.domain.application.repository.ApplicationHistorySnapshotRepository;
-import org.lowcoder.domain.application.service.ApplicationHistorySnapshotService;
-import org.lowcoder.sdk.exception.BizError;
+import org.quickdev.domain.application.model.ApplicationHistorySnapshot;
+import org.quickdev.domain.application.repository.ApplicationHistorySnapshotRepository;
+import org.quickdev.domain.application.service.ApplicationHistorySnapshotService;
+import org.quickdev.sdk.exception.BizError;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.data.domain.PageRequest;

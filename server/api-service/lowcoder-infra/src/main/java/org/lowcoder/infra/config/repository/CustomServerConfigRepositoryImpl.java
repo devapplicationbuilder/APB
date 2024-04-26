@@ -1,7 +1,7 @@
-package org.lowcoder.infra.config.repository;
+package org.quickdev.infra.config.repository;
 
-import org.lowcoder.infra.config.model.ServerConfig;
-import org.lowcoder.infra.mongo.MongoUpsertHelper;
+import org.quickdev.infra.config.model.ServerConfig;
+import org.quickdev.infra.mongo.MongoUpsertHelper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 

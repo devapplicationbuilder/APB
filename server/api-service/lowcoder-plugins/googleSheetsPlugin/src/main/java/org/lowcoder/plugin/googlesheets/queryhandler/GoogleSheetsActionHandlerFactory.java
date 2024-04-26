@@ -1,13 +1,13 @@
-package org.lowcoder.plugin.googlesheets.queryhandler;
+package org.quickdev.plugin.googlesheets.queryhandler;
 
 
-import static org.lowcoder.sdk.exception.PluginCommonError.QUERY_ARGUMENT_ERROR;
+import static org.quickdev.sdk.exception.PluginCommonError.QUERY_ARGUMENT_ERROR;
 
 import java.util.Map;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-import org.lowcoder.sdk.exception.PluginException;
+import org.quickdev.sdk.exception.PluginException;
 
 import com.google.common.collect.Lists;
 

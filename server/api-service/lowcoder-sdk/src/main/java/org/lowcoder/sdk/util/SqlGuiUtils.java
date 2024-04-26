@@ -1,8 +1,8 @@
-package org.lowcoder.sdk.util;
+package org.quickdev.sdk.util;
 
 import static org.apache.commons.lang3.StringUtils.isBlank;
-import static org.lowcoder.sdk.util.JsonUtils.jsonNodeToObject;
-import static org.lowcoder.sdk.util.JsonUtils.toJson;
+import static org.quickdev.sdk.util.JsonUtils.jsonNodeToObject;
+import static org.quickdev.sdk.util.JsonUtils.toJson;
 
 import java.util.Collection;
 import java.util.Map;
@@ -10,7 +10,7 @@ import java.util.Map;
 import javax.annotation.Nonnull;
 
 import org.apache.commons.lang3.RandomStringUtils;
-import org.lowcoder.sdk.util.SqlGuiUtils.GuiSqlValue.EscapeSql;
+import org.quickdev.sdk.util.SqlGuiUtils.GuiSqlValue.EscapeSql;
 
 import com.fasterxml.jackson.databind.JsonNode;
 

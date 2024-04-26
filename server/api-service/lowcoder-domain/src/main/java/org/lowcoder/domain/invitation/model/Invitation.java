@@ -1,8 +1,8 @@
-package org.lowcoder.domain.invitation.model;
+package org.quickdev.domain.invitation.model;
 
 import java.util.Set;
 
-import org.lowcoder.sdk.models.HasIdAndAuditing;
+import org.quickdev.sdk.models.HasIdAndAuditing;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import lombok.Builder;

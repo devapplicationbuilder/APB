@@ -1,6 +1,6 @@
-package org.lowcoder.api.authentication.dto;
+package org.quickdev.api.authentication.dto;
 
-import static org.lowcoder.sdk.util.IDUtils.generate;
+import static org.quickdev.sdk.util.IDUtils.generate;
 
 import java.util.HashMap;
 

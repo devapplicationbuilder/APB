@@ -1,13 +1,13 @@
-package org.lowcoder.sdk.plugin.mysql;
+package org.quickdev.sdk.plugin.mysql;
 
-import static org.lowcoder.sdk.util.ExceptionUtils.ofPluginException;
-import static org.lowcoder.sdk.util.JsonUtils.fromJson;
-import static org.lowcoder.sdk.util.JsonUtils.toJson;
+import static org.quickdev.sdk.util.ExceptionUtils.ofPluginException;
+import static org.quickdev.sdk.util.JsonUtils.fromJson;
+import static org.quickdev.sdk.util.JsonUtils.toJson;
 
 import java.util.Map;
 
-import org.lowcoder.sdk.exception.PluginCommonError;
-import org.lowcoder.sdk.plugin.common.sql.SqlBasedDatasourceConnectionConfig;
+import org.quickdev.sdk.exception.PluginCommonError;
+import org.quickdev.sdk.plugin.common.sql.SqlBasedDatasourceConnectionConfig;
 
 import com.google.common.annotations.VisibleForTesting;
 

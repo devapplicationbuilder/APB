@@ -1,4 +1,4 @@
-package org.lowcoder.sdk.plugin.sqlcommand.command;
+package org.quickdev.sdk.plugin.sqlcommand.command;
 
 public final class GuiConstants {
 

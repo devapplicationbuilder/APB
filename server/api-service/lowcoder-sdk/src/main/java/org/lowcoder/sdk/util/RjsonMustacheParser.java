@@ -1,16 +1,16 @@
-package org.lowcoder.sdk.util;
+package org.quickdev.sdk.util;
 
 import static org.apache.commons.lang3.StringUtils.isBlank;
 import static org.apache.commons.lang3.StringUtils.replace;
-import static org.lowcoder.sdk.exception.PluginCommonError.JSON_PARSE_ERROR;
-import static org.lowcoder.sdk.util.JsonUtils.EMPTY_JSON_NODE;
-import static org.lowcoder.sdk.util.JsonUtils.createArrayNode;
-import static org.lowcoder.sdk.util.JsonUtils.createObjectNode;
-import static org.lowcoder.sdk.util.JsonUtils.valueToTree;
-import static org.lowcoder.sdk.util.MustacheHelper.isMustacheToken;
-import static org.lowcoder.sdk.util.MustacheHelper.removeCurlyBraces;
-import static org.lowcoder.sdk.util.MustacheHelper.tokenize;
-import static org.lowcoder.sdk.util.StreamUtils.toMapNullFriendly;
+import static org.quickdev.sdk.exception.PluginCommonError.JSON_PARSE_ERROR;
+import static org.quickdev.sdk.util.JsonUtils.EMPTY_JSON_NODE;
+import static org.quickdev.sdk.util.JsonUtils.createArrayNode;
+import static org.quickdev.sdk.util.JsonUtils.createObjectNode;
+import static org.quickdev.sdk.util.JsonUtils.valueToTree;
+import static org.quickdev.sdk.util.MustacheHelper.isMustacheToken;
+import static org.quickdev.sdk.util.MustacheHelper.removeCurlyBraces;
+import static org.quickdev.sdk.util.MustacheHelper.tokenize;
+import static org.quickdev.sdk.util.StreamUtils.toMapNullFriendly;
 
 import java.util.Collection;
 import java.util.HashMap;
@@ -24,7 +24,7 @@ import javax.annotation.Nullable;
 
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.math.NumberUtils;
-import org.lowcoder.sdk.exception.PluginException;
+import org.quickdev.sdk.exception.PluginException;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.node.ArrayNode;

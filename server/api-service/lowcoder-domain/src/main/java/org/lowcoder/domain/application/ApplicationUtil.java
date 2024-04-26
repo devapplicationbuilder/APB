@@ -1,4 +1,4 @@
-package org.lowcoder.domain.application;
+package org.quickdev.domain.application;
 
 import java.util.Collections;
 import java.util.List;

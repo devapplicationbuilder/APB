@@ -1,21 +1,21 @@
-package org.lowcoder.domain.permission.service.impl;
+package org.quickdev.domain.permission.service.impl;
 
-import static org.lowcoder.infra.birelation.BiRelationBizType.RESOURCE;
-import static org.lowcoder.sdk.util.StreamUtils.collectList;
+import static org.quickdev.infra.birelation.BiRelationBizType.RESOURCE;
+import static org.quickdev.sdk.util.StreamUtils.collectList;
 
 import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-import org.lowcoder.domain.permission.model.ResourceHolder;
-import org.lowcoder.domain.permission.model.ResourcePermission;
-import org.lowcoder.domain.permission.model.ResourceRole;
-import org.lowcoder.domain.permission.model.ResourceType;
-import org.lowcoder.domain.permission.service.ResourcePermissionRepository;
-import org.lowcoder.infra.birelation.BiRelation;
-import org.lowcoder.infra.birelation.BiRelationService;
-import org.lowcoder.infra.mongo.MongoUpsertHelper;
+import org.quickdev.domain.permission.model.ResourceHolder;
+import org.quickdev.domain.permission.model.ResourcePermission;
+import org.quickdev.domain.permission.model.ResourceRole;
+import org.quickdev.domain.permission.model.ResourceType;
+import org.quickdev.domain.permission.service.ResourcePermissionRepository;
+import org.quickdev.infra.birelation.BiRelation;
+import org.quickdev.infra.birelation.BiRelationService;
+import org.quickdev.infra.mongo.MongoUpsertHelper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Service;

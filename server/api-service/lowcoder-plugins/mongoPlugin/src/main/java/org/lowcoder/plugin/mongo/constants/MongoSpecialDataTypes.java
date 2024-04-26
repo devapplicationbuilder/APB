@@ -14,7 +14,7 @@
  * limitations under the License.
  * <p>
  */
-package org.lowcoder.plugin.mongo.constants;
+package org.quickdev.plugin.mongo.constants;
 
 import java.util.regex.Pattern;
 

@@ -1,7 +1,7 @@
-package org.lowcoder.sdk.plugin.sqlcommand.changeset;
+package org.quickdev.sdk.plugin.sqlcommand.changeset;
 
-import static org.lowcoder.sdk.exception.PluginCommonError.INVALID_GUI_SETTINGS;
-import static org.lowcoder.sdk.util.JsonUtils.toJson;
+import static org.quickdev.sdk.exception.PluginCommonError.INVALID_GUI_SETTINGS;
+import static org.quickdev.sdk.util.JsonUtils.toJson;
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
@@ -15,10 +15,10 @@ import javax.annotation.Nonnull;
 import org.apache.commons.collections4.MapUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.tuple.Pair;
-import org.lowcoder.sdk.exception.PluginException;
-import org.lowcoder.sdk.util.MustacheHelper;
-import org.lowcoder.sdk.util.SqlGuiUtils;
-import org.lowcoder.sdk.util.SqlGuiUtils.GuiSqlValue;
+import org.quickdev.sdk.exception.PluginException;
+import org.quickdev.sdk.util.MustacheHelper;
+import org.quickdev.sdk.util.SqlGuiUtils;
+import org.quickdev.sdk.util.SqlGuiUtils.GuiSqlValue;
 
 import com.google.common.annotations.VisibleForTesting;
 

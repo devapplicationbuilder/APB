@@ -1,10 +1,10 @@
-package org.lowcoder.api.config;
+package org.quickdev.api.config;
 
 
 import java.util.List;
 
-import org.lowcoder.sdk.auth.AbstractAuthConfig;
-import org.lowcoder.sdk.constants.WorkspaceMode;
+import org.quickdev.sdk.auth.AbstractAuthConfig;
+import org.quickdev.sdk.constants.WorkspaceMode;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;

@@ -1,19 +1,19 @@
-package org.lowcoder.api.usermanagement;
+package org.quickdev.api.usermanagement;
 
-import static org.lowcoder.sdk.exception.BizError.UNSUPPORTED_OPERATION;
-import static org.lowcoder.sdk.util.ExceptionUtils.ofError;
+import static org.quickdev.sdk.exception.BizError.UNSUPPORTED_OPERATION;
+import static org.quickdev.sdk.util.ExceptionUtils.ofError;
 
 import java.util.Objects;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-import org.lowcoder.api.home.SessionUserService;
-import org.lowcoder.domain.organization.service.OrgMemberService;
-import org.lowcoder.domain.user.model.Connection;
-import org.lowcoder.domain.user.model.User;
-import org.lowcoder.domain.user.model.UserDetail;
-import org.lowcoder.domain.user.repository.UserRepository;
-import org.lowcoder.domain.user.service.UserService;
+import org.quickdev.api.home.SessionUserService;
+import org.quickdev.domain.organization.service.OrgMemberService;
+import org.quickdev.domain.user.model.Connection;
+import org.quickdev.domain.user.model.User;
+import org.quickdev.domain.user.model.UserDetail;
+import org.quickdev.domain.user.repository.UserRepository;
+import org.quickdev.domain.user.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,12 +1,12 @@
-package org.lowcoder.api.usermanagement;
+package org.quickdev.api.usermanagement;
 
 
-import static org.lowcoder.sdk.constants.Authentication.isAnonymousUser;
-import static org.lowcoder.sdk.exception.BizError.INVITED_USER_NOT_LOGIN;
+import static org.quickdev.sdk.constants.Authentication.isAnonymousUser;
+import static org.quickdev.sdk.exception.BizError.INVITED_USER_NOT_LOGIN;
 
-import org.lowcoder.api.framework.view.ResponseView;
-import org.lowcoder.api.home.SessionUserService;
-import org.lowcoder.api.usermanagement.view.InvitationVO;
+import org.quickdev.api.framework.view.ResponseView;
+import org.quickdev.api.home.SessionUserService;
+import org.quickdev.api.usermanagement.view.InvitationVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;

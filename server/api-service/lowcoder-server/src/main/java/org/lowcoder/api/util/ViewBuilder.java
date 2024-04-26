@@ -1,8 +1,8 @@
-package org.lowcoder.api.util;
+package org.quickdev.api.util;
 
 import static java.util.function.Function.identity;
-import static org.lowcoder.sdk.util.StreamUtils.collectList;
-import static org.lowcoder.sdk.util.StreamUtils.collectMap;
+import static org.quickdev.sdk.util.StreamUtils.collectList;
+import static org.quickdev.sdk.util.StreamUtils.collectMap;
 
 import java.util.Collection;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.function.BiFunction;
 import java.util.function.Function;
 
-import org.lowcoder.infra.annotation.NonEmptyMono;
+import org.quickdev.infra.annotation.NonEmptyMono;
 
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;

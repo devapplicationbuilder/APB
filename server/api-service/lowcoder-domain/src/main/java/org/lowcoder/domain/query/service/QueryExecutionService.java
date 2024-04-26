@@ -1,20 +1,20 @@
-package org.lowcoder.domain.query.service;
+package org.quickdev.domain.query.service;
 
 import lombok.extern.slf4j.Slf4j;
-import org.lowcoder.domain.datasource.model.Datasource;
-import org.lowcoder.domain.datasource.model.DatasourceConnectionHolder;
-import org.lowcoder.domain.datasource.service.DatasourceConnectionPool;
-import org.lowcoder.domain.plugin.client.DatasourcePluginClient;
-import org.lowcoder.domain.plugin.service.DatasourceMetaInfoService;
-import org.lowcoder.domain.query.util.QueryTimeoutUtils;
-import org.lowcoder.sdk.config.CommonConfig;
-import org.lowcoder.sdk.exception.BizException;
-import org.lowcoder.sdk.exception.PluginException;
-import org.lowcoder.sdk.models.JsDatasourceConnectionConfig;
-import org.lowcoder.sdk.models.Property;
-import org.lowcoder.sdk.models.QueryExecutionResult;
-import org.lowcoder.sdk.query.QueryExecutionContext;
-import org.lowcoder.sdk.query.QueryVisitorContext;
+import org.quickdev.domain.datasource.model.Datasource;
+import org.quickdev.domain.datasource.model.DatasourceConnectionHolder;
+import org.quickdev.domain.datasource.service.DatasourceConnectionPool;
+import org.quickdev.domain.plugin.client.DatasourcePluginClient;
+import org.quickdev.domain.plugin.service.DatasourceMetaInfoService;
+import org.quickdev.domain.query.util.QueryTimeoutUtils;
+import org.quickdev.sdk.config.CommonConfig;
+import org.quickdev.sdk.exception.BizException;
+import org.quickdev.sdk.exception.PluginException;
+import org.quickdev.sdk.models.JsDatasourceConnectionConfig;
+import org.quickdev.sdk.models.Property;
+import org.quickdev.sdk.models.QueryExecutionResult;
+import org.quickdev.sdk.query.QueryExecutionContext;
+import org.quickdev.sdk.query.QueryVisitorContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Mono;
@@ -26,9 +26,9 @@ import java.util.Map;
 import java.util.concurrent.TimeoutException;
 import java.util.stream.Collectors;
 
-import static org.lowcoder.sdk.exception.BizError.QUERY_EXECUTION_ERROR;
-import static org.lowcoder.sdk.exception.PluginCommonError.QUERY_EXECUTION_TIMEOUT;
-import static org.lowcoder.sdk.util.ExceptionUtils.ofException;
+import static org.quickdev.sdk.exception.BizError.QUERY_EXECUTION_ERROR;
+import static org.quickdev.sdk.exception.PluginCommonError.QUERY_EXECUTION_TIMEOUT;
+import static org.quickdev.sdk.util.ExceptionUtils.ofException;
 
 @Slf4j
 @Service

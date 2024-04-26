@@ -1,10 +1,10 @@
-package org.lowcoder.domain.application.model;
+package org.quickdev.domain.application.model;
 
 
 import static com.google.common.base.Suppliers.memoize;
 import static java.util.Optional.ofNullable;
-import static org.lowcoder.domain.application.ApplicationUtil.getContainerSizeFromDSL;
-import static org.lowcoder.domain.application.ApplicationUtil.getDependentModulesFromDsl;
+import static org.quickdev.domain.application.ApplicationUtil.getContainerSizeFromDSL;
+import static org.quickdev.domain.application.ApplicationUtil.getDependentModulesFromDsl;
 
 import java.util.Collections;
 import java.util.Map;
@@ -15,11 +15,11 @@ import java.util.function.Supplier;
 import lombok.Setter;
 import org.apache.commons.collections4.MapUtils;
 import org.apache.commons.lang3.BooleanUtils;
-import org.lowcoder.domain.query.model.ApplicationQuery;
-import org.lowcoder.sdk.exception.BizError;
-import org.lowcoder.sdk.exception.BizException;
-import org.lowcoder.sdk.models.HasIdAndAuditing;
-import org.lowcoder.sdk.util.JsonUtils;
+import org.quickdev.domain.query.model.ApplicationQuery;
+import org.quickdev.sdk.exception.BizError;
+import org.quickdev.sdk.exception.BizException;
+import org.quickdev.sdk.models.HasIdAndAuditing;
+import org.quickdev.sdk.util.JsonUtils;
 import org.springframework.data.annotation.Transient;
 import org.springframework.data.mongodb.core.mapping.Document;
 

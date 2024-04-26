@@ -1,4 +1,4 @@
-package org.lowcoder.sdk.config;
+package org.quickdev.sdk.config;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;

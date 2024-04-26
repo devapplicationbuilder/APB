@@ -1,6 +1,6 @@
-package org.lowcoder.infra.config.model;
+package org.quickdev.infra.config.model;
 
-import org.lowcoder.sdk.models.HasIdAndAuditing;
+import org.quickdev.sdk.models.HasIdAndAuditing;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import com.fasterxml.jackson.annotation.JsonCreator;

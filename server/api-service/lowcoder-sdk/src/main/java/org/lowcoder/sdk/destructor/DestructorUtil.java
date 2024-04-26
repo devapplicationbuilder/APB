@@ -1,4 +1,4 @@
-package org.lowcoder.sdk.destructor;
+package org.quickdev.sdk.destructor;
 
 import java.util.Queue;
 import java.util.concurrent.LinkedBlockingQueue;

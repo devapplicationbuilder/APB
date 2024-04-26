@@ -1,8 +1,8 @@
-package org.lowcoder.sdk.plugin.restapi.auth;
+package org.quickdev.sdk.plugin.restapi.auth;
 
 import javax.annotation.Nullable;
 
-import org.lowcoder.sdk.models.Encrypt;
+import org.quickdev.sdk.models.Encrypt;
 
 import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonSubTypes.Type;

@@ -1,4 +1,4 @@
-package org.lowcoder.domain.user.model;
+package org.quickdev.domain.user.model;
 
 import static org.apache.commons.collections4.MapUtils.emptyIfNull;
 
@@ -12,7 +12,7 @@ import javax.validation.constraints.NotEmpty;
 import org.apache.commons.collections4.CollectionUtils;
 import org.apache.commons.collections4.SetUtils;
 import org.apache.commons.lang3.StringUtils;
-import org.lowcoder.sdk.constants.AuthSourceConstants;
+import org.quickdev.sdk.constants.AuthSourceConstants;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonIgnore;

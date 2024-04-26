@@ -1,4 +1,4 @@
-package org.lowcoder.domain.organization.model;
+package org.quickdev.domain.organization.model;
 
 public enum OrganizationState {
 

@@ -1,11 +1,11 @@
-package org.lowcoder.api.material;
+package org.quickdev.api.material;
 
-import static org.lowcoder.infra.constant.NewUrl.MATERIAL_URL;
+import static org.quickdev.infra.constant.NewUrl.MATERIAL_URL;
 
 import java.util.List;
 
-import org.lowcoder.api.framework.view.ResponseView;
-import org.lowcoder.domain.material.model.MaterialType;
+import org.quickdev.api.framework.view.ResponseView;
+import org.quickdev.domain.material.model.MaterialType;
 import org.springframework.http.server.reactive.ServerHttpResponse;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;

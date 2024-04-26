@@ -1,4 +1,4 @@
-package org.lowcoder.impl.mock;
+package org.quickdev.impl.mock;
 
 import java.util.Collections;
 import java.util.Map;
@@ -8,10 +8,10 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 import javax.annotation.Nonnull;
 
-import org.lowcoder.domain.datasource.service.impl.ClientBasedConnectionPool.ClientBasedDatasourceCacheKey;
-import org.lowcoder.sdk.models.DatasourceConnectionConfig;
-import org.lowcoder.sdk.models.DatasourceTestResult;
-import org.lowcoder.sdk.plugin.common.DatasourceConnector;
+import org.quickdev.domain.datasource.service.impl.ClientBasedConnectionPool.ClientBasedDatasourceCacheKey;
+import org.quickdev.sdk.models.DatasourceConnectionConfig;
+import org.quickdev.sdk.models.DatasourceTestResult;
+import org.quickdev.sdk.plugin.common.DatasourceConnector;
 
 import reactor.core.publisher.Mono;
 

@@ -1,4 +1,4 @@
-package org.lowcoder.plugin.restapi;
+package org.quickdev.plugin.restapi;
 
 import java.net.URI;
 import java.util.Collections;
@@ -6,8 +6,8 @@ import java.util.Map;
 
 import org.junit.Assert;
 import org.junit.Test;
-import org.lowcoder.sdk.exception.PluginException;
-import org.lowcoder.sdk.plugin.common.RestApiUriBuilder;
+import org.quickdev.sdk.exception.PluginException;
+import org.quickdev.sdk.plugin.common.RestApiUriBuilder;
 
 public class RestApiUriBuilderTest {
 

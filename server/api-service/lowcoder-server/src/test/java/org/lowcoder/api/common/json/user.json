@@ -1,5 +1,5 @@
 {
-  "class": "org.lowcoder.domain.user.model.User",
+  "class": "org.quickdev.domain.user.model.User",
   "data": [
     {
       "id": "user01",

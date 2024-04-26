@@ -1,4 +1,4 @@
-package org.lowcoder.infra.localcache;
+package org.quickdev.infra.localcache;
 
 import static com.google.common.base.MoreObjects.firstNonNull;
 import static java.util.concurrent.Executors.newSingleThreadScheduledExecutor;
@@ -10,7 +10,7 @@ import java.util.concurrent.TimeUnit;
 import javax.annotation.CheckReturnValue;
 import javax.annotation.Nonnull;
 
-import org.lowcoder.sdk.destructor.DestructorUtil;
+import org.quickdev.sdk.destructor.DestructorUtil;
 
 import com.google.common.base.Preconditions;
 import com.google.common.util.concurrent.MoreExecutors;

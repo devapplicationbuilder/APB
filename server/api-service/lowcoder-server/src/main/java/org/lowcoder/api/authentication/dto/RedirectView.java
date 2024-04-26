@@ -1,4 +1,4 @@
-package org.lowcoder.api.authentication.dto;
+package org.quickdev.api.authentication.dto;
 
 import lombok.Builder;
 import lombok.Getter;

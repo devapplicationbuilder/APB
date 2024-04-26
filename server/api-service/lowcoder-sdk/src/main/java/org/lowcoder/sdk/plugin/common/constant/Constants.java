@@ -1,4 +1,4 @@
-package org.lowcoder.sdk.plugin.common.constant;
+package org.quickdev.sdk.plugin.common.constant;
 
 public final class Constants {
 

@@ -1,6 +1,6 @@
-package org.lowcoder.api.framework.view;
+package org.quickdev.api.framework.view;
 
-import org.lowcoder.sdk.exception.BizError;
+import org.quickdev.sdk.exception.BizError;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 

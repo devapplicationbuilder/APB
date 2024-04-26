@@ -1,4 +1,4 @@
-package org.lowcoder.sdk.query;
+package org.quickdev.sdk.query;
 
 public abstract class QueryExecutionContext {
 

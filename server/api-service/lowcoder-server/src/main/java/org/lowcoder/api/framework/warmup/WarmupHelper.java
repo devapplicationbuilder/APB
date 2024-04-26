@@ -1,6 +1,6 @@
-package org.lowcoder.api.framework.warmup;
+package org.quickdev.api.framework.warmup;
 
-import org.lowcoder.sdk.config.CommonConfig;
+import org.quickdev.sdk.config.CommonConfig;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.ReactiveMongoTemplate;
 import org.springframework.data.redis.core.ReactiveRedisTemplate;

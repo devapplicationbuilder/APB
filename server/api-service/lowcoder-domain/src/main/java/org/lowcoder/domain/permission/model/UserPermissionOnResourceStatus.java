@@ -1,4 +1,4 @@
-package org.lowcoder.domain.permission.model;
+package org.quickdev.domain.permission.model;
 
 public class UserPermissionOnResourceStatus {
     private final ResourcePermission permission;

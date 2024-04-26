@@ -1,8 +1,8 @@
-package org.lowcoder.sdk.exception;
+package org.quickdev.sdk.exception;
 
-import static org.lowcoder.sdk.exception.ErrorLogType.SIMPLE;
-import static org.lowcoder.sdk.exception.ErrorLogType.VERBOSE;
-import static org.lowcoder.sdk.util.EnumUtils.checkDuplicates;
+import static org.quickdev.sdk.exception.ErrorLogType.SIMPLE;
+import static org.quickdev.sdk.exception.ErrorLogType.VERBOSE;
+import static org.quickdev.sdk.util.EnumUtils.checkDuplicates;
 
 import lombok.Getter;
 
@@ -63,6 +63,9 @@ public enum BizError {
     INVALID_HISTORY_SNAPSHOT(500, 5307),
 
     NO_PERMISSION_TO_REQUEST_APP(403, 5308),
+    NO_LICENSE(500, 5309),
+    NO_EDIT_LICENSE(500, 5310),
+    NO_VIEW_LICENSE(500, 5311),
 
     // datasource related, code range 5500 - 5600
     DATASOURCE_NOT_FOUND(500, 5500),

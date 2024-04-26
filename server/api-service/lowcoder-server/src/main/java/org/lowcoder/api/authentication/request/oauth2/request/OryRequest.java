@@ -1,15 +1,15 @@
-package org.lowcoder.api.authentication.request.oauth2.request;
+package org.quickdev.api.authentication.request.oauth2.request;
 
 import org.apache.commons.collections4.MapUtils;
 import org.apache.http.client.utils.URIBuilder;
-import org.lowcoder.api.authentication.request.AuthException;
-import org.lowcoder.api.authentication.request.oauth2.OAuth2RequestContext;
-import org.lowcoder.api.authentication.request.oauth2.Oauth2DefaultSource;
-import org.lowcoder.domain.user.model.AuthToken;
-import org.lowcoder.domain.user.model.AuthUser;
-import org.lowcoder.sdk.auth.Oauth2OryAuthConfig;
-import org.lowcoder.sdk.util.JsonUtils;
-import org.lowcoder.sdk.webclient.WebClientBuildHelper;
+import org.quickdev.api.authentication.request.AuthException;
+import org.quickdev.api.authentication.request.oauth2.OAuth2RequestContext;
+import org.quickdev.api.authentication.request.oauth2.Oauth2DefaultSource;
+import org.quickdev.domain.user.model.AuthToken;
+import org.quickdev.domain.user.model.AuthUser;
+import org.quickdev.sdk.auth.Oauth2OryAuthConfig;
+import org.quickdev.sdk.util.JsonUtils;
+import org.quickdev.sdk.webclient.WebClientBuildHelper;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.MediaType;
 import reactor.core.publisher.Mono;

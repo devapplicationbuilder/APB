@@ -1,20 +1,20 @@
-package org.lowcoder.runner.eventlistener;
+package org.quickdev.runner.eventlistener;
 
-import static org.lowcoder.sdk.util.JsonUtils.toJson;
+import static org.quickdev.sdk.util.JsonUtils.toJson;
 
 import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-import org.lowcoder.domain.application.service.ApplicationService;
-import org.lowcoder.domain.datasource.service.DatasourceService;
-import org.lowcoder.domain.group.event.GroupDeletedEvent;
-import org.lowcoder.domain.group.service.GroupMemberService;
-import org.lowcoder.domain.group.service.GroupService;
-import org.lowcoder.domain.organization.event.OrgDeletedEvent;
-import org.lowcoder.domain.organization.event.OrgMemberLeftEvent;
-import org.lowcoder.domain.organization.service.OrgMemberService;
-import org.lowcoder.domain.permission.service.ResourcePermissionService;
+import org.quickdev.domain.application.service.ApplicationService;
+import org.quickdev.domain.datasource.service.DatasourceService;
+import org.quickdev.domain.group.event.GroupDeletedEvent;
+import org.quickdev.domain.group.service.GroupMemberService;
+import org.quickdev.domain.group.service.GroupService;
+import org.quickdev.domain.organization.event.OrgDeletedEvent;
+import org.quickdev.domain.organization.event.OrgMemberLeftEvent;
+import org.quickdev.domain.organization.service.OrgMemberService;
+import org.quickdev.domain.permission.service.ResourcePermissionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Component;

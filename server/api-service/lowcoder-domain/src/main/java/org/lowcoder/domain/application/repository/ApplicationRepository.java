@@ -1,12 +1,12 @@
-package org.lowcoder.domain.application.repository;
+package org.quickdev.domain.application.repository;
 
 
 import java.util.Collection;
 
 import javax.annotation.Nonnull;
 
-import org.lowcoder.domain.application.model.Application;
-import org.lowcoder.domain.application.model.ApplicationStatus;
+import org.quickdev.domain.application.model.Application;
+import org.quickdev.domain.application.model.ApplicationStatus;
 import org.springframework.data.mongodb.repository.Query;
 import org.springframework.data.mongodb.repository.ReactiveMongoRepository;
 import org.springframework.stereotype.Repository;

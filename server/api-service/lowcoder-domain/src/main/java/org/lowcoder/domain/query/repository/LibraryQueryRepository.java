@@ -1,6 +1,6 @@
-package org.lowcoder.domain.query.repository;
+package org.quickdev.domain.query.repository;
 
-import org.lowcoder.domain.query.model.LibraryQuery;
+import org.quickdev.domain.query.model.LibraryQuery;
 import org.springframework.data.mongodb.repository.ReactiveMongoRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,10 +1,10 @@
-package org.lowcoder.domain.group.repository;
+package org.quickdev.domain.group.repository;
 
 import java.util.Collection;
 
 import javax.validation.constraints.NotNull;
 
-import org.lowcoder.domain.group.model.Group;
+import org.quickdev.domain.group.model.Group;
 import org.springframework.data.mongodb.repository.ReactiveMongoRepository;
 import org.springframework.stereotype.Repository;
 

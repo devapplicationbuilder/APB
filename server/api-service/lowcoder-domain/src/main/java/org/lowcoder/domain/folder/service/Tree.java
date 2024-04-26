@@ -1,4 +1,4 @@
-package org.lowcoder.domain.folder.service;
+package org.quickdev.domain.folder.service;
 
 import java.util.Collection;
 import java.util.Comparator;

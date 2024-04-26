@@ -1,8 +1,8 @@
-package org.lowcoder.domain.user.model;
+package org.quickdev.domain.user.model;
 
 import static com.google.common.collect.Maps.newHashMap;
 import static org.apache.commons.lang3.BooleanUtils.isTrue;
-import static org.lowcoder.domain.user.constant.UserStatusType.HAS_SHOW_NEW_USER_GUIDANCE;
+import static org.quickdev.domain.user.constant.UserStatusType.HAS_SHOW_NEW_USER_GUIDANCE;
 
 import java.util.Map;
 

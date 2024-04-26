@@ -1,4 +1,4 @@
-package org.lowcoder.domain.user.model;
+package org.quickdev.domain.user.model;
 
 public enum UserState {
     NEW, INVITED, ACTIVATED,

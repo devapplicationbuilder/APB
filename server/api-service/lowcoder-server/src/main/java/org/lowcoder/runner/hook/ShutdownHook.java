@@ -1,8 +1,8 @@
-package org.lowcoder.runner.hook;
+package org.quickdev.runner.hook;
 
 import jakarta.annotation.PreDestroy;
 
-import org.lowcoder.sdk.destructor.DestructorUtil;
+import org.quickdev.sdk.destructor.DestructorUtil;
 import org.springframework.stereotype.Component;
 
 import lombok.extern.slf4j.Slf4j;

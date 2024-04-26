@@ -1,17 +1,17 @@
-package org.lowcoder.plugin.restapi;
+package org.quickdev.plugin.restapi;
 
-import static org.lowcoder.sdk.plugin.restapi.auth.RestApiAuthType.BASIC_AUTH;
-import static org.lowcoder.sdk.plugin.restapi.auth.RestApiAuthType.BEARER_TOKEN_AUTH;
-import static org.lowcoder.sdk.plugin.restapi.auth.RestApiAuthType.DIGEST_AUTH;
-import static org.lowcoder.sdk.plugin.restapi.auth.RestApiAuthType.NO_AUTH;
+import static org.quickdev.sdk.plugin.restapi.auth.RestApiAuthType.BASIC_AUTH;
+import static org.quickdev.sdk.plugin.restapi.auth.RestApiAuthType.BEARER_TOKEN_AUTH;
+import static org.quickdev.sdk.plugin.restapi.auth.RestApiAuthType.DIGEST_AUTH;
+import static org.quickdev.sdk.plugin.restapi.auth.RestApiAuthType.NO_AUTH;
 
 import org.junit.Assert;
 import org.junit.Test;
-import org.lowcoder.sdk.plugin.restapi.RestApiDatasourceConfig;
-import org.lowcoder.sdk.plugin.restapi.auth.BasicAuthConfig;
-import org.lowcoder.sdk.plugin.restapi.auth.DefaultAuthConfig;
-import org.lowcoder.sdk.plugin.restapi.auth.NoneAuthConfig;
-import org.lowcoder.sdk.util.JsonUtils;
+import org.quickdev.sdk.plugin.restapi.RestApiDatasourceConfig;
+import org.quickdev.sdk.plugin.restapi.auth.BasicAuthConfig;
+import org.quickdev.sdk.plugin.restapi.auth.DefaultAuthConfig;
+import org.quickdev.sdk.plugin.restapi.auth.NoneAuthConfig;
+import org.quickdev.sdk.util.JsonUtils;
 
 public class AuthConfigTest {
 

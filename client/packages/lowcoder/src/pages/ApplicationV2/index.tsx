@@ -345,14 +345,14 @@ export default function ApplicationHome() {
                 icon: ({ selected, ...otherProps }) => selected ? <HomeModuleIcon {...otherProps} width={"24px"}/> : <HomeModuleIcon {...otherProps} width={"24px"}/>,
                 visible: ({ user }) => user.orgDev,
               },
-              {
-                text: <TabLabel>{trans("home.marketplace")}</TabLabel>,
-                routePath: MARKETPLACE_URL,
-                routePathExact: false,
-                routeComp: MarketplaceView,
-                icon: ({ selected, ...otherProps }) => selected ? <MarketplaceIcon {...otherProps} width={"24px"}/> : <MarketplaceIcon {...otherProps} width={"24px"}/>,
-                visible: ({ user }) => user.orgDev,
-              },
+              //{
+              //  text: <TabLabel>{trans("home.marketplace")}</TabLabel>,
+              //  routePath: MARKETPLACE_URL,
+              //  routePathExact: false,
+              //  routeComp: MarketplaceView,
+              //  icon: ({ selected, ...otherProps }) => selected ? <MarketplaceIcon {...otherProps} width={"24px"}/> : <MarketplaceIcon {...otherProps} width={"24px"}/>,
+              //  visible: ({ user }) => user.orgDev,
+              //},
               {
                 text: <TabLabel>{trans("home.trash")}</TabLabel>,
                 routePath: TRASH_URL,
@@ -410,17 +410,17 @@ export default function ApplicationHome() {
           },
         ]}
       />
-      {user.orgDev && (
-        <InviteDialog
-          trigger={
-            <InviteUser>
-              <InviteUserIcon style={{ marginRight: "8px" }} />
-              {trans("home.inviteUser")}
-            </InviteUser>
-          }
-          style={{ marginLeft: "auto" }}
-        />
-      )}
+      {/*{user.orgDev && (*/}
+      {/*  <InviteDialog*/}
+      {/*    trigger={*/}
+      {/*      <InviteUser>*/}
+      {/*        <InviteUserIcon style={{ marginRight: "8px" }} />*/}
+      {/*        {trans("home.inviteUser")}*/}
+      {/*      </InviteUser>*/}
+      {/*    }*/}
+      {/*    style={{ marginLeft: "auto" }}*/}
+      {/*  />*/}
+      {/*)}*/}
     </DivStyled>
   );
 }

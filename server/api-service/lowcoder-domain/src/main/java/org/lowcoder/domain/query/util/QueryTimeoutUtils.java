@@ -1,8 +1,8 @@
-package org.lowcoder.domain.query.util;
+package org.quickdev.domain.query.util;
 
-import static org.lowcoder.sdk.exception.PluginCommonError.EXCEED_MAX_QUERY_TIMEOUT;
-import static org.lowcoder.sdk.exception.PluginCommonError.QUERY_ARGUMENT_ERROR;
-import static org.lowcoder.sdk.util.MustacheHelper.renderMustacheString;
+import static org.quickdev.sdk.exception.PluginCommonError.EXCEED_MAX_QUERY_TIMEOUT;
+import static org.quickdev.sdk.exception.PluginCommonError.QUERY_ARGUMENT_ERROR;
+import static org.quickdev.sdk.util.MustacheHelper.renderMustacheString;
 
 import java.time.Duration;
 import java.util.Map;
@@ -10,7 +10,7 @@ import java.util.Map;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.math.NumberUtils;
 import org.apache.commons.lang3.tuple.Pair;
-import org.lowcoder.sdk.exception.PluginException;
+import org.quickdev.sdk.exception.PluginException;
 
 import com.google.common.annotations.VisibleForTesting;
 

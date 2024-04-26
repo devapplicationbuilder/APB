@@ -1,4 +1,4 @@
-package org.lowcoder.sdk.webclient;
+package org.quickdev.sdk.webclient;
 
 import java.net.InetAddress;
 import java.net.InetSocketAddress;

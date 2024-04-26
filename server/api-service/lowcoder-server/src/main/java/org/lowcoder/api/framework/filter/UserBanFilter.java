@@ -1,15 +1,15 @@
-package org.lowcoder.api.framework.filter;
+package org.quickdev.api.framework.filter;
 
-import static org.lowcoder.api.framework.filter.FilterOrder.USER_BAN;
-import static org.lowcoder.sdk.constants.Authentication.isAnonymousUser;
-import static org.lowcoder.sdk.exception.BizError.USER_BANNED;
-import static org.lowcoder.sdk.util.ExceptionUtils.ofError;
+import static org.quickdev.api.framework.filter.FilterOrder.USER_BAN;
+import static org.quickdev.sdk.constants.Authentication.isAnonymousUser;
+import static org.quickdev.sdk.exception.BizError.USER_BANNED;
+import static org.quickdev.sdk.util.ExceptionUtils.ofError;
 
 import javax.annotation.Nonnull;
 
-import org.lowcoder.api.home.SessionUserService;
-import org.lowcoder.domain.user.model.UserStatus;
-import org.lowcoder.domain.user.service.UserStatusService;
+import org.quickdev.api.home.SessionUserService;
+import org.quickdev.domain.user.model.UserStatus;
+import org.quickdev.domain.user.service.UserStatusService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.Ordered;
 import org.springframework.stereotype.Component;

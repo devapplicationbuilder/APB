@@ -1,22 +1,22 @@
-package org.lowcoder.api.authentication.request.oauth2;
+package org.quickdev.api.authentication.request.oauth2;
 
 import java.util.Set;
 
-import org.lowcoder.api.authentication.request.AuthRequest;
-import org.lowcoder.api.authentication.request.AuthRequestFactory;
-import org.lowcoder.api.authentication.request.oauth2.request.AbstractOauth2Request;
-import org.lowcoder.api.authentication.request.oauth2.request.GithubRequest;
-import org.lowcoder.api.authentication.request.oauth2.request.GoogleRequest;
-import org.lowcoder.api.authentication.request.oauth2.request.KeycloakRequest;
-import org.lowcoder.api.authentication.request.oauth2.request.OryRequest;
-import org.lowcoder.sdk.auth.Oauth2KeycloakAuthConfig;
-import org.lowcoder.sdk.auth.Oauth2OryAuthConfig;
-import org.lowcoder.sdk.auth.Oauth2SimpleAuthConfig;
+import org.quickdev.api.authentication.request.AuthRequest;
+import org.quickdev.api.authentication.request.AuthRequestFactory;
+import org.quickdev.api.authentication.request.oauth2.request.AbstractOauth2Request;
+import org.quickdev.api.authentication.request.oauth2.request.GithubRequest;
+import org.quickdev.api.authentication.request.oauth2.request.GoogleRequest;
+import org.quickdev.api.authentication.request.oauth2.request.KeycloakRequest;
+import org.quickdev.api.authentication.request.oauth2.request.OryRequest;
+import org.quickdev.sdk.auth.Oauth2KeycloakAuthConfig;
+import org.quickdev.sdk.auth.Oauth2OryAuthConfig;
+import org.quickdev.sdk.auth.Oauth2SimpleAuthConfig;
 import org.springframework.stereotype.Component;
 
 import reactor.core.publisher.Mono;
 
-import static org.lowcoder.sdk.auth.constants.AuthTypeConstants.*;
+import static org.quickdev.sdk.auth.constants.AuthTypeConstants.*;
 
 @Component
 public class Oauth2AuthRequestFactory implements AuthRequestFactory<OAuth2RequestContext> {

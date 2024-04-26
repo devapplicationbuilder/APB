@@ -1,13 +1,13 @@
-package org.lowcoder.api.application;
+package org.quickdev.api.application;
 
 import org.apache.commons.collections4.MapUtils;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.lowcoder.api.common.mockuser.WithMockUser;
-import org.lowcoder.sdk.constants.DslConstants.CompoundAppDslConstants;
-import org.lowcoder.sdk.test.JsonFileReader;
+import org.quickdev.api.common.mockuser.WithMockUser;
+import org.quickdev.sdk.constants.DslConstants.CompoundAppDslConstants;
+import org.quickdev.sdk.test.JsonFileReader;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;

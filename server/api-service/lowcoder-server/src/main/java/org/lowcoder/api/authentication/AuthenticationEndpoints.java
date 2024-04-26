@@ -1,18 +1,18 @@
-package org.lowcoder.api.authentication;
+package org.quickdev.api.authentication;
 
 import java.util.List;
 
-import org.lowcoder.api.authentication.dto.APIKeyRequest;
-import org.lowcoder.api.authentication.dto.AuthConfigRequest;
-import org.lowcoder.api.framework.view.ResponseView;
-import org.lowcoder.api.usermanagement.UserController;
-import org.lowcoder.api.usermanagement.UserEndpoints.UpdatePasswordRequest;
-import org.lowcoder.api.usermanagement.view.APIKeyVO;
-import org.lowcoder.domain.user.model.APIKey;
-import org.lowcoder.infra.constant.NewUrl;
-import org.lowcoder.sdk.auth.AbstractAuthConfig;
-import org.lowcoder.sdk.config.SerializeConfig.JsonViews;
-import org.lowcoder.sdk.constants.AuthSourceConstants;
+import org.quickdev.api.authentication.dto.APIKeyRequest;
+import org.quickdev.api.authentication.dto.AuthConfigRequest;
+import org.quickdev.api.framework.view.ResponseView;
+import org.quickdev.api.usermanagement.UserController;
+import org.quickdev.api.usermanagement.UserEndpoints.UpdatePasswordRequest;
+import org.quickdev.api.usermanagement.view.APIKeyVO;
+import org.quickdev.domain.user.model.APIKey;
+import org.quickdev.infra.constant.NewUrl;
+import org.quickdev.sdk.auth.AbstractAuthConfig;
+import org.quickdev.sdk.config.SerializeConfig.JsonViews;
+import org.quickdev.sdk.constants.AuthSourceConstants;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -157,7 +157,7 @@ public interface AuthenticationEndpoints
      * @param register register or login
      * @param source {@link AuthSourceConstants#PHONE} or {@link AuthSourceConstants#EMAIL}
      */
-    public record FormLoginRequest(String loginId, String password, boolean register, String source, String authId, String token) {
+    public record FormLoginRequest(String loginId, String password, boolean register, String source, String authId, String token, String authType) {
     }
 
 }

@@ -1,19 +1,19 @@
-package org.lowcoder.api.permission;
+package org.quickdev.api.permission;
 
-import static org.lowcoder.api.util.ViewBuilder.multiBuild;
+import static org.quickdev.api.util.ViewBuilder.multiBuild;
 
 import java.util.List;
 import java.util.Locale;
 
 import javax.validation.constraints.NotEmpty;
 
-import org.lowcoder.api.permission.view.PermissionItemView;
-import org.lowcoder.domain.group.model.Group;
-import org.lowcoder.domain.group.service.GroupService;
-import org.lowcoder.domain.permission.model.ResourceHolder;
-import org.lowcoder.domain.permission.model.ResourcePermission;
-import org.lowcoder.domain.user.service.UserService;
-import org.lowcoder.sdk.util.LocaleUtils;
+import org.quickdev.api.permission.view.PermissionItemView;
+import org.quickdev.domain.group.model.Group;
+import org.quickdev.domain.group.service.GroupService;
+import org.quickdev.domain.permission.model.ResourceHolder;
+import org.quickdev.domain.permission.model.ResourcePermission;
+import org.quickdev.domain.user.service.UserService;
+import org.quickdev.sdk.util.LocaleUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

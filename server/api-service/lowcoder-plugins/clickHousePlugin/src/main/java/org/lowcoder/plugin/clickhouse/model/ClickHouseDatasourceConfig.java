@@ -1,13 +1,13 @@
-package org.lowcoder.plugin.clickhouse.model;
+package org.quickdev.plugin.clickhouse.model;
 
-import static org.lowcoder.sdk.exception.PluginCommonError.DATASOURCE_ARGUMENT_ERROR;
-import static org.lowcoder.sdk.util.ExceptionUtils.ofPluginException;
-import static org.lowcoder.sdk.util.JsonUtils.fromJson;
-import static org.lowcoder.sdk.util.JsonUtils.toJson;
+import static org.quickdev.sdk.exception.PluginCommonError.DATASOURCE_ARGUMENT_ERROR;
+import static org.quickdev.sdk.util.ExceptionUtils.ofPluginException;
+import static org.quickdev.sdk.util.JsonUtils.fromJson;
+import static org.quickdev.sdk.util.JsonUtils.toJson;
 
 import java.util.Map;
 
-import org.lowcoder.sdk.plugin.common.sql.SqlBasedDatasourceConnectionConfig;
+import org.quickdev.sdk.plugin.common.sql.SqlBasedDatasourceConnectionConfig;
 
 import lombok.Builder;
 import lombok.extern.slf4j.Slf4j;

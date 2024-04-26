@@ -1,15 +1,15 @@
-package org.lowcoder.plugin.sql;
+package org.quickdev.plugin.sql;
 
 import static com.google.common.collect.Lists.newArrayList;
 import static com.google.common.collect.Maps.newHashMapWithExpectedSize;
 import static java.util.Collections.emptyList;
-import static org.lowcoder.sdk.exception.PluginCommonError.PREPARED_STATEMENT_BIND_PARAMETERS_ERROR;
-import static org.lowcoder.sdk.exception.PluginCommonError.QUERY_EXECUTION_ERROR;
-import static org.lowcoder.sdk.util.ExceptionUtils.wrapException;
-import static org.lowcoder.sdk.util.JsonUtils.toJson;
-import static org.lowcoder.sdk.util.MustacheHelper.doPrepareStatement;
-import static org.lowcoder.sdk.util.MustacheHelper.extractMustacheKeysInOrder;
-import static org.lowcoder.sdk.util.MustacheHelper.renderMustacheString;
+import static org.quickdev.sdk.exception.PluginCommonError.PREPARED_STATEMENT_BIND_PARAMETERS_ERROR;
+import static org.quickdev.sdk.exception.PluginCommonError.QUERY_EXECUTION_ERROR;
+import static org.quickdev.sdk.util.ExceptionUtils.wrapException;
+import static org.quickdev.sdk.util.JsonUtils.toJson;
+import static org.quickdev.sdk.util.MustacheHelper.doPrepareStatement;
+import static org.quickdev.sdk.util.MustacheHelper.extractMustacheKeysInOrder;
+import static org.quickdev.sdk.util.MustacheHelper.renderMustacheString;
 
 import java.math.BigDecimal;
 import java.sql.Connection;
@@ -29,13 +29,13 @@ import java.util.Map;
 import javax.annotation.Nonnull;
 
 import org.apache.commons.lang3.tuple.Pair;
-import org.lowcoder.sdk.exception.PluginException;
-import org.lowcoder.sdk.models.QueryExecutionResult;
-import org.lowcoder.sdk.plugin.common.sql.ResultSetParser;
-import org.lowcoder.sdk.plugin.common.sql.SqlBasedQueryExecutionContext;
-import org.lowcoder.sdk.plugin.sqlcommand.GuiSqlCommand;
-import org.lowcoder.sdk.plugin.sqlcommand.GuiSqlCommand.GuiSqlCommandRenderResult;
-import org.lowcoder.sdk.plugin.sqlcommand.command.UpdateOrDeleteSingleCommandRenderResult;
+import org.quickdev.sdk.exception.PluginException;
+import org.quickdev.sdk.models.QueryExecutionResult;
+import org.quickdev.sdk.plugin.common.sql.ResultSetParser;
+import org.quickdev.sdk.plugin.common.sql.SqlBasedQueryExecutionContext;
+import org.quickdev.sdk.plugin.sqlcommand.GuiSqlCommand;
+import org.quickdev.sdk.plugin.sqlcommand.GuiSqlCommand.GuiSqlCommandRenderResult;
+import org.quickdev.sdk.plugin.sqlcommand.command.UpdateOrDeleteSingleCommandRenderResult;
 
 import lombok.extern.slf4j.Slf4j;
 

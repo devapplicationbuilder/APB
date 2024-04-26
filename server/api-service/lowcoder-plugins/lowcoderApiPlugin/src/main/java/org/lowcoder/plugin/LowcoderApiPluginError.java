@@ -1,6 +1,6 @@
-package org.lowcoder.plugin;
+package org.quickdev.plugin;
 
-import org.lowcoder.sdk.exception.PluginError;
+import org.quickdev.sdk.exception.PluginError;
 
 public enum LowcoderApiPluginError implements PluginError {
 

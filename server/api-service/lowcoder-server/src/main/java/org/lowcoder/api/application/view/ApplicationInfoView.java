@@ -1,11 +1,11 @@
-package org.lowcoder.api.application.view;
+package org.quickdev.api.application.view;
 
 import java.time.Instant;
 
 import javax.annotation.Nullable;
 
-import org.lowcoder.api.home.FolderInfoView;
-import org.lowcoder.domain.application.model.ApplicationStatus;
+import org.quickdev.api.home.FolderInfoView;
+import org.quickdev.domain.application.model.ApplicationStatus;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
@@ -23,7 +23,7 @@ public class ApplicationInfoView {
     private final String createBy;
     private final String role; // user's max role for current app
     /**
-     * @see org.lowcoder.domain.application.model.ApplicationType
+     * @see org.quickdev.domain.application.model.ApplicationType
      */
     private final int applicationType;
     private final ApplicationStatus applicationStatus;

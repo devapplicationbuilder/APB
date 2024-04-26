@@ -1,4 +1,4 @@
-package org.lowcoder.api.framework.view;
+package org.quickdev.api.framework.view;
 
 import java.util.Collections;
 import java.util.List;

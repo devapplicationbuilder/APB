@@ -1,9 +1,9 @@
-package org.lowcoder.domain.user.service;
+package org.quickdev.domain.user.service;
 
-import org.lowcoder.domain.user.constant.UserStatusType;
-import org.lowcoder.domain.user.model.UserStatus;
-import org.lowcoder.domain.user.repository.UserStatusRepository;
-import org.lowcoder.infra.mongo.MongoUpsertHelper;
+import org.quickdev.domain.user.constant.UserStatusType;
+import org.quickdev.domain.user.model.UserStatus;
+import org.quickdev.domain.user.repository.UserStatusRepository;
+import org.quickdev.infra.mongo.MongoUpsertHelper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.data.mongodb.core.query.Update;

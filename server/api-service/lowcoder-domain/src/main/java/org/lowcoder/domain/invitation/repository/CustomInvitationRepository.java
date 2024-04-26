@@ -1,4 +1,4 @@
-package org.lowcoder.domain.invitation.repository;
+package org.quickdev.domain.invitation.repository;
 
 import com.mongodb.client.result.UpdateResult;
 

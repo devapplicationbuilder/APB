@@ -1,6 +1,6 @@
-package org.lowcoder.domain.permission.model;
+package org.quickdev.domain.permission.model;
 
-import static org.lowcoder.domain.permission.config.PermissionConst.ID_SPLITTER;
+import static org.quickdev.domain.permission.config.PermissionConst.ID_SPLITTER;
 
 import java.util.Arrays;
 

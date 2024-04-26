@@ -1,8 +1,8 @@
-package org.lowcoder.plugin.snowflake;
+package org.quickdev.plugin.snowflake;
 
 import java.util.Map;
 
-import org.lowcoder.sdk.plugin.common.sql.SqlBasedDatasourceConnectionConfig;
+import org.quickdev.sdk.plugin.common.sql.SqlBasedDatasourceConnectionConfig;
 
 import lombok.Builder;
 import lombok.ToString;

@@ -1,15 +1,15 @@
-package org.lowcoder.domain.query.service;
+package org.quickdev.domain.query.service;
 
-import static org.lowcoder.sdk.exception.BizError.LIBRARY_QUERY_NOT_FOUND;
-import static org.lowcoder.sdk.util.ExceptionUtils.deferredError;
+import static org.quickdev.sdk.exception.BizError.LIBRARY_QUERY_NOT_FOUND;
+import static org.quickdev.sdk.util.ExceptionUtils.deferredError;
 
 import java.util.Map;
 
-import org.lowcoder.domain.query.model.BaseQuery;
-import org.lowcoder.domain.query.model.LibraryQuery;
-import org.lowcoder.domain.query.model.LibraryQueryRecord;
-import org.lowcoder.domain.query.repository.LibraryQueryRepository;
-import org.lowcoder.infra.mongo.MongoUpsertHelper;
+import org.quickdev.domain.query.model.BaseQuery;
+import org.quickdev.domain.query.model.LibraryQuery;
+import org.quickdev.domain.query.model.LibraryQueryRecord;
+import org.quickdev.domain.query.repository.LibraryQueryRepository;
+import org.quickdev.infra.mongo.MongoUpsertHelper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

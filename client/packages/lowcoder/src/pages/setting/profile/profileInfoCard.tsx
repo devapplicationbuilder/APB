@@ -47,7 +47,7 @@ export function ProfileInfoCard(props: ProfileModalCardProps) {
             setTitle(hasPass ? trans("profile.modifyPassword") : trans("profile.setPassword"));
             setShowBackLink(true);
           },
-          hidden: false,
+          hidden: true,
         }}
       />
     </>

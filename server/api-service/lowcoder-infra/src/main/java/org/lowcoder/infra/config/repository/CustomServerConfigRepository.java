@@ -1,6 +1,6 @@
-package org.lowcoder.infra.config.repository;
+package org.quickdev.infra.config.repository;
 
-import org.lowcoder.infra.config.model.ServerConfig;
+import org.quickdev.infra.config.model.ServerConfig;
 
 import reactor.core.publisher.Mono;
 

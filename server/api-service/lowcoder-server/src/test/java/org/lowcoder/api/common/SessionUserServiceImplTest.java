@@ -1,7 +1,7 @@
-package org.lowcoder.api.common;
+package org.quickdev.api.common;
 
-import org.lowcoder.api.home.SessionUserServiceImpl;
-import org.lowcoder.domain.organization.model.OrgMember;
+import org.quickdev.api.home.SessionUserServiceImpl;
+import org.quickdev.domain.organization.model.OrgMember;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 

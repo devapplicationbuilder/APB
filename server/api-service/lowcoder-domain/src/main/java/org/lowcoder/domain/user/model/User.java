@@ -1,7 +1,7 @@
-package org.lowcoder.domain.user.model;
+package org.quickdev.domain.user.model;
 
 import static com.google.common.base.Suppliers.memoize;
-import static org.lowcoder.infra.util.AssetUtils.toAssetPath;
+import static org.quickdev.infra.util.AssetUtils.toAssetPath;
 
 import java.util.*;
 import java.util.function.Supplier;
@@ -9,12 +9,12 @@ import java.util.function.Supplier;
 import com.fasterxml.jackson.core.type.TypeReference;
 import org.apache.commons.collections4.SetUtils;
 import org.apache.commons.lang3.StringUtils;
-import org.lowcoder.domain.mongodb.AfterMongodbRead;
-import org.lowcoder.domain.mongodb.BeforeMongodbWrite;
-import org.lowcoder.domain.mongodb.MongodbInterceptorContext;
-import org.lowcoder.sdk.config.SerializeConfig;
-import org.lowcoder.sdk.models.HasIdAndAuditing;
-import org.lowcoder.sdk.util.JsonUtils;
+import org.quickdev.domain.mongodb.AfterMongodbRead;
+import org.quickdev.domain.mongodb.BeforeMongodbWrite;
+import org.quickdev.domain.mongodb.MongodbInterceptorContext;
+import org.quickdev.sdk.config.SerializeConfig;
+import org.quickdev.sdk.models.HasIdAndAuditing;
+import org.quickdev.sdk.util.JsonUtils;
 import org.springframework.data.annotation.Transient;
 import org.springframework.data.mongodb.core.mapping.Document;
 

@@ -1,4 +1,4 @@
-package org.lowcoder.domain.permission.solution;
+package org.quickdev.domain.permission.solution;
 
 import static com.google.common.collect.Lists.newArrayList;
 import static com.google.common.collect.Sets.newHashSet;
@@ -10,13 +10,13 @@ import java.util.stream.Collectors;
 
 import javax.annotation.Nonnull;
 
-import org.lowcoder.domain.group.model.GroupMember;
-import org.lowcoder.domain.group.service.GroupMemberService;
-import org.lowcoder.domain.permission.model.ResourcePermission;
-import org.lowcoder.domain.permission.model.ResourceRole;
-import org.lowcoder.domain.permission.service.ResourcePermissionService;
-import org.lowcoder.domain.user.model.User;
-import org.lowcoder.domain.user.service.UserService;
+import org.quickdev.domain.group.model.GroupMember;
+import org.quickdev.domain.group.service.GroupMemberService;
+import org.quickdev.domain.permission.model.ResourcePermission;
+import org.quickdev.domain.permission.model.ResourceRole;
+import org.quickdev.domain.permission.service.ResourcePermissionService;
+import org.quickdev.domain.user.model.User;
+import org.quickdev.domain.user.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

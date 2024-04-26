@@ -1,7 +1,7 @@
-package org.lowcoder.domain.permission.model;
+package org.quickdev.domain.permission.model;
 
-import static org.lowcoder.domain.permission.config.PermissionConst.ID_SPLITTER;
-import static org.lowcoder.sdk.util.StreamUtils.collectMap;
+import static org.quickdev.domain.permission.config.PermissionConst.ID_SPLITTER;
+import static org.quickdev.sdk.util.StreamUtils.collectMap;
 
 import java.util.Arrays;
 import java.util.Map;

@@ -1,4 +1,4 @@
-package org.lowcoder.api.application;
+package org.quickdev.api.application;
 
 
 import java.util.Map;
@@ -8,19 +8,19 @@ import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.lowcoder.api.application.ApplicationEndpoints.CreateApplicationRequest;
-import org.lowcoder.api.application.view.ApplicationView;
-import org.lowcoder.api.common.mockuser.WithMockUser;
-import org.lowcoder.api.datasource.DatasourceApiService;
-import org.lowcoder.api.datasource.DatasourceApiServiceIntegrationTest;
-import org.lowcoder.api.permission.view.CommonPermissionView;
-import org.lowcoder.api.permission.view.PermissionItemView;
-import org.lowcoder.domain.application.model.Application;
-import org.lowcoder.domain.application.model.ApplicationType;
-import org.lowcoder.domain.datasource.model.Datasource;
-import org.lowcoder.domain.permission.model.ResourceRole;
-import org.lowcoder.sdk.exception.BizError;
-import org.lowcoder.sdk.exception.BizException;
+import org.quickdev.api.application.ApplicationEndpoints.CreateApplicationRequest;
+import org.quickdev.api.application.view.ApplicationView;
+import org.quickdev.api.common.mockuser.WithMockUser;
+import org.quickdev.api.datasource.DatasourceApiService;
+import org.quickdev.api.datasource.DatasourceApiServiceIntegrationTest;
+import org.quickdev.api.permission.view.CommonPermissionView;
+import org.quickdev.api.permission.view.PermissionItemView;
+import org.quickdev.domain.application.model.Application;
+import org.quickdev.domain.application.model.ApplicationType;
+import org.quickdev.domain.datasource.model.Datasource;
+import org.quickdev.domain.permission.model.ResourceRole;
+import org.quickdev.sdk.exception.BizError;
+import org.quickdev.sdk.exception.BizException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;

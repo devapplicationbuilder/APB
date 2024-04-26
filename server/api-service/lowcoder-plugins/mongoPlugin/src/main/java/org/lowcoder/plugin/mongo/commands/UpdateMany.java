@@ -14,13 +14,13 @@
  * limitations under the License.
  * <p>
  */
-package org.lowcoder.plugin.mongo.commands;
+package org.quickdev.plugin.mongo.commands;
 
-import static org.lowcoder.plugin.mongo.constants.MongoFieldName.UPDATE_LIMIT;
-import static org.lowcoder.plugin.mongo.constants.MongoFieldName.UPDATE_OPERATION;
-import static org.lowcoder.plugin.mongo.constants.MongoFieldName.UPDATE_QUERY;
-import static org.lowcoder.sdk.plugin.common.QueryExecutionUtils.getValueSafelyFromFormData;
-import static org.lowcoder.sdk.plugin.common.QueryExecutionUtils.validConfigurationPresentInFormData;
+import static org.quickdev.plugin.mongo.constants.MongoFieldName.UPDATE_LIMIT;
+import static org.quickdev.plugin.mongo.constants.MongoFieldName.UPDATE_OPERATION;
+import static org.quickdev.plugin.mongo.constants.MongoFieldName.UPDATE_QUERY;
+import static org.quickdev.sdk.plugin.common.QueryExecutionUtils.getValueSafelyFromFormData;
+import static org.quickdev.sdk.plugin.common.QueryExecutionUtils.validConfigurationPresentInFormData;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,7 +28,7 @@ import java.util.Map;
 
 import org.apache.commons.lang3.StringUtils;
 import org.bson.Document;
-import org.lowcoder.plugin.mongo.utils.MongoQueryUtils;
+import org.quickdev.plugin.mongo.utils.MongoQueryUtils;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;

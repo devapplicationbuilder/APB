@@ -226,23 +226,23 @@ function AppShareView(props: {
           label={isModule ? trans("home.modulePublicMessage") : trans("home.appPublicMessage")}
         />
       </PermissionSwitchWrapper>
-      {isPublic &&
-        <PermissionSwitchWrapper>
-          <TacoSwitch
-            checked={isPublicToMarketplace}
-            onChange={(checked) => {
-              setPublicToMarketplace(checked);
-              ApplicationApi.publicToMarketplace(applicationId, checked)
-                .then((resp) => {
-                  validateResponse(resp);
-                  dispatch(updateAppPermissionInfo({ publicToMarketplace: checked }));
-                })
-                .catch((e) => {
-                  messageInstance.error(e.message);
-                });
-            } }
-            label={isModule ? trans("home.moduleMarketplaceMessage") : trans("home.appMarketplaceMessage")} />
-        </PermissionSwitchWrapper> }
+      {/*{isPublic &&*/}
+      {/*  <PermissionSwitchWrapper>*/}
+      {/*    <TacoSwitch*/}
+      {/*      checked={isPublicToMarketplace}*/}
+      {/*      onChange={(checked) => {*/}
+      {/*        setPublicToMarketplace(checked);*/}
+      {/*        ApplicationApi.publicToMarketplace(applicationId, checked)*/}
+      {/*          .then((resp) => {*/}
+      {/*            validateResponse(resp);*/}
+      {/*            dispatch(updateAppPermissionInfo({ publicToMarketplace: checked }));*/}
+      {/*          })*/}
+      {/*          .catch((e) => {*/}
+      {/*            messageInstance.error(e.message);*/}
+      {/*          });*/}
+      {/*      } }*/}
+      {/*      label={isModule ? trans("home.moduleMarketplaceMessage") : trans("home.appMarketplaceMessage")} />*/}
+      {/*  </PermissionSwitchWrapper> }*/}
         { isPublicToMarketplace && <><div style={{ margin: "10px 22px 22px 22px" }}>
           {trans("home.marketplaceGoodPublishing")}
         </div><Divider/></>}

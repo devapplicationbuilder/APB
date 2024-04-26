@@ -1,4 +1,4 @@
-package org.lowcoder.sdk.util;
+package org.quickdev.sdk.util;
 
 import static org.springframework.http.MediaType.APPLICATION_OCTET_STREAM;
 import static org.springframework.http.MediaType.APPLICATION_PDF;

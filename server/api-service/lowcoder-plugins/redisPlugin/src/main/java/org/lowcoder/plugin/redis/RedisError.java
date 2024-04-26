@@ -1,6 +1,6 @@
-package org.lowcoder.plugin.redis;
+package org.quickdev.plugin.redis;
 
-import org.lowcoder.sdk.exception.PluginError;
+import org.quickdev.sdk.exception.PluginError;
 
 public enum RedisError implements PluginError {
 

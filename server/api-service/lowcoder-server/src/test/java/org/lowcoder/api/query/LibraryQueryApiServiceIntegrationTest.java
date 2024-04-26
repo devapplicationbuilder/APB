@@ -1,14 +1,14 @@
-package org.lowcoder.api.query;
+package org.quickdev.api.query;
 
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.lowcoder.api.common.mockuser.WithMockUser;
-import org.lowcoder.api.datasource.DatasourceApiService;
-import org.lowcoder.api.datasource.DatasourceApiServiceIntegrationTest;
-import org.lowcoder.api.query.view.LibraryQueryView;
-import org.lowcoder.domain.query.model.LibraryQuery;
+import org.quickdev.api.common.mockuser.WithMockUser;
+import org.quickdev.api.datasource.DatasourceApiService;
+import org.quickdev.api.datasource.DatasourceApiServiceIntegrationTest;
+import org.quickdev.api.query.view.LibraryQueryView;
+import org.quickdev.domain.query.model.LibraryQuery;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
@@ -19,7 +19,7 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 
-import static org.lowcoder.api.common.mockuser.WithMockUser.DEFAULT_CURRENT_ORG_ID;
+import static org.quickdev.api.common.mockuser.WithMockUser.DEFAULT_CURRENT_ORG_ID;
 
 @SuppressWarnings("SameParameterValue")
 @SpringBootTest

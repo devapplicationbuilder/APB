@@ -1,9 +1,9 @@
-package org.lowcoder.sdk.query;
+package org.quickdev.sdk.query;
 
 import java.util.List;
 import java.util.Set;
 
-import org.lowcoder.sdk.models.Property;
+import org.quickdev.sdk.models.Property;
 import org.springframework.http.HttpCookie;
 import org.springframework.util.MultiValueMap;
 

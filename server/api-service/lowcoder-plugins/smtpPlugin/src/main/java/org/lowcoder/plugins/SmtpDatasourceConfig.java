@@ -1,4 +1,4 @@
-package org.lowcoder.plugins;
+package org.quickdev.plugins;
 
 import static org.apache.commons.lang3.ObjectUtils.firstNonNull;
 import static org.apache.commons.lang3.StringUtils.isNotBlank;
@@ -7,8 +7,8 @@ import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
-import org.lowcoder.sdk.config.SerializeConfig.JsonViews;
-import org.lowcoder.sdk.models.DatasourceConnectionConfig;
+import org.quickdev.sdk.config.SerializeConfig.JsonViews;
+import org.quickdev.sdk.models.DatasourceConnectionConfig;
 
 import com.fasterxml.jackson.annotation.JsonView;
 

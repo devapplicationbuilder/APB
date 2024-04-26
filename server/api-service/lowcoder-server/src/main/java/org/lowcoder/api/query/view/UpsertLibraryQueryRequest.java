@@ -1,4 +1,4 @@
-package org.lowcoder.api.query.view;
+package org.quickdev.api.query.view;
 
 import java.util.Map;
 

@@ -1,4 +1,4 @@
-package org.lowcoder.sdk.plugin.common.ssl;
+package org.quickdev.sdk.plugin.common.ssl;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 

@@ -1,4 +1,4 @@
-package org.lowcoder.domain.query.model;
+package org.quickdev.domain.query.model;
 
 import java.util.Map;
 

@@ -1,6 +1,6 @@
-package org.lowcoder.api.authentication.request.oauth2;
+package org.quickdev.api.authentication.request.oauth2;
 
-import org.lowcoder.domain.authentication.context.AuthRequestContext;
+import org.quickdev.domain.authentication.context.AuthRequestContext;
 
 import lombok.Getter;
 

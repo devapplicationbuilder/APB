@@ -1,6 +1,6 @@
-package org.lowcoder.sdk.plugin.common.sql;
+package org.quickdev.sdk.plugin.common.sql;
 
-import static org.lowcoder.sdk.util.DateTimeUtils.DATE_TIME_FORMAT;
+import static org.quickdev.sdk.util.DateTimeUtils.DATE_TIME_FORMAT;
 
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;

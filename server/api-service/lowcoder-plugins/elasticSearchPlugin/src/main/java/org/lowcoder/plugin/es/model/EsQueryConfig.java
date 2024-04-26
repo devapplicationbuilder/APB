@@ -1,4 +1,4 @@
-package org.lowcoder.plugin.es.model;
+package org.quickdev.plugin.es.model;
 
 import org.springframework.http.HttpMethod;
 

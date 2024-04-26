@@ -1,8 +1,8 @@
-package org.lowcoder.domain.user.repository;
+package org.quickdev.domain.user.repository;
 
 import java.util.Collection;
 
-import org.lowcoder.domain.user.model.User;
+import org.quickdev.domain.user.model.User;
 import org.springframework.data.mongodb.repository.ReactiveMongoRepository;
 import org.springframework.stereotype.Repository;
 

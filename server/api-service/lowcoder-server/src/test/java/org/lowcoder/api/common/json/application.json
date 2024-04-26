@@ -1,5 +1,5 @@
 {
-  "class": "org.lowcoder.domain.application.model.Application",
+  "class": "org.quickdev.domain.application.model.Application",
   "data": [
     {
       "id": "app01",

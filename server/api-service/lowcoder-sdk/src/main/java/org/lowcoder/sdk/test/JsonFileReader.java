@@ -1,4 +1,4 @@
-package org.lowcoder.sdk.test;
+package org.quickdev.sdk.test;
 
 import java.io.FileReader;
 import java.io.IOException;
@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.apache.commons.io.IOUtils;
-import org.lowcoder.sdk.util.JsonUtils;
+import org.quickdev.sdk.util.JsonUtils;
 
 import com.google.common.annotations.VisibleForTesting;
 import com.jayway.jsonpath.JsonPath;

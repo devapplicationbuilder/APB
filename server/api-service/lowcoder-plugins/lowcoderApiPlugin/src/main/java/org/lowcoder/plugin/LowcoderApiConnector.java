@@ -1,4 +1,4 @@
-package org.lowcoder.plugin;
+package org.quickdev.plugin;
 
 import java.util.Collections;
 import java.util.Map;
@@ -6,9 +6,9 @@ import java.util.Set;
 
 import javax.annotation.Nonnull;
 
-import org.lowcoder.sdk.models.DatasourceTestResult;
-import org.lowcoder.sdk.plugin.common.DatasourceConnector;
-import org.lowcoder.sdk.plugin.lowcoderapi.LowcoderApiDatasourceConfig;
+import org.quickdev.sdk.models.DatasourceTestResult;
+import org.quickdev.sdk.plugin.common.DatasourceConnector;
+import org.quickdev.sdk.plugin.lowcoderapi.LowcoderApiDatasourceConfig;
 import org.pf4j.Extension;
 
 import reactor.core.publisher.Mono;

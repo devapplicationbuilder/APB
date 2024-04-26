@@ -1,24 +1,24 @@
-package org.lowcoder.api.usermanagement;
+package org.quickdev.api.usermanagement;
 
-import static org.lowcoder.sdk.exception.BizError.INVITED_ORG_DELETED;
-import static org.lowcoder.sdk.exception.BizError.INVITER_NOT_FOUND;
-import static org.lowcoder.sdk.util.ExceptionUtils.deferredError;
-import static org.lowcoder.sdk.util.ExceptionUtils.ofException;
+import static org.quickdev.sdk.exception.BizError.INVITED_ORG_DELETED;
+import static org.quickdev.sdk.exception.BizError.INVITER_NOT_FOUND;
+import static org.quickdev.sdk.util.ExceptionUtils.deferredError;
+import static org.quickdev.sdk.util.ExceptionUtils.ofException;
 
 import javax.annotation.Nonnull;
 
-import org.lowcoder.api.bizthreshold.AbstractBizThresholdChecker;
-import org.lowcoder.api.home.SessionUserService;
-import org.lowcoder.api.usermanagement.view.InvitationVO;
-import org.lowcoder.domain.invitation.model.Invitation;
-import org.lowcoder.domain.invitation.service.InvitationService;
-import org.lowcoder.domain.organization.model.Organization;
-import org.lowcoder.domain.organization.service.OrgMemberService;
-import org.lowcoder.domain.organization.service.OrganizationService;
-import org.lowcoder.domain.user.model.User;
-import org.lowcoder.domain.user.service.UserService;
-import org.lowcoder.sdk.exception.BizError;
-import org.lowcoder.sdk.exception.BizException;
+import org.quickdev.api.bizthreshold.AbstractBizThresholdChecker;
+import org.quickdev.api.home.SessionUserService;
+import org.quickdev.api.usermanagement.view.InvitationVO;
+import org.quickdev.domain.invitation.model.Invitation;
+import org.quickdev.domain.invitation.service.InvitationService;
+import org.quickdev.domain.organization.model.Organization;
+import org.quickdev.domain.organization.service.OrgMemberService;
+import org.quickdev.domain.organization.service.OrganizationService;
+import org.quickdev.domain.user.model.User;
+import org.quickdev.domain.user.service.UserService;
+import org.quickdev.sdk.exception.BizError;
+import org.quickdev.sdk.exception.BizException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

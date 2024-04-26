@@ -1,4 +1,4 @@
-package org.lowcoder.sdk.plugin.common.sql;
+package org.quickdev.sdk.plugin.common.sql;
 
 import java.util.Properties;
 import java.util.function.Supplier;

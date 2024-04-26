@@ -1,10 +1,10 @@
-package org.lowcoder.api.query.view;
+package org.quickdev.api.query.view;
 
 import java.util.Collection;
 import java.util.Locale;
 
-import org.lowcoder.sdk.models.QueryExecutionResult;
-import org.lowcoder.sdk.util.LocaleUtils;
+import org.quickdev.sdk.models.QueryExecutionResult;
+import org.quickdev.sdk.util.LocaleUtils;
 
 import com.fasterxml.jackson.databind.JsonNode;
 

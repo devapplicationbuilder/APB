@@ -14,14 +14,14 @@
  * limitations under the License.
  * <p>
  */
-package org.lowcoder.plugin.mongo.commands;
+package org.quickdev.plugin.mongo.commands;
 
 import static org.apache.commons.lang3.StringUtils.isBlank;
-import static org.lowcoder.plugin.mongo.constants.MongoFieldName.AGGREGATE_LIMIT;
-import static org.lowcoder.plugin.mongo.constants.MongoFieldName.AGGREGATE_PIPELINE;
-import static org.lowcoder.plugin.mongo.utils.MongoQueryUtils.parseSafely;
-import static org.lowcoder.sdk.exception.PluginCommonError.QUERY_ARGUMENT_ERROR;
-import static org.lowcoder.sdk.plugin.common.QueryExecutionUtils.getValueSafelyFromFormData;
+import static org.quickdev.plugin.mongo.constants.MongoFieldName.AGGREGATE_LIMIT;
+import static org.quickdev.plugin.mongo.constants.MongoFieldName.AGGREGATE_PIPELINE;
+import static org.quickdev.plugin.mongo.utils.MongoQueryUtils.parseSafely;
+import static org.quickdev.sdk.exception.PluginCommonError.QUERY_ARGUMENT_ERROR;
+import static org.quickdev.sdk.plugin.common.QueryExecutionUtils.getValueSafelyFromFormData;
 
 import java.util.Map;
 
@@ -29,7 +29,7 @@ import org.apache.commons.lang3.math.NumberUtils;
 import org.bson.BsonArray;
 import org.bson.Document;
 import org.bson.json.JsonParseException;
-import org.lowcoder.sdk.exception.PluginException;
+import org.quickdev.sdk.exception.PluginException;
 import org.pf4j.util.StringUtils;
 
 import com.google.common.collect.ImmutableList;

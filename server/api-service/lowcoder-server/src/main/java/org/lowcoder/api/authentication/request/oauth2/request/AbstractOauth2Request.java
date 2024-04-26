@@ -1,17 +1,17 @@
-package org.lowcoder.api.authentication.request.oauth2.request;
+package org.quickdev.api.authentication.request.oauth2.request;
 
-import static org.lowcoder.api.authentication.util.AuthenticationUtils.AUTH_REQUEST_THREAD_POOL;
-import static org.lowcoder.sdk.exception.BizError.FAIL_TO_GET_OIDC_INFO;
-import static org.lowcoder.sdk.util.ExceptionUtils.deferredError;
-import static org.lowcoder.sdk.util.JsonUtils.toJson;
+import static org.quickdev.api.authentication.util.AuthenticationUtils.AUTH_REQUEST_THREAD_POOL;
+import static org.quickdev.sdk.exception.BizError.FAIL_TO_GET_OIDC_INFO;
+import static org.quickdev.sdk.util.ExceptionUtils.deferredError;
+import static org.quickdev.sdk.util.JsonUtils.toJson;
 
-import org.lowcoder.api.authentication.request.AuthRequest;
-import org.lowcoder.api.authentication.request.oauth2.OAuth2RequestContext;
-import org.lowcoder.api.authentication.request.oauth2.Oauth2Source;
-import org.lowcoder.domain.authentication.context.AuthRequestContext;
-import org.lowcoder.domain.user.model.AuthToken;
-import org.lowcoder.domain.user.model.AuthUser;
-import org.lowcoder.sdk.auth.Oauth2SimpleAuthConfig;
+import org.quickdev.api.authentication.request.AuthRequest;
+import org.quickdev.api.authentication.request.oauth2.OAuth2RequestContext;
+import org.quickdev.api.authentication.request.oauth2.Oauth2Source;
+import org.quickdev.domain.authentication.context.AuthRequestContext;
+import org.quickdev.domain.user.model.AuthToken;
+import org.quickdev.domain.user.model.AuthUser;
+import org.quickdev.sdk.auth.Oauth2SimpleAuthConfig;
 
 import lombok.extern.slf4j.Slf4j;
 import reactor.core.publisher.Mono;

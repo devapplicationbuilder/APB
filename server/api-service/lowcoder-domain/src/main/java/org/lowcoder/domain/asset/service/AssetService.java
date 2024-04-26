@@ -1,6 +1,6 @@
-package org.lowcoder.domain.asset.service;
+package org.quickdev.domain.asset.service;
 
-import org.lowcoder.domain.asset.model.Asset;
+import org.quickdev.domain.asset.model.Asset;
 import org.springframework.http.codec.multipart.Part;
 import org.springframework.web.server.ServerWebExchange;
 

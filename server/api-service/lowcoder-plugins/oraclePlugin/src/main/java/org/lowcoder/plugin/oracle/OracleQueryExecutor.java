@@ -1,8 +1,8 @@
-package org.lowcoder.plugin.oracle;
+package org.quickdev.plugin.oracle;
 
-import static org.lowcoder.sdk.exception.PluginCommonError.DATASOURCE_GET_STRUCTURE_ERROR;
-import static org.lowcoder.sdk.exception.PluginCommonError.QUERY_ARGUMENT_ERROR;
-import static org.lowcoder.sdk.plugin.common.sql.StructureParser.QUERY_STRUCTURE_SQL;
+import static org.quickdev.sdk.exception.PluginCommonError.DATASOURCE_GET_STRUCTURE_ERROR;
+import static org.quickdev.sdk.exception.PluginCommonError.QUERY_ARGUMENT_ERROR;
+import static org.quickdev.sdk.plugin.common.sql.StructureParser.QUERY_STRUCTURE_SQL;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -13,19 +13,19 @@ import java.util.Map;
 
 import javax.annotation.Nonnull;
 
-import org.lowcoder.plugin.oracle.gui.OracleBulkInsertCommand;
-import org.lowcoder.plugin.oracle.gui.OracleBulkUpdateCommand;
-import org.lowcoder.plugin.oracle.gui.OracleDeleteCommand;
-import org.lowcoder.plugin.oracle.gui.OracleInsertCommand;
-import org.lowcoder.plugin.oracle.gui.OracleUpdateCommand;
-import org.lowcoder.plugin.sql.GeneralSqlExecutor;
-import org.lowcoder.plugin.sql.SqlBasedQueryExecutor;
-import org.lowcoder.sdk.exception.PluginException;
-import org.lowcoder.sdk.models.DatasourceStructure;
-import org.lowcoder.sdk.models.DatasourceStructure.Table;
-import org.lowcoder.sdk.plugin.common.sql.SqlBasedDatasourceConnectionConfig;
-import org.lowcoder.sdk.plugin.common.sql.StructureParser;
-import org.lowcoder.sdk.plugin.sqlcommand.GuiSqlCommand;
+import org.quickdev.plugin.oracle.gui.OracleBulkInsertCommand;
+import org.quickdev.plugin.oracle.gui.OracleBulkUpdateCommand;
+import org.quickdev.plugin.oracle.gui.OracleDeleteCommand;
+import org.quickdev.plugin.oracle.gui.OracleInsertCommand;
+import org.quickdev.plugin.oracle.gui.OracleUpdateCommand;
+import org.quickdev.plugin.sql.GeneralSqlExecutor;
+import org.quickdev.plugin.sql.SqlBasedQueryExecutor;
+import org.quickdev.sdk.exception.PluginException;
+import org.quickdev.sdk.models.DatasourceStructure;
+import org.quickdev.sdk.models.DatasourceStructure.Table;
+import org.quickdev.sdk.plugin.common.sql.SqlBasedDatasourceConnectionConfig;
+import org.quickdev.sdk.plugin.common.sql.StructureParser;
+import org.quickdev.sdk.plugin.sqlcommand.GuiSqlCommand;
 import org.pf4j.Extension;
 
 import lombok.extern.slf4j.Slf4j;

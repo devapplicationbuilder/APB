@@ -1,8 +1,8 @@
 {
   "name": "quickdev",
   "description": "An all-in-one IDE to create internal or customer-facing apps. · Visual UI builder with 50+ built-in components",
-  "repository": "http://localhost:4500",
-  "logo": "http://localhost:4500",
+  "repository": "http://172.23.16.1",
+  "logo": "http://172.23.16.1",
   "keywords": [
     "LowCode",
     "Low code",

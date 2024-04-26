@@ -1,4 +1,4 @@
-package org.lowcoder.infra.js;
+package org.quickdev.infra.js;
 
 public interface NodeServerClient {
 }

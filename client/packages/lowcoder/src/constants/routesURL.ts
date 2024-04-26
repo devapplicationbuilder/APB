@@ -20,7 +20,7 @@ export const PERMISSION_SETTING_DETAIL = `${PERMISSION_SETTING}/:groupId`;
 export const ORGANIZATION_SETTING_DETAIL = `${ORGANIZATION_SETTING}/:orgId`;
 
 export const ALL_APPLICATIONS_URL = "/apps";
-export const APPLICATION_MARKETPLACE_URL = `http://localhost:4500/apps`;
+export const APPLICATION_MARKETPLACE_URL = `http://172.23.16.1/apps`;
 export const MODULE_APPLICATIONS_URL = "/apps/module";
 export const MARKETPLACE_URL = `/marketplace`;
 export const DATASOURCE_URL = `/datasource`;
@@ -48,7 +48,7 @@ export const MARKETPLACE_TYPE_URL = `${MARKETPLACE_URL}/:marketplaceType`;
 
 export const APPLICATION_VIEW_URL = (appId: string, viewMode: AppViewMode) => {
     if (viewMode == 'view' || viewMode == 'preview')
-        return `${ALL_APPLICATIONS_URL}/${appId}/${viewMode}?template=1`;
+        return `${ALL_APPLICATIONS_URL}/${appId}/${viewMode}`;
     return `${ALL_APPLICATIONS_URL}/${appId}/${viewMode}`;
 }
 

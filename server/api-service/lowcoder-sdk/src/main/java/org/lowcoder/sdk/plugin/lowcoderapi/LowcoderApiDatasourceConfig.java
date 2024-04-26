@@ -1,6 +1,6 @@
-package org.lowcoder.sdk.plugin.lowcoderapi;
+package org.quickdev.sdk.plugin.lowcoderapi;
 
-import org.lowcoder.sdk.models.DatasourceConnectionConfig;
+import org.quickdev.sdk.models.DatasourceConnectionConfig;
 
 public class LowcoderApiDatasourceConfig implements DatasourceConnectionConfig {
 

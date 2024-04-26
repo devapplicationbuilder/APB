@@ -8,8 +8,8 @@ services:
     image: "mongo:4.4"
     container_name: mongodb
     environment:
-      MONGO_INITDB_DATABASE: lowcoder
-      MONGO_INITDB_ROOT_USERNAME: lowcoder
+      MONGO_INITDB_DATABASE: quickdev
+      MONGO_INITDB_ROOT_USERNAME: quickdev
       MONGO_INITDB_ROOT_PASSWORD: secret123
     # Uncomment to save database data into local 'mongodata' folder
     # volumes:

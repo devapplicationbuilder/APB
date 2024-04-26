@@ -1,20 +1,20 @@
-package org.lowcoder.sdk.plugin.sqlcommand.command;
+package org.quickdev.sdk.plugin.sqlcommand.command;
 
 import static com.google.common.collect.Lists.newArrayList;
-import static org.lowcoder.sdk.exception.PluginCommonError.INVALID_UPDATE_COMMAND;
-import static org.lowcoder.sdk.plugin.sqlcommand.changeset.ChangeSet.parseChangeSet;
-import static org.lowcoder.sdk.plugin.sqlcommand.filter.FilterSet.parseFilterSet;
-import static org.lowcoder.sdk.util.MustacheHelper.renderMustacheString;
+import static org.quickdev.sdk.exception.PluginCommonError.INVALID_UPDATE_COMMAND;
+import static org.quickdev.sdk.plugin.sqlcommand.changeset.ChangeSet.parseChangeSet;
+import static org.quickdev.sdk.plugin.sqlcommand.filter.FilterSet.parseFilterSet;
+import static org.quickdev.sdk.util.MustacheHelper.renderMustacheString;
 
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import org.lowcoder.sdk.exception.PluginException;
-import org.lowcoder.sdk.plugin.sqlcommand.GuiSqlCommand;
-import org.lowcoder.sdk.plugin.sqlcommand.changeset.ChangeSet;
-import org.lowcoder.sdk.plugin.sqlcommand.changeset.ChangeSetRow;
-import org.lowcoder.sdk.plugin.sqlcommand.filter.FilterSet;
+import org.quickdev.sdk.exception.PluginException;
+import org.quickdev.sdk.plugin.sqlcommand.GuiSqlCommand;
+import org.quickdev.sdk.plugin.sqlcommand.changeset.ChangeSet;
+import org.quickdev.sdk.plugin.sqlcommand.changeset.ChangeSetRow;
+import org.quickdev.sdk.plugin.sqlcommand.filter.FilterSet;
 
 import com.google.common.collect.Sets;
 

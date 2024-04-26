@@ -1,4 +1,4 @@
-package org.lowcoder.plugin.oracle.gui;
+package org.quickdev.plugin.oracle.gui;
 
 public final class GuiConstants {
 

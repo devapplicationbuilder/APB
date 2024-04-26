@@ -1,4 +1,4 @@
-package org.lowcoder.infra.util;
+package org.quickdev.infra.util;
 
 import reactor.util.function.Tuple2;
 import reactor.util.function.Tuple3;

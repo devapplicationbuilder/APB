@@ -1,4 +1,4 @@
-package org.lowcoder.domain.util;
+package org.quickdev.domain.util;
 
 import com.querydsl.core.types.Path;
 

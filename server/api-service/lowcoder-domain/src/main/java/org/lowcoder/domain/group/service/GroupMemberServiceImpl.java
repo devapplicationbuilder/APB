@@ -1,6 +1,6 @@
-package org.lowcoder.domain.group.service;
+package org.quickdev.domain.group.service;
 
-import static org.lowcoder.infra.birelation.BiRelationBizType.GROUP_MEMBER;
+import static org.quickdev.infra.birelation.BiRelationBizType.GROUP_MEMBER;
 
 import java.util.Collection;
 import java.util.List;
@@ -8,13 +8,13 @@ import java.util.Map;
 
 import org.apache.commons.lang3.StringUtils;
 import org.bson.Document;
-import org.lowcoder.domain.group.model.Group;
-import org.lowcoder.domain.group.model.GroupMember;
-import org.lowcoder.domain.organization.model.MemberRole;
-import org.lowcoder.domain.organization.model.OrgMemberState;
-import org.lowcoder.infra.birelation.BiRelation;
-import org.lowcoder.infra.birelation.BiRelationService;
-import org.lowcoder.infra.mongo.MongoUpsertHelper;
+import org.quickdev.domain.group.model.Group;
+import org.quickdev.domain.group.model.GroupMember;
+import org.quickdev.domain.organization.model.MemberRole;
+import org.quickdev.domain.organization.model.OrgMemberState;
+import org.quickdev.infra.birelation.BiRelation;
+import org.quickdev.infra.birelation.BiRelationService;
+import org.quickdev.infra.mongo.MongoUpsertHelper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

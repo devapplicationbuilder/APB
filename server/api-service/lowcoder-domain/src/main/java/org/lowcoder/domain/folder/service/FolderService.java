@@ -1,15 +1,15 @@
-package org.lowcoder.domain.folder.service;
+package org.quickdev.domain.folder.service;
 
-import static org.lowcoder.sdk.exception.BizError.NO_RESOURCE_FOUND;
+import static org.quickdev.sdk.exception.BizError.NO_RESOURCE_FOUND;
 
 import java.util.Collection;
 
-import org.lowcoder.domain.folder.model.Folder;
-import org.lowcoder.domain.folder.repository.FolderRepository;
-import org.lowcoder.infra.mongo.MongoUpsertHelper;
-import org.lowcoder.sdk.constants.FieldName;
-import org.lowcoder.sdk.exception.BizError;
-import org.lowcoder.sdk.exception.BizException;
+import org.quickdev.domain.folder.model.Folder;
+import org.quickdev.domain.folder.repository.FolderRepository;
+import org.quickdev.infra.mongo.MongoUpsertHelper;
+import org.quickdev.sdk.constants.FieldName;
+import org.quickdev.sdk.exception.BizError;
+import org.quickdev.sdk.exception.BizException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

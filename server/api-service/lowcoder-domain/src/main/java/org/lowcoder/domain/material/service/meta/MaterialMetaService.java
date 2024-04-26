@@ -1,6 +1,6 @@
-package org.lowcoder.domain.material.service.meta;
+package org.quickdev.domain.material.service.meta;
 
-import org.lowcoder.domain.material.model.MaterialMeta;
+import org.quickdev.domain.material.model.MaterialMeta;
 
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;

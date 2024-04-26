@@ -1,4 +1,4 @@
-package org.lowcoder.domain.user.model;
+package org.quickdev.domain.user.model;
 
 import java.util.Map;
 import java.util.Optional;
@@ -7,7 +7,7 @@ import java.util.Set;
 import javax.annotation.Nullable;
 
 import org.apache.commons.lang3.StringUtils;
-import org.lowcoder.domain.authentication.context.AuthRequestContext;
+import org.quickdev.domain.authentication.context.AuthRequestContext;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

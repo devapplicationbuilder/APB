@@ -1,9 +1,9 @@
-package org.lowcoder.domain.application.service;
+package org.quickdev.domain.application.service;
 
 import java.util.List;
 import java.util.Map;
 
-import org.lowcoder.domain.application.model.ApplicationHistorySnapshot;
+import org.quickdev.domain.application.model.ApplicationHistorySnapshot;
 import org.springframework.data.domain.PageRequest;
 
 import reactor.core.publisher.Mono;
