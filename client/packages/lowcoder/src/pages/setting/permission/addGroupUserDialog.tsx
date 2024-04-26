@@ -14,6 +14,7 @@ import { isGroupAdmin } from "util/permissionUtils";
 import { SuperUserIcon } from "lowcoder-design";
 import { EmptyContent } from "pages/common/styledComponent";
 import { trans } from "i18n";
+import { messageInstance } from "lowcoder-design";
 
 const TableWrapper = styled.div`
   margin-right: -16px;
@@ -73,15 +74,30 @@ function AddGroupUserDialog(props: {
         okText={trans("finish")}
         onOk={async () => {
           setConfirmLoading(true);
+          
+          let errorOccurred = false; // Initialize a flag to track if an error occurred
+          let errorMessage = ''; // Initialize a variable to store the error message
+
+
           for (let [userId, checked] of Object.entries(toAddUserIdRecord.current)) {
             if (checked) {
-              await OrgApi.addGroupUser({
-                userId: userId,
-                groupId: groupId,
-                role: MEMBER_ROLE,
-              });
+                const response = await OrgApi.addGroupUser({
+                    userId: userId,
+                    groupId: groupId,
+                    role: MEMBER_ROLE,
+                });
+
+                if (!response.data.success) {
+                    errorOccurred = true; // Set the flag if an error occurs
+                    errorMessage = response.data.message; // Store the error message
+                }
             }
           }
+
+          if (errorOccurred) {
+              messageInstance.error(errorMessage);
+          }
+
           dispatch(fetchGroupUsersAction({ groupId }));
           setDialogVisible(false);
         }}

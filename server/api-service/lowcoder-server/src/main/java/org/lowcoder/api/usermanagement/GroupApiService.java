@@ -137,7 +137,7 @@ public class GroupApiService {
                     String orgId = tuple.getT2().getOrgId();
                     if (tuple.getT3().isDevGroup()) {
                         return bizThresholdChecker.checkMaxDeveloperCount(orgId, groupId, newUserId)
-                                .then(groupMemberService.addMember(orgId, groupId, newUserId, MemberRole.fromValue(roleName)));
+                               .then(groupMemberService.addMember(orgId, groupId, newUserId, MemberRole.fromValue(roleName)));
                     }
                     return groupMemberService.addMember(orgId, groupId, newUserId, MemberRole.fromValue(roleName));
                 });

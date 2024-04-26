@@ -48,7 +48,7 @@ export const MARKETPLACE_TYPE_URL = `${MARKETPLACE_URL}/:marketplaceType`;
 
 export const APPLICATION_VIEW_URL = (appId: string, viewMode: AppViewMode) => {
     if (viewMode == 'view' || viewMode == 'preview')
-        return `${ALL_APPLICATIONS_URL}/${appId}/${viewMode}?template=1`;
+        return `${ALL_APPLICATIONS_URL}/${appId}/${viewMode}`;
     return `${ALL_APPLICATIONS_URL}/${appId}/${viewMode}`;
 }
 

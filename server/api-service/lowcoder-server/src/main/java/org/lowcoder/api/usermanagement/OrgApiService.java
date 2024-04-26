@@ -45,6 +45,8 @@ public interface OrgApiService {
 
     Mono<Boolean> tryAddUserToOrgAndSwitchOrg(String orgId, String userId);
 
+    Mono<Void> checkMaxOrgMemberCount(String orgId);
+
     Mono<ConfigView> getOrganizationConfigs(String orgId);
 
     Mono<Long> getApiUsageCount(String orgId, Boolean lastMonthOnly);

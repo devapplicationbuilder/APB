@@ -6,6 +6,7 @@ import org.quickdev.api.usermanagement.view.UserProfileView;
 import org.quickdev.domain.user.model.UserDetail;
 import org.quickdev.infra.constant.NewUrl;
 import org.quickdev.infra.constant.Url;
+import org.quickdev.domain.user.model.User;
 import org.springframework.http.MediaType;
 import org.springframework.http.codec.multipart.Part;
 import org.springframework.web.bind.annotation.DeleteMapping;

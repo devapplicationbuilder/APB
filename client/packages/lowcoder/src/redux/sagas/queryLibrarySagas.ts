@@ -32,7 +32,7 @@ function* fetchQueryLibrarySaga(action: ReduxActionWithoutPayload) {
       });
     }
   } catch (error: any) {
-    log.error("fetch query library error: ", error);
+    log.error("fetch query Repository error: ", error);
     messageInstance.error(error.message);
   }
 }
@@ -60,7 +60,7 @@ function* fetchQueryLibraryRecordDSLSaga(
       });
     }
   } catch (error: any) {
-    log.error("fetch query library dsl by id error: ", error);
+    log.error("fetch query Repository dsl by id error: ", error);
     messageInstance.error(error.message);
     action.onErrorCallback && action.onErrorCallback(error);
   }
@@ -78,7 +78,7 @@ function* fetchQueryLibraryDropdownSaga() {
       });
     }
   } catch (error: any) {
-    log.error("fetch query library dropdown error: ", error);
+    log.error("fetch query Repository dropdown error: ", error);
     messageInstance.error(error.message);
   }
 }
@@ -99,7 +99,7 @@ export function* createQueryLibrarySaga(action: ReduxActionWithCallbacks<Library
       action.onSuccessCallback && action.onSuccessCallback(response);
     }
   } catch (error: any) {
-    log.error("create query library error: ", error);
+    log.error("create query Repository error: ", error);
     messageInstance.error(error.message);
     action.onErrorCallback && action.onErrorCallback(error);
   }
@@ -143,7 +143,7 @@ export function* deleteQueryLibrarySaga(
       });
     }
   } catch (error: any) {
-    log.error("delete query library error: ", error);
+    log.error("delete query Repository error: ", error);
     messageInstance.error(error.message);
   }
 }
@@ -161,7 +161,7 @@ function* fetchQueryLibraryRecordSaga(action: ReduxAction<{ libraryQueryId: stri
       });
     }
   } catch (error: any) {
-    log.error("fetch query library records by id error: ", error);
+    log.error("fetch query Repository records by id error: ", error);
     messageInstance.error(error.message);
   }
 }
@@ -188,7 +188,7 @@ export function* createQueryLibraryRecordSaga(
       action.onSuccessCallback && action.onSuccessCallback(response);
     }
   } catch (error: any) {
-    log.error("create query library record error: ", error);
+    log.error("create query Repository record error: ", error);
     messageInstance.error(error.message);
     action.onErrorCallback && action.onErrorCallback(error);
   }

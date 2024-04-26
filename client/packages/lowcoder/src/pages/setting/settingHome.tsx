@@ -41,7 +41,7 @@ enum SettingPageEnum {
 export function SettingHome() {
   const user = useSelector(getUser);
   const config = useSelector(selectSystemConfig);
-  const selectKey = useParams<{ setting: string }>().setting || SettingPageEnum.UserGroups;
+  const selectKey = useParams<{ setting: string }>().setting || SettingPageEnum.Advanced;
 
   const items = [
     {
@@ -49,12 +49,12 @@ export function SettingHome() {
       label: trans("settings.organization"),
       icon: <WorkspacesIcon width={"20px"}/>,
     },
-    {
-      key: SettingPageEnum.OAuthProvider,
-      label: (trans("settings.oauthProviders")),
-      disabled: !currentOrgAdmin(user),
-      icon: <UserShieldIcon width={"20px"}/>,
-    },
+    //{
+    //  key: SettingPageEnum.OAuthProvider,
+    //  label: (trans("settings.oauthProviders")),
+    //  disabled: !currentOrgAdmin(user),
+    //  icon: <UserShieldIcon width={"20px"}/>,
+    //},
     {
       key: SettingPageEnum.UserGroups,
       label: trans("settings.userGroups"),
@@ -73,57 +73,53 @@ export function SettingHome() {
 
     // Premium features
 
-    {
-      key: SettingPageEnum.Environments,
-      label: (
-        <span>
-          <span className="text">{trans("settings.environments")}</span>
-          <FreeLimitTag text={trans("settings.premium")} />
-        </span>
-      ),
-      disabled: true,
-    },
-    {
-      key: SettingPageEnum.AppUsage,
-      label: (
-        <span>
-          <span className="text">{trans("settings.appUsage")}</span>
-          <FreeLimitTag text={trans("settings.premium")} />
-        </span>
-      ),
-      disabled: true,
-    },
-    {
-      key: SettingPageEnum.Audit,
-      label: (
-        <span>
-          <span className="text">{trans("settings.audit")}</span>
-          {(!showAuditLog(config) || !currentOrgAdmin(user)) && (
-            <FreeLimitTag text={trans("settings.premium")} />
-          )}
-        </span>
-      ),
-      disabled: !showAuditLog(config) || !currentOrgAdmin(user),
-    },
-    {
-      key: SettingPageEnum.Branding,
-      label: (
-        <span>
-          <span className="text">{trans("settings.branding")}</span>
-          {(!isEE() ||
-            !currentOrgAdmin(user) ||
-            !enableCustomBrand(config) ||
-            (!isSelfDomain(config) && !isEnterpriseMode(config))) && (
-            <FreeLimitTag text={trans("settings.premium")} />
-          )}
-        </span>
-      ),
-      disabled:
-        !isEE() ||
-        !currentOrgAdmin(user) ||
-        !enableCustomBrand(config) ||
-        (!isSelfDomain(config) && !isEnterpriseMode(config)),
-    },
+    //{
+    //  key: SettingPageEnum.Environments,
+    //  label: (
+    //    <span>
+    //      <span className="text">{trans("settings.environments")}</span>
+    //      <FreeLimitTag text={trans("settings.premium")} />
+    //    </span>
+    //  ),
+    //  disabled: false,
+    //},
+    //{
+    //  key: SettingPageEnum.AppUsage,
+    //  label: (
+    //    <span>
+    //      <span className="text">{trans("settings.appUsage")}</span>
+    //      <FreeLimitTag text={trans("settings.premium")} />
+    //    </span>
+    //  ),
+    //  disabled: false,
+    //},
+    //{
+    //  key: SettingPageEnum.Audit,
+    //  label: (
+    //    <span>
+    //      <span className="text">{trans("settings.audit")}</span>
+    //      {(!showAuditLog(config) || !currentOrgAdmin(user)) && (
+    //        <FreeLimitTag text={trans("settings.premium")} />
+    //      )}
+    //    </span>
+    //  ),
+    //  disabled: false,
+    //},
+    //{
+    //  key: SettingPageEnum.Branding,
+    //  label: (
+    //    <span>
+    //      <span className="text">{trans("settings.branding")}</span>
+    //      {(!isEE() ||
+    //        !currentOrgAdmin(user) ||
+    //        !enableCustomBrand(config) ||
+    //        (!isSelfDomain(config) && !isEnterpriseMode(config))) && (
+    //        <FreeLimitTag text={trans("settings.premium")} />
+    //      )}
+    //    </span>
+    //  ),
+    //  disabled: false,
+    //},
   ];
 
   return (

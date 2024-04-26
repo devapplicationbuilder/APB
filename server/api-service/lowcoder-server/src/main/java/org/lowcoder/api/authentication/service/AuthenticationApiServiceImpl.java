@@ -105,7 +105,7 @@ public class AuthenticationApiServiceImpl implements AuthenticationApiService {
                     String pass = "yourpasswordhere";
                     return authenticate(authId, source, new FormAuthRequestContext(loginId, pass, register, orgId));
                 } else {
-                    return ofError(AUTH_ERROR, "Session is not active");
+                    return null;
                 }
             });
     }
@@ -234,7 +234,10 @@ public class AuthenticationApiServiceImpl implements AuthenticationApiService {
 
 
                     if (authUser.getAuthContext().getAuthConfig().isEnableRegister()) {
-                        return userService.createNewUserByAuthUser(authUser);
+                        if(authUser.getOrgId() == null)
+                            return userService.createNewUserByAuthUser(authUser);
+                        return userService.createNewUserByAuthUser(authUser)
+                                .delayUntil(user -> orgApiService.checkMaxOrgMemberCount(authUser.getOrgId()));
                     }
                     return Mono.error(new BizException(USER_NOT_EXIST, "USER_NOT_EXIST"));
                 });

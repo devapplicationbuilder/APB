@@ -50,9 +50,9 @@ To control a component, select a component in the **Component** dropdown list an
 
 ![](<../.gitbook/assets/image (29).png>)
 
-### Set temporary state
+### Set Dynamic Variable
 
-Store data in a [temporary state](write-javascript/temporary-state.md).&#x20;
+Store data in a [Dynamic Variable](write-javascript/temporary-state.md).&#x20;
 
 ### Go to app
 

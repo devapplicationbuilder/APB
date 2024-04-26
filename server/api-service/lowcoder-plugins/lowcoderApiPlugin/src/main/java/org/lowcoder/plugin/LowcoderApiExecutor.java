@@ -31,6 +31,7 @@ import reactor.core.publisher.Mono;
 @Extension
 public class LowcoderApiExecutor implements QueryExecutor<LowcoderApiDatasourceConfig, Object, LowcoderApiQueryExecutionContext> {
     private static final String QUERY_ORG_USERS = "queryOrgUsers";
+    private static final String QUERY_GET_COOKIE = "queryGetCookie";
 
     private final String cookieName;
 
@@ -45,7 +46,7 @@ public class LowcoderApiExecutor implements QueryExecutor<LowcoderApiDatasourceC
 
         String actionType = MapUtils.getString(queryConfig, "compType", "");
         MultiValueMap<String, HttpCookie> cookies = queryVisitorContext.getCookies();
-        if (actionType.equalsIgnoreCase(QUERY_ORG_USERS)) {
+        if (actionType.equalsIgnoreCase(QUERY_ORG_USERS) || actionType.equalsIgnoreCase(QUERY_GET_COOKIE)) {
             return LowcoderApiQueryExecutionContext.builder()
                     .actionType(actionType)
                     .visitorId(queryVisitorContext.getVisitorId())
@@ -66,6 +67,16 @@ public class LowcoderApiExecutor implements QueryExecutor<LowcoderApiDatasourceC
                 .flatMap(email -> {
                     return getUserDetails(email);
                 });
+        }
+        else if (actionType.equalsIgnoreCase(QUERY_GET_COOKIE)){
+            // Retrieve the cookie value from the requestCookies field
+            String cookieValue = "";
+            List<HttpCookie> cookies = context.getRequestCookies().get(cookieName);
+            if (cookies != null && !cookies.isEmpty()) {
+                cookieValue = cookies.get(0).getValue();
+            }
+            // Create a Mono that emits a single QueryExecutionResult with the cookie value
+            return Mono.just(QueryExecutionResult.success(cookieName + "=" + cookieValue));
         }
 
         throw new PluginException(LowcoderApiPluginError.LOWCODER_API_INVALID_REQUEST_TYPE, "LOWCODER_INTERNAL_INVALID_REQUEST_TYPE");

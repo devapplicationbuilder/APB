@@ -256,41 +256,33 @@ public class ApplicationApiService {
                 }));
     }
 
-    public Mono<ApplicationView> getEditingApplication(String applicationId) {
-        return checkPermissionWithReadableErrorMsg(applicationId, EDIT_APPLICATIONS)
-                .zipWhen(permission -> applicationService.findById(applicationId)
-                        .delayUntil(application -> checkApplicationStatus(application, NORMAL)))
-                .zipWhen(tuple -> applicationService.getAllDependentModulesFromApplication(tuple.getT2(), false), TupleUtils::merge)
-                .zipWhen(tuple -> organizationService.getOrgCommonSettings(tuple.getT2().getOrganizationId()), TupleUtils::merge)
-                .map(tuple -> {
-                    ResourcePermission permission = tuple.getT1();
-                    Application application = tuple.getT2();
-                    List<Application> dependentModules = tuple.getT3();
-                    Map<String, Object> commonSettings = tuple.getT4();
-                    Map<String, Map<String, Object>> dependentModuleDsl = dependentModules.stream()
-                            .collect(Collectors.toMap(Application::getId, Application::getLiveApplicationDsl, (a, b) -> b));
-                    return ApplicationView.builder()
-                            .applicationInfoView(buildView(application, permission.getResourceRole().getValue()))
-                            .applicationDSL(application.getEditingApplicationDSL())
-                            .moduleDSL(dependentModuleDsl)
-                            .orgCommonSettings(commonSettings)
-                            .build();
-                });
-    }
+    public Mono<Boolean> canViewOrEdit(String actionType, int curYear, int curMonth, int curDay, int curHour, int curMinute, int curSecond) {
+        return sessionUserService.getVisitorOrgMemberCache()
+                .flatMap(orgMember -> {
+                    return bizThresholdChecker.getItemFromLicense(orgMember.getOrgId(), actionType + "_VALID_TO")
+                            .map(validTo -> {
+                                String[] parts = validTo.split("#");
+                                int year = Integer.parseInt(parts[0]);
+                                int month = Integer.parseInt(parts[1]);
+                                int day = Integer.parseInt(parts[2]);
+                                int hour = Integer.parseInt(parts[3]);
+                                int minute = Integer.parseInt(parts[4]);
+                                int second = Integer.parseInt(parts[5]);
+                    
+                                Calendar targetDateTime = Calendar.getInstance();
+                                targetDateTime.set(year, month-1, day, hour, minute, second);
 
-    public Boolean canView(int year, int month, int day, int hour, int minute) {
-        Calendar targetDateTime = Calendar.getInstance();
-        targetDateTime.set(2024, 4, 16, 16, 30); // Note: Month is 0-indexed, so 4 represents May
-
-        Calendar currentDateTime = Calendar.getInstance();
-        currentDateTime.set(year, month - 1, day, hour, minute); // Note: Month in Calendar is 0-indexed
-
-        // Compare the two dates
-        return currentDateTime.compareTo(targetDateTime) <= 0;
+                                Calendar currentDateTime = Calendar.getInstance();
+                                currentDateTime.set(curYear, curMonth - 1, curDay, curHour, curMinute, curSecond);
+                                return currentDateTime.compareTo(targetDateTime) <= 0;
+                            })
+                            .defaultIfEmpty(false)
+                            .flatMap(Mono::just);
+                })
+                .defaultIfEmpty(false);
     } 
 
-    public Mono<ApplicationView> getPublishedApplication(String applicationId, ApplicationRequestType requestType) {
-        // Make a request to the time API
+    public Mono<ApplicationView> getEditingApplication(String applicationId) {
         WebClient webClient = WebClient.create("https://timeapi.io/api/Time/current/zone?timeZone=Europe/Bucharest");
         return webClient.get()
                 .retrieve()
@@ -302,43 +294,88 @@ public class ApplicationApiService {
                     int day = (int) timeResponse.get("day");
                     int hour = (int) timeResponse.get("hour");
                     int minute = (int) timeResponse.get("minute");
+                    int second = (int) timeResponse.get("seconds");
 
-                    // Compare the retrieved time with specific variables
-                    if (canView(year, month, day, hour, minute)) {
-                        // Continue with the original logic to retrieve application details
-                        return checkApplicationPermissionWithReadableErrorMsg(applicationId, READ_APPLICATIONS, requestType)
-                                .zipWhen(permission -> applicationService.findById(applicationId)
-                                        .delayUntil(application -> checkApplicationStatus(application, NORMAL))
-                                        .delayUntil(application -> checkApplicationViewRequest(application, requestType)))
-                                .zipWhen(tuple -> applicationService.getAllDependentModulesFromApplication(tuple.getT2(), true), TupleUtils::merge)
-                                .zipWhen(tuple -> organizationService.getOrgCommonSettings(tuple.getT2().getOrganizationId()), TupleUtils::merge)
-                                .zipWith(getTemplateIdFromApplicationId(applicationId), TupleUtils::merge)
-                                .map(tuple -> {
-                                    ResourcePermission permission = tuple.getT1();
-                                    Application application = tuple.getT2();
-                                    List<Application> dependentModules = tuple.getT3();
-                                    Map<String, Object> commonSettings = tuple.getT4();
-                                    String templateId = tuple.getT5();
-                                    Map<String, Map<String, Object>> dependentModuleDsl = dependentModules.stream()
-                                            .collect(Collectors.toMap(Application::getId, app -> sanitizeDsl(app.getLiveApplicationDsl()), (a, b) -> b));
-                                    return ApplicationView.builder()
-                                            .applicationInfoView(buildView(application, permission.getResourceRole().getValue()))
-                                            .applicationDSL(sanitizeDsl(application.getLiveApplicationDsl()))
-                                            .moduleDSL(dependentModuleDsl)
-                                            .orgCommonSettings(commonSettings)
-                                            .templateId(templateId)
-                                            .build();
-                                })
-                                .delayUntil(applicationView -> {
-                                    if (applicationView.getApplicationInfoView().getApplicationType() == ApplicationType.COMPOUND_APPLICATION.getValue()) {
-                                        return compoundApplicationDslFilter.removeSubAppsFromCompoundDsl(applicationView.getApplicationDSL());
-                                    }
-                                    return Mono.empty();
-                                });
-                    } else {
-                        // Return an empty Mono if the condition is not met
-                        return Mono.empty();
-                    }
+                    return canViewOrEdit("EDIT", year, month, day, hour, minute, second)
+                            .flatMap(isEditable -> {
+                                if (isEditable) {
+                                    return checkPermissionWithReadableErrorMsg(applicationId, EDIT_APPLICATIONS)
+                                        .zipWhen(permission -> applicationService.findById(applicationId)
+                                                .delayUntil(application -> checkApplicationStatus(application, NORMAL)))
+                                        .zipWhen(tuple -> applicationService.getAllDependentModulesFromApplication(tuple.getT2(), false), TupleUtils::merge)
+                                        .zipWhen(tuple -> organizationService.getOrgCommonSettings(tuple.getT2().getOrganizationId()), TupleUtils::merge)
+                                        .map(tuple -> {
+                                            ResourcePermission permission = tuple.getT1();
+                                            Application application = tuple.getT2();
+                                            List<Application> dependentModules = tuple.getT3();
+                                            Map<String, Object> commonSettings = tuple.getT4();
+                                            Map<String, Map<String, Object>> dependentModuleDsl = dependentModules.stream()
+                                                    .collect(Collectors.toMap(Application::getId, Application::getLiveApplicationDsl, (a, b) -> b));
+                                            return ApplicationView.builder()
+                                                    .applicationInfoView(buildView(application, permission.getResourceRole().getValue()))
+                                                    .applicationDSL(application.getEditingApplicationDSL())
+                                                    .moduleDSL(dependentModuleDsl)
+                                                    .orgCommonSettings(commonSettings)
+                                                    .build();
+                                        });
+                                } else {
+                                    return deferredError(BizError.NO_EDIT_LICENSE, "NO_EDIT_LICENSE");
+                                }
+                            });
+                });
+    }
+
+    public Mono<ApplicationView> getPublishedApplication(String applicationId, ApplicationRequestType requestType) {
+        
+        WebClient webClient = WebClient.create("https://timeapi.io/api/Time/current/zone?timeZone=Europe/Bucharest");
+        return webClient.get()
+                .retrieve()
+                .bodyToMono(Map.class) // Map<String, Object> to represent JSON response
+                .flatMap(timeResponse -> {
+                    // Extract relevant fields from the map
+                    int year = (int) timeResponse.get("year");
+                    int month = (int) timeResponse.get("month");
+                    int day = (int) timeResponse.get("day");
+                    int hour = (int) timeResponse.get("hour");
+                    int minute = (int) timeResponse.get("minute");
+                    int second = (int) timeResponse.get("seconds");
+
+                    return canViewOrEdit("VIEW", year, month, day, hour, minute, second)
+                            .flatMap(isViewable -> {
+                                if (isViewable) {
+                                    return checkApplicationPermissionWithReadableErrorMsg(applicationId, READ_APPLICATIONS, requestType)
+                                        .zipWhen(permission -> applicationService.findById(applicationId)
+                                                .delayUntil(application -> checkApplicationStatus(application, NORMAL))
+                                                .delayUntil(application -> checkApplicationViewRequest(application, requestType)))
+                                        .zipWhen(tuple -> applicationService.getAllDependentModulesFromApplication(tuple.getT2(), true), TupleUtils::merge)
+                                        .zipWhen(tuple -> organizationService.getOrgCommonSettings(tuple.getT2().getOrganizationId()), TupleUtils::merge)
+                                        .zipWith(getTemplateIdFromApplicationId(applicationId), TupleUtils::merge)
+                                        .map(tuple -> {
+                                            ResourcePermission permission = tuple.getT1();
+                                            Application application = tuple.getT2();
+                                            List<Application> dependentModules = tuple.getT3();
+                                            Map<String, Object> commonSettings = tuple.getT4();
+                                            String templateId = tuple.getT5();
+                                            Map<String, Map<String, Object>> dependentModuleDsl = dependentModules.stream()
+                                                    .collect(Collectors.toMap(Application::getId, app -> sanitizeDsl(app.getLiveApplicationDsl()), (a, b) -> b));
+                                            return ApplicationView.builder()
+                                                    .applicationInfoView(buildView(application, permission.getResourceRole().getValue()))
+                                                    .applicationDSL(sanitizeDsl(application.getLiveApplicationDsl()))
+                                                    .moduleDSL(dependentModuleDsl)
+                                                    .orgCommonSettings(commonSettings)
+                                                    .templateId(templateId)
+                                                    .build();
+                                        })
+                                        .delayUntil(applicationView -> {
+                                            if (applicationView.getApplicationInfoView().getApplicationType() == ApplicationType.COMPOUND_APPLICATION.getValue()) {
+                                                return compoundApplicationDslFilter.removeSubAppsFromCompoundDsl(applicationView.getApplicationDSL());
+                                            }
+                                            return Mono.empty();
+                                        });
+                                } else {
+                                    return deferredError(BizError.NO_VIEW_LICENSE, "NO_VIEW_LICENSE");
+                                }
+                            });
                 });
     }
 
@@ -489,6 +526,10 @@ public class ApplicationApiService {
                         }
 
                         if (permissionStatus.failByNotInOrg()) {
+                            return ofError(NO_PERMISSION_TO_REQUEST_APP, "INSUFFICIENT_PERMISSION");
+                        }
+
+                        if(permissionStatus.failByNotEnoughPermission()){
                             return ofError(NO_PERMISSION_TO_REQUEST_APP, "INSUFFICIENT_PERMISSION");
                         }
 

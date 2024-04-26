@@ -78,7 +78,8 @@ export function* updateUserOrgRoleSaga(action: ReduxAction<UpdateUserOrgRolePayl
     if (isValidResponse) {
       log.debug("update user role success", action.payload);
     }
-  } catch (error) {
+  } catch (error: any) {
+    messageInstance.error(error.message);
     log.error(error);
   }
 }

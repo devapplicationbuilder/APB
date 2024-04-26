@@ -23,6 +23,7 @@ import org.springframework.web.server.ServerWebExchange;
 
 import lombok.RequiredArgsConstructor;
 import reactor.core.publisher.Mono;
+import org.springframework.http.HttpStatus;
 
 @RequiredArgsConstructor
 @RestController
@@ -41,14 +42,16 @@ public class AuthenticationController implements AuthenticationEndpoints
      */
     @Override
     public Mono<ResponseView<Boolean>> formLogin(@RequestBody FormLoginRequest formLoginRequest,
-                                                 @RequestParam(required = false) String invitationId,
-                                                 @RequestParam(required = false) String orgId,
-                                                 ServerWebExchange exchange) {
-        return authenticationApiService.authenticateByForm(formLoginRequest.loginId(), formLoginRequest.password(),
-                        formLoginRequest.source(), formLoginRequest.register(), formLoginRequest.authId(), orgId, formLoginRequest.token(), formLoginRequest.authType())
-                .flatMap(user -> authenticationApiService.loginOrRegister(user, exchange, invitationId, Boolean.FALSE))
-                .thenReturn(ResponseView.success(true));
-    }
+                                              @RequestParam(required = false) String invitationId,
+                                              @RequestParam(required = false) String orgId,
+                                              ServerWebExchange exchange) {
+    return authenticationApiService.authenticateByForm(formLoginRequest.loginId(), formLoginRequest.password(),
+                    formLoginRequest.source(), formLoginRequest.register(), formLoginRequest.authId(), orgId, formLoginRequest.token(), formLoginRequest.authType())
+            .flatMap(user -> {
+                    return authenticationApiService.loginOrRegister(user, exchange, invitationId, Boolean.FALSE)
+                            .thenReturn(ResponseView.success(true));
+            });
+}
 
     /**
      * third party login api

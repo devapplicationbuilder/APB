@@ -451,7 +451,7 @@ export const FileComp = withExposingConfigs(FileTmpComp, [
       <>
         {trans("file.filesDesc")}
         {(() => {
-          const url = getComponentDocUrl("file");
+          const url = trans("docUrls.fileUpload");
           if (url) {
             return (
               <>

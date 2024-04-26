@@ -134,14 +134,14 @@ function OrgUsersPermission(props: UsersPermissionProp) {
           <ArrowIcon />
           <span>{trans("memberSettings.allMembers")}</span>
         </HeaderBack>
-        <InviteDialog
-          trigger={
-            <AddMemberButton buttonType="primary" icon={<StyledMembersIcon />}>
-              {trans("memberSettings.inviteUser")}
-            </AddMemberButton>
-          }
-          style={{ marginLeft: "auto" }}
-        />
+        {/*<InviteDialog*/}
+        {/*  trigger={*/}
+        {/*    <AddMemberButton buttonType="primary" icon={<StyledMembersIcon />}>*/}
+        {/*      {trans("memberSettings.inviteUser")}*/}
+        {/*    </AddMemberButton>*/}
+        {/*  }*/}
+        {/*  style={{ marginLeft: "auto" }}*/}
+        {/*/>*/}
       </PermissionHeaderWrapper>
       <TableStyled
         tableLayout={"auto"}

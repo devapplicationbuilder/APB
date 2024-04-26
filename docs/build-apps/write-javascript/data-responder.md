@@ -2,7 +2,7 @@
 
 When building an app, you can set events for the components in order to listen to the changes of certain data. For example, for a **Table** component, the built-in events for the change of the `selectedRow` property include "Row select change", "Filter change", "Sort change", and "Page change".
 
-However, there lacks similar events for some data changes, such as the changes of temporary states, transformers, or query results. Data responders are designed for these cases and allow you to listen and respond to any data change.
+However, there lacks similar events for some data changes, such as the changes of Dynamic Variables, transformers, or query results. Data responders are designed for these cases and allow you to listen and respond to any data change.
 
 {% hint style="info" %}
 Events for data responders are more general than the events that listen to data changes such as content change, row select change, etc.

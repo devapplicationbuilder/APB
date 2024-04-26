@@ -359,6 +359,11 @@ public class OrgApiServiceImpl implements OrgApiService {
     }
 
     @Override
+    public Mono<Void> checkMaxOrgMemberCount(String orgId) {
+        return bizThresholdChecker.checkMaxOrgMemberCount(orgId);
+    }
+
+    @Override
     public Mono<ConfigView> getOrganizationConfigs(String orgId) {
         return authenticationService.findAllAuthConfigs(orgId,true)
                 .map(FindAuthConfig::authConfig)
