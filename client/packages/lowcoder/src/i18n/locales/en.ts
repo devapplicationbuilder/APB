@@ -1,8 +1,8 @@
 import table from "./componentDocExtra/table.md?url";
 
 export const en = {
-  "productName": "QuickDEV DEMO",
-  "productDesc": "Create software applications for your company and customers with minimal coding experience. QuickDEV DEMO is an excellent alternative to Retool, Appsmith, and Tooljet.",
+  "productName": "QuickDEV",
+  "productDesc": "Create software applications for your company and customers with minimal coding experience. QuickDEV is an excellent alternative to Retool, Appsmith, and Tooljet.",
   "notSupportedBrowser": "Your current browser may have compatibility issues. For an optimal user experience, please use the latest version of Chrome.",
   "create": "Create",
   "move": "Move",
@@ -474,7 +474,7 @@ export const en = {
     "quickRestAPI": "REST Query",
     "quickStreamAPI": "Stream Query",
     "quickGraphql": "GraphQL Query",
-    "lowcoderAPI": "QuickDEV DEMO API",
+    "lowcoderAPI": "QuickDEV API",
     "executeJSCode": "Run JavaScript Code",
     "importFromQueryLibrary": "Import from Query Repository",
     "importFromFile": "Import from File",
@@ -558,8 +558,8 @@ export const en = {
     "connectSuccessfully": "Connection Successful",
     "saveSuccessfully": "Saved Successfully",
     "database": "Database",
-    "cloudHosting": "Cloud-hosted QuickDEV DEMO cannot access local services using 127.0.0.1 or localhost. Try connecting to public network data sources or use a reverse proxy for private services.",
-    "notCloudHosting": "For docker-hosted deployment, QuickDEV DEMO uses bridge networks, so 127.0.0.1 and localhost are invalid for host addresses. To access local machine data sources, refer to",
+    "cloudHosting": "Cloud-hosted QuickDEV cannot access local services using 127.0.0.1 or localhost. Try connecting to public network data sources or use a reverse proxy for private services.",
+    "notCloudHosting": "For docker-hosted deployment, QuickDEV uses bridge networks, so 127.0.0.1 and localhost are invalid for host addresses. To access local machine data sources, refer to",
     "howToAccessHostDocLink": "How to Access Host API/DB",
     "returnList": "Return",
     "chooseDatasourceType": "Choose Data Source Type",
@@ -567,7 +567,7 @@ export const en = {
     "testConnection": "Test Connection",
     "save": "Save",
     "whitelist": "Allowlist",
-    "whitelistTooltip": "Add QuickDEV DEMO's IP addresses to your data source allowlist as needed.",
+    "whitelistTooltip": "Add QuickDEV's IP addresses to your data source allowlist as needed.",
     "address": "Address: ",
     "nameExists": "Name {name} already exists",
     "jsQueryDocLink": "About JavaScript Query",
@@ -1005,7 +1005,7 @@ export const en = {
     "text": "It's a Good Day.",
     "triggerQuery": "Trigger Query",
     "updateData": "Update Data",
-    "updateText": "I'm Also in a Good Mood to Develop now my own Custom Component with QuickDEV DEMO!",
+    "updateText": "I'm Also in a Good Mood to Develop now my own Custom Component with QuickDEV!",
     "sdkGlobalVarName": "QuickDEV",
     "data": "Data you want to pass to the Custom Component",
     "code": "Code of your Custom Component",
@@ -1811,7 +1811,7 @@ export const en = {
     "unStructuredError": "Unstructured Data {prev} Can't Be Updated by {path}",
     "valueDesc": "Dynamic Variable Value",
     "deleteMessage": "The Dynamic Variable is Deleted Successfully. You Can Use {undoKey} to Undo.",
-    "documentationText" : "Dynamic Variables in QuickDEV DEMO are a powerful feature used to manage complex variables that dynamically update the state of components in your application. These states act as intermediary or transient storage for data that can change over time due to user interactions or other processes."
+    "documentationText" : "Dynamic Variables in QuickDEV are a powerful feature used to manage complex variables that dynamically update the state of components in your application. These states act as intermediary or transient storage for data that can change over time due to user interactions or other processes."
   },
   "dataResponder": {
     "data": "Data",
@@ -1967,7 +1967,7 @@ export const en = {
   "module": {
     "emptyText": "No Data",
     "docLink": "Read More About Modules...",
-    "documentationText" : "QuickDEV DEMO Modules are complete Applications, that can get included and repeated in other QuickDEV DEMO Applications and it functions just like a single component. As modules can get embedded, they need to be able to interact with your outside apps or websites. This four settings help to support communication with a Module.",
+    "documentationText" : "QuickDEV Modules are complete Applications, that can get included and repeated in other QuickDEV Applications and it functions just like a single component. As modules can get embedded, they need to be able to interact with your outside apps or websites. This four settings help to support communication with a Module.",
     "circularReference": "Circular Reference, Current Module/Application Cannot Be Used!",
     "emptyTestInput": "The Current Module Has No Input to Test",
     "emptyTestMethod": "The Current Module Has No Method to Test",
@@ -2008,7 +2008,7 @@ export const en = {
   "apiMessage": {
     "authenticationFail": "User Authentication Failed, Please Sign In Again",
     "verifyAccount": "Need to Verify Account",
-    "functionNotSupported": "The Current Version Does Not Support This Function. Please Contact the QuickDEV DEMO Business Team to Upgrade Your Account"
+    "functionNotSupported": "The Current Version Does Not Support This Function. Please Contact the QuickDEV Business Team to Upgrade Your Account"
   },
   "globalErrorMessage": {
     "createCompFail": "Create Component {comp} Failed",
@@ -2201,7 +2201,7 @@ export const en = {
     "resetSuccess": "Reset Succeeded",
     "resetSuccessDesc": "Password Reset Succeeded. The New Password is: {password}",
     "copyPassword": "Copy Password",
-    "poweredByLowcoder": "Powered by QuickDEV DEMO"
+    "poweredByLowcoder": "Powered by QuickDEV"
   },
   "preLoad": {
     "jsLibraryHelpText": "Add JavaScript Libraries to Your Current Application via URL Addresses. lodash, day.js, uuid, numbro are Built into the System for Immediate Use. JavaScript Libraries are Loaded Before the Application is Initialized, Which Can Have an Impact on Application Performance.",
@@ -2328,13 +2328,13 @@ export const en = {
     "appPublicMessage": "Make the app public. Anyone can view.",
     "modulePublicMessage": "Make the module public. Anyone can view.",
     "marketplaceURL": "http://172.23.16.1",
-    "appMarketplaceMessage": "Publish your App on QuickDEV DEMO Marketplace. Anyone can view and copy it from there.",
-    "moduleMarketplaceMessage": "Publish your Module on QuickDEV DEMO Marketplace. Anyone can view and copy it from there.",
+    "appMarketplaceMessage": "Publish your App on QuickDEV Marketplace. Anyone can view and copy it from there.",
+    "moduleMarketplaceMessage": "Publish your Module on QuickDEV Marketplace. Anyone can view and copy it from there.",
     "marketplaceGoodPublishing": "Please make sure your app is well-named and easy to use. Remove any sensitive information before publishing. Also, remove local datasources and replace by static built-in temporary data.",
     "noMarketplaceApps": "No apps yet in the marketplace",
     "errorMarketplaceApps": "Error while loading Marketplace Apps",
     "localMarketplaceTitle": "Local Marketplace",
-    "globalMarketplaceTitle": "QuickDEV DEMO Marketplace",
+    "globalMarketplaceTitle": "QuickDEV Marketplace",
     "memberPermissionList": "Member permissions: ",
     "orgName": "{orgName} admins",
     "addMember": "Add members",
@@ -2387,8 +2387,8 @@ export const en = {
 
 
   "componentDoc": {
-    "markdownDemoText": "**QuickDEV DEMO** | Create software applications for your Company and your Customers with minimal coding experience. QuickDEV DEMO is the best Retool, Appsmith or Tooljet Alternative.",
-    "demoText": "QuickDEV DEMO | Create software applications for your Company and your Customers with minimal coding experience. QuickDEV DEMO is the best Retool, Appsmith or Tooljet Alternative.",
+    "markdownDemoText": "**QuickDEV** | Create software applications for your Company and your Customers with minimal coding experience. QuickDEV is the best Retool, Appsmith or Tooljet Alternative.",
+    "demoText": "QuickDEV | Create software applications for your Company and your Customers with minimal coding experience. QuickDEV is the best Retool, Appsmith or Tooljet Alternative.",
     "submit": "Submit",
     "style": "Style",
     "danger": "Danger",

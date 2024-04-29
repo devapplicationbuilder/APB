@@ -1,7 +1,7 @@
 
 {
-    "productName": "QuickDEV DEMO",
-    "productDesc": "Create software applications for your company and customers with minimal coding experience. QuickDEV DEMO is an excellent alternative to Retool, Appsmith, and Tooljet.",
+    "productName": "QuickDEV",
+    "productDesc": "Create software applications for your company and customers with minimal coding experience. QuickDEV is an excellent alternative to Retool, Appsmith, and Tooljet.",
     "notSupportedBrowser": "Your current browser may have compatibility issues. For an optimal user experience, please use the latest version of Chrome.",
     "create": "Create",
     "move": "Move",
@@ -428,7 +428,7 @@
       "quickRestAPI": "REST Query",
       "quickStreamAPI": "Stream Query",
       "quickGraphql": "GraphQL Query",
-      "lowcoderAPI": "QuickDEV DEMO API",
+      "lowcoderAPI": "QuickDEV API",
       "executeJSCode": "Run JavaScript Code",
       "importFromQueryLibrary": "Import from Query Repository",
       "importFromFile": "Import from File",
@@ -512,8 +512,8 @@
       "connectSuccessfully": "Connection Successful",
       "saveSuccessfully": "Saved Successfully",
       "database": "Database",
-      "cloudHosting": "Cloud-hosted QuickDEV DEMO cannot access local services using 127.0.0.1 or localhost. Try connecting to public network data sources or use a reverse proxy for private services.",
-      "notCloudHosting": "For docker-hosted deployment, QuickDEV DEMO uses bridge networks, so 127.0.0.1 and localhost are invalid for host addresses. To access local machine data sources, refer to",
+      "cloudHosting": "Cloud-hosted QuickDEV cannot access local services using 127.0.0.1 or localhost. Try connecting to public network data sources or use a reverse proxy for private services.",
+      "notCloudHosting": "For docker-hosted deployment, QuickDEV uses bridge networks, so 127.0.0.1 and localhost are invalid for host addresses. To access local machine data sources, refer to",
       "howToAccessHostDocLink": "How to Access Host API/DB",
       "returnList": "Return",
       "chooseDatasourceType": "Choose Data Source Type",
@@ -521,7 +521,7 @@
       "testConnection": "Test Connection",
       "save": "Save",
       "whitelist": "Allowlist",
-      "whitelistTooltip": "Add QuickDEV DEMO's IP addresses to your data source allowlist as needed.",
+      "whitelistTooltip": "Add QuickDEV's IP addresses to your data source allowlist as needed.",
       "address": "Address: ",
       "nameExists": "Name {name} already exists",
       "jsQueryDocLink": "About JavaScript Query",
@@ -943,7 +943,7 @@
       "text": "It's a Good Day.",
       "triggerQuery": "Trigger Query",
       "updateData": "Update Data",
-      "updateText": "I'm Also in a Good Mood to Develop now my own Custom Component with QuickDEV DEMO!",
+      "updateText": "I'm Also in a Good Mood to Develop now my own Custom Component with QuickDEV!",
       "sdkGlobalVarName": "QuickDEV",
       "data": "Data you want to pass to the Custom Component",
       "code": "Code of your Custom Component"
@@ -1688,7 +1688,7 @@
       "unStructuredError": "Unstructured Data {prev} Can't Be Updated by {path}",
       "valueDesc": "Dynamic Variable Value",
       "deleteMessage": "The Dynamic Variable is Deleted Successfully. You Can Use {undoKey} to Undo.",
-      "documentationText" : "Dynamic Variables in QuickDEV DEMO are a powerful feature used to manage complex variables that dynamically update the state of components in your application. These states act as intermediary or transient storage for data that can change over time due to user interactions or other processes."
+      "documentationText" : "Dynamic Variables in QuickDEV are a powerful feature used to manage complex variables that dynamically update the state of components in your application. These states act as intermediary or transient storage for data that can change over time due to user interactions or other processes."
     },
     "dataResponder": {
       "data": "Data",
@@ -1869,7 +1869,7 @@
     "apiMessage": {
       "authenticationFail": "User Authentication Failed, Please Sign In Again",
       "verifyAccount": "Need to Verify Account",
-      "functionNotSupported": "The Current Version Does Not Support This Function. Please Contact the QuickDEV DEMO Business Team to Upgrade Your Account"
+      "functionNotSupported": "The Current Version Does Not Support This Function. Please Contact the QuickDEV Business Team to Upgrade Your Account"
     },
     "globalErrorMessage": {
       "createCompFail": "Create Component {comp} Failed",
@@ -2048,7 +2048,7 @@
       "resetSuccess": "Reset Succeeded",
       "resetSuccessDesc": "Password Reset Succeeded. The New Password is: {password}",
       "copyPassword": "Copy Password",
-      "poweredByLowcoder": "Powered by QuickDEV DEMO"
+      "poweredByLowcoder": "Powered by QuickDEV"
     },
     "preLoad": {
       "jsLibraryHelpText": "Add JavaScript Libraries to Your Current Application via URL Addresses. lodash, day.js, uuid, numbro are Built into the System for Immediate Use. JavaScript Libraries are Loaded Before the Application is Initialized, Which Can Have an Impact on Application Performance.",
@@ -2210,8 +2210,8 @@
       "showBorder": "Show Border"
     },
     "componentDoc": {
-      "markdownDemoText": "**QuickDEV DEMO** | Create software applications for your Company and your Customers with minimal coding experience. QuickDEV DEMO is the best Retool, Appsmith or Tooljet Alternative.",
-      "demoText": "QuickDEV DEMO | Create software applications for your Company and your Customers with minimal coding experience. QuickDEV DEMO is the best Retool, Appsmith or Tooljet Alternative.",
+      "markdownDemoText": "**QuickDEV** | Create software applications for your Company and your Customers with minimal coding experience. QuickDEV is the best Retool, Appsmith or Tooljet Alternative.",
+      "demoText": "QuickDEV | Create software applications for your Company and your Customers with minimal coding experience. QuickDEV is the best Retool, Appsmith or Tooljet Alternative.",
       "submit": "Submit",
       "style": "Style",
       "danger": "Danger",

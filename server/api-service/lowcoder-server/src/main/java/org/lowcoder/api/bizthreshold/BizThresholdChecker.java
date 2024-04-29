@@ -59,7 +59,8 @@ public class BizThresholdChecker extends AbstractBizThresholdChecker {
 
     @Override
     protected int getMaxOrgPerUser() {
-        return maxOrgPerUser.get();
+        return 1;
+        //return maxOrgPerUser.get();
     }
 
     @Override

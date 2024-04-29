@@ -54,7 +54,7 @@ common:
   workspace:
     mode: ${QUICKDEV_WORKSPACE_MODE:SAAS}
   marketplace:
-    private-mode: ${QUICKDEV_MARKETPLACE_PRIVATE_MODE:true}
+    private-mode: ${QUICKDEV_MARKETPLACE_PRIVATE_MODE:false}
 
 material:
   mongodb-grid-fs:

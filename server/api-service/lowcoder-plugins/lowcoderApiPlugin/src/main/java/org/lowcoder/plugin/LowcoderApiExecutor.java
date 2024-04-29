@@ -83,8 +83,8 @@ public class LowcoderApiExecutor implements QueryExecutor<LowcoderApiDatasourceC
     }
 
     private Mono<QueryExecutionResult> getUserDetails(String email) {
-        String authUrl = System.getenv("QUICKDEV_AUTH_URL");
-        String url = authUrl + "/api/QuickDEV/" + email + "/GetUserDetails";
+        String authUrl = System.getenv("QUICKDEV_API_URL");
+        String url = authUrl + "/QuickDEV/" + email + "/GetUserDetails";
 
         return WebClient.builder()
             .build()
