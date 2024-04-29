@@ -76,19 +76,8 @@ export class AppViewInstance<I = any, O = any> {
               [AuthSearchParams.redirectUrl]: encodeURIComponent(window.location.href),
               [AuthSearchParams.loginType]: null,
             })
-            //window.location.href = 'https://localhost:44447/';//`${webUrl}${AUTH_LOGIN_URL}`;
-            //window.location.href = 'http://172.23.16.1:4501/';
 
-            const { protocol, hostname, port } = window.location;
-
-            if (port) {
-                const newPort = Number(port) + 1;
-                const newUrl = `${protocol}//${hostname}:${newPort}`;
-                window.location.href = newUrl;
-            } else {
-                const newUrl = `${protocol}//${hostname}_AUTH`;
-                window.location.href = newUrl;
-            }
+            window.location.href = `${webUrl}${AUTH_LOGIN_URL}`;
           }
         });
 

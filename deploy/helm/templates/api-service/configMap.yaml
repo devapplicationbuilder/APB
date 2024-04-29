@@ -33,5 +33,5 @@ data:
   QUICKDEV_MAX_GROUPS_PER_ORG: {{ .Values.global.defaults.maxGroupsPerOrg | default "100" | quote }}
   QUICKDEV_MAX_APPS_PER_ORG: {{ .Values.global.defaults.maxAppsPerOrg | default "1000" | quote }}
   QUICKDEV_MAX_DEVELOPERS: {{ .Values.global.defaults.maxDevelopers | default "50" | quote }}
-  QUICKDEV_WORKSPACE_MODE: {{ .Values.global.config.workspaceMode | default "ENTERPRISE" | quote }}
+  QUICKDEV_WORKSPACE_MODE: {{ .Values.global.config.workspaceMode | default "SAAS" | quote }}
   QUICKDEV_CREATE_WORKSPACE_ON_SIGNUP: {{ .Values.global.config.createWorkspaceOnSignup | default "true" | quote }}

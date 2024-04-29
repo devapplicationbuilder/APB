@@ -28,7 +28,7 @@ export function getComponentPlaygroundUrl(compType: UICompType) {
   if (port) {
       newUrl = `${protocol}//${hostname}:${port}/playground/${compType}/1`;
   } else {
-      newUrl = `${protocol}//${hostname}_AUTH/playground/${compType}/1`;
+      newUrl = `${protocol}//${hostname}/playground/${compType}/1`;
   }
 
   if (!compType) {
