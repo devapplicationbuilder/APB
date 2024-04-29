@@ -57,23 +57,7 @@ export function useAuthSubmit(
           onAuthSuccess,
         ))
         .catch((e) => {
-          messageInstance.error(e.message + ' You will be redirected to the login page in 3 seconds ...');
-          setTimeout(() => {
-            //window.location.href = 'https://localhost:44447';
-            //window.location.href = 'http://172.23.16.1:4501';
-            const { protocol, hostname, port } = window.location;
-
-            if (port) {
-                const newPort = Number(port) + 1;
-                const newUrl = `${protocol}//${hostname}:${newPort}`;
-                window.location.href = newUrl;
-            } else {
-                const newUrl = `${protocol}//${hostname}_AUTH`;
-                window.location.href = newUrl;
-            }
-
-          }, 3000);
-          //aici pot sa redirectionez
+          messageInstance.error(e.message);
         })
         .finally(() => setLoading(false));
     },

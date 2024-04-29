@@ -135,7 +135,12 @@ function Login() {
   const loginSubHeading = '' // REACT_APP_LOWCODER_CUSTOM_AUTH_WELCOME_TEXT !== "" ? trans("userAuth.poweredByLowcoder") : ''
 
   return (
+    <AuthContainer
+      heading={loginHeading}
+      subHeading={loginSubHeading}
+    >
       <FormLogin organizationId={organizationId} />
+    </AuthContainer>
   );
 }
 
