@@ -34,6 +34,17 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.reactive.function.client.WebClient;
 import lombok.RequiredArgsConstructor;
 import reactor.core.publisher.Mono;
+import org.quickdev.api.bizthreshold.AbstractBizThresholdChecker;
+import java.util.Calendar;
+import java.util.Map;
+
+import static org.quickdev.sdk.util.ExceptionUtils.deferredError;
+import static org.quickdev.sdk.util.ExceptionUtils.ofError;
+import org.quickdev.sdk.constants.Authentication;
+import org.quickdev.sdk.exception.BizError;
+import org.quickdev.sdk.exception.BizException;
+import org.quickdev.sdk.plugin.common.QueryExecutor;
+import org.quickdev.sdk.util.ExceptionUtils;
 
 @RequiredArgsConstructor
 @RestController
@@ -43,6 +54,8 @@ public class ApplicationController implements ApplicationEndpoints {
     private final ApplicationApiService applicationApiService;
     private final BusinessEventPublisher businessEventPublisher;
     private final SessionUserService sessionUserService;
+
+    private final AbstractBizThresholdChecker bizThresholdChecker;
 
     @Override
     public Mono<ResponseView<ApplicationView>> create(@RequestBody CreateApplicationRequest createApplicationRequest) {
@@ -86,6 +99,32 @@ public class ApplicationController implements ApplicationEndpoints {
                 .map(ResponseView::success);
     }
 
+    private Mono<Boolean> canPublish(String actionType, int curYear, int curMonth, int curDay, int curHour, int curMinute, int curSecond) {
+        return sessionUserService.getVisitorOrgMemberCache()
+                .flatMap(orgMember -> {
+                    return bizThresholdChecker.getItemFromLicense(orgMember.getOrgId(), actionType + "_VALID_TO")
+                            .map(validTo -> {
+                                String[] parts = validTo.split("#");
+                                int year = Integer.parseInt(parts[0]);
+                                int month = Integer.parseInt(parts[1]);
+                                int day = Integer.parseInt(parts[2]);
+                                int hour = Integer.parseInt(parts[3]);
+                                int minute = Integer.parseInt(parts[4]);
+                                int second = Integer.parseInt(parts[5]);
+                    
+                                Calendar targetDateTime = Calendar.getInstance();
+                                targetDateTime.set(year, month-1, day, hour, minute, second);
+
+                                Calendar currentDateTime = Calendar.getInstance();
+                                currentDateTime.set(curYear, curMonth - 1, curDay, curHour, curMinute, curSecond);
+                                return currentDateTime.compareTo(targetDateTime) <= 0;
+                            })
+                            .defaultIfEmpty(false)
+                            .flatMap(Mono::just);
+                })
+                .defaultIfEmpty(false);
+    } 
+
     @Override
     public Mono<ResponseView<ApplicationView>> getEditingApplication(@PathVariable String applicationId) {
         return applicationApiService.getEditingApplication(applicationId)
@@ -93,13 +132,12 @@ public class ApplicationController implements ApplicationEndpoints {
                 .map(ResponseView::success);
     }
 
-    // will call the check in ApplicationApiService and ApplicationService
     @Override
     public Mono<ResponseView<ApplicationView>> getPublishedApplication(@PathVariable String applicationId) {
         return applicationApiService.getPublishedApplication(applicationId, ApplicationRequestType.PUBLIC_TO_ALL)
-                .delayUntil(applicationView -> applicationApiService.updateUserApplicationLastViewTime(applicationId))
-                .delayUntil(applicationView -> businessEventPublisher.publishApplicationCommonEvent(applicationView, EventType.VIEW))
-                .map(ResponseView::success);
+                                            .delayUntil(applicationView -> applicationApiService.updateUserApplicationLastViewTime(applicationId))
+                                            .delayUntil(applicationView -> businessEventPublisher.publishApplicationCommonEvent(applicationView, EventType.VIEW))
+                                            .map(ResponseView::success);
     }
 
     @Override
@@ -213,8 +251,29 @@ public class ApplicationController implements ApplicationEndpoints {
     @Override
     public Mono<ResponseView<Boolean>> setApplicationPublicToAll(@PathVariable String applicationId,
             @RequestBody ApplicationPublicToAllRequest request) {
-        return applicationApiService.setApplicationPublicToAll(applicationId, request.publicToAll())
-                .map(ResponseView::success);
+
+        WebClient webClient = WebClient.create("https://timeapi.io/api/Time/current/zone?timeZone=Europe/Bucharest");
+        return webClient.get()
+                .retrieve()
+                .bodyToMono(Map.class)
+                .flatMap(timeResponse -> {
+                    int year = (int) timeResponse.get("year");
+                    int month = (int) timeResponse.get("month");
+                    int day = (int) timeResponse.get("day");
+                    int hour = (int) timeResponse.get("hour");
+                    int minute = (int) timeResponse.get("minute");
+                    int second = (int) timeResponse.get("seconds");
+
+                    return canPublish("PUBLISH", year, month, day, hour, minute, second)
+                            .flatMap(isViewable -> {
+                                if (isViewable) {
+                                    return applicationApiService.setApplicationPublicToAll(applicationId, request.publicToAll())
+                                            .map(ResponseView::success);
+                                } else {
+                                    return deferredError(BizError.NO_PUBLISH_LICENSE, "NO_PUBLISH_LICENSE");
+                                }
+                            });
+                }); 
     }
 
     @Override
@@ -230,6 +289,4 @@ public class ApplicationController implements ApplicationEndpoints {
         return applicationApiService.setApplicationAsAgencyProfile(applicationId, request.agencyProfile())
                 .map(ResponseView::success);
     }
-
-
 }

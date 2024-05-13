@@ -47,11 +47,9 @@ public class AuthenticationController implements AuthenticationEndpoints
                                               ServerWebExchange exchange) {
     return authenticationApiService.authenticateByForm(formLoginRequest.loginId(), formLoginRequest.password(),
                     formLoginRequest.source(), formLoginRequest.register(), formLoginRequest.authId(), orgId, formLoginRequest.token(), formLoginRequest.authType())
-            .flatMap(user -> {
-                    return authenticationApiService.loginOrRegister(user, exchange, invitationId, Boolean.FALSE)
-                            .thenReturn(ResponseView.success(true));
-            });
-}
+            .flatMap(user -> authenticationApiService.loginOrRegister(user, exchange, invitationId, Boolean.FALSE))
+            .thenReturn(ResponseView.success(true));
+    }
 
     /**
      * third party login api

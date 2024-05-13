@@ -172,14 +172,14 @@ public class OrganizationServiceImpl implements OrganizationService {
 
     @Override
     public Mono<Organization> getById(String id) {
-        return repository.findByIdAndState(id, ACTIVE)
-                .switchIfEmpty(deferredError(UNABLE_TO_FIND_VALID_ORG, "INVALID_ORG_ID"));
+        return repository.findByIdAndState(id, ACTIVE);
+                //.switchIfEmpty(deferredError(UNABLE_TO_FIND_VALID_ORG, "INVALID_ORG_ID"));
     }
 
     @Override
     public Mono<OrganizationCommonSettings> getOrgCommonSettings(String orgId) {
         return repository.findByIdAndState(orgId, ACTIVE)
-                .switchIfEmpty(deferredError(UNABLE_TO_FIND_VALID_ORG, "INVALID_ORG_ID"))
+                //.switchIfEmpty(deferredError(UNABLE_TO_FIND_VALID_ORG, "INVALID_ORG_ID"))
                 .map(Organization::getCommonSettings);
     }
 

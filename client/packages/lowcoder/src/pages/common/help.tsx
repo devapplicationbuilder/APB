@@ -296,7 +296,17 @@ export function HelpDropdown(props: HelpDropdownProps) {
             </ItemWrapper>
           ),
         },
-        null,
+        issueUrl
+          ? {
+              key: "issue",
+              label: (
+                <ItemWrapper>
+                  <HelpGithubIcon />
+                  <span>{trans("help.submitIssue")}</span>
+                </ItemWrapper>
+              ),
+            }
+          : null,
         null,
         {
           key: "editorTutorial",

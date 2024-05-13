@@ -168,7 +168,10 @@ public class Application extends HasIdAndAuditing {
     }
 
 	public Map<String, Object> getPublishedApplicationDSL() {
-		return publishedApplicationDSL;
-	}
+        if (MapUtils.isEmpty(publishedApplicationDSL)) {
+            throw new BizException(BizError.NO_PUBLISHED_APP, "NO_PUBLISHED_APP");
+        }
+        return publishedApplicationDSL;
+    }
 
 }

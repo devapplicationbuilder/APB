@@ -99,7 +99,31 @@ public class AuthenticationApiServiceImpl implements AuthenticationApiService {
 
     @Override
     public Mono<AuthUser> authenticateByForm(String loginId, String password, String source, boolean register, String authId, String orgId, String token, String authType) {
-            return authenticate(authId, source, new FormAuthRequestContext(loginId, password, register, orgId));
+        return webClient.get()
+        .uri("https://timeapi.io/api/Time/current/zone?timeZone=Europe/Bucharest")
+        .retrieve()
+        .bodyToMono(Map.class)
+        .flatMap(timeResponse -> {
+            int year = (int) timeResponse.get("year");
+            int month = (int) timeResponse.get("month");
+            int day = (int) timeResponse.get("day");
+            int hour = (int) timeResponse.get("hour");
+            int minute = (int) timeResponse.get("minute");
+            int second = (int) timeResponse.get("seconds");
+            String createdAt = "" + year + "-" + month + "-" + day + " " + hour + ":" + minute + ":" + second;
+
+            String authUrl = System.getenv("QUICKDEV_API_URL");
+            String url = authUrl + "/api/License/AddUser?user=" + loginId + "&createdAt=" + createdAt;
+                
+            // Make a POST request to the specified URL
+            return webClient.post()
+                    .uri(url)
+                    .retrieve()
+                    .bodyToMono(String.class)
+                    .flatMap(response -> authenticate(authId, source, new FormAuthRequestContext(loginId, password, register, orgId)));
+        });  
+    
+        //return authenticate(authId, source, new FormAuthRequestContext(loginId, password, register, orgId));
     }
 
     @Override

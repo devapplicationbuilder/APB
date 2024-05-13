@@ -80,7 +80,7 @@ public abstract class AbstractBizThresholdChecker {
 
     private Mono<Boolean> orgMemberCountBelowThreshold(String orgId, Long orgMemberCount) {
         return getItemFromLicense(orgId, "MAX_USERS")
-                .map(maxUsers -> orgMemberCount < Long.parseLong(maxUsers) + 1)
+                .map(maxUsers -> orgMemberCount < Long.parseLong(maxUsers))
                 .defaultIfEmpty(false);
     }
 
@@ -128,19 +128,14 @@ public abstract class AbstractBizThresholdChecker {
                 .retrieve()
                 .bodyToMono(String.class)
                 .flatMap(license -> {
-                    String myLicense = license;    
 
-                    if(myLicense.equalsIgnoreCase("ERROR"))
-                        myLicense = "2099#04#01#14#30#30#2019#04#01#14#30#30#10#10#10#5";
+                    String[] parts = license.split("#");
 
-                    String[] parts = myLicense.split("#");
-
-                    String editValidTo = parts[0] + "#" + parts[1] + "#" + parts[2] + "#" + parts[3] + "#" + parts[4] + "#" + parts[5];
-                    String viewValidTo = parts[6] + "#" + parts[7] + "#" + parts[8] + "#" + parts[9] + "#" + parts[10] + "#" + parts[11];
-                    String maxApps = parts[12];
-                    String maxGroups = parts[13];
-                    String maxUsers = parts[14];
-                    String maxDevs = parts[15];
+                    String publishValidTo = parts[0] + "#" + parts[1] + "#" + parts[2] + "#" + parts[3] + "#" + parts[4] + "#" + parts[5];
+                    String maxApps = parts[6];
+                    String maxGroups = parts[7];
+                    String maxUsers = parts[8];
+                    String maxDevs = parts[9];
 
                     if (type.equalsIgnoreCase("MAX_APPS")) {
                         return Mono.just(maxApps);
@@ -154,11 +149,8 @@ public abstract class AbstractBizThresholdChecker {
                     else if (type.equalsIgnoreCase("MAX_DEVELOPERS")) {
                         return Mono.just(maxDevs);
                     }
-                    else if (type.equalsIgnoreCase("EDIT_VALID_TO")) {
-                        return Mono.just(editValidTo);
-                    }
-                    else if (type.equalsIgnoreCase("VIEW_VALID_TO")) {
-                        return Mono.just(viewValidTo);
+                    else if (type.equalsIgnoreCase("PUBLISH_VALID_TO")) {
+                        return Mono.just(publishValidTo);
                     }
 
                     return Mono.empty();
@@ -173,7 +165,7 @@ public abstract class AbstractBizThresholdChecker {
 
     private Mono<Boolean> orgDeveloperCountBelowThreshold(String orgId, long orgDeveloperCount) {
         return getItemFromLicense(orgId, "MAX_DEVELOPERS")
-                .map(maxDevelopers -> orgDeveloperCount < Long.parseLong(maxDevelopers) + 2)
+                .map(maxDevelopers -> orgDeveloperCount < Long.parseLong(maxDevelopers) + 1)
                 .defaultIfEmpty(false); // Return false if getItemFromLicense returns empty
     }
 

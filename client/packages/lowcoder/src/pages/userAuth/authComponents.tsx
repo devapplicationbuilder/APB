@@ -196,8 +196,7 @@ const TermsAndPrivacyLabel = styled.span`
 export const TermsAndPrivacyInfo = (props: { onCheckChange: (e: CheckboxChangeEvent) => void }) => {
   const termsUrl = trans("docUrls.terms");
   const privacyUrl = trans("docUrls.privacy");
-  //TBD de adaugat terms and privacy policy
-  return null;
+
   if (!termsUrl || !privacyUrl) {
     return null;
   }

@@ -208,50 +208,70 @@ function OrgUsersPermission(props: UsersPermissionProp) {
           key="action"
           render={(value, record: OrgUser) => {
             const operationItems: Array<EditPopoverItemType> = [];
-            return (
-                <div className="operation-cell-div-wrapper">
-                    {currentOrgAdmin(currentUser) && (
-                        <UserDetailPopup userId={record.userId} title={record.name} />
-                    )}
-                    {record.userId !== currentUser.id && (
-                        currentOrgAdmin(currentUser) && false && (
-                            <span
-                                onClick={() => {
-                                    CustomModal.confirm({
-                                        title: trans("memberSettings.moveOutOrg"),
-                                        type: "warn",
-                                        content: transToNode(
-                                            isSaasMode(sysConfig)
-                                                ? "memberSettings.moveOutOrgDescSaasMode"
-                                                : "memberSettings.moveOutOrgDesc",
-                                            { name: <b>{record.name}</b> }
-                                        ),
-                                        onConfirm: () => {
-                                            dispatch(
-                                                deleteOrgUserAction({
-                                                    userId: record.userId,
-                                                    orgId: orgId,
-                                                })
-                                            );
-                                        },
-                                        confirmBtnType: "delete",
-                                        okText: trans("memberSettings.moveOutOrg"),
-                                    });
-                                }}
-                            >
-                                {trans("memberSettings.moveOutOrg")}
-                            </span>
-                        )
-                    )}
-                    {operationItems.length > 0 && <EditPopover items={operationItems} />}
-                </div>
-
-            );
-          }}
-        />
-      </TableStyled>
-    </>
-  );
+                        return (
+                            <div className="operation-cell-div-wrapper">
+                                {currentOrgAdmin(currentUser) && (
+                                    <UserDetailPopup userId={record.userId} title={record.name} />
+                                )}
+                                {record.userId === currentUser.id ? (
+                                    record.role === ADMIN_ROLE && adminCount === 1 ? (
+                                        <QuestionTooltip title={LAST_ADMIN_QUIT} />
+                                    ) : (
+                                        <span
+                                            onClick={() => {
+                                                CustomModal.confirm({
+                                                    title: trans("memberSettings.exitOrg"),
+                                                    type: "warn",
+                                                    content: trans("memberSettings.exitOrgDesc"),
+                                                    onConfirm: () => {
+                                                        dispatch(quitOrgAction(orgId));
+                                                    },
+                                                    confirmBtnType: "delete",
+                                                    okText: trans("memberSettings.exitOrg"),
+                                                });
+                                            }}
+                                        >
+                                            {trans("memberSettings.exitOrg")}
+                                        </span>
+                                    )
+                                ) : (
+                                    currentOrgAdmin(currentUser) && (
+                                        <span
+                                            onClick={() => {
+                                                CustomModal.confirm({
+                                                    title: trans("memberSettings.moveOutOrg"),
+                                                    type: "warn",
+                                                    content: transToNode(
+                                                        isSaasMode(sysConfig)
+                                                            ? "memberSettings.moveOutOrgDescSaasMode"
+                                                            : "memberSettings.moveOutOrgDesc",
+                                                        { name: <b>{record.name}</b> }
+                                                    ),
+                                                    onConfirm: () => {
+                                                        dispatch(
+                                                            deleteOrgUserAction({
+                                                                userId: record.userId,
+                                                                orgId: orgId,
+                                                            })
+                                                        );
+                                                    },
+                                                    confirmBtnType: "delete",
+                                                    okText: trans("memberSettings.moveOutOrg"),
+                                                });
+                                            }}
+                                        >
+                                            {trans("memberSettings.moveOutOrg")}
+                                        </span>
+                                    )
+                                )}
+                                {operationItems.length > 0 && <EditPopover items={operationItems} />}
+                            </div>
+                        );
+                    }}
+                />
+            </TableStyled>
+        </>
+    );
 }
 
 const mapStateToProps = (state: AppState) => {

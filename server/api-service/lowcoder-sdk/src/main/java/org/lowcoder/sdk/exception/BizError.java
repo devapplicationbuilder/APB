@@ -64,8 +64,8 @@ public enum BizError {
 
     NO_PERMISSION_TO_REQUEST_APP(403, 5308),
     NO_LICENSE(500, 5309),
-    NO_EDIT_LICENSE(500, 5310),
-    NO_VIEW_LICENSE(500, 5311),
+    NO_PUBLISH_LICENSE(500, 5311),
+    NO_PUBLISHED_APP(500, 5312),
 
     // datasource related, code range 5500 - 5600
     DATASOURCE_NOT_FOUND(500, 5500),

@@ -94,7 +94,7 @@ function getUrl(): string {
         return `${protocol}//${hostname}:${newPort}/custom_component.html`;
     }
 
-    return `${protocol}//${hostname}_SDK/custom_component.html`
+    return `${protocol}//${hostname}:4431/custom_component.html`
 }
 
 function InnerCustomComponent(props: IProps) {

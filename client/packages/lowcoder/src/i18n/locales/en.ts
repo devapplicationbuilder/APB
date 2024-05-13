@@ -2787,50 +2787,50 @@ export const en = {
     "navItemStyle": "Menu Item Style"
   },
 
-  docUrls: {
-    docHome: "https://quickdev-cloud.web.app",
-    components: "http://172.23.16.1:4501/components/{compType}",
-    module: "https://quickdev-cloud.web.app/#/modules?id=modules",
-    fileUpload: "https://quickdev-cloud.web.app/#/file-upload?id=file-upload",
-    optionList: "https://quickdev-cloud.web.app/#/option-lists?id=option-lists",
-    terms: "http://172.23.16.1",
-    privacy: "http://172.23.16.1",
-    aboutUs: "http://172.23.16.1",
-    changeLog: "http://172.23.16.1",
-    introVideo: "",
-    devNpmPlugin: "http://172.23.16.1",
-    devNpmPluginText: "How to develop npm plugin",
-    useHost: "http://172.23.16.1",
-    eventHandlerSlowdown: "https://quickdev-cloud.web.app/#/event-handlers?id=event-handlers",
-    thirdLib: "https://quickdev-cloud.web.app/#/third-party-libraries?id=third-party-libraries",
-    thirdLibUrlText: "Use third-party libraries",
-  },
-  datasourceTutorial: {
-    mysql: "",
-    mongodb: "",
-    postgres: "",
-    redis: "",
-    es: "",
-    smtp: "",
-    clickHouse: "",
-  },
-  queryTutorial: {
-    js: "",
-    transformer: "https://quickdev-cloud.web.app/#/transformers?id=transformers",
-    tempState: "https://quickdev-cloud.web.app/#/dynamic-variable?id=dynamic-variable",
-    dataResponder: "https://quickdev-cloud.web.app/#/data-responder?id=data-responder",
-  },
-  customComponent: {
-    //entryUrl: "https://sdk.lowcoder.cloud/custom_component.html"
-    entryUrl: "http://172.23.16.1:4502/custom_component.html"
-  },
-  template: {
-    cloneUrl: "/apps/template-import/",
-  },
-  lowcoderUrl: {
-    createIssue: "http://172.23.16.1",
-    discord: "http://172.23.16.1",
-  }
+    docUrls: {
+        docHome: "https://docs.quickdev.cloud/",
+        components: "https://app.quickdev.cloud/privacy-policy/components/{compType}",
+        module: "https://docs.quickdev.cloud/applications/create-applications/module",
+        fileUpload: "https://docs.quickdev.cloud/applications/application-editor/visual-components/file-upload",
+        optionList: "https://docs.quickdev.cloud/applications/application-editor/visual-components/option-lists",
+        terms: "https://quickdev.cloud/terms-and-conditions",
+        privacy: "https://quickdev.cloud/privacy-policy",
+        aboutUs: "https://quickdev.cloud",
+        changeLog: "https://quickdev.cloud",
+        introVideo: "",
+        devNpmPlugin: "https://quickdev.cloud",
+        devNpmPluginText: "How to develop npm plugin",
+        useHost: "https://quickdev.cloud",
+        eventHandlerSlowdown: "https://docs.quickdev.cloud/applications/actions-editor/event-handlers",
+        thirdLib: "https://docs.quickdev.cloud/applications/actions-editor/third-party-libraries",
+        thirdLibUrlText: "Use third-party libraries",
+    },
+    datasourceTutorial: {
+        mysql: "",
+        mongodb: "",
+        postgres: "",
+        redis: "",
+        es: "",
+        smtp: "",
+        clickHouse: "",
+    },
+    queryTutorial: {
+        js: "",
+        transformer: "https://docs.quickdev.cloud/applications/actions-editor/transformers",
+        tempState: "https://docs.quickdev.cloud/applications/actions-editor/dynamic-variable",
+        dataResponder: "https://docs.quickdev.cloud/applications/actions-editor/data-responder",
+    },
+    customComponent: {
+        //entryUrl: "https://sdk.lowcoder.cloud/custom_component.html"
+        entryUrl: "https://app.quickdev.cloud:4431/custom_component.html"
+    },
+    template: {
+        cloneUrl: "/apps/template-import/",
+    },
+    lowcoderUrl: {
+        createIssue: "https://quickdev.cloud/contact",
+        discord: "https://quickdev.cloud/contact",
+    }
 };
 
 // const jsonString = JSON.stringify(en, null, 2);
