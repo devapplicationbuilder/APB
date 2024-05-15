@@ -202,10 +202,12 @@ public class AuthenticationApiServiceImpl implements AuthenticationApiService {
 
         if(linkExistingUser) {
             return sessionUserService.getVisitor()
-                    .flatMap(user -> userService.addNewConnectionAndReturnUser(user.getId(), authUser.toAuthConnection()));
+                    .flatMap(user -> userService.addNewConnectionAndReturnUser(user.getId(), authUser.toAuthConnection()))
+                    .delayUntil(user -> orgApiService.checkLicenseValid(authUser.getOrgId()));
         }
 
         return findByAuthUserSourceAndRawId(authUser).zipWith(findByAuthUserRawId(authUser))
+                .delayUntil(user -> orgApiService.checkLicenseValid(authUser.getOrgId()))
                 .flatMap(tuple -> {
 
                     FindByAuthUser findByAuthUserFirst = tuple.getT1();

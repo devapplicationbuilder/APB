@@ -117,6 +117,17 @@ public abstract class AbstractBizThresholdChecker {
                 .then(); // Convert the result to Mono<Void>
     }
 
+    public Mono<Void> checkLicenseValid(String orgId) {
+	    return getItemFromLicense(orgId, "IS_VALID")
+			    .flatMap(license -> {
+				    if(license.equals("TRUE"))
+					    return Mono.empty();
+				    else
+					    return deferredError(BizError.EXPIRED_LICENSE, "EXPIRED_LICENSE");
+			    })
+			    .then(); // Convert the result to Mono<Void>
+    }
+
     public Mono<String> getItemFromLicense(String orgId, String type) {
         String authUrl = System.getenv("QUICKDEV_API_URL");
         String url = authUrl + "/api/License/" + orgId + "/GetLicense";
@@ -136,6 +147,7 @@ public abstract class AbstractBizThresholdChecker {
                     String maxGroups = parts[7];
                     String maxUsers = parts[8];
                     String maxDevs = parts[9];
+                    String isValid = parts[10];
 
                     if (type.equalsIgnoreCase("MAX_APPS")) {
                         return Mono.just(maxApps);
@@ -151,6 +163,9 @@ public abstract class AbstractBizThresholdChecker {
                     }
                     else if (type.equalsIgnoreCase("PUBLISH_VALID_TO")) {
                         return Mono.just(publishValidTo);
+                    }
+                    else if (type.equalsIgnoreCase("IS_VALID")){
+                        return Mono.just(isValid);
                     }
 
                     return Mono.empty();

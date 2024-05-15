@@ -66,6 +66,7 @@ public enum BizError {
     NO_LICENSE(500, 5309),
     NO_PUBLISH_LICENSE(500, 5311),
     NO_PUBLISHED_APP(500, 5312),
+    EXPIRED_LICENSE(500, 5313),
 
     // datasource related, code range 5500 - 5600
     DATASOURCE_NOT_FOUND(500, 5500),
