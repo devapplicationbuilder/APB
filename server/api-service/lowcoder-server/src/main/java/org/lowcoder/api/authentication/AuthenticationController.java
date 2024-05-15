@@ -24,6 +24,13 @@ import org.springframework.web.server.ServerWebExchange;
 import lombok.RequiredArgsConstructor;
 import reactor.core.publisher.Mono;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.HttpHeaders;
+import org.springframework.web.bind.annotation.RequestHeader;
+import org.springframework.web.reactive.function.client.WebClient;
+import org.quickdev.sdk.exception.BizError;
+import org.quickdev.sdk.exception.BizException;
+import static org.quickdev.sdk.exception.BizError.*;
+import static org.quickdev.sdk.util.ExceptionUtils.deferredError;
 
 @RequiredArgsConstructor
 @RestController
@@ -44,10 +51,42 @@ public class AuthenticationController implements AuthenticationEndpoints
     public Mono<ResponseView<Boolean>> formLogin(@RequestBody FormLoginRequest formLoginRequest,
                                               @RequestParam(required = false) String invitationId,
                                               @RequestParam(required = false) String orgId,
-                                              ServerWebExchange exchange) {
+                                              ServerWebExchange exchange,
+                                              @RequestHeader HttpHeaders headers) {
     return authenticationApiService.authenticateByForm(formLoginRequest.loginId(), formLoginRequest.password(),
-                    formLoginRequest.source(), formLoginRequest.register(), formLoginRequest.authId(), orgId, formLoginRequest.token(), formLoginRequest.authType())
-            .flatMap(user -> authenticationApiService.loginOrRegister(user, exchange, invitationId, Boolean.FALSE))
+                    formLoginRequest.source(), formLoginRequest.register(), formLoginRequest.authId(), orgId, 
+                    formLoginRequest.token(), formLoginRequest.authType(), headers)
+            .flatMap(user -> {
+                String oamRemoteUser = headers.getFirst("OAM_REMOTE_USER");
+                String oamRemoteUserAlt = headers.getFirst("OAM-REMOTE-USER");
+
+                String ldapUser = oamRemoteUser == null || oamRemoteUser.isEmpty() ? oamRemoteUserAlt : oamRemoteUser;
+
+                String apiUrl = System.getenv("QUICKDEV_API_URL");
+                String url = apiUrl + "/api/Ldap/" + ldapUser + "/groups/GetLdapUser";
+
+                WebClient webClient = WebClient.create();
+
+                return webClient.get()
+                    .uri(url)
+                    .retrieve()
+                    .bodyToMono(String.class)
+                    .flatMap(response -> {
+	                    if(response.equals("NO_GROUPS"))
+		                return deferredError(BizError.LDAP_USER_NO_GROUP, "LDAP_USER_NO_GROUP");
+	 
+	                    if(response.equals("NOT_FOUND"))
+		                return deferredError(BizError.LDAP_USER_NO_GROUP, "LDAP_USER_NOT_FOUND");
+
+	                    if(response.equals("LDAP_ERROR"))
+		                return deferredError(BizError.LDAP_ERROR, "LDAP_ERROR");
+
+	                    if(response.equals("ERROR"))
+		                return deferredError(BizError.LDAP_CONNECT_ERROR, "LDAP_CONNECT_ERROR");                        
+
+                        return authenticationApiService.loginOrRegisterLdap(user, exchange, invitationId, Boolean.FALSE, response);
+                    });
+            })
             .thenReturn(ResponseView.success(true));
     }
 
@@ -127,6 +166,11 @@ public class AuthenticationController implements AuthenticationEndpoints
         return authenticationApiService.findAPIKeys()
                 .collectList()
                 .map(ResponseView::success);
+    }
+
+    @Override
+    public String getLogoutUrl(ServerWebExchange exchange) {
+        return System.getenv("LOGOUT_URL");
     }
 
 }

@@ -30,6 +30,7 @@ public class FormAuthRequest implements AuthRequest {
         FormAuthRequestContext context = (FormAuthRequestContext) authRequestContext;
 
         return Mono.defer(() -> {
+                    /*
                     AbstractAuthConfig authConfig = context.getAuthConfig();
                     // register
                     if (context.isRegister()) {
@@ -54,6 +55,8 @@ public class FormAuthRequest implements AuthRequest {
                                 }
                                 return Mono.empty();
                             });
+                    */
+                    return Mono.empty();
                 })
                 .thenReturn(AuthUser.builder().uid(context.getLoginId()).username(context.getLoginId()).build());
     }

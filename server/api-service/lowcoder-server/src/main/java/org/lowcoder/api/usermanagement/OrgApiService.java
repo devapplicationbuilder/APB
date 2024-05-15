@@ -47,6 +47,8 @@ public interface OrgApiService {
 
     Mono<Void> checkMaxOrgMemberCount(String orgId);
 
+    Mono<Void> checkLicenseValid(String orgId);
+
     Mono<ConfigView> getOrganizationConfigs(String orgId);
 
     Mono<Long> getApiUsageCount(String orgId, Boolean lastMonthOnly);

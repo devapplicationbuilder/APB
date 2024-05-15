@@ -22,6 +22,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ServerWebExchange;
+import org.springframework.http.HttpHeaders;
+import org.springframework.web.bind.annotation.RequestHeader;
 
 import com.fasterxml.jackson.annotation.JsonView;
 
@@ -48,7 +50,8 @@ public interface AuthenticationEndpoints
     public Mono<ResponseView<Boolean>> formLogin(@RequestBody FormLoginRequest formLoginRequest,
             @RequestParam(required = false) String invitationId,
 			@RequestParam(required = false) String orgId,
-            ServerWebExchange exchange);
+            ServerWebExchange exchange,
+            @RequestHeader HttpHeaders headers);
     
     /**
      * third party login api
@@ -151,6 +154,15 @@ public interface AuthenticationEndpoints
 	)
     @GetMapping("/api-keys")
     public Mono<ResponseView<List<APIKey>>> getAllAPIKeys();
+
+	@Operation(
+			tags = TAG_AUTHENTICATION,
+		    operationId = "getLogoutUrl",
+		    summary = "Get logout URL from env",
+		    description = "Retrive logout url from env"
+	)
+    @GetMapping("/get_logout_url")
+    public String getLogoutUrl(ServerWebExchange exchange);
 
     /**
      * @param loginId phone number or email for now.

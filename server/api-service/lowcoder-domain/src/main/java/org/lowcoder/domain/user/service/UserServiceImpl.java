@@ -49,6 +49,7 @@ import static org.quickdev.domain.user.model.UserDetail.ANONYMOUS_CURRENT_USER;
 import static org.quickdev.sdk.constants.GlobalContext.CLIENT_IP;
 import static org.quickdev.sdk.util.ExceptionUtils.ofError;
 import static org.quickdev.sdk.util.ExceptionUtils.ofException;
+import org.springframework.web.reactive.function.client.WebClient;
 
 @Slf4j
 @Service
@@ -293,21 +294,23 @@ public class UserServiceImpl implements UserService {
             Locale locale = LocaleUtils.getLocale(contextView);
             return orgMemberService.getCurrentOrgMember(user.getId())
                     .zipWhen(orgMember -> buildUserDetailGroups(user.getId(), orgMember, withoutDynamicGroups, locale))
-                    .map(tuple2 -> {
+                    .flatMap(tuple2 -> {
                         OrgMember orgMember = tuple2.getT1();
                         List<Map<String, String>> groups = tuple2.getT2();
-                        return UserDetail.builder()
-                                .id(user.getId())
-                                .name(user.getName())
-                                .avatarUrl(user.getAvatarUrl())
-                                .email(convertEmail(user.getConnections()))
-                                .ip(ip)
-                                .groups(groups)
-                                .extra(getUserDetailExtra(user, orgMember.getOrgId()))
-                                .build();
+                        return getUserDetailExtra(user, orgMember.getOrgId())
+                                .map(extra -> UserDetail.builder()
+                                        .id(user.getId())
+                                        .name(user.getName())
+                                        .avatarUrl(user.getAvatarUrl())
+                                        .email(convertEmail(user.getConnections()))
+                                        .ip(ip)
+                                        .groups(groups)
+                                        .extra(extra)
+                                        .build());
                     });
         });
     }
+
 
     /**
      * In enterprise mode, user can be deleted and then related connections should be released here by appending a timestamp after the source field.
@@ -324,11 +327,40 @@ public class UserServiceImpl implements UserService {
                 });
     }
 
-    protected Map<String, Object> getUserDetailExtra(User user, String orgId) {
-        return Optional.ofNullable(user.getOrgTransformedUserInfo())
-                .map(orgTransformedUserInfo -> orgTransformedUserInfo.get(orgId))
-                .map(TransformedUserInfo::extra)
-                .orElse(convertConnections(user.getConnections()));
+    protected Mono<Map<String, Object>> getUserDetailExtra(User user, String orgId) {
+        Map<String, Object> extra = new HashMap<>();
+
+        String apiUrl = System.getenv("QUICKDEV_API_URL");
+        String url = apiUrl + "/api/Ldap/" + user.getName() + "/attributes/GetLdapUser";
+
+        WebClient webClient = WebClient.create();
+
+        return webClient.get()
+            .uri(url)
+            .retrieve()
+            .bodyToMono(String.class)
+            .flatMap(response -> {
+                if (response.equals("NO_GROUPS"))
+                    return Mono.error(new RuntimeException("LDAP_USER_NO_GROUP"));
+
+                if (response.equals("NOT_FOUND"))
+                    return Mono.error(new RuntimeException("LDAP_USER_NOT_FOUND"));
+
+                if (response.equals("LDAP_ERROR"))
+                    return Mono.error(new RuntimeException("LDAP_ERROR"));
+
+                if (response.equals("ERROR"))
+                    return Mono.error(new RuntimeException("LDAP_CONNECT_ERROR"));
+
+                String[] attributePairs = response.split("\\|\\|\\|");
+                for (String attributePair : attributePairs) {
+                    String[] keyValue = attributePair.split("###");
+                    if (keyValue.length == 2) {
+                        extra.put(keyValue[0], keyValue[1]);
+                    }
+                }
+                return Mono.just(extra);
+            });
     }
 
     protected Mono<List<Map<String, String>>> buildUserDetailGroups(String userId, OrgMember orgMember, boolean withoutDynamicGroups,

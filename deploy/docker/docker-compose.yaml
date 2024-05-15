@@ -58,7 +58,7 @@ services:
       # frontend parameters
       QUICKDEV_MAX_REQUEST_SIZE: 20m
       QUICKDEV_MAX_QUERY_TIMEOUT: 120
-      QUICKDEV_WORKSPACE_MODE: SAAS
+      QUICKDEV_WORKSPACE_MODE: ENTERPRISE
     volumes:
       - ./lowcoder-stacks:/lowcoder-stacks
       - ./lowcoder-stacks/assets:/lowcoder/assets

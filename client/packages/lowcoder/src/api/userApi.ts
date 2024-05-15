@@ -48,6 +48,7 @@ class UserApi extends Api {
   static usersURL = "/v1/users";
   static sendVerifyCodeURL = "/auth/otp/send";
   static logoutURL = "/auth/logout";
+  static getLogoutURL = "/auth/get_logout_url";
   static userURL = "/v1/users/me";
   static currentUserURL = "/users/currentUser";
   static rawCurrentUserURL = "/users/rawCurrentUser";
@@ -105,6 +106,10 @@ class UserApi extends Api {
 
   static userLogout(): AxiosPromise<ApiResponse> {
     return Api.post(UserApi.logoutURL);
+  }
+
+  static logout_url(): AxiosPromise<string> {
+    return Api.get(UserApi.getLogoutURL);
   }
 
   static updateUser(request: UpdateUserPayload): AxiosPromise<ApiResponse> {

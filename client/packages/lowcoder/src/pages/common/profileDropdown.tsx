@@ -28,6 +28,8 @@ import { showSwitchOrg } from "@lowcoder-ee/pages/common/customerService";
 import { checkIsMobile } from "util/commonUtils";
 import { selectSystemConfig } from "redux/selectors/configSelectors";
 import { ItemType } from "antd/es/menu/hooks/useItems";
+import { getCurrentUser } from "redux/selectors/usersSelectors";
+import UserApi from "api/userApi";
 
 const { Item } = Menu;
 
@@ -144,6 +146,10 @@ export default function ProfileDropdown(props: DropDownProps) {
   const settingModalVisible = useSelector(isProfileSettingModalVisible);
   const sysConfig = useSelector(selectSystemConfig);
   const dispatch = useDispatch();
+
+  const _currentUser = useSelector(getCurrentUser);
+  console.log(_currentUser);
+
   const handleClick = (e: any) => {
     if (e.key === "profile") {
       // click the profile, while not close the dropdown
@@ -152,8 +158,14 @@ export default function ProfileDropdown(props: DropDownProps) {
       }
       dispatch(profileSettingModalVisible(true));
     } else if (e.key === "logout") {
-      // logout
-      dispatch(logoutAction({}));
+      //dispatch(logoutAction({}));
+      UserApi.logout_url()
+          .then(logoutUrl => {
+              window.location.href = logoutUrl.data;
+          })
+          .catch(error => {
+              console.error("Error fetching logout URL:", error);
+          });
     }
     else if (e.keyPath.includes("switchOrg")) {
       if (e.key === "newOrganization") {

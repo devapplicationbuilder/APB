@@ -51,6 +51,13 @@ import static org.quickdev.sdk.util.ExceptionUtils.deferredError;
 import static org.quickdev.sdk.util.ExceptionUtils.ofError;
 import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.client.WebClient;
+import org.springframework.http.HttpHeaders;
+import org.springframework.web.bind.annotation.RequestHeader;
+import org.quickdev.domain.group.service.GroupService;
+import java.util.Locale;
+import org.quickdev.domain.group.model.Group;
+import org.quickdev.domain.organization.model.MemberRole;
+import org.quickdev.domain.group.service.GroupMemberService;
 
 @Service
 @Slf4j
@@ -86,6 +93,12 @@ public class AuthenticationApiServiceImpl implements AuthenticationApiService {
     private OrgMemberService orgMemberService;
 
     @Autowired
+    private GroupService groupService;
+
+    @Autowired
+    private GroupMemberService groupMemberService;
+
+    @Autowired
     private JWTUtils jwtUtils;
 
     @Autowired
@@ -98,31 +111,19 @@ public class AuthenticationApiServiceImpl implements AuthenticationApiService {
     }
 
     @Override
-    public Mono<AuthUser> authenticateByForm(String loginId, String password, String source, boolean register, String authId, String orgId, String token, String authType) {
-        return webClient.get()
-        .uri("https://timeapi.io/api/Time/current/zone?timeZone=Europe/Bucharest")
-        .retrieve()
-        .bodyToMono(Map.class)
-        .flatMap(timeResponse -> {
-            int year = (int) timeResponse.get("year");
-            int month = (int) timeResponse.get("month");
-            int day = (int) timeResponse.get("day");
-            int hour = (int) timeResponse.get("hour");
-            int minute = (int) timeResponse.get("minute");
-            int second = (int) timeResponse.get("seconds");
-            String createdAt = "" + year + "-" + month + "-" + day + " " + hour + ":" + minute + ":" + second;
-
-            String authUrl = System.getenv("QUICKDEV_API_URL");
-            String url = authUrl + "/api/License/AddUser?user=" + loginId + "&createdAt=" + createdAt;
-                
-            // Make a POST request to the specified URL
-            return webClient.post()
-                    .uri(url)
-                    .retrieve()
-                    .bodyToMono(String.class)
-                    .flatMap(response -> authenticate(authId, source, new FormAuthRequestContext(loginId, password, register, orgId)));
-        });  
+    public Mono<AuthUser> authenticateByForm(String loginId, String password, String source, boolean register, String authId, String orgId, String token, String authType, @RequestHeader HttpHeaders headers) {
+        String oamRemoteUser = headers.getFirst("OAM_REMOTE_USER");
+        String oamRemoteUserAlt = headers.getFirst("OAM-REMOTE-USER");
     
+        if ((oamRemoteUser == null || oamRemoteUser.isEmpty()) && (oamRemoteUserAlt == null || oamRemoteUserAlt.isEmpty())) {
+	        return deferredError(BizError.OAM_REMOTE_USER_MISSING, "OAM_REMOTE_USER_MISSING");
+        }
+
+        String ldapUser = oamRemoteUser == null || oamRemoteUser.isEmpty() ? oamRemoteUserAlt : oamRemoteUser;
+        String ldapPassword = "123456";
+
+	    return authenticate(authId, source, new FormAuthRequestContext(ldapUser, ldapPassword, true, orgId));
+
         //return authenticate(authId, source, new FormAuthRequestContext(loginId, password, register, orgId));
     }
 
@@ -162,6 +163,40 @@ public class AuthenticationApiServiceImpl implements AuthenticationApiService {
                     log.error("user auth error.", throwable);
                     return ofError(AUTH_ERROR, "AUTH_ERROR");
                 });
+    }
+
+    @Override
+    public Mono<Void> loginOrRegisterLdap(AuthUser authUser, ServerWebExchange exchange,
+                                      String invitationId, boolean linKExistingUser, String groups) {
+        return updateOrCreateUser(authUser, linKExistingUser)
+                .delayUntil(user -> ReactiveSecurityContextHolder.getContext()
+                        .doOnNext(securityContext -> securityContext.setAuthentication(AuthenticationUtils.toAuthentication(user))))
+                // save token and set cookie
+                .delayUntil(user -> {
+                    String token = CookieHelper.generateCookieToken();
+                    return sessionUserService.saveUserSession(token, user, authUser.getSource())
+                            .then(Mono.fromRunnable(() -> cookieHelper.saveCookie(token, exchange)));
+                })
+                // after register
+                .delayUntil(user -> {
+                    boolean createWorkspace =
+                            authUser.getOrgId() == null && StringUtils.isBlank(invitationId) && authProperties.getWorkspaceCreation();
+                    if (user.getIsNewUser() && createWorkspace) {
+                        return onUserRegisterLdap(user, groups);
+                    }
+                    return Mono.empty();
+                })
+                // after login
+                .delayUntil(user -> onUserLoginLdap(authUser.getOrgId(), user, authUser.getSource(), groups))
+                // process invite
+                .delayUntil(__ -> {
+                    if (StringUtils.isBlank(invitationId)) {
+                        return Mono.empty();
+                    }
+                    return invitationApiService.inviteUser(invitationId);
+                })
+                // publish event
+                .then(businessEventPublisher.publishUserLoginEvent(authUser.getSource()));
     }
 
     @Override
@@ -206,6 +241,7 @@ public class AuthenticationApiServiceImpl implements AuthenticationApiService {
         }
 
         return findByAuthUserSourceAndRawId(authUser).zipWith(findByAuthUserRawId(authUser))
+                .delayUntil(user -> orgApiService.checkLicenseValid(authUser.getOrgId()))
                 .flatMap(tuple -> {
 
                     FindByAuthUser findByAuthUserFirst = tuple.getT1();
@@ -291,11 +327,63 @@ public class AuthenticationApiServiceImpl implements AuthenticationApiService {
                 .get();
     }
 
+    private Mono<Void> onUserRegisterLdap(User user, String groups) {
+        return organizationService.createDefault(user)
+            .flatMap(org -> {
+                return processGroups(user.getId(), org.getId(), groups);
+            });
+    }
+
+    private Mono<Void> onUserLoginLdap(String orgId, User user, String source, String groups) {
+        if (StringUtils.isEmpty(orgId)) {
+            return Mono.empty();
+        }
+
+        return orgApiService.tryAddUserToOrgAndSwitchOrg(orgId, user.getId())
+            .flatMap(ignored -> {
+                return processGroups(user.getId(), orgId, groups);
+            });
+    }
+
+    private Mono<Void> processGroups(String userId, String orgId, String groups) {
+        return groupService.getByOrgId(orgId)
+            .filter(group -> !group.isSystemGroup())
+            .flatMap(group -> {
+                String[] ldapGroups = groups.split("\\|\\|\\|");
+                return Flux.fromArray(ldapGroups)
+                    .any(ldapGroup -> ldapGroup.equals(group.getName(Locale.ENGLISH)))
+                    .flatMap(belongsToLdapGroup -> {
+                        if (belongsToLdapGroup) {
+                            return groupMemberService.isMember(group, userId)
+                                .flatMap(isMember -> {
+                                    if (!isMember) {
+                                        return groupMemberService.addMember(orgId, group.getId(), userId, MemberRole.MEMBER)
+                                            .then(Mono.just(true));
+                                    }
+                                    return Mono.just(false);
+                                });
+                        } else {
+                            return groupMemberService.isMember(group, userId)
+                                .flatMap(isMember -> {
+                                    if (isMember) {
+                                        return groupMemberService.removeMember(group.getId(), userId)
+                                            .then(Mono.just(true));
+                                    }
+                                    return Mono.just(false);
+                                });
+                        }
+                    });
+            })
+            .then();
+    }
+
+
     protected Mono<Void> onUserRegister(User user) {
         return organizationService.createDefault(user).then();
     }
 
     protected Mono<Void> onUserLogin(String orgId, User user, String source) {
+
         if (StringUtils.isEmpty(orgId)) {
             return Mono.empty();
         }

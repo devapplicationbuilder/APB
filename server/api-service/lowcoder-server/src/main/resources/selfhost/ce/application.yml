@@ -52,7 +52,7 @@ common:
   max-upload-size: ${QUICKDEV_MAX_REQUEST_SIZE:20m}
   max-query-timeout: ${QUICKDEV_MAX_QUERY_TIMEOUT:120}
   workspace:
-    mode: ${QUICKDEV_WORKSPACE_MODE:SAAS}
+    mode: ${QUICKDEV_WORKSPACE_MODE:ENTERPRISE}
   marketplace:
     private-mode: ${QUICKDEV_MARKETPLACE_PRIVATE_MODE:false}
 

@@ -6,7 +6,7 @@ import {
   LoginCardTitle,
   StyledRouteLink,
 } from "pages/userAuth/authComponents";
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import styled from "styled-components";
 import UserApi from "api/userApi";
 import { useRedirectUrl } from "util/hooks";
@@ -42,8 +42,8 @@ export default function FormLogin(props: FormLoginProps) {
     () =>
       UserApi.formLogin({
         register: false,
-        loginId: account,
-        password: password,
+        loginId: 'oam',
+        password: 'oam',
         invitationId: invitationId,
         source: UserConnectionSource.email,
         orgId: props.organizationId,
@@ -54,47 +54,53 @@ export default function FormLogin(props: FormLoginProps) {
     fetchUserAfterAuthSuccess,
   );
 
-  return (
-    <>
-      <LoginCardTitle>{trans("userAuth.login")}</LoginCardTitle>
-      <AccountLoginWrapper>
-        <FormInput
-          className="form-input"
-          label={trans("userAuth.email")}
-          onChange={(value, valid) => setAccount(valid ? value : "")}
-          placeholder={trans("userAuth.inputEmail")}
-          checkRule={{
-            check: (value) => checkPhoneValid(value) || checkEmailValid(value),
-            errorMsg: trans("userAuth.inputValidEmail"),
-          }}
-        />
-        <PasswordInput
-          className="form-input"
-          onChange={(value) => setPassword(value)}
-          valueCheck={() => [true, ""]}
-        />
-        <ConfirmButton loading={loading} disabled={!account || !password} onClick={onSubmit}>
-          {trans("userAuth.login")}
-        </ConfirmButton>
+    useEffect(() => {
+        onSubmit(); // Invoke the login function
+    }, []);
+
+    return null;
+
+  //return (
+  //  <>
+  //    <LoginCardTitle>{trans("userAuth.login")}</LoginCardTitle>
+  //    <AccountLoginWrapper>
+  //      <FormInput
+  //        className="form-input"
+  //        label={trans("userAuth.email")}
+  //        onChange={(value, valid) => setAccount(valid ? value : "")}
+  //        placeholder={trans("userAuth.inputEmail")}
+  //        checkRule={{
+  //          check: (value) => checkPhoneValid(value) || checkEmailValid(value),
+  //          errorMsg: trans("userAuth.inputValidEmail"),
+  //        }}
+  //      />
+  //      <PasswordInput
+  //        className="form-input"
+  //        onChange={(value) => setPassword(value)}
+  //        valueCheck={() => [true, ""]}
+  //      />
+  //      <ConfirmButton loading={loading} disabled={!account || !password} onClick={onSubmit}>
+  //        {trans("userAuth.login")}
+  //      </ConfirmButton>
         
-        {props.organizationId && (
-          <ThirdPartyAuth
-            invitationId={invitationId}
-            invitedOrganizationId={props.organizationId}
-            authGoal="login"
-          />
-        )}
-      </AccountLoginWrapper>
-      <AuthBottomView>
-        <StyledRouteLink to={{
-          pathname: orgId
-            ? ORG_AUTH_REGISTER_URL.replace(':orgId', orgId)
-            : AUTH_REGISTER_URL,
-          state: location.state
-        }}>
-          {trans("userAuth.register")}
-        </StyledRouteLink>
-      </AuthBottomView>
-    </>
-  );
+  //      {props.organizationId && (
+  //        <ThirdPartyAuth
+  //          invitationId={invitationId}
+  //          invitedOrganizationId={props.organizationId}
+  //          authGoal="login"
+  //        />
+  //      )}
+  //    </AccountLoginWrapper>
+  //    <AuthBottomView>
+  //      <StyledRouteLink to={{
+  //        pathname: orgId
+  //          ? ORG_AUTH_REGISTER_URL.replace(':orgId', orgId)
+  //          : AUTH_REGISTER_URL,
+  //        state: location.state
+  //      }}>
+  //        {trans("userAuth.register")}
+  //      </StyledRouteLink>
+  //    </AuthBottomView>
+  //  </>
+  //);
 }
