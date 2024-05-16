@@ -117,17 +117,6 @@ public abstract class AbstractBizThresholdChecker {
                 .then(); // Convert the result to Mono<Void>
     }
 
-    public Mono<Void> checkLicenseValid(String orgId) {
-        return getItemFromLicense(orgId, "IS_VALID")
-                .flatMap(license -> {
-                    if(license.equals("TRUE"))
-                        return Mono.empty();
-                    else
-                        return deferredError(BizError.EXPIRED_LICENSE, "EXPIRED_LICENSE");
-                })
-                .then(); // Convert the result to Mono<Void>
-    }
-
     public Mono<String> getItemFromLicense(String orgId, String type) {
         String authUrl = System.getenv("QUICKDEV_API_URL");
         String url = authUrl + "/api/License/" + orgId + "/GetLicense";
@@ -142,12 +131,12 @@ public abstract class AbstractBizThresholdChecker {
 
                     String[] parts = license.split("#");
 
-                    String publishValidTo = parts[0] + "#" + parts[1] + "#" + parts[2] + "#" + parts[3] + "#" + parts[4] + "#" + parts[5];
-                    String maxApps = parts[6];
-                    String maxGroups = parts[7];
-                    String maxUsers = parts[8];
-                    String maxDevs = parts[9];
-                    String isValid = parts[10];
+                    String maxApps = parts[0];
+                    String maxGroups = parts[1];
+                    String maxUsers = parts[2];
+                    String maxDevs = parts[3];
+                    String canPublish = parts[4];
+                    String canView = parts[5];
 
                     if (type.equalsIgnoreCase("MAX_APPS")) {
                         return Mono.just(maxApps);
@@ -161,11 +150,11 @@ public abstract class AbstractBizThresholdChecker {
                     else if (type.equalsIgnoreCase("MAX_DEVELOPERS")) {
                         return Mono.just(maxDevs);
                     }
-                    else if (type.equalsIgnoreCase("PUBLISH_VALID_TO")) {
-                        return Mono.just(publishValidTo);
+                    else if (type.equalsIgnoreCase("CAN_PUBLISH")) {
+                        return Mono.just(canPublish);
                     }
-                    else if(type.equalsIgnoreCase("IS_VALID")){
-                        return Mono.just(isValid);
+                    else if (type.equalsIgnoreCase("CAN_VIEW")){
+                        return Mono.just(canView);
                     }
 
                     return Mono.empty();

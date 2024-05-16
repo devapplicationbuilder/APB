@@ -276,6 +276,11 @@ public class ApplicationApiService {
                 });
     }
 
+    public Mono<String> getOrganizationId(String applicationId) {
+        return applicationService.findById(applicationId)
+                .map(Application::getOrganizationId);
+    }
+
     public Mono<ApplicationView> getPublishedApplication(String applicationId, ApplicationRequestType requestType) {
         return checkApplicationPermissionWithReadableErrorMsg(applicationId, READ_APPLICATIONS, requestType)
                 .zipWhen(permission -> applicationService.findById(applicationId)
