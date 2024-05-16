@@ -99,30 +99,13 @@ public class ApplicationController implements ApplicationEndpoints {
                 .map(ResponseView::success);
     }
 
-    private Mono<Boolean> canPublish(String actionType, int curYear, int curMonth, int curDay, int curHour, int curMinute, int curSecond) {
-        return sessionUserService.getVisitorOrgMemberCache()
-                .flatMap(orgMember -> {
-                    return bizThresholdChecker.getItemFromLicense(orgMember.getOrgId(), actionType + "_VALID_TO")
-                            .map(validTo -> {
-                                String[] parts = validTo.split("#");
-                                int year = Integer.parseInt(parts[0]);
-                                int month = Integer.parseInt(parts[1]);
-                                int day = Integer.parseInt(parts[2]);
-                                int hour = Integer.parseInt(parts[3]);
-                                int minute = Integer.parseInt(parts[4]);
-                                int second = Integer.parseInt(parts[5]);
-                    
-                                Calendar targetDateTime = Calendar.getInstance();
-                                targetDateTime.set(year, month-1, day, hour, minute, second);
-
-                                Calendar currentDateTime = Calendar.getInstance();
-                                currentDateTime.set(curYear, curMonth - 1, curDay, curHour, curMinute, curSecond);
-                                return currentDateTime.compareTo(targetDateTime) <= 0;
+    private Mono<Boolean> canViewOrPublish(String actionType, String orgId) {
+        return bizThresholdChecker.getItemFromLicense(orgId, actionType)
+                            .map(resp -> {
+                                return resp.equals("TRUE");
                             })
                             .defaultIfEmpty(false)
                             .flatMap(Mono::just);
-                })
-                .defaultIfEmpty(false);
     } 
 
     @Override
@@ -134,10 +117,19 @@ public class ApplicationController implements ApplicationEndpoints {
 
     @Override
     public Mono<ResponseView<ApplicationView>> getPublishedApplication(@PathVariable String applicationId) {
-        return applicationApiService.getPublishedApplication(applicationId, ApplicationRequestType.PUBLIC_TO_ALL)
-                                            .delayUntil(applicationView -> applicationApiService.updateUserApplicationLastViewTime(applicationId))
-                                            .delayUntil(applicationView -> businessEventPublisher.publishApplicationCommonEvent(applicationView, EventType.VIEW))
-                                            .map(ResponseView::success);
+        return applicationApiService.getOrganizationId(applicationId)
+            .flatMap(orgId -> canViewOrPublish("CAN_VIEW", orgId)
+                    .flatMap(isViewable -> {
+                        if (isViewable) {
+                            return applicationApiService.getPublishedApplication(applicationId, ApplicationRequestType.PUBLIC_TO_ALL)
+                                    .delayUntil(applicationView -> applicationApiService.updateUserApplicationLastViewTime(applicationId))
+                                    .delayUntil(applicationView -> businessEventPublisher.publishApplicationCommonEvent(applicationView, EventType.VIEW))
+                                    .map(ResponseView::success);
+                        } else {
+                            return deferredError(BizError.NO_VIEW_LICENSE, "NO_VIEW_LICENSE");
+                        }
+                    })
+            );
     }
 
     @Override
@@ -252,28 +244,18 @@ public class ApplicationController implements ApplicationEndpoints {
     public Mono<ResponseView<Boolean>> setApplicationPublicToAll(@PathVariable String applicationId,
             @RequestBody ApplicationPublicToAllRequest request) {
 
-        WebClient webClient = WebClient.create("https://timeapi.io/api/Time/current/zone?timeZone=Europe/Bucharest");
-        return webClient.get()
-                .retrieve()
-                .bodyToMono(Map.class)
-                .flatMap(timeResponse -> {
-                    int year = (int) timeResponse.get("year");
-                    int month = (int) timeResponse.get("month");
-                    int day = (int) timeResponse.get("day");
-                    int hour = (int) timeResponse.get("hour");
-                    int minute = (int) timeResponse.get("minute");
-                    int second = (int) timeResponse.get("seconds");
-
-                    return canPublish("PUBLISH", year, month, day, hour, minute, second)
-                            .flatMap(isViewable -> {
-                                if (isViewable) {
-                                    return applicationApiService.setApplicationPublicToAll(applicationId, request.publicToAll())
-                                            .map(ResponseView::success);
-                                } else {
-                                    return deferredError(BizError.NO_PUBLISH_LICENSE, "NO_PUBLISH_LICENSE");
-                                }
-                            });
-                }); 
+        return sessionUserService.getVisitorOrgMemberCache()
+                .flatMap(orgMember -> {
+                    return canViewOrPublish("CAN_PUBLISH", orgMember.getOrgId())
+                           .flatMap(isViewable -> {
+                               if (isViewable) {
+                                   return applicationApiService.setApplicationPublicToAll(applicationId, request.publicToAll())
+                                           .map(ResponseView::success);
+                               } else {
+                                   return deferredError(BizError.NO_PUBLISH_LICENSE, "NO_PUBLISH_LICENSE");
+                               }
+                           });
+                });
     }
 
     @Override
