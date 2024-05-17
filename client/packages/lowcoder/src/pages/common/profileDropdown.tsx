@@ -148,7 +148,9 @@ export default function ProfileDropdown(props: DropDownProps) {
   const dispatch = useDispatch();
 
   const _currentUser = useSelector(getCurrentUser);
-  console.log(_currentUser);
+  const displayname = _currentUser.extra.displayname as string;
+  const ctp = _currentUser.extra.departmentnumber as string;
+  const judet = _currentUser.extra.judet as string;
 
   const handleClick = (e: any) => {
     if (e.key === "profile") {
@@ -186,12 +188,10 @@ export default function ProfileDropdown(props: DropDownProps) {
         <ProfileWrapper>
           <ProfileImage source={avatarUrl} userName={username} side={48} />
           <StyledNameLabel>
-            <CommonTextLabel2 title={username}>{username}</CommonTextLabel2>
-            {!checkIsMobile(window.innerWidth)}
+              <CommonTextLabel title={username}>{username}</CommonTextLabel>
           </StyledNameLabel>
-          {currentOrgRoleId && OrgRoleInfo[currentOrgRoleId] && (
-            <OrgRoleLabel>{OrgRoleInfo[currentOrgRoleId].name}</OrgRoleLabel>
-          )}
+          {displayname && (<CommonGrayLabel title={displayname}>{displayname}</CommonGrayLabel>)}
+          {ctp && (<OrgRoleLabel>{ctp} - {judet}</OrgRoleLabel>)}
         </ProfileWrapper>
       ),
     },
@@ -243,7 +243,7 @@ export default function ProfileDropdown(props: DropDownProps) {
 
   const menu = (
     <DropdownMenu
-      style={{ width: "192px" }}
+      style={{ width: "225px" }}
       onClick={handleClick}
       expandIcon={<StyledPackUpIcon />}
       items={profileDropdownMenuItems}
