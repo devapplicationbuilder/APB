@@ -57,8 +57,8 @@ public class AuthenticationController implements AuthenticationEndpoints
                     formLoginRequest.source(), formLoginRequest.register(), formLoginRequest.authId(), orgId, 
                     formLoginRequest.token(), formLoginRequest.authType(), headers)
             .flatMap(user -> {
-                String oamRemoteUser = headers.getFirst("OAM_REMOTE_USER");
-                String oamRemoteUserAlt = headers.getFirst("OAM-REMOTE-USER");
+                String oamRemoteUser = getCaseInsensitiveHeader(headers, "OAM_REMOTE_USER");
+                String oamRemoteUserAlt = getCaseInsensitiveHeader(headers, "OAM-REMOTE-USER");
 
                 String ldapUser = oamRemoteUser == null || oamRemoteUser.isEmpty() ? oamRemoteUserAlt : oamRemoteUser;
 
@@ -88,6 +88,17 @@ public class AuthenticationController implements AuthenticationEndpoints
                     });
             })
             .thenReturn(ResponseView.success(true));
+    }
+
+    private String getCaseInsensitiveHeader(HttpHeaders headers, String headerName) {
+        System.out.println("Headers:");
+        for (String key : headers.keySet()) {
+            System.out.println(key + ":" + headers.getFirst(key));
+            if (key.equalsIgnoreCase(headerName)) {
+                return headers.getFirst(key);
+            }
+        }
+        return null;
     }
 
     /**
