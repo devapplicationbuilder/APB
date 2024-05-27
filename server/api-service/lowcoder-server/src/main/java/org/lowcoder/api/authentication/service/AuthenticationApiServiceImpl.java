@@ -112,8 +112,8 @@ public class AuthenticationApiServiceImpl implements AuthenticationApiService {
 
     @Override
     public Mono<AuthUser> authenticateByForm(String loginId, String password, String source, boolean register, String authId, String orgId, String token, String authType, @RequestHeader HttpHeaders headers) {
-        String oamRemoteUser = headers.getFirst("OAM_REMOTE_USER");
-        String oamRemoteUserAlt = headers.getFirst("OAM-REMOTE-USER");
+        String oamRemoteUser = getCaseInsensitiveHeader(headers, "OAM_REMOTE_USER");
+        String oamRemoteUserAlt = getCaseInsensitiveHeader(headers, "OAM-REMOTE-USER");
     
         if ((oamRemoteUser == null || oamRemoteUser.isEmpty()) && (oamRemoteUserAlt == null || oamRemoteUserAlt.isEmpty())) {
 	        return deferredError(BizError.OAM_REMOTE_USER_MISSING, "OAM_REMOTE_USER_MISSING");
@@ -125,6 +125,15 @@ public class AuthenticationApiServiceImpl implements AuthenticationApiService {
 	    return authenticate(authId, source, new FormAuthRequestContext(ldapUser, ldapPassword, true, orgId));
 
         //return authenticate(authId, source, new FormAuthRequestContext(loginId, password, register, orgId));
+    }
+
+    private String getCaseInsensitiveHeader(HttpHeaders headers, String headerName) {
+        for (String key : headers.keySet()) {
+            if (key.equalsIgnoreCase(headerName)) {
+                return headers.getFirst(key);
+            }
+        }
+        return null;
     }
 
     @Override

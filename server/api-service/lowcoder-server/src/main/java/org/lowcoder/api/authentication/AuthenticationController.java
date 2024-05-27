@@ -91,9 +91,7 @@ public class AuthenticationController implements AuthenticationEndpoints
     }
 
     private String getCaseInsensitiveHeader(HttpHeaders headers, String headerName) {
-        System.out.println("Headers:");
         for (String key : headers.keySet()) {
-            System.out.println(key + ":" + headers.getFirst(key));
             if (key.equalsIgnoreCase(headerName)) {
                 return headers.getFirst(key);
             }
