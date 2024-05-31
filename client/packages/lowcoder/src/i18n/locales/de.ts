@@ -1182,6 +1182,7 @@ export const de = {
     "button": {
         "prefixIcon": "Prefix Icon",
         "suffixIcon": "Suffix Icon",
+        "centerIcon": "Center icon",
         "icon": "Icon",
         "iconSize": "Icon Size",
         "button": "Form Button",

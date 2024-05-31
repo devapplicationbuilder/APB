@@ -1107,19 +1107,20 @@
       "startTime": "Start Time",
       "endTime": "End Time"
     },
-    "button": {
-      "prefixIcon": "Prefix Icon",
-      "suffixIcon": "Suffix Icon",
-      "icon": "Icon",
-      "iconSize": "Icon Size",
-      "button": "Form Button",
-      "formToSubmit": "Form to Submit",
-      "default": "Default",
-      "submit": "Submit",
-      "textDesc": "Text Currently Displayed on Button",
-      "loadingDesc": "Is the Button in Loading State? If True the Current Button Is Loading",
-      "formButtonEvent": "Event"
-    },
+  "button": {
+    "prefixIcon": "Prefix Icon",
+    "centerIcon": "Center icon",
+    "suffixIcon": "Suffix Icon",
+    "icon": "Icon",
+    "iconSize": "Icon Size",
+    "button": "Form Button",
+    "formToSubmit": "Form to Submit",
+    "default": "Default",
+    "submit": "Submit",
+    "textDesc": "Text Currently Displayed on Button",
+    "loadingDesc": "Is the Button in Loading State? If True the Current Button Is Loading",
+    "formButtonEvent": "Event"
+  },
     "link": {
       "link": "Link",
       "textDesc": "Text Currently Displayed on Link",

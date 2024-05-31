@@ -1181,6 +1181,7 @@ export const en = {
   },
   "button": {
     "prefixIcon": "Prefix Icon",
+    "centerIcon": "Center icon",
     "suffixIcon": "Suffix Icon",
     "icon": "Icon",
     "iconSize": "Icon Size",

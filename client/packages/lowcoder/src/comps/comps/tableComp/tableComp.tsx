@@ -595,6 +595,21 @@ TableTmpComp = withMethodExposing(TableTmpComp, [
       comp.children.selection.children.selectedRowKeys.dispatchChangeValueAction([]);
     },
   },
+  {
+      method: {
+          name: "changeSelections",
+          description: "",
+          params: [
+              {
+                  name: "selectedIndexes", type: "arrayString"
+              }
+          ],
+      },
+      execute: (comp, values) => {
+          console.log(values[0] as string[]);
+          comp.children.selection.children.selectedRowKeys.dispatchChangeValueAction(values[0] as string[])
+      },
+  },
 ]);
 
 // exposing data
